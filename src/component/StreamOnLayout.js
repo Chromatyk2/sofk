@@ -90,7 +90,7 @@ function StreamOnLayout() {
                     <div className="twitch">
                         <div className="twitch-video">
                             <iframe
-                                src={"https://player.twitch.tv/?channel=" + streamToDisplay + "&parent=preview--chromatyk.netlify.app&autoplay=true&muted=false"}
+                                src={"https://player.twitch.tv/?channel=" + streamToDisplay + "&parent=streamonforkids.fr&autoplay=true&muted=false"}
                                 frameBorder="0"
                                 scrolling="no"
                                 allowFullScreen="true"
@@ -102,7 +102,7 @@ function StreamOnLayout() {
                             <iframe
                                 frameBorder="0"
                                 scrolling="no"
-                                src={"https://www.twitch.tv/embed/" + streamToDisplay + "/chat?parent=preview--chromatyk.netlify.app"}
+                                src={"https://www.twitch.tv/embed/" + streamToDisplay + "/chat?parent=streamonforkids.fr"}
                                 height="100%"
                                 width="100%">
                             </iframe>
