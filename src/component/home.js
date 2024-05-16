@@ -33,8 +33,6 @@ function HomePage(props) {
                 })
             })
         })
-    }, [])
-console.log(user);
   return (
     <>
         <div className="homeContainer">
