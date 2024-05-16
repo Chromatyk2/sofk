@@ -9,7 +9,7 @@ import Login from './services/auth.services.js';
 import StreamOnLayout from "./component/StreamOnLayout";
 import ClipsLayout from "./component/ClipsLayout";
 import Footer from "./component/footer";
-import {BrowserRouter, Link} from "react-router-dom";
+import LinkToStream from "./component/LinkToStream";
 function App() {
   const [cookies, setCookie] = useCookies();
   if(Object.keys(cookies).length == 0) {
@@ -18,7 +18,7 @@ function App() {
   return(
     <>
       <BrowserRouter>
-        <Link className={"linkToTwitch"} to="/Streams"><i style={{color: "white"}} className="fa-brands fa-twitch"></i></Link>
+        <LinkToStream cookies={cookies} />
         <NavBar cookies={cookies}/>
         <Routes>
           <Route path="/" element={<HomePage cookies={cookies}/>}/>
