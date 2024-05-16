@@ -18,7 +18,6 @@ function App() {
   return(
     <>
       <BrowserRouter>
-        <LinkToStream cookies={cookies} />
         <NavBar cookies={cookies}/>
         <Routes>
           <Route path="/" element={<HomePage cookies={cookies}/>}/>

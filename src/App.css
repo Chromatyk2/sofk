@@ -2664,7 +2664,7 @@ button.buttonToDisplayStreamMozaique {
     font-size: 35px;
     height: 60px;
     line-height: 63px;
-    position: absolute;
+    position: fixed;
     right: 15px;
     text-align: center;
     text-decoration: none;
