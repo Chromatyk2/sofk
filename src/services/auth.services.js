@@ -71,7 +71,7 @@ function AuthService() {
              href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
               un Don</a>
 
-          <button className="loginButton" onClick={authentication}>Visiter le site
+          <button className="loginButton" onClick={isAuthenticated}>Visiter le site
           </button>
       </div>
   )
