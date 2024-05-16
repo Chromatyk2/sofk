@@ -67,9 +67,6 @@ function StreamOnLayout() {
     console.log(charityTeam.find((person) => person.infos.display_name === "Asarhell"));
     return (
         <div className={"containerStream"}>
-            {streamToDisplay &&
-            <a className={"linkToTwitch"} href={"https://twitch.tv/"+streamToDisplay}><i style={{color:"white"}} class="fa-brands fa-twitch"></i></a>
-            }
             <div className={"streamersList"}>
                 <p className={"streamTitle"}>Streameur.euses</p>
                 <hr style={{width: "50%", display: "block", margin: "auto", border: "1px solid #f7bb3e"}}/>
