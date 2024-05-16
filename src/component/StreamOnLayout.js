@@ -63,6 +63,7 @@ function StreamOnLayout() {
         setStreamToDisplay(null);
     }
     console.log(charityTeam);
+    console.log(streamToDisplay);
     console.log(charityTeam.find((person) => person.infos.display_name === "asarhell"));
     return (
         <div className={"containerStream"}>
