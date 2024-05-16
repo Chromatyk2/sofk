@@ -33,6 +33,7 @@ function HomePage(props) {
                 })
             })
         })
+    }, [])
   return (
     <>
         <div className="homeContainer">
