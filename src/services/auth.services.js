@@ -27,7 +27,6 @@ function AuthService() {
             setCookie('token', result.data,{days:1} );
           }
         );
-      return params["access_token"] !== undefined;
   }
 
   useEffect(() => {
