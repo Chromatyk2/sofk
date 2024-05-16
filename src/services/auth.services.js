@@ -28,6 +28,8 @@ function AuthService() {
         scope: SCOPES,
     };
       const queryString = encodeQueryString(params);
+      const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
+      window.location.href = authenticationUrl;
   };
 
   const decodeQueryString = (string) => {
@@ -61,6 +63,7 @@ function AuthService() {
       .then(
         (result) => {
             setCookie('token', result.data,{days:1} );
+            location.replace();
           }
         );
       }
