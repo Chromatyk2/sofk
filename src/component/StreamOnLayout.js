@@ -112,7 +112,7 @@ function StreamOnLayout() {
                     </div>
                     <a style={{position: "absolute", left: "0", right: "0", margin: "auto", bottom: "60px"}}
                        className="donationLink socialLink" target='_blank'
-                       href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member="+charityTeam.find((person) => person.infos.display_name === streamToDisplay).infos.id+"&l=fr-FR"}>Faire
+                       href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member="+charityTeam.find((person) => person.infos.slug === streamToDisplay.toLowerCase()).infos.id+"&l=fr-FR"}>Faire
                         un Don</a>
                 </>
                 :
