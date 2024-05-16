@@ -11,6 +11,9 @@ import ClipsLayout from "./component/ClipsLayout";
 import Footer from "./component/footer";
 function App() {
   const [cookies, setCookie] = useCookies();
+  if(Object.keys(cookies).length == 0) {
+    return <Login />
+  }
   return(
     <>
       <BrowserRouter>
