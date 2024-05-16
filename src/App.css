@@ -2660,6 +2660,10 @@ button.buttonToDisplayStreamMozaique {
 .linkToTwitch{
     background: purple;
     border: none;
+    width: 95%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
   }
 @media screen and (min-width: 850px) {
     .twitch {
