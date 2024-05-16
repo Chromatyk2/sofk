@@ -13,18 +13,12 @@ function AuthService() {
   const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET
 
   const isAuthenticated = () => {
-      const params = {
-          client_id: CLIENT_ID,
-          redirect_uri: REDIRECT_URI,
-          grant_type: "client_credentials"
-      };
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
           client_id:CLIENT_ID,
           client_secret:CLIENT_SECRET,
-          code:params.code,
-          grant_type:"authorization_code",
+          grant_type:"client_credentials",
           redirect_uri:"https://streamonforkids.fr/"
         }
       )
