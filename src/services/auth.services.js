@@ -63,7 +63,6 @@ function AuthService() {
       .then(
         (result) => {
             setCookie('token', result.data,{days:1} );
-            location.replace();
           }
         );
       }
