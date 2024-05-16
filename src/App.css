@@ -2659,18 +2659,7 @@ button.buttonToDisplayStreamMozaique {
 }
 .linkToTwitch{
     background: purple;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 35px;
-    height: 60px;
-    line-height: 63px;
-    position: fixed;
-    right: 15px;
-    text-align: center;
-    text-decoration: none;
-    top: 63px;
-    width: 60px;
-    z-index: 1000000000;
+    border: none;
   }
 @media screen and (min-width: 850px) {
     .twitch {
