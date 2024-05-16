@@ -12,51 +12,13 @@ function AuthService() {
   const SCOPES = ['openid'];
   const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET
 
-  const encodeQueryString = (params) => {
-      const queryString = new URLSearchParams();
-      for (let paramName in params) {
-          queryString.append(paramName, params[paramName]);
-      }
-      return queryString.toString();
-  };
-
-  const authentication = () => {
-    const params = {
-        client_id: CLIENT_ID,
-        redirect_uri: REDIRECT_URI,
-        response_type: "code",
-        scope: SCOPES,
-    };
-      const queryString = encodeQueryString(params);
-      const authenticationUrl = `https://id.twitch.tv/oauth2/authorize?${queryString}`;
-      window.location.href = authenticationUrl;
-  };
-
-  const decodeQueryString = (string) => {
-      const params = {};
-      const queryString = new URLSearchParams(string);
-      for (let [paramName, value] of queryString) {
-          params[paramName] = value;
-      }
-      return params;
-  };
-
-  const getUrlParams = () => {
-      const queryParameters = new URLSearchParams(window.location.search);
-      return decodeQueryString(queryParameters);
-  };
-
   const isAuthenticated = () => {
-      const params = getUrlParams();
-      if(Object.keys(params).length > 0){
-        setCookie('oauth', params.code,{days:1} );
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
         {
           client_id:CLIENT_ID,
           client_secret:CLIENT_SECRET,
-          code:params.code,
-          grant_type:"authorization_code",
+          grant_type:"client_credentials",
           redirect_uri:"https://streamonforkids.fr/"
         }
       )
@@ -65,8 +27,6 @@ function AuthService() {
             setCookie('token', result.data,{days:1} );
           }
         );
-      }
-      return params["access_token"] !== undefined;
   }
 
   useEffect(() => {
@@ -104,7 +64,7 @@ function AuthService() {
              href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
               un Don</a>
 
-          <button className="loginButton" onClick={authentication}>Visiter le site
+          <button className="loginButton" onClick={isAuthenticated}>Visiter le site
           </button>
       </div>
   )
