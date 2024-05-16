@@ -2280,7 +2280,7 @@ a:hover{
     display: flex;
     width: 100%;
     flex-flow: row;
-    height: 94vh;
+    height: fit-content;
 }
 nav.navbar.navbar-expand-lg.navbar-light {
     background-color: #38617F!important;
@@ -2535,6 +2535,7 @@ a.socialLink {
     margin: 20px;
     scrollbar-color: white transparent;
     scrollbar-width: thin;
+    height: 89vh;
 }
 .uniqueStreamerMozaique {
     width: 496px;
@@ -2729,7 +2730,7 @@ button.buttonToDisplayStreamMozaique {
     .containerStream {
         display: block;
         flex-flow: row;
-        height: 94vh;
+        height: fit-content;
         width: 100%;
     }
     .streamersList{
