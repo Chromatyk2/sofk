@@ -2794,7 +2794,12 @@ a.socialLink {
         width: 90%;
         text-align: justify;
     }
-    secondSectionHome {
+    .infosAssoLink {
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .secondSectionHome {
         display: block;
         height: fit-content;
         padding: 15px;
