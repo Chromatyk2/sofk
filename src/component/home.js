@@ -71,7 +71,7 @@ function HomePage(props) {
             </div>
             <div className={"secondSectionHome"}>
                 <div className={"homeContent"}>
-                    <img style={{minWidth: "250px", width: "45%"}} src={"images/116000logo.webp"}/>
+                    <img style={{minWidth: "250px", width: "30%"}} src={"images/116000logo.webp"}/>
                     <div className={"linkContainerHome"}>
                         <a className="socialLink" target='_blank'
                            href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
