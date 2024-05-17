@@ -69,6 +69,11 @@ function HomePage(props) {
                     </div>
                 </div>
             </div>
+            <div className={"secondPartHome"}>
+                <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                    <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style={{stroke: "none", fill:red}}></path>
+                </svg>
+            </div>
             <a className="socialLink" target='_blank'
                href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
                 un Don</a>
