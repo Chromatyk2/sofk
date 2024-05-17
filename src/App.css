@@ -2414,8 +2414,10 @@ nav.navbar.navbar-expand-lg.navbar-light {
     z-index: 1;
     background-repeat: no-repeat;
     background-color: #39617f;
+    background-attachment: fixed;
 }
 .thirdSectionHome {
+    background-image: url("../public/images/backSofk.webp");
     display: flex;
     justify-content: center;
     height: 100vh;
