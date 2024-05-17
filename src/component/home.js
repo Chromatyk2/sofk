@@ -70,15 +70,17 @@ function HomePage(props) {
                 </div>
             </div>
             <div className={"secondSectionHome"}>
-                <h1 className={"titleEdition"}>Liens utiles</h1>
-                <div className={"linkContainerHome"}>
-                    <a className="socialLink" target='_blank'
-                       href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
-                        un Don</a>
-                    <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
-                    <a className="socialLink" target='_blank'
-                       href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
-                        un Don</a>
+                <div className={"homeContent"}>
+                    <h1 className={"titleEdition"}>Liens utiles</h1>
+                    <div className={"linkContainerHome"}>
+                        <a className="socialLink" target='_blank'
+                           href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
+                            un Don</a>
+                        <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
+                        <a className="socialLink" target='_blank'
+                           href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
+                            un Don</a>
+                    </div>
                 </div>
             </div>
             <h1 className={"titleEdition"}>Editions précédentes</h1>
