@@ -2786,6 +2786,7 @@ a.socialLink {
     .firstSectionHome {
         padding-top:5%;
         height: fit-content;
+        padding: 15px;
     }
     .firstSectionHome .homeContent {
         display: block;
@@ -2793,8 +2794,44 @@ a.socialLink {
         width: 90%;
         text-align: justify;
     }
-    .secondSectionHome {
+    secondSectionHome {
         display: block;
+        height: fit-content;
+        padding: 15px;
+    }
+    .linkContainerHome {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+    .linkContainerHome p {
+        color: #fff;
+        font-size: 20px;
+        text-align: justify;
+    }
+    .infosAssoLink a.socialLink {
+        border-radius: 15px;
+        font-size: 15px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .thirdFakeContent {
+        background-repeat: no-repeat;
+        width: 100%;
+        z-index: 1;
+        height: 20vh;
+        background-size: 100%;
+    }
+    .thirdSectionHome .homeContent {
+        width: 95%;
+    }
+    a.liveButtonHome {
+        border-radius: 15px;
+        display: block;
+        margin: auto;
+        width: 100%;
+        font-size: 25px;
     }
     .streamListHome {
         display: flex;
