@@ -2383,6 +2383,9 @@ nav.navbar.navbar-expand-lg.navbar-light {
     justify-content: center;
     gap: 50px;
 }
+.infosAssoLink a {
+     font-size: 20px;
+ }
 .linkContainerHome {
     width: 65%;
     display: block;
