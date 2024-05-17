@@ -92,8 +92,8 @@ function HomePage(props) {
                     </div>
                 </div>
             </div>
+            <div className={"thirdFakeContent"}></div>
             <div className={"thirdSectionHome"}>
-                <div className={"thirdFakeContent"}></div>
                 <div className={"homeContent"}>
                     <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
                     <h1 className={"titleEdition"}>Editions précédentes</h1>
