@@ -2360,6 +2360,20 @@ nav.navbar.navbar-expand-lg.navbar-light {
     align-items: center;
     background: red;
 }
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.secondPartHome {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
 .homeContent{
     display: flex;
     align-items: center;
