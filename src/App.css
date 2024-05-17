@@ -2359,14 +2359,15 @@ nav.navbar.navbar-expand-lg.navbar-light {
     justify-content: center;
     align-items: center;
 }
-.homeContent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.homeContent {
     width: 65%;
-    gap: 30px;
-    margin-bottom: 70px;
-    flex-wrap: wrap;
+    display: block;
+    margin: auto;
+}
+.firstSectionHome {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 .paragraphHome{
     color: #fff;
