@@ -35,7 +35,7 @@ function AuthService() {
 
   return (
       <div className="homeContainer">
-          <img src={"/images/animatedSOFK.gif"}/>
+          <img style={{width:"70%",top:"50%",bottom:"50%",left:"0",right:"0"}} src={"/images/animatedSOFK.gif"}/>
       </div>
   )
 }
