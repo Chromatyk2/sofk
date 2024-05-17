@@ -2378,6 +2378,11 @@ nav.navbar.navbar-expand-lg.navbar-light {
     width: 100%;
     z-index: 2;
 }
+.infosAssoLink {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
 .linkContainerHome {
     width: 65%;
     display: block;
