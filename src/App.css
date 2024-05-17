@@ -2369,12 +2369,10 @@ nav.navbar.navbar-expand-lg.navbar-light {
     margin: auto;
 }
 .secondSectionHome {
-    background-image: linear-gradient(180deg, #37627f 24%, #7ea8c5 106%);
-    border-top: 5px solid #f7bb3e;
+    background-image: linear-gradient(180deg, #37627f 24%, #7ea8c5 65%);
     border-bottom: 5px solid #f7bb3e;
-    display: flex;
+    border-top: 5px solid #f7bb3e;
     height: 85vh;
-    justify-content: center;
     width: 100%;
     z-index: 2;
 }
@@ -2417,27 +2415,26 @@ nav.navbar.navbar-expand-lg.navbar-light {
     background-attachment: fixed;
 }
 .thirdSectionHome {
-    background-image: linear-gradient(0deg, #37627f 24%, #7ea8c5 106%);
-    display: flex;
+    background-image: linear-gradient(0deg, #37627f -9%, #7ea8c5 87%);
     background-size: cover;
-    background-repeat: no-repeat;
+    display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     justify-content: center;
-    width: 100%;
-    z-index: 1;
     padding: 50px;
 }
 .thirdSectionHome .homeContent{
     width: 65%;
 }
 .fourthSectionHome {
+    background-color: #3e6986;
     display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #446f8a;
-    z-index: 1;
     flex-flow: column;
+    justify-content: center;
     padding: 50px;
+    width: 100%;
+    z-index: 1;
 }
 .paragraphHome{
     color: #fff;
