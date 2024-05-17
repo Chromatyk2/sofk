@@ -39,6 +39,7 @@ function HomePage(props) {
     <>
         <div className="homeContainer">
             <div className={"firstSectionHome"}>
+                <div className={"homeContent"}>
                     <img style={{width: "300px"}} src={"images/logoSofk.png"}/>
                     <div>
                         <p className={"paragraphHome"}>
@@ -66,6 +67,7 @@ function HomePage(props) {
                             auprès du public.
                         </p>
                     </div>
+                </div>
             </div>
             <div className={"secondSectionHome"}>
                 <h1 className={"titleEdition"}>Liens utiles</h1>
