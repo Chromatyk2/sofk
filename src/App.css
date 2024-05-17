@@ -2419,11 +2419,17 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .thirdSectionHome {
     background-image: url("../public/images/backSofk.webp");
     display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: fit-content;
     justify-content: center;
-    height: 100vh;
-    z-index: 1;
-    background: red;
     width: 100%;
+    z-index: 1;
+    padding: 50px;
+}
+.thirdSectionHome .homeContent{
+    width: 65%;
 }
 .paragraphHome{
     color: #fff;
@@ -2514,9 +2520,8 @@ ul.paginateLay {
     color:#38617f;
 }
 h1.titleEdition {
+    color: #fff;
     font-family: Charge Vector Black;
-    color: white;
-    margin-top: 100px;
     text-align: center;
 }
 .editionsInfosContainer {

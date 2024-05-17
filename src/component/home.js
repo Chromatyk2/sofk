@@ -95,7 +95,6 @@ function HomePage(props) {
             <div className={"thirdFakeContent"}></div>
             <div className={"thirdSectionHome"}>
                 <div className={"homeContent"}>
-                    <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
                     <h1 className={"titleEdition"}>Editions précédentes</h1>
                     <div className={"editionsInfosContainer"}>
                         <div className={"editionsContainer"}>
@@ -110,9 +109,10 @@ function HomePage(props) {
                             <p className={"nbEdition"}>Edition 2023</p>
                             <p className={"totalEdition"}>17 414 €</p>
                         </div>
-                        <div className={"editionsContainer"}>
+                        <div style={{width:"85%"}} className={"editionsContainer"}>
                             <p className={"nbEdition"}>Edition 2024</p>
                             <p className={"totalEdition"}>?</p>
+                            <Link className={"liveButtonHome"} to="/Streams">Les lives !</Link>
                         </div>
                     </div>
                 </div>
