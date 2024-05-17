@@ -40,7 +40,7 @@ function HomePage(props) {
         <div className="homeContainer">
             <div className={"firstSectionHome"}>
                 <div className={"homeContent"}>
-                    <img style={{minWidth: "250px",width:"45%"}} src={"images/logoSofk.png"}/>
+                    <img style={{minWidth: "250px", width: "45%"}} src={"images/logoSofk.png"}/>
                     <div>
                         <p className={"paragraphHome"}>
                             Le <span>Stream On for Kids</span> est un évènement caritatif en ligne se déroulant chaque
@@ -74,10 +74,14 @@ function HomePage(props) {
                     <img style={{minWidth: "250px", width: "30%"}} src={"images/116000logo.webp"}/>
                     <div className={"linkContainerHome"}>
                         <p>
-                            Le 116 000 est le numéro d’urgence gratuit accessible 24 h / 24 et 7 j / 7 en cas de disparition d’enfant.
+                            Le 116 000 est le numéro d’urgence gratuit accessible 24 h / 24 et 7 j / 7 en cas de
+                            disparition d’enfant.
                             Nos équipes ont pour mission d’écouter et soutenir les familles d’enfants disparus.
-                            Nous intervenons auprès des familles dans le cadre de fugues, d’enlèvements parentaux en France ou à l’étranger, de disparitions inquiétantes de mineurs et de jeunes majeurs (de moins de 25 ans).
-                            Droit d’Enfance est membre de Missing Children Europe, fédération européenne pour les enfants disparus et exploités sexuellement.
+                            Nous intervenons auprès des familles dans le cadre de fugues, d’enlèvements parentaux en
+                            France ou à l’étranger, de disparitions inquiétantes de mineurs et de jeunes majeurs (de
+                            moins de 25 ans).
+                            Droit d’Enfance est membre de Missing Children Europe, fédération européenne pour les
+                            enfants disparus et exploités sexuellement.
                         </p>
                         <div className={"infosAssoLink"}>
                             <a className="socialLink" target='_blank'
@@ -88,24 +92,28 @@ function HomePage(props) {
                     </div>
                 </div>
             </div>
-            <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
-            <h1 className={"titleEdition"}>Editions précédentes</h1>
-            <div className={"editionsInfosContainer"}>
-                <div className={"editionsContainer"}>
-                    <p className={"nbEdition"}>Edition 2021</p>
-                    <p className={"totalEdition"}>2 800 €</p>
-                </div>
-                <div className={"editionsContainer"}>
-                    <p className={"nbEdition"}>Edition 2022</p>
-                    <p className={"totalEdition"}>8 238 €</p>
-                </div>
-                <div className={"editionsContainer"}>
-                    <p className={"nbEdition"}>Edition 2023</p>
-                    <p className={"totalEdition"}>17 414 €</p>
-                </div>
-                <div className={"editionsContainer"}>
-                    <p className={"nbEdition"}>Edition 2024</p>
-                    <p className={"totalEdition"}>?</p>
+            <div className={"thirdSectionHome"}>
+                <div className={"homeContent"}>
+                    <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
+                    <h1 className={"titleEdition"}>Editions précédentes</h1>
+                    <div className={"editionsInfosContainer"}>
+                        <div className={"editionsContainer"}>
+                            <p className={"nbEdition"}>Edition 2021</p>
+                            <p className={"totalEdition"}>2 800 €</p>
+                        </div>
+                        <div className={"editionsContainer"}>
+                            <p className={"nbEdition"}>Edition 2022</p>
+                            <p className={"totalEdition"}>8 238 €</p>
+                        </div>
+                        <div className={"editionsContainer"}>
+                            <p className={"nbEdition"}>Edition 2023</p>
+                            <p className={"totalEdition"}>17 414 €</p>
+                        </div>
+                        <div className={"editionsContainer"}>
+                            <p className={"nbEdition"}>Edition 2024</p>
+                            <p className={"totalEdition"}>?</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <h1 className={"titleEdition"}>Streamer.euses 2024</h1>

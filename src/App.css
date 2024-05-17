@@ -2373,7 +2373,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     background-image: linear-gradient(180deg, #37627f 24%, #7ea8c5 106%);
     border-top: 5px solid #f7bb3e;
     display: flex;
-    height: 100vh;
+    height: 85vh;
     justify-content: center;
     width: 100%;
     z-index: 2;
