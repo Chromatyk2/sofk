@@ -2378,6 +2378,14 @@ nav.navbar.navbar-expand-lg.navbar-light {
     z-index: 2;
     border-top: solid 5px #f7bb3e;
 }
+.linkContainerHome {
+    width: 65%;
+    display: block;
+    margin: auto;
+}
+.linkContainerHome p{
+    color: white;
+}
 .paragraphHome{
     color: #fff;
     font-size: 18px;
