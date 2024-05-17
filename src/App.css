@@ -2355,7 +2355,6 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .homeContainer {
     display: flex;
     flex-flow: column;
-    gap: 20px;
     justify-content: center;
     align-items: center;
 }
