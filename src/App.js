@@ -16,18 +16,17 @@ function App() {
     return <Login />
   }
   return(
-      <Login />
-    // <>
-    //   <BrowserRouter>
-    //     <NavBar cookies={cookies}/>
-    //     <Routes>
-    //       <Route path="/" element={<HomePage cookies={cookies}/>}/>
-    //       <Route path="/Streams" element={<StreamOnLayout cookies={cookies}/>}/>
-    //       <Route path="/Clips" element={<ClipsLayout cookies={cookies}/>}/>
-    //     </Routes>
-    //     <Footer cookies={cookies}/>
-    //   </BrowserRouter>
-    // </>
+    <>
+      <BrowserRouter>
+        <NavBar cookies={cookies}/>
+        <Routes>
+          <Route path="/" element={<HomePage cookies={cookies}/>}/>
+          <Route path="/Streams" element={<StreamOnLayout cookies={cookies}/>}/>
+          <Route path="/Clips" element={<ClipsLayout cookies={cookies}/>}/>
+        </Routes>
+        <Footer cookies={cookies}/>
+      </BrowserRouter>
+    </>
   );
 }
 
