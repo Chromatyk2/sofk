@@ -2433,6 +2433,15 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .thirdSectionHome .homeContent{
     width: 65%;
 }
+.fourthSectionHome {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #446f8a;
+    z-index: 1;
+    flex-flow: column;
+    padding: 50px;
+}
 .paragraphHome{
     color: #fff;
     font-size: 18px;
@@ -2668,10 +2677,11 @@ button.buttonToDisplayStreamMozaique {
 }
 .streamListHome {
     display: flex;
-    width: 50%;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
 }
 .streamHomeContainer{
     display: flex;

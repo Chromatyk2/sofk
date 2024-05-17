@@ -118,7 +118,6 @@ function HomePage(props) {
                 </div>
             </div>
             <div className={"fourthSectionHome"}>
-                <div className={"homeContent"}>
                     <h1 className={"titleEdition"}>Streamer.euses 2024</h1>
                     <div className={"streamListHome"}>
                         {user.length > 0 &&
@@ -134,7 +133,6 @@ function HomePage(props) {
                             })
                         }
                     </div>
-                </div>
             </div>
         </div>
     </>
