@@ -2358,7 +2358,6 @@ nav.navbar.navbar-expand-lg.navbar-light {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
 }
 .homeContent{
     display: flex;
@@ -2666,6 +2665,12 @@ button.buttonToDisplayStreamMozaique {
     width: 320px;
     border: 4px solid #f7bb3e;
   }
+.firstPartHome{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    background-image: linear-gradient(0deg, #38617f 20%, #9ad4df 238%, #38617f 0);
+}
 @media screen and (min-width: 850px) {
     .twitch {
         position: relative;
