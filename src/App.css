@@ -2384,7 +2384,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     gap: 50px;
     margin-top: 50px;
 }
-.infosAssoLink a {
+.infosAssoLink a.socialLink {
      font-size: 20px;
  }
 .linkContainerHome {
