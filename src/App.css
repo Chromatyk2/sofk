@@ -2417,6 +2417,8 @@ nav.navbar.navbar-expand-lg.navbar-light {
     background-attachment: fixed;
 }
 .thirdSectionHome {
+    border-top: 5px solid #f7bb3e;
+    border-bottom: 5px solid #f7bb3e;
     background-image: url("../public/images/backSofk.webp");
     display: flex;
     background-size: cover;
