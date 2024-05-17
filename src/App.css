@@ -2406,10 +2406,14 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .thirdFakeContent {
     width: 100%;
     height: 50vh;
-    background-image: url("../public/images/116000logo.webp");
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url("../public/images/logoSofk.png");
+    background-position: 50%;
+    background-size: 50%;
+    height: 50vh;
+    width: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-color: #39617f;
 }
 .thirdSectionHome {
     display: flex;
