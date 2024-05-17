@@ -109,7 +109,7 @@ function HomePage(props) {
                             <p className={"nbEdition"}>Edition 2023</p>
                             <p className={"totalEdition"}>17 414 €</p>
                         </div>
-                        <div style={{width:"85%"}} className={"editionsContainer"}>
+                        <div style={{width: "85%"}} className={"editionsContainer"}>
                             <p className={"nbEdition"}>Edition 2024</p>
                             <p className={"totalEdition"}>?</p>
                             <Link className={"liveButtonHome"} to="/Streams">Les lives !</Link>
@@ -117,20 +117,24 @@ function HomePage(props) {
                     </div>
                 </div>
             </div>
-            <h1 className={"titleEdition"}>Streamer.euses 2024</h1>
-            <div className={"streamListHome"}>
-                {user.length > 0 &&
-                    user.map((val, key) => {
-                        return (
-                            <div className={"streamHomeContainer"}>
-                                <a href={"https://twitch.tv/" + val.infos[0].login} target={"_blank"}>
-                                    <img src={val.infos[0].profile_image_url}/>
-                                </a>
-                                <p style={{textAlign: "center"}}>{val.infos[0].login}</p>
-                            </div>
-                        )
-                    })
-                }
+            <div className={"fourthSectionHome"}>
+                <div className={"homeContent"}>
+                    <h1 className={"titleEdition"}>Streamer.euses 2024</h1>
+                    <div className={"streamListHome"}>
+                        {user.length > 0 &&
+                            user.map((val, key) => {
+                                return (
+                                    <div className={"streamHomeContainer"}>
+                                        <a href={"https://twitch.tv/" + val.infos[0].login} target={"_blank"}>
+                                            <img src={val.infos[0].profile_image_url}/>
+                                        </a>
+                                        <p style={{textAlign: "center"}}>{val.infos[0].login}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     </>
