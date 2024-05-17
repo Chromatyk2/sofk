@@ -2370,12 +2370,13 @@ nav.navbar.navbar-expand-lg.navbar-light {
     margin: auto;
 }
 .secondSectionHome {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    height: 100vh;
     background: #37627f;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
     z-index: 2;
+    border-top: solid 5px #f7bb3e;
 }
 .paragraphHome{
     color: #fff;
@@ -2683,6 +2684,7 @@ button.buttonToDisplayStreamMozaique {
     .secondSectionHome .homeContent img{
         position: relative;
         top: -115px;
+        border-top: solid 5px #f7bb3e;
     }
     .twitch {
         position: relative;
