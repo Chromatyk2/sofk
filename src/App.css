@@ -2718,7 +2718,19 @@ button.buttonToDisplayStreamMozaique {
     width: 320px;
     border: 4px solid #f7bb3e;
   }
-
+a.liveButtonHome {
+    display: block;
+    margin: auto;
+    border: 4px solid #f7bb3e;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    width: 50%;
+}
+a.liveButtonHome:hover {
+    background-image: linear-gradient(180deg, #f7bb3e 24%, #fff 155%);
+    color: #fff;
+}
 a.socialLink {
     border: 4px solid #F7BB3E;
     border-radius: 35px;
