@@ -2358,6 +2358,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    background: red;
 }
 .homeContent{
     display: flex;

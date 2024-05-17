@@ -71,7 +71,7 @@ function HomePage(props) {
             </div>
             <div className={"secondPartHome"}>
                 <div className={"homeContent"}>
-                    <img style={{width: "300px"}} src={"images/logoSofk.png"}/>
+                    <img style={{width: "500px"}} src={"images/logoSofk.png"}/>
                     <div>
                         <p className={"paragraphHome"}>
                             Le <span>Stream On for Kids</span> est un évènement caritatif en ligne se déroulant chaque
