@@ -2369,6 +2369,14 @@ nav.navbar.navbar-expand-lg.navbar-light {
     justify-content: center;
     height: 100vh;
 }
+.secondSectionHome {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    background: red;
+    z-index: 2;
+}
 .paragraphHome{
     color: #fff;
     font-size: 18px;
@@ -2666,6 +2674,7 @@ button.buttonToDisplayStreamMozaique {
     width: 320px;
     border: 4px solid #f7bb3e;
   }
+
 @media screen and (min-width: 850px) {
     .firstSectionHome .homeContent {
         position: fixed;
