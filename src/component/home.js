@@ -73,6 +73,12 @@ function HomePage(props) {
                 <div className={"homeContent"}>
                     <img style={{minWidth: "250px", width: "30%"}} src={"images/116000logo.webp"}/>
                     <div className={"linkContainerHome"}>
+                        <p>
+                            Le 116 000 est le numéro d’urgence gratuit accessible 24 h / 24 et 7 j / 7 en cas de disparition d’enfant.
+                            Nos équipes ont pour mission d’écouter et soutenir les familles d’enfants disparus.
+                            Nous intervenons auprès des familles dans le cadre de fugues, d’enlèvements parentaux en France ou à l’étranger, de disparitions inquiétantes de mineurs et de jeunes majeurs (de moins de 25 ans).
+                            Droit d’Enfance est membre de Missing Children Europe, fédération européenne pour les enfants disparus et exploités sexuellement.
+                        </p>
                         <a className="socialLink" target='_blank'
                            href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
                             un Don</a>

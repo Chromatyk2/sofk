@@ -2684,7 +2684,7 @@ button.buttonToDisplayStreamMozaique {
     .secondSectionHome .homeContent img{
         position: relative;
         top: -115px;
-        border-top: solid 5px #f7bb3e;
+        border: solid 5px #f7bb3e;
     }
     .twitch {
         position: relative;
