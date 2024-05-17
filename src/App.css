@@ -2668,8 +2668,8 @@ button.buttonToDisplayStreamMozaique {
 .firstPartHome{
     display: flex;
     justify-content: center;
-    padding-top: 5%;
     background-image: linear-gradient(0deg, #38617f 20%, #9ad4df 238%, #38617f 0);
+    height: 100vh;
 }
 @media screen and (min-width: 850px) {
     .twitch {
