@@ -79,16 +79,18 @@ function HomePage(props) {
                             Nous intervenons auprès des familles dans le cadre de fugues, d’enlèvements parentaux en France ou à l’étranger, de disparitions inquiétantes de mineurs et de jeunes majeurs (de moins de 25 ans).
                             Droit d’Enfance est membre de Missing Children Europe, fédération européenne pour les enfants disparus et exploités sexuellement.
                         </p>
-                        <a className="socialLink" target='_blank'
-                           href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
-                            un Don</a>
-                        <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
-                        <a className="socialLink" target='_blank'
-                           href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
-                            un Don</a>
+                        <div className={"infosAssoLink"}>
+                            <a className="socialLink" target='_blank'
+                               href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
+                                un Don</a>
+                            <a className="socialLink" target='_blank'
+                               href="https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=643451324922470142&l=fr-FR">Faire
+                                un Don</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <Link className={"linkToTwitch"} to="/Streams">Les lives</Link>
             <h1 className={"titleEdition"}>Editions précédentes</h1>
             <div className={"editionsInfosContainer"}>
                 <div className={"editionsContainer"}>
