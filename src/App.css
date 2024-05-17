@@ -2787,6 +2787,12 @@ a.socialLink {
         padding-top:5%;
         height: fit-content;
     }
+    .firstSectionHome .homeContent {
+        display: block;
+        margin: auto;
+        width: 90%;
+        text-align: justify;
+    }
     .secondSectionHome {
         display: block;
     }
