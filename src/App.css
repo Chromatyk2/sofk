@@ -2382,6 +2382,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     display: flex;
     justify-content: center;
     gap: 50px;
+    margin-top: 50px;
 }
 .infosAssoLink a {
      font-size: 20px;
@@ -2703,6 +2704,7 @@ button.buttonToDisplayStreamMozaique {
         position: relative;
         top: -115px;
         border: solid 5px #f7bb3e;
+        border-radius: 50px;
     }
     .twitch {
         position: relative;
