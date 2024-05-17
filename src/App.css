@@ -2785,6 +2785,10 @@ a.socialLink {
 @media screen and (max-width: 849px) {
     .firstSectionHome {
         padding-top:5%;
+        height: fit-content;
+    }
+    .secondSectionHome {
+        display: block;
     }
     .streamListHome {
         display: flex;
