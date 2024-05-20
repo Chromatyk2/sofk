@@ -4,6 +4,7 @@ import '../App.css'
 function Partners(props) {
     return (
         <>
+            <h1 className={"titleEdition"}>Nos partenaires</h1>
             <div className={"partnerContainer"}>
                 <a href={"https://www.ville-fachesthumesnil.fr/"}><img src={"/images/faches.png"}/></a>
                 <a href={"https://www.tokyosnackbox.com/"}><img src={"/images/tokyo.png"}/></a>
