@@ -2799,7 +2799,7 @@ a.socialLink {
     }
 }
 @media screen and (max-width: 849px) {
-    .donationLinkMobile{
+    .donationLinkMobile {
         position: absolute;
         margin: auto;
         top: 3px;
@@ -2809,6 +2809,7 @@ a.socialLink {
         bottom: auto;
         right: 0;
         display: block;
+    }
     .firstSectionHome {
         padding-top:5%;
         height: fit-content;
