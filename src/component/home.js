@@ -4,6 +4,7 @@ import {useCookies} from "react-cookie";
 import '../App.css'
 import {Link} from "react-router-dom";
 import UniqueStreamerClip from "./uniqueStreamerClip";
+import Login from '../services/auth.services.js';
 
 function HomePage(props) {
     const [cookies, setCookie] = useCookies();
@@ -20,19 +21,23 @@ function HomePage(props) {
                 }
             }
         ).then(function (response) {
-            response.data.data[0].users.map((val, key) => {
-                Axios.get(
-                    'https://api.twitch.tv/helix/users?login='+val.user_name,
-                    {
-                        headers:{
-                            'Authorization': `Bearer ${cookies.token.access_token}`,
-                            'Client-Id': process.env.REACT_APP_CLIENT_ID
+            if(response.status == 200){
+                response.data.data[0].users.map((val, key) => {
+                    Axios.get(
+                        'https://api.twitch.tv/helix/users?login='+val.user_name,
+                        {
+                            headers:{
+                                'Authorization': `Bearer ${cookies.token.access_token}`,
+                                'Client-Id': process.env.REACT_APP_CLIENT_ID
+                            }
                         }
-                    }
-                ).then(function(response){
-                    setUser(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+                    ).then(function(response){
+                        setUser(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+                    })
                 })
-            })
+            }else{
+                return <Login />
+            }
         })
     }, [])
   return (
