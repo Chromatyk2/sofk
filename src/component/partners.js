@@ -5,7 +5,7 @@ function Partners(props) {
     return (
         <>
             <div style={{position: "relative",backgroundColor: "#f7bb3e"}} className={"partnerSection"}>
-                <h1 style={{color:"black"}} className={"titleEdition"}>Nos partenaires</h1>
+                <h1 style={{color:"black",fontSize:"20px",padding:"10px"}} className={"titleEdition"}>Nos partenaires</h1>
                 <div className={"partnerContainer"}>
                     <a href={"https://www.ville-fachesthumesnil.fr/"}><img src={"/images/faches.png"}/></a>
                     <a href={"https://www.tokyosnackbox.com/"}><img src={"/images/tokyo.png"}/></a>

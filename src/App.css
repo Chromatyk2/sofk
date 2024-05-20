@@ -2752,15 +2752,16 @@ a.socialLink {
     font-size: 35px;
 }
 
-.partnerContainer{
+.partnerContainer {
     background-color: #f7bb3e;
-    z-index: 10;
-    position: relative;
     display: flex;
-    padding: 20px;
-    justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    padding: 10px;
 }
 .partnerContainer a{
     display: flex;
