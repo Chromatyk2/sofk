@@ -13,7 +13,7 @@ function Partners(props) {
                         <small style={{textAlign:"center"}}>-10 % sur vos commandes avec le code <span style={{fontWeight:"bold"}}>STREAMON10</span><br/> pendant la durée de l'événement</small>
                     </div>
                     <a href={"https://mangadokaze.com/index.php"} target={"_blank"}><img src={"/images/manga.png"}/></a>
-                    <div style={{height:"85px",display:"flex",flexFlow:"column",justifyContent:"center"}}>
+                    <div style={{height:"120px",display:"flex",flexFlow:"column",justifyContent:"center"}}>
                         <a href={"https://mistertee.fr/"} target={"_blank"}><img src={"/images/mister.png"}/></a>
                         <small style={{textAlign:"center"}}>-10 % sur vos commandes avec le code <span style={{fontWeight:"bold"}}>Stream10</span><br/> pendant la durée de
                             l'événement</small>
