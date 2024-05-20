@@ -2762,6 +2762,9 @@ a.socialLink {
     gap: 50px;
     flex-wrap: wrap;
 }
+.partnerContainer a{
+    display: flex;
+}
 @media screen and (min-width: 850px) {
     .firstSectionHome .homeContent {
         position: fixed;
