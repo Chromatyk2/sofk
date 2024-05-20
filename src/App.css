@@ -2751,6 +2751,17 @@ a.socialLink {
     width: 320px;
     font-size: 35px;
 }
+
+.partnerContainer{
+    background-color: #f7bb3e;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
 @media screen and (min-width: 850px) {
     .firstSectionHome .homeContent {
         position: fixed;
@@ -2798,15 +2809,6 @@ a.socialLink {
         gap: 15px;
         margin-top: 30px;
         flex-wrap: wrap;
-    }
-    .partnerContainer{
-        background-color: #f7bb3e;
-        z-index: 10;
-        position: relative;
-        display: flex;
-        padding: 20px;
-        justify-content: center;
-        gap: 50px;
     }
     .secondSectionHome {
         display: block;
