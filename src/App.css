@@ -2355,19 +2355,91 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .homeContainer {
     display: flex;
     flex-flow: column;
-    gap: 20px;
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
 }
-.homeContent{
+.firstSectionHome {
     display: flex;
-    align-items: center;
     justify-content: center;
+    height: 100vh;
+}
+.firstSectionHome .homeContent {
     width: 65%;
-    gap: 30px;
-    margin-bottom: 70px;
-    flex-wrap: wrap;
+    display: block;
+    margin: auto;
+}
+.secondSectionHome {
+    background-image: linear-gradient(180deg, #37627f 24%, #7ea8c5 106%);
+    border-top: 5px solid #f7bb3e;
+    border-bottom: 5px solid #f7bb3e;
+    display: flex;
+    height: 85vh;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+}
+.infosAssoLink {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+.infosAssoLink a.socialLink {
+    font-size: 20px;
+    border-radius: 15px;
+}
+.infosAssoLink a.socialLink:hover {
+    background-image: linear-gradient(180deg, #f7bb3e 24%, #fff 155%);
+    color: white;
+}
+.linkContainerHome {
+    width: 65%;
+    display: block;
+    margin: auto;
+}
+.linkContainerHome p {
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.thirdFakeContent {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../public/images/animatedSOFK.gif");
+    background-position: 50%;
+    background-size: 50%;
+    height: 50vh;
+    width: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-color: #7ea8c5;
+    background-attachment: fixed;
+}
+.thirdSectionHome {
+    border-top: 5px solid #f7bb3e;
+    border-bottom: 5px solid #f7bb3e;
+    background-image: linear-gradient(0deg, #37627f 24%, #7ea8c5 106%);
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    padding: 50px;
+}
+.thirdSectionHome .homeContent{
+    width: 65%;
+}
+.fourthSectionHome {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #446f8a;
+    z-index: 1;
+    flex-flow: column;
+    padding: 50px;
 }
 .paragraphHome{
     color: #fff;
@@ -2458,9 +2530,8 @@ ul.paginateLay {
     color:#38617f;
 }
 h1.titleEdition {
+    color: #fff;
     font-family: Charge Vector Black;
-    color: white;
-    margin-top: 100px;
     text-align: center;
 }
 .editionsInfosContainer {
@@ -2509,15 +2580,6 @@ button.disableStreamerListButton {
     text-align: end;
     width: 100%;
     background-color: #38617f;
-}
-a.socialLink {
-    border: 4px solid #F7BB3E;
-    border-radius: 35px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    width: 320px;
-    font-size: 35px;
 }
 .streamersListMobile{
     display: none;
@@ -2614,10 +2676,11 @@ button.buttonToDisplayStreamMozaique {
 }
 .streamListHome {
     display: flex;
-    width: 50%;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
 }
 .streamHomeContainer{
     display: flex;
@@ -2667,7 +2730,54 @@ button.buttonToDisplayStreamMozaique {
     border: 4px solid #f7bb3e;
   }
 .donationLinkMobile{display: none}
+a.liveButtonHome {
+    display: block;
+    margin: auto;
+    border: 4px solid #f7bb3e;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    width: 50%;
+}
+a.liveButtonHome:hover {
+    background-image: linear-gradient(180deg, #f7bb3e 24%, #fff 155%);
+    color: #fff;
+}
+a.socialLink {
+    border: 4px solid #F7BB3E;
+    border-radius: 35px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 320px;
+    font-size: 35px;
+}
+
+.partnerContainer {
+    background-color: #f7bb3e;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+.partnerContainer a{
+    display: flex;
+}
 @media screen and (min-width: 850px) {
+    .firstSectionHome .homeContent {
+        position: fixed;
+        top: 15%;
+    }
+    .secondSectionHome .homeContent img{
+        position: relative;
+        top: -115px;
+        border: solid 5px #f7bb3e;
+        border-radius: 50px;
+    }
     .twitch {
         position: relative;
         margin-bottom: 0;
@@ -2699,6 +2809,60 @@ button.buttonToDisplayStreamMozaique {
         bottom: auto;
         right: 0;
         display: block;
+    .firstSectionHome {
+        padding-top:5%;
+        height: fit-content;
+        padding: 15px;
+    }
+    .firstSectionHome .homeContent {
+        display: block;
+        margin: auto;
+        width: 90%;
+        text-align: justify;
+    }
+    .infosAssoLink {
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .secondSectionHome {
+        display: block;
+        height: fit-content;
+        padding: 15px;
+    }
+    .linkContainerHome {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+    .linkContainerHome p {
+        color: #fff;
+        font-size: 20px;
+        text-align: justify;
+    }
+    .infosAssoLink a.socialLink {
+        border-radius: 15px;
+        font-size: 15px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .thirdFakeContent {
+        background-repeat: no-repeat;
+        width: 100%;
+        z-index: 1;
+        height: 20vh;
+        background-size: 100%;
+    }
+    .thirdSectionHome .homeContent {
+        width: 95%;
+    }
+    a.liveButtonHome {
+        border-radius: 15px;
+        display: block;
+        margin: auto;
+        width: 100%;
+        font-size: 25px;
     }
     .streamListHome {
         display: flex;
