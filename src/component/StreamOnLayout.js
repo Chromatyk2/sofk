@@ -112,7 +112,11 @@ function StreamOnLayout() {
                     </div>
                     <a style={{position: "absolute", left: "0", right: "0", margin: "auto", bottom: "60px"}}
                        className="donationLink socialLink" target='_blank'
-                       href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member="+charityTeam.find((person) => person.infos.display_name.toLowerCase() === streamToDisplay.toLowerCase()).infos.id+"&l=fr-FR"}>Faire
+                       href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=" + charityTeam.find((person) => person.infos.display_name.toLowerCase() === streamToDisplay.toLowerCase()).infos.id + "&l=fr-FR"}>Faire
+                        un Don</a>
+                    <a style={{position: "absolute",margin: "auto",top: "3px",zIndex: "10000",width: "150px",fontSize: "15px",bottom: "auto",right: "0"}}
+                       className="donationLinkMobile socialLink" target='_blank'
+                       href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member=" + charityTeam.find((person) => person.infos.display_name.toLowerCase() === streamToDisplay.toLowerCase()).infos.id + "&l=fr-FR"}>Faire
                         un Don</a>
                 </>
                 :
@@ -121,7 +125,8 @@ function StreamOnLayout() {
                         {orderedOnStream.length > 0 &&
                             onStream.map((val, key) => {
                                 return (
-                                    <UniqueStreamerMozaique change={handleDataFromChild} onStream={true} streamer={val}/>
+                                    <UniqueStreamerMozaique change={handleDataFromChild} onStream={true}
+                                                            streamer={val}/>
                                 )
                             })
                         }

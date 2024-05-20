@@ -2666,6 +2666,7 @@ button.buttonToDisplayStreamMozaique {
     width: 320px;
     border: 4px solid #f7bb3e;
   }
+.donationLinkMobile{display: none}
 @media screen and (min-width: 850px) {
     .twitch {
         position: relative;
@@ -2688,6 +2689,17 @@ button.buttonToDisplayStreamMozaique {
     }
 }
 @media screen and (max-width: 849px) {
+    .donationLinkMobile{
+        position: absolute;
+        margin: auto;
+        top: 3px;
+        z-index: 10000;
+        width: 150px;
+        font-size: 15px;
+        bottom: auto;
+        right: 0;
+        display: block;
+    }
     .streamListHome {
         display: flex;
         width: 100%;
