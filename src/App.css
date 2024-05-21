@@ -2397,6 +2397,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     width: 65%;
     display: block;
     margin: auto;
+    margin-top: -75px;
 }
 .linkContainerHome p {
     color: #fff;
@@ -2738,7 +2739,7 @@ a.liveButtonHome {
     text-align: center;
     text-decoration: none;
     border-radius: 15px;
-    width: 50%;
+    width: 100%;
 }
 a.liveButtonHome:hover {
     background-image: linear-gradient(180deg, #f7bb3e 24%, #fff 155%);
