@@ -2775,7 +2775,7 @@ a.socialLink {
     }
     .secondSectionHome .homeContent img{
         position: relative;
-        top: 17%;
+        top: -20%;
         border: solid 5px #f7bb3e;
         border-radius: 50px;
     }
