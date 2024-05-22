@@ -28,7 +28,7 @@ function ClipsLayout() {
                 setTeam(response.data.data[0].users);
                 response.data.data[0].users.map((val, key) => {
                     Axios.get(
-                        'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00.000+02:00&ended_at=2024-05-26T00:00:00.000+02:00&first=100&broadcaster_id=' + val.user_id,
+                        'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00+02:00&first=100&broadcaster_id=' + val.user_id,
                         {
                             headers: {
                                 'Authorization': `Bearer ${cookies.token.access_token}`,
