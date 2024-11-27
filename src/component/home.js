@@ -115,9 +115,8 @@ function HomePage(props) {
                             <p className={"totalEdition"}>17 414 €</p>
                         </div>
                         <div style={{width: "85%"}} className={"editionsContainer"}>
-                            <p className={"nbEdition"}>Edition 2024</p>
+                            <p className={"nbEdition"}>23 542 €</p>
                             <p className={"totalEdition"}>?</p>
-                            <Link className={"liveButtonHome"} to="/Streams">Les lives !</Link>
                         </div>
                     </div>
                 </div>
