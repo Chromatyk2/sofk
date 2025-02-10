@@ -55,7 +55,7 @@ function App() {
               <p style={{color: "white"}}>Streameur.euses</p>
               <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
             </div>
-            <div>
+            <div className={"streamsModalContainer"}>
               <StreamsModal cookies={cookies}/>
             </div>
           </Modal>

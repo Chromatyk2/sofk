@@ -2971,3 +2971,11 @@ a.socialLink {
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
     background-color: rgba(0, 0, 0, 0.75) !important;
 }
+.streamsModalContainer{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: overlay;
+    height: 500px;
+    gap: 10px;
+    justify-content: center;
+}
