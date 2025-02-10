@@ -1,11 +1,12 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import logoTwitch from '../twitch.png'
 import logoReplay from '../film.png'
 import logoEuro from '../euro.png'
 
 
 function Player(props) {
-    const streamerUrl = urlParams.get('streamer')
+    const queryParameters = new URLSearchParams(window.location.search)
+    const streamerUrl = queryParameters.get('streamer')
     const [streamer, setStreamer] = React.useState(null);
     useEffect(() => {
         setStreamer(streamerUrl)
