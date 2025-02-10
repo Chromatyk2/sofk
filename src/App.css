@@ -2268,14 +2268,6 @@ span.navbar-brand {
     background-position: center;
 }
 
-a{
-    font-size: 50px;
-    color: white;
-    font-family: "Charge Vector Black";
-}
-a:hover{
-    color: #cbcbcb;
-}
 .containerStream {
     display: flex;
     width: 100%;
@@ -2292,6 +2284,8 @@ nav.navbar.navbar-expand-lg.navbar-light {
     border-radius: 10px;
     height: 70px;
     padding: 0px 20px 0 20px;
+    display: flex;
+    align-items: anchor-center;
 }
 
 .uniqueStreamer button{
@@ -2322,7 +2316,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     justify-content: space-between;
     margin: auto;
     position: relative;
-    width: 90%;
+    width: 280px;
 }
 .streamsModalContainer::-webkit-scrollbar {
     width: 12px; /* width of the entire scrollbar */
