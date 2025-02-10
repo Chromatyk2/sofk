@@ -28,6 +28,7 @@ function App() {
     },
   };
   if(Object.keys(cookies).length == 0) {
+    const StreamsModal = React.lazy(() => import('./component/StreamsModal'));
     return <Login />
   }
   function openModal() {
@@ -36,7 +37,6 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
-  const StreamsModal = React.lazy(() => import('./component/StreamsModal'));
   return(
     <>
       <BrowserRouter>
