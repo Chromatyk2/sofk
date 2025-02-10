@@ -2288,6 +2288,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
 }
 .uniqueStreamer{
     background-color:#38617F;
+    width: 300px;
 }
 .uniqueStreamer button{
     background-color:transparent;
@@ -2978,4 +2979,5 @@ a.socialLink {
     height: 500px;
     gap: 10px;
     justify-content: center;
+    max-width:1000px;
 }

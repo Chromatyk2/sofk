@@ -5,7 +5,7 @@ import UniqueStreamer from './uniqueStreamer.js';
 import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
-function StreamOnLayout() {
+function StreamsModal() {
     const [cookies, setCookie] = useCookies();
     const [streamToDisplay, setStreamToDisplay] = useState();
     const [team, setTeam] = useState([]);
@@ -73,14 +73,14 @@ function StreamOnLayout() {
                 {orderedOnStream.length > 0 &&
                     onStream.map((val, key) => {
                         return (
-                            <UniqueStreamer change={handleDataFromChild} onStream={true} streamer={val}/>
+                            <UniqueStreamerModal change={handleDataFromChild} onStream={true} streamer={val}/>
                         )
                     })
                 }
                 {offStream.length > 0 &&
                     offStream.map((val, key) => {
                         return (
-                            <UniqueStreamer change={handleDataFromChild} onStream={false} streamer={val}/>
+                            <UniqueStreamerModal change={handleDataFromChild} onStream={false} streamer={val}/>
                         )
                     })
                 }
@@ -89,4 +89,4 @@ function StreamOnLayout() {
         ;
 }
 
-export default StreamOnLayout;
+export default StreamsModal;
