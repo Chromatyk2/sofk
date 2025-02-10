@@ -5,7 +5,6 @@ import UniqueStreamer from './uniqueStreamer.js';
 import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 import UniqueStreamerModal from "./UniqueStreamerModal";
-import { useCookies } from 'react-cookie';
 
 function StreamsModal(props) {
 
