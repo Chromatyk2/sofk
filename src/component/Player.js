@@ -14,7 +14,7 @@ function Player(props) {
     return (
         <>
             {streamer &&
-                <>
+                <div style={{height:"100vh"}}>
                     <h1 style={{marginTop:"30px", textAlign:"center"}}>{streamer}</h1>
                     <div style={{marginTop:"30px"}} className="twitch">
                         <div className="twitch-video">
@@ -72,7 +72,7 @@ function Player(props) {
                     {/*<a href="mailto:?subject=<SUBJECT>&body=<BODY>">*/}
                     {/*    Email*/}
                     {/*</a>*/}
-                </>
+                </div>
             }
         </>
     );
