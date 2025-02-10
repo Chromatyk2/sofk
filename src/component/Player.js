@@ -10,7 +10,7 @@ function Player(props) {
             <div className="twitch">
                 <div className="twitch-video">
                     <iframe
-                        src="https://player.twitch.tv/?channel=meetup_tv&parent=meetuptv.netlify.app&autoplay=true&muted=false"
+                        src="https://player.twitch.tv/?channel=meetup_tv&parent=preview--streamonforkids.netlify.app&autoplay=true&muted=false"
                         frameBorder="0"
                         scrolling="no"
                         allowFullScreen="true"
@@ -22,7 +22,7 @@ function Player(props) {
                     <iframe
                         frameBorder="0"
                         scrolling="no"
-                        src="https://www.twitch.tv/embed/meetup_tv/chat?parent=meetuptv.netlify.app"
+                        src="https://www.twitch.tv/embed/meetup_tv/chat?parent=preview--streamonforkids.netlify.app"
                         height="100%"
                         width="100%">
                     </iframe>
