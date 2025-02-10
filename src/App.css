@@ -2361,18 +2361,29 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .homeContent{
     padding: 20px;
 }
+.buttonStreamsContainer{
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    background: white;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 10px;
+}
 .buttonStreamers{
     background-image: linear-gradient(180deg, #53819A 24%, #38617F 155%);
     border-radius: 10px;
     bottom: 50px;
     color: #fff;
-    left: 0;
-    margin: auto;
-    position: fixed;
-    right: 0;
     width: 250px;
     font-size: 20px;
-    border: #fcc249 solid 4px;
+    border: none;
 }
 
 .buttonStreamers:hover {

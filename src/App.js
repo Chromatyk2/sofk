@@ -27,7 +27,7 @@ function App() {
         </Routes>
         {/*<Partners cookies={cookies}/>*/}
         <Footer cookies={cookies}/>
-        <div>
+        <div className={"buttonStreamsContainer"}>
           <button className={"buttonStreamers"}>Streameur.euses</button>
           <button className={"buttonStreamers"}>Boutique</button>
         </div>
