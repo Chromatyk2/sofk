@@ -43,7 +43,6 @@ function HomePage(props) {
   return (
     <>
         <div className="homeContainer">
-            <div className={"firstSectionHome"}>
                 <div className={"homeContent"}>
                     <img style={{width: "250px", marginBottom: "25px"}} src={"images/logoSofk.png"}/>
                     <div style={{maxWidth:"650px", display:"block", margin:"auto"}}>
@@ -72,7 +71,7 @@ function HomePage(props) {
                             auprès du public.
                         </p>
                     </div>
-                    <div className={"homeContent"}>
+                    <div>
                         <h1 className={"titleEdition"}>Editions précédentes</h1>
                         <div className={"editionsInfosContainer"}>
                             <div className={"editionsContainer"}>
@@ -94,7 +93,6 @@ function HomePage(props) {
                         </div>
                     </div>
                 </div>
-            </div>
             {/*<div className={"secondSectionHome"}>*/}
             {/*    <div className={"homeContent"}>*/}
             {/*        <img style={{minWidth: "250px", width: "30%"}} src={"images/116000logo.webp"}/>*/}
@@ -118,24 +116,24 @@ function HomePage(props) {
             {/*        </div>*/}
             {/*    </div>*/}
             {/*</div>*/}
-            <div className={"thirdFakeContent"}></div>
-            <div className={"fourthSectionHome"}>
-                    <h1 className={"titleEdition"}>Streamer.euses 2024</h1>
-                    <div className={"streamListHome"}>
-                        {user.length > 0 &&
-                            user.map((val, key) => {
-                                return (
-                                    <div className={"streamHomeContainer"}>
-                                        <a href={"https://twitch.tv/" + val.infos[0].login} target={"_blank"}>
-                                            <img src={val.infos[0].profile_image_url}/>
-                                        </a>
-                                        <p style={{textAlign: "center"}}>{val.infos[0].login}</p>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-            </div>
+            {/*<div className={"thirdFakeContent"}></div>*/}
+            {/*<div className={"fourthSectionHome"}>*/}
+            {/*        <h1 className={"titleEdition"}>Streamer.euses 2024</h1>*/}
+            {/*        <div className={"streamListHome"}>*/}
+            {/*            {user.length > 0 &&*/}
+            {/*                user.map((val, key) => {*/}
+            {/*                    return (*/}
+            {/*                        <div className={"streamHomeContainer"}>*/}
+            {/*                            <a href={"https://twitch.tv/" + val.infos[0].login} target={"_blank"}>*/}
+            {/*                                <img src={val.infos[0].profile_image_url}/>*/}
+            {/*                            </a>*/}
+            {/*                            <p style={{textAlign: "center"}}>{val.infos[0].login}</p>*/}
+            {/*                        </div>*/}
+            {/*                    )*/}
+            {/*                })*/}
+            {/*            }*/}
+            {/*        </div>*/}
+            {/*</div>*/}
         </div>
     </>
   )
