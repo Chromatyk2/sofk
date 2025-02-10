@@ -71,7 +71,7 @@ function HomePage(props) {
                             auprès du public.
                         </p>
                     </div>
-                    <div>
+                    <div style={{marginTop:"30px"}}>
                         <h1 className={"titleEdition"}>Editions précédentes</h1>
                         <div className={"editionsInfosContainer"}>
                             <div className={"editionsContainer"}>
