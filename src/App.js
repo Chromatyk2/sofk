@@ -13,6 +13,7 @@ import LinkToStream from "./component/LinkToStream";
 import Partners from "./component/partners";
 import Modal from 'react-modal';
 import StreamsModal from "./component/StreamsModal";
+import Player from "./component/Player";
 function App() {
   const [cookies, setCookie] = useCookies();
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -44,6 +45,7 @@ function App() {
           <Route path="/" element={<HomePage cookies={cookies}/>}/>
           <Route path="/Streams" element={<StreamOnLayout cookies={cookies}/>}/>
           <Route path="/Clips" element={<ClipsLayout cookies={cookies}/>}/>
+          <Route path="/Stream" element={<Player cookies={cookies}/>}/>
         </Routes>
         {/*<Partners cookies={cookies}/>*/}
         <Footer cookies={cookies}/>
