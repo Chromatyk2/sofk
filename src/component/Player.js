@@ -15,6 +15,7 @@ function Player(props) {
         <>
             {streamer &&
                 <>
+                    <h1 style={{marginTop:"30px", textAlign:"center"}}>{streamer}</h1>
                     <div style={{marginTop:"30px"}} className="twitch">
                         <div className="twitch-video">
                             <iframe
