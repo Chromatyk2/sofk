@@ -2400,7 +2400,7 @@ img.linkUnderStreamImg {
     position: fixed;
     right: 0;
     left: 0;
-    bottom: 50px;
+    bottom: 10px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -2781,8 +2781,6 @@ button.buttonToDisplayStreamMozaique {
     width: 100%;
     background-color: #5B8AA1;
     height: 50px;
-    position: fixed;
-    bottom: 0;
 }
 .footerContainer p {
     color: white;
