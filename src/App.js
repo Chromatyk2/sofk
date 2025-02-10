@@ -54,7 +54,7 @@ function App() {
               style={customStyles}
               contentLabel="Example Modal"
           >
-            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+            <h2>Hello</h2>
             <button onClick={closeModal}>close</button>
             <div>I am a modal</div>
             <form>
