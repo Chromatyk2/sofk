@@ -14,6 +14,7 @@ import Partners from "./component/partners";
 import Modal from 'react-modal';
 import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
+import Axios from 'axios';
 function App() {
   const [cookies, setCookie] = useCookies();
   const [modalIsOpen, setIsOpen] = React.useState(false);
