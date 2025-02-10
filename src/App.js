@@ -49,17 +49,14 @@ function App() {
         <div className={"buttonStreamsContainer"}>
           <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
           <button className={"buttonStreamers"}>Boutique</button>
-          <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              style={customStyles}
-              contentLabel="Example Modal"
-          >
-            <h2>Hello</h2>
-            <button onClick={closeModal}>close</button>
+          <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
+            <div style={{display:"flex"}}>
+              <h2 style={{color: "white"}}>Streameur</h2>
+              <button onClick={closeModal}>close</button>
+            </div>
             <div>I am a modal</div>
             <form>
-              <input />
+              <input/>
               <button>tab navigation</button>
               <button>stays</button>
               <button>inside</button>
