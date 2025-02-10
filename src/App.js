@@ -58,7 +58,7 @@ function App() {
               <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
             </div>
             <div className={"streamsModalContainer"}>
-              <StreamsModal cookies={cookies}/>
+              <StreamsModal change={closeModal} cookies={cookies}/>
             </div>
           </Modal>
         </div>

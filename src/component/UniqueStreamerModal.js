@@ -28,6 +28,9 @@ function UniqueStreamerModal(props) {
     function changeStream(e) {
         props.change(e.target.value);
     }
+    function handleState() {
+        props.change();
+    }
     return (
         <>
             {user &&
@@ -35,7 +38,7 @@ function UniqueStreamerModal(props) {
                     <div onClick={changeStream} className="uniqueStreamer">
                         {props.onStream === true ?
 
-                            <Link className="navLink linkFromNav" to={"/stream?streamer="+props.streamer.infos[0].user_name}>
+                            <Link onClick={handleState} className="navLink linkFromNav" to={"/stream?streamer="+props.streamer.infos[0].user_name}>
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer.infos[0].user_name} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>

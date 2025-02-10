@@ -64,7 +64,7 @@ function StreamsModal() {
     }, [onStream.length + offStream.length == team.length]);
 
     function handleDataFromChild(data) {
-        setStreamToDisplay(data);
+        props.change();
     }
     function disableStream() {
         setStreamToDisplay(null);
