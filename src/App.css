@@ -2314,14 +2314,14 @@ nav.navbar.navbar-expand-lg.navbar-light {
     color: white;
     font-size: 26px;
 }
-.uniqueStreamerOnline{
+.uniqueStreamerOnline {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    height: inherit;
+    justify-content: space-around;
     margin: auto;
-    width: 90%;
-    height: 90px;
     position: relative;
+    width: 90%;
 }
 .uniqueStreamerProfile {
     display: flex;
@@ -2806,10 +2806,17 @@ a.socialLink {
 .partnerContainer a{
     display: flex;
 }
-@media screen and (min-width: 850px) {
+@media screen and (max-width: 850px) {
     .uniqueStreamer {
-        width: 65%;
+        width: 49%;
     }
+}
+@media screen and (max-width: 541px) {
+    .uniqueStreamer {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 850px) {
     .firstSectionHome .homeContent {
         position: fixed;
         top: 10%;
