@@ -2371,6 +2371,11 @@ nav.navbar.navbar-expand-lg.navbar-light {
     color: white;
     background-color: #fcc249;
 }
+
+.buttonStreamers:hover {
+    background-image: linear-gradient(180deg, #f7bb3e 24%, #fff 155%);
+    color: white;
+}
 .firstSectionHome {
     display: flex;
     justify-content: center;
