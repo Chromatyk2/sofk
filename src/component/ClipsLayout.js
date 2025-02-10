@@ -4,6 +4,7 @@ import {useCookies} from "react-cookie";
 import ClipsPaginate from "./ClipsPaginate";
 import UniqueStreamerClip from "./uniqueStreamerClip";
 import UniqueStreamerMozaique from "./UniqueStreamerMozaique";
+import Login from "../services/auth.services";
 
 function ClipsLayout() {
     const [cookies, setCookie] = useCookies();
@@ -23,22 +24,26 @@ function ClipsLayout() {
                 }
             }
         ).then(function (response) {
-            setTeam(response.data.data[0].users);
-            response.data.data[0].users.map((val, key) => {
-                Axios.get(
-                    'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00+02:00&ended_at=2024-05-26T00:00:00+02:00&first=100&broadcaster_id='+val.user_id,
-                    {
-                        headers: {
-                            'Authorization': `Bearer ${cookies.token.access_token}`,
-                            'Client-Id': process.env.REACT_APP_CLIENT_ID
+            if(response.status == 200) {
+                setTeam(response.data.data[0].users);
+                response.data.data[0].users.map((val, key) => {
+                    Axios.get(
+                        'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + val.user_id,
+                        {
+                            headers: {
+                                'Authorization': `Bearer ${cookies.token.access_token}`,
+                                'Client-Id': process.env.REACT_APP_CLIENT_ID
+                            }
                         }
-                    }
-                ).then(function (response) {
-                    response.data.data.map((val, key) => {
-                        setClips(oldArrayOn => [...oldArrayOn, val]);
+                    ).then(function (response) {
+                        response.data.data.map((val, key) => {
+                            setClips(oldArrayOn => [...oldArrayOn, val]);
+                        })
                     })
                 })
-            })
+            }else{
+                return <Login />
+            }
         })
     }, [])
     useEffect(() => {
@@ -75,7 +80,7 @@ function ClipsLayout() {
         setShowStreamerList(false);
         setClips([]);
             Axios.get(
-                'https://api.twitch.tv/helix/clips?first=100&broadcaster_id='+data,
+                'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&&broadcaster_id='+data,
                 {
                     headers: {
                         'Authorization': `Bearer ${cookies.token.access_token}`,

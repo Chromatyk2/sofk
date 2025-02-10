@@ -3,6 +3,7 @@ import Axios from 'axios'
 import {useCookies} from "react-cookie";
 import UniqueStreamer from './uniqueStreamer.js';
 import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
+import Login from "../services/auth.services";
 
 function StreamOnLayout() {
     const [cookies, setCookie] = useCookies();
@@ -32,24 +33,29 @@ function StreamOnLayout() {
                 }
             }
         ).then(function (response) {
-            setTeam(response.data.data[0].users);
-            response.data.data[0].users.map((val, key) => {
-                Axios.get(
-                    'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
-                    {
-                        headers: {
-                            'Authorization': `Bearer ${cookies.token.access_token}`,
-                            'Client-Id': process.env.REACT_APP_CLIENT_ID
+
+            if(response.status == 200) {
+                setTeam(response.data.data[0].users);
+                response.data.data[0].users.map((val, key) => {
+                    Axios.get(
+                        'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
+                        {
+                            headers: {
+                                'Authorization': `Bearer ${cookies.token.access_token}`,
+                                'Client-Id': process.env.REACT_APP_CLIENT_ID
+                            }
                         }
-                    }
-                ).then(function (response) {
-                    if (response.data.data.length > 0) {
-                        setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
-                    } else if (response.data.data.length < 1) {
-                        setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
-                    }
+                    ).then(function (response) {
+                        if (response.data.data.length > 0) {
+                            setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+                        } else if (response.data.data.length < 1) {
+                            setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
+                        }
+                    })
                 })
-            })
+            }else{
+                return <Login />
+            }
         })
     }, [])
     useEffect(() => {
@@ -62,9 +68,6 @@ function StreamOnLayout() {
     function disableStream() {
         setStreamToDisplay(null);
     }
-    console.log(charityTeam);
-    console.log(streamToDisplay);
-    console.log(charityTeam.find((person) => person.infos.display_name === "Asarhell"));
     return (
         <div className={"containerStream"}>
             <div className={"streamersList"}>
@@ -110,10 +113,6 @@ function StreamOnLayout() {
                             </iframe>
                         </div>
                     </div>
-                    <a style={{position: "absolute", left: "0", right: "0", margin: "auto", bottom: "60px"}}
-                       className="donationLink socialLink" target='_blank'
-                       href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2024/stream-on-for-kids-2024?member="+charityTeam.find((person) => person.infos.display_name.toLowerCase() === streamToDisplay.toLowerCase()).infos.id+"&l=fr-FR"}>Faire
-                        un Don</a>
                 </>
                 :
                 <>
@@ -121,7 +120,8 @@ function StreamOnLayout() {
                         {orderedOnStream.length > 0 &&
                             onStream.map((val, key) => {
                                 return (
-                                    <UniqueStreamerMozaique change={handleDataFromChild} onStream={true} streamer={val}/>
+                                    <UniqueStreamerMozaique change={handleDataFromChild} onStream={true}
+                                                            streamer={val}/>
                                 )
                             })
                         }

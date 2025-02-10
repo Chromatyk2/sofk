@@ -4,6 +4,7 @@ import {useCookies} from "react-cookie";
 import '../App.css'
 import {Link} from "react-router-dom";
 import UniqueStreamerClip from "./uniqueStreamerClip";
+import Login from '../services/auth.services.js';
 
 function HomePage(props) {
     const [cookies, setCookie] = useCookies();
@@ -20,19 +21,23 @@ function HomePage(props) {
                 }
             }
         ).then(function (response) {
-            response.data.data[0].users.map((val, key) => {
-                Axios.get(
-                    'https://api.twitch.tv/helix/users?login='+val.user_name,
-                    {
-                        headers:{
-                            'Authorization': `Bearer ${cookies.token.access_token}`,
-                            'Client-Id': process.env.REACT_APP_CLIENT_ID
+            if(response.status == 200){
+                response.data.data[0].users.map((val, key) => {
+                    Axios.get(
+                        'https://api.twitch.tv/helix/users?login='+val.user_name,
+                        {
+                            headers:{
+                                'Authorization': `Bearer ${cookies.token.access_token}`,
+                                'Client-Id': process.env.REACT_APP_CLIENT_ID
+                            }
                         }
-                    }
-                ).then(function(response){
-                    setUser(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+                    ).then(function(response){
+                        setUser(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+                    })
                 })
-            })
+            }else{
+                return <Login />
+            }
         })
     }, [])
   return (
@@ -40,7 +45,7 @@ function HomePage(props) {
         <div className="homeContainer">
             <div className={"firstSectionHome"}>
                 <div className={"homeContent"}>
-                    <img style={{minWidth: "250px", width: "45%"}} src={"images/logoSofk.png"}/>
+                    <img style={{minWidth: "250px", width: "300px", marginBottom:"25px"}} src={"images/logoSofk.png"}/>
                     <div>
                         <p className={"paragraphHome"}>
                             Le <span>Stream On for Kids</span> est un évènement caritatif en ligne se déroulant chaque
@@ -111,8 +116,7 @@ function HomePage(props) {
                         </div>
                         <div style={{width: "85%"}} className={"editionsContainer"}>
                             <p className={"nbEdition"}>Edition 2024</p>
-                            <p className={"totalEdition"}>?</p>
-                            <Link className={"liveButtonHome"} to="/Streams">Les lives !</Link>
+                            <p className={"totalEdition"}>23 542 €</p>
                         </div>
                     </div>
                 </div>
