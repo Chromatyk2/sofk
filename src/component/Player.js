@@ -43,7 +43,7 @@ function Player(props) {
                         gap: "50px",
                         justifyContent: "center",
                         flexWrap: "wrap",
-                        marginTop: "50px"
+                        marginTop: "20px"
                     }}>
                         <a href={"https://streamlabs.com/"+streamer+"/tip"} target={"_blank"} className={"linkUnderStream"}>
                             <div>
