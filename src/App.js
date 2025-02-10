@@ -27,7 +27,7 @@ function App() {
         </Routes>
         {/*<Partners cookies={cookies}/>*/}
         <Footer cookies={cookies}/>
-        <button>Streameur.euses</button>
+        <button className={"buttonStreamers"}>Streameur.euses</button>
       </BrowserRouter>
     </>
   );

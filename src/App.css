@@ -2361,6 +2361,16 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .homeContent{
     padding: 20px;
 }
+.buttonStreamers{
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 50px;
+    width: 250px;
+    color: white;
+    background-color: #fcc249;
+}
 .firstSectionHome {
     display: flex;
     justify-content: center;
