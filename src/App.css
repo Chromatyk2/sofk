@@ -2291,6 +2291,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     width: 32.5%;
     border-radius: 10px;
     height: 70px;
+    padding: 0px 20px 0 20px;
 }
 
 .uniqueStreamer button{
@@ -2318,7 +2319,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     align-items: center;
     display: flex;
     height: inherit;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
     position: relative;
     width: 90%;
