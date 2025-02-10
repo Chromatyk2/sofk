@@ -5,10 +5,10 @@ import logoEuro from '../euro.png'
 
 
 function Player(props) {
-    const queryParameters = new URLSearchParams(window.location.search)
-    const streamerUrl = queryParameters.get('streamer')
     const [streamer, setStreamer] = React.useState(null);
     useEffect(() => {
+        const queryParameters = new URLSearchParams(window.location.search)
+        const streamerUrl = queryParameters.get('streamer')
         setStreamer(streamerUrl)
     }, []);
     return (
