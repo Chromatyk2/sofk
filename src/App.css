@@ -2330,11 +2330,11 @@ nav.navbar.navbar-expand-lg.navbar-light {
 
 .streamsModalContainer::-webkit-scrollbar-track {
     border-radius: 20px;
-    box-shadow: inset 0 0 27px 30px #dadada;
+    box-shadow: inset 0 0 27px 30px #38617f;
     border: solid 3px transparent;
 }
 .streamsModalContainer::-webkit-scrollbar-thumb {
-    background-color: #787878;
+    background-color: #5b87a7;
     border-radius: 20px;
     border: solid 3px transparent;
     background-clip: content-box;
