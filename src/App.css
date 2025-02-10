@@ -2778,9 +2778,11 @@ button.buttonToDisplayStreamMozaique {
     background-color: #38617F;
 }
 .footerContainer {
-    width: 100%;
-    background-color: #5B8AA1;
-    height: 50px;
+    background-color: #5b8aa1;
+    width: fit-content;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
 }
 .footerContainer p {
     color: white;
