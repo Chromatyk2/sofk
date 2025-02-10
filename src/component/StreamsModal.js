@@ -6,7 +6,7 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 import UniqueStreamerModal from "./UniqueStreamerModal";
 
-function StreamsModal() {
+function StreamsModal(props) {
     const [cookies, setCookie] = useCookies();
     const [streamToDisplay, setStreamToDisplay] = useState();
     const [team, setTeam] = useState([]);
