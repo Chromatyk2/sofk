@@ -10,6 +10,9 @@ function HomePage(props) {
     const [cookies, setCookie] = useCookies();
     const [user, setUser] = useState([]);
     const [team, setTeam] = useState([]);
+    const Image = React.memo(function Image({ src }) {
+        return <img style={{width: "250px", marginBottom: "25px"}} src={src}/>;
+    });
 
     useEffect(() => {
         Axios.get(
@@ -44,7 +47,7 @@ function HomePage(props) {
     <>
         <div className="homeContainer">
                 <div className={"homeContent"}>
-                    <img style={{width: "250px", marginBottom: "25px"}} src={"images/logoSofk.png"}/>
+                    <Image src={"images/logoSofk.png"}/>
                     <div style={{maxWidth:"650px", display:"block", margin:"auto"}}>
                         <p className={"paragraphHome"}>
                             Le <span>Stream On for Kids</span> est un évènement caritatif en ligne se déroulant chaque
