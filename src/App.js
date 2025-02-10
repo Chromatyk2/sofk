@@ -13,8 +13,15 @@ import LinkToStream from "./component/LinkToStream";
 import Partners from "./component/partners";
 function App() {
   const [cookies, setCookie] = useCookies();
+  const [modalIsOpen, setIsOpen] = React.useState(false);
   if(Object.keys(cookies).length == 0) {
     return <Login />
+  }
+  function openModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
   }
   return(
     <>
@@ -28,8 +35,26 @@ function App() {
         {/*<Partners cookies={cookies}/>*/}
         <Footer cookies={cookies}/>
         <div className={"buttonStreamsContainer"}>
-          <button className={"buttonStreamers"}>Streameur.euses</button>
+          <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
           <button className={"buttonStreamers"}>Boutique</button>
+          <Modal
+              isOpen={modalIsOpen}
+              onAfterOpen={afterOpenModal}
+              onRequestClose={closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+          >
+            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+            <button onClick={closeModal}>close</button>
+            <div>I am a modal</div>
+            <form>
+              <input />
+              <button>tab navigation</button>
+              <button>stays</button>
+              <button>inside</button>
+              <button>the modal</button>
+            </form>
+          </Modal>
         </div>
       </BrowserRouter>
     </>
