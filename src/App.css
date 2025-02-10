@@ -2309,6 +2309,9 @@ nav.navbar.navbar-expand-lg.navbar-light {
     color: white;
     font-size: 26px;
 }
+p.linkUnderStreamTxt{
+    margin:0;
+}
 a{
     color:white;
 }

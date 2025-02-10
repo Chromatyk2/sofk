@@ -44,7 +44,7 @@ function Player(props) {
                         flexWrap: "wrap",
                         marginTop: "50px"
                     }}>
-                        <a href={"https://streamlabs.com/meetup_tv/tip"} target={"_blank"} className={"linkUnderStream"}>
+                        <a href={"https://streamlabs.com/"+streamer+"/tip"} target={"_blank"} className={"linkUnderStream"}>
                             <div>
                                 <img className={"linkUnderStreamImg"} src={logoEuro}/>
                             </div>
