@@ -23,6 +23,7 @@ function App() {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
+      background: '#325269'
     },
   };
   if(Object.keys(cookies).length == 0) {
