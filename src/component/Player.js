@@ -44,30 +44,12 @@ function Player(props) {
                         flexWrap: "wrap",
                         marginTop: "50px"
                     }}>
-                        <a href={"https://www.twitch.tv/meetup_tv"} target={"_blank"} className={"linkUnderStream"}>
-                            <div>
-                                <img className={"linkUnderStreamImg"} src={logoTwitch}/>
-                            </div>
-                            <div style={{width: "300px"}}>
-                                <p className={"linkUnderStreamTxt"}><span style={{fontSize: "20px", fontWeight: "bold"}}>Abonne-toi ! </span><br/> Abonne-toi à
-                                    la chaine pour nous soutenir et obtenir pleins d'avantages ! Fait partis de la MeetUp Family ! </p>
-                            </div>
-                        </a>
-                        <a href={"https://www.twitch.tv/meetup_tv/videos"} target={"_blank"} className={"linkUnderStream"}>
-                            <div>
-                                <img className={"linkUnderStreamImg"} src={logoReplay}/>
-                            </div>
-                            <div style={{width: "300px"}}>
-                                <p className={"linkUnderStreamTxt"}><span style={{fontSize: "20px", fontWeight: "bold"}}>Les VODs </span><br/> T'as raté un
-                                    stream ? Pas grave viens regarder les vods en accès immédiat après chaque stream !</p>
-                            </div>
-                        </a>
                         <a href={"https://streamlabs.com/meetup_tv/tip"} target={"_blank"} className={"linkUnderStream"}>
                             <div>
                                 <img className={"linkUnderStreamImg"} src={logoEuro}/>
                             </div>
                             <div style={{width: "300px"}}>
-                                <p className={"linkUnderStreamTxt"}><span style={{fontSize: "20px", fontWeight: "bold"}}>Soutiens nous ! </span><br/>MeetUpTV est une assocition a but non lucratif, chaque dons nous aide à créer de nouveau projets !</p>
+                                <p className={"linkUnderStreamTxt"}><span style={{fontSize: "20px", fontWeight: "bold"}}>Faire un don ! </span><br/>Soutien le 116 000 avec un don, le moindre euro compte !</p>
                             </div>
                         </a>
                     </div>

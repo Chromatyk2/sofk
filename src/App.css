@@ -2316,6 +2316,13 @@ a.linkUnderStream {
     display: flex;
     align-items: center;
     gap: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+a.linkUnderStream:hover {
+    color:white;
+    background-color: #5B8AA1;
 }
 img.linkUnderStreamImg {
     width: 100%;
@@ -2771,6 +2778,8 @@ button.buttonToDisplayStreamMozaique {
     width: 100%;
     background-color: #5B8AA1;
     height: 50px;
+    position: fixed;
+    bottom: 0;
 }
 .footerContainer p {
     color: white;
