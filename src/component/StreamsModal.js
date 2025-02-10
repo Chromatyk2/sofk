@@ -13,6 +13,54 @@ function StreamsModal(props) {
     const [onStream, setOnStream] = useState([]);
     const [orderedOnStream, setOrderedOnStream] = useState([]);
     const [offStream, setOffStream] = useState([]);
+    const [charityTeam, setCharityTeam] = useState([]);
+    useEffect(() => {
+        Axios.get(
+            'https://streamlabscharity.com/api/v1/teams/643437249115068091'
+        ).then(function (response) {
+            response.data.members.map((val, key) => {
+                setCharityTeam(oldArrayOn => [...oldArrayOn, {infos: val.user}]);
+            })
+        })
+    }, []);
+    useEffect(() => {
+        Axios.get(
+            'https://api.twitch.tv/helix/teams?name=streamon',
+            {
+                headers: {
+                    'Authorization': `Bearer ${cookies.token.access_token}`,
+                    'Client-Id': process.env.REACT_APP_CLIENT_ID
+                }
+            }
+        ).then(function (response) {
+
+            if(response.status == 200) {
+                setTeam(response.data.data[0].users);
+                response.data.data[0].users.map((val, key) => {
+                    Axios.get(
+                        'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
+                        {
+                            headers: {
+                                'Authorization': `Bearer ${cookies.token.access_token}`,
+                                'Client-Id': process.env.REACT_APP_CLIENT_ID
+                            }
+                        }
+                    ).then(function (response) {
+                        if (response.data.data.length > 0) {
+                            setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+                        } else if (response.data.data.length < 1) {
+                            setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
+                        }
+                    })
+                })
+            }else{
+                return <Login />
+            }
+        })
+    }, [])
+    useEffect(() => {
+        setOrderedOnStream(onStream.sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1));
+    }, [onStream.length + offStream.length == team.length]);
 
     function handleDataFromChild(data) {
         props.change();
@@ -22,15 +70,15 @@ function StreamsModal(props) {
     }
     return (
             <>
-                {
-                    props.onStream.map((val, key) => {
+                {orderedOnStream.length > 0 &&
+                    onStream.map((val, key) => {
                         return (
                             <UniqueStreamerModal change={handleDataFromChild} onStream={true} streamer={val}/>
                         )
                     })
                 }
-                {
-                    props.offStream.map((val, key) => {
+                {offStream.length > 0 &&
+                    offStream.map((val, key) => {
                         return (
                             <UniqueStreamerModal change={handleDataFromChild} onStream={false} streamer={val}/>
                         )
