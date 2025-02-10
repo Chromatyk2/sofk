@@ -6,11 +6,11 @@ import logoEuro from '../euro.png'
 
 function Player(props) {
     const [streamer, setStreamer] = React.useState(null);
+    const queryParameters = new URLSearchParams(window.location.search)
+    const streamerUrl = queryParameters.get('streamer')
     useEffect(() => {
-        const queryParameters = new URLSearchParams(window.location.search)
-        const streamerUrl = queryParameters.get('streamer')
         setStreamer(streamerUrl)
-    }, []);
+    }, [streamerUrl]);
     return (
         <>
             {streamer &&

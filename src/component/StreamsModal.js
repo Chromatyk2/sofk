@@ -18,7 +18,6 @@ function StreamsModal(props) {
         Axios.get(
             'https://streamlabscharity.com/api/v1/teams/643437249115068091'
         ).then(function (response) {
-            console.log(response.data.members);
             response.data.members.map((val, key) => {
                 setCharityTeam(oldArrayOn => [...oldArrayOn, {infos: val.user}]);
             })
