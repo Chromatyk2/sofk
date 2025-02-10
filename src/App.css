@@ -2785,10 +2785,10 @@ button.buttonToDisplayStreamMozaique {
     bottom: 0;
 }
 .footerContainer p {
-    color: white;
+    color: #fff;
     letter-spacing: 1px;
-    text-align: center;
     margin: 0;
+    font-size: 13px;
 }
 .consent-banner {
     display: none;
