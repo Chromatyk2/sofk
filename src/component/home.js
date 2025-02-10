@@ -45,7 +45,7 @@ function HomePage(props) {
         <div className="homeContainer">
             <div className={"firstSectionHome"}>
                 <div className={"homeContent"}>
-                    <img style={{width: "250px", marginBottom:"25px"}} src={"images/logoSofk.png"}/>
+                    <img style={{width: "250px", marginBottom: "25px"}} src={"images/logoSofk.png"}/>
                     <div>
                         <p className={"paragraphHome"}>
                             Le <span>Stream On for Kids</span> est un évènement caritatif en ligne se déroulant chaque
@@ -71,6 +71,27 @@ function HomePage(props) {
                             numéro <span>116 000</span>
                             auprès du public.
                         </p>
+                    </div>
+                    <div className={"homeContent"}>
+                        <h1 className={"titleEdition"}>Editions précédentes</h1>
+                        <div className={"editionsInfosContainer"}>
+                            <div className={"editionsContainer"}>
+                                <p className={"nbEdition"}>Edition 2021</p>
+                                <p className={"totalEdition"}>2 800 €</p>
+                            </div>
+                            <div className={"editionsContainer"}>
+                                <p className={"nbEdition"}>Edition 2022</p>
+                                <p className={"totalEdition"}>8 238 €</p>
+                            </div>
+                            <div className={"editionsContainer"}>
+                                <p className={"nbEdition"}>Edition 2023</p>
+                                <p className={"totalEdition"}>17 414 €</p>
+                            </div>
+                            <div style={{width: "85%"}} className={"editionsContainer"}>
+                                <p className={"nbEdition"}>Edition 2024</p>
+                                <p className={"totalEdition"}>23 542 €</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,29 +119,6 @@ function HomePage(props) {
             {/*    </div>*/}
             {/*</div>*/}
             <div className={"thirdFakeContent"}></div>
-            <div className={"thirdSectionHome"}>
-                <div className={"homeContent"}>
-                    <h1 className={"titleEdition"}>Editions précédentes</h1>
-                    <div className={"editionsInfosContainer"}>
-                        <div className={"editionsContainer"}>
-                            <p className={"nbEdition"}>Edition 2021</p>
-                            <p className={"totalEdition"}>2 800 €</p>
-                        </div>
-                        <div className={"editionsContainer"}>
-                            <p className={"nbEdition"}>Edition 2022</p>
-                            <p className={"totalEdition"}>8 238 €</p>
-                        </div>
-                        <div className={"editionsContainer"}>
-                            <p className={"nbEdition"}>Edition 2023</p>
-                            <p className={"totalEdition"}>17 414 €</p>
-                        </div>
-                        <div style={{width: "85%"}} className={"editionsContainer"}>
-                            <p className={"nbEdition"}>Edition 2024</p>
-                            <p className={"totalEdition"}>23 542 €</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div className={"fourthSectionHome"}>
                     <h1 className={"titleEdition"}>Streamer.euses 2024</h1>
                     <div className={"streamListHome"}>
