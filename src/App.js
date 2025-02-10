@@ -29,6 +29,7 @@ function App() {
         <Footer cookies={cookies}/>
         <div>
           <button className={"buttonStreamers"}>Streameur.euses</button>
+          <button className={"buttonStreamers"}>Boutique</button>
         </div>
       </BrowserRouter>
     </>
