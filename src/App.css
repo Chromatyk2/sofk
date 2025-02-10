@@ -2362,20 +2362,22 @@ nav.navbar.navbar-expand-lg.navbar-light {
     padding: 20px;
 }
 .buttonStreamers{
-    position: fixed;
-    right: 0;
+    background-image: linear-gradient(180deg, #53819A 24%, #38617F 155%);
+    border-radius: 10px;
+    bottom: 50px;
+    color: #fff;
     left: 0;
     margin: auto;
-    bottom: 50px;
+    position: fixed;
+    right: 0;
     width: 250px;
-    color: white;
-    border-radius: 20px;
-    background-image: linear-gradient(180deg, #f7bb3e 24%, #c68806  155%);
+    font-size: 20px;
+    border: #fcc249 solid 4px;
 }
 
 .buttonStreamers:hover {
-    background-image: linear-gradient(180deg, #c68806 24%, #f7bb3e 155%);
-    color: white;
+    background-image: linear-gradient(180deg, #38617F 24%, #53819A 155%);
+    color: #fff;
 }
 .firstSectionHome {
     display: flex;
