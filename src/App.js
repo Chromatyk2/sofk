@@ -14,29 +14,11 @@ import Partners from "./component/partners";
 import Modal from 'react-modal';
 import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
+import ButtonToStreamers from "./component/ButtonToStreamers";
 function App() {
   const [cookies, setCookie] = useCookies();
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      background: '#325269'
-    },
-  };
   if(Object.keys(cookies).length == 0) {
     return <Login />
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
-  function closeModal() {
-    setIsOpen(false);
   }
   return(
     <>
@@ -50,19 +32,7 @@ function App() {
         </Routes>
         {/*<Partners cookies={cookies}/>*/}
         <Footer cookies={cookies}/>
-        <div className={"buttonStreamsContainer"}>
-          <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
-          <button className={"buttonStreamers"}>Boutique</button>
-          <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
-            <div style={{display:"flex", justifyContent:"space-between", alignItems:"baseline"}}>
-              <p style={{color: "white"}}>Streameur.euses</p>
-              <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
-            </div>
-            <div className={"streamsModalContainer"}>
-              <StreamsModal change={closeModal} cookies={cookies}/>
-            </div>
-          </Modal>
-        </div>
+        <ButtonToStreamers cookies={cookies}/>
       </BrowserRouter>
     </>
   );
