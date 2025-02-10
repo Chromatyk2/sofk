@@ -12,6 +12,7 @@ import Footer from "./component/footer";
 import LinkToStream from "./component/LinkToStream";
 import Partners from "./component/partners";
 import Modal from 'react-modal';
+import StreamsModal from "./component/StreamsModal";
 function App() {
   const [cookies, setCookie] = useCookies();
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -51,17 +52,12 @@ function App() {
           <button className={"buttonStreamers"}>Boutique</button>
           <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
             <div style={{display:"flex", justifyContent:"space-between", alignItems:"baseline"}}>
-              <h2 style={{color: "white"}}>Streameur.euses</h2>
+              <p style={{color: "white"}}>Streameur.euses</p>
               <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
             </div>
-            <div>I am a modal</div>
-            <form>
-              <input/>
-              <button>tab navigation</button>
-              <button>stays</button>
-              <button>inside</button>
-              <button>the modal</button>
-            </form>
+            <div>
+              <StreamsModal cookies={cookies}/>
+            </div>
           </Modal>
         </div>
       </BrowserRouter>
