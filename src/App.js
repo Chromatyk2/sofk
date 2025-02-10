@@ -25,7 +25,7 @@ function App() {
           <Route path="/Streams" element={<StreamOnLayout cookies={cookies}/>}/>
           <Route path="/Clips" element={<ClipsLayout cookies={cookies}/>}/>
         </Routes>
-        <Partners cookies={cookies}/>
+        {/*<Partners cookies={cookies}/>*/}
         <Footer cookies={cookies}/>
       </BrowserRouter>
     </>
