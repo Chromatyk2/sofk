@@ -12,6 +12,7 @@ import Footer from "./component/footer";
 import LinkToStream from "./component/LinkToStream";
 import Partners from "./component/partners";
 import Modal from 'react-modal';
+import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
 function App() {
   const [cookies, setCookie] = useCookies();
@@ -28,7 +29,6 @@ function App() {
     },
   };
   if(Object.keys(cookies).length == 0) {
-    const StreamsModal = React.lazy(() => import('./component/StreamsModal'));
     return <Login />
   }
   function openModal() {
