@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import Axios from 'axios'
 import {useCookies} from "react-cookie";
+import {BrowserRouter, Link} from "react-router-dom";
 
 function UniqueStreamerModal(props) {
     const [cookies, setCookie] = useCookies();
@@ -33,7 +34,8 @@ function UniqueStreamerModal(props) {
                 <>
                     <div onClick={changeStream} className="uniqueStreamer">
                         {props.onStream === true ?
-                            <>
+
+                            <Link className="navLink linkFromNav" to={"/stream?streamer="+props.streamer.infos[0].user_name}>
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer.infos[0].user_name} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>
@@ -45,9 +47,9 @@ function UniqueStreamerModal(props) {
                                         <p>{props.streamer.infos[0].viewer_count}</p>
                                     </div>
                                 </div>
-                            </>
+                            </Link>
                             :
-                            <>
+                            <Link className="navLink linkFromNav" to={"/stream?streamer="+props.streamer}>
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>
@@ -55,7 +57,7 @@ function UniqueStreamerModal(props) {
                                         <p>{props.streamer}</p>
                                     </div>
                                 </div>
-                            </>
+                            </Link>
                         }
                     </div>
                 </>

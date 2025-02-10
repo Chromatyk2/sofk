@@ -2853,15 +2853,6 @@ a.socialLink {
         padding-top: 42.95%;
         width: 80%;
     }
-
-    .twitch .twitch-chat {
-        bottom: 0;
-        height: auto;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 20%;
-    }
 }
 @media screen and (max-width: 849px) {
     .donationLinkMobile {

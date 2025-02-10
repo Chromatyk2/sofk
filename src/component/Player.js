@@ -7,7 +7,7 @@ import logoEuro from '../euro.png'
 function Player(props) {
     return (
         <>
-            <div className="twitch">
+            <div style={{marginTop:"30px"}} className="twitch">
                 <div className="twitch-video">
                     <iframe
                         src="https://player.twitch.tv/?channel=meetup_tv&parent=preview--streamonforkids.netlify.app&autoplay=true&muted=false"
