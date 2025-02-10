@@ -84,7 +84,7 @@ function ButtonToStreamers(props) {
 
     return (
         <>
-            {orderedOnStream.length > 0 &&
+            {orderedOnStream.length > 0 ||
                 offStream.length > 0 &&
                 <div className={"buttonStreamsContainer"}>
                     <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
