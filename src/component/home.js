@@ -71,24 +71,24 @@ function HomePage(props) {
                             auprès du public.
                         </p>
                     </div>
-                    <div style={{marginTop:"30px"}}>
+                    <div style={{marginTop:"30px", marginBottom:"30px"}}>
                         <h1 className={"titleEdition"}>Editions précédentes</h1>
                         <div className={"editionsInfosContainer"}>
                             <div className={"editionsContainer"}>
-                                <p className={"nbEdition"}>Edition 2021</p>
-                                <p className={"totalEdition"}>2 800 €</p>
+                                <p className={"nbEdition"}>Edition 2024</p>
+                                <p className={"totalEdition"}>23 542 €</p>
+                            </div>
+                            <div className={"editionsContainer"}>
+                                <p className={"nbEdition"}>Edition 2023</p>
+                                <p className={"totalEdition"}>17 414 €</p>
                             </div>
                             <div className={"editionsContainer"}>
                                 <p className={"nbEdition"}>Edition 2022</p>
                                 <p className={"totalEdition"}>8 238 €</p>
                             </div>
                             <div className={"editionsContainer"}>
-                                <p className={"nbEdition"}>Edition 2023</p>
-                                <p className={"totalEdition"}>17 414 €</p>
-                            </div>
-                            <div style={{width: "85%"}} className={"editionsContainer"}>
-                                <p className={"nbEdition"}>Edition 2024</p>
-                                <p className={"totalEdition"}>23 542 €</p>
+                                <p className={"nbEdition"}>Edition 2021</p>
+                                <p className={"totalEdition"}>2 800 €</p>
                             </div>
                         </div>
                     </div>
