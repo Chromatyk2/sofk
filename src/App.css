@@ -2309,6 +2309,17 @@ nav.navbar.navbar-expand-lg.navbar-light {
     color: white;
     font-size: 26px;
 }
+a{
+    color:white;
+}
+a.linkUnderStream {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+img.linkUnderStreamImg {
+    width: 100%;
+}
 .uniqueStreamerOnline {
     align-items: center;
     display: flex;
