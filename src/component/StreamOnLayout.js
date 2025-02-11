@@ -6,6 +6,11 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
 function StreamOnLayout(props) {
+    useEffect(() => {
+        if(props.onStream.length == 0 && props.offStream.length == 0){
+            props.change();
+        }
+    }, []);
     const [multiStream, setMultiStream] = useState([]);
     const [url, setUrl] = useState()
     function loadForMultiStream(data) {
