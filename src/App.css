@@ -2602,7 +2602,7 @@ h1.titleEdition {
     color: #fff;
     font-family: Charge Vector Black;
     text-align: center;
-    argin-bottom:20px;
+    margin-bottom:60px;
 }
 .editionsInfosContainer {
     display: flex;
