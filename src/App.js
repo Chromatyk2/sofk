@@ -28,6 +28,7 @@ function App() {
       background: '#325269'
     },
   };
+
   if(Object.keys(cookies).length == 0) {
     return <Login />
   }

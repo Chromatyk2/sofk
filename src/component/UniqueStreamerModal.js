@@ -33,16 +33,16 @@ function UniqueStreamerModal(props) {
     }
     return (
         <>
-            {user &&
                 <>
                     <div onClick={changeStream} className="uniqueStreamer">
                         {props.onStream === true ?
-
                             <Link onClick={handleState} className="navLink linkFromNav" to={"/stream?streamer="+props.streamer.infos[0].user_name}>
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer.infos[0].user_name} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>
-                                        <img src={user.data[0].profile_image_url}/>
+                                        {user &&
+                                            <img src={user.data[0].profile_image_url}/>
+                                        }
                                         <p>{props.streamer.infos[0].user_name}</p>
                                     </div>
                                     <div className={"uniqueStreamerStats"}>
@@ -56,7 +56,9 @@ function UniqueStreamerModal(props) {
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>
-                                        <img style={{width: "50px", margin: "0"}} src={user.data[0].profile_image_url}/>
+                                        {user &&
+                                            <img style={{width: "50px", margin: "0"}} src={user.data[0].profile_image_url}/>
+                                        }
                                         <p>{props.streamer}</p>
                                     </div>
                                 </div>
@@ -64,7 +66,6 @@ function UniqueStreamerModal(props) {
                         }
                     </div>
                 </>
-            }
         </>
     );
 }

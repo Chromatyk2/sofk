@@ -8,21 +8,10 @@ import UniqueStreamerModal from "./UniqueStreamerModal";
 
 function StreamsModal(props) {
     const [cookies, setCookie] = useCookies();
-    const [streamToDisplay, setStreamToDisplay] = useState();
     const [team, setTeam] = useState([]);
     const [onStream, setOnStream] = useState([]);
     const [orderedOnStream, setOrderedOnStream] = useState([]);
     const [offStream, setOffStream] = useState([]);
-    const [charityTeam, setCharityTeam] = useState([]);
-    useEffect(() => {
-        Axios.get(
-            'https://streamlabscharity.com/api/v1/teams/643437249115068091'
-        ).then(function (response) {
-            response.data.members.map((val, key) => {
-                setCharityTeam(oldArrayOn => [...oldArrayOn, {infos: val.user}]);
-            })
-        })
-    }, []);
     useEffect(() => {
         Axios.get(
             'https://api.twitch.tv/helix/teams?name=streamon',
@@ -33,7 +22,6 @@ function StreamsModal(props) {
                 }
             }
         ).then(function (response) {
-
             if(response.status == 200) {
                 setTeam(response.data.data[0].users);
                 response.data.data[0].users.map((val, key) => {
@@ -64,9 +52,6 @@ function StreamsModal(props) {
 
     function handleDataFromChild(data) {
         props.change();
-    }
-    function disableStream() {
-        setStreamToDisplay(null);
     }
     return (
             <>
