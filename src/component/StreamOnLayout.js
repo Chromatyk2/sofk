@@ -6,8 +6,8 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
 function StreamOnLayout(props) {
-    function addToMultistream() {
-        console.log("Test")
+    function loadForMultiStream(data) {
+        console.log(data)
     }
     return (
         <div className={"containerStream"}>
@@ -16,14 +16,14 @@ function StreamOnLayout(props) {
                         {
                             props.onStream.map((val, key) => {
                                 return (
-                                    <UniqueStreamerMozaique onClick={addToMultistream} onStream={true} streamer={val} token={props.token}/>
+                                    <UniqueStreamerMozaique change={loadForMultiStream} onClick={addToMultistream} onStream={true} streamer={val} token={props.token}/>
                                 )
                             })
                         }
                         {
                             props.offStream.map((val, key) => {
                                 return (
-                                    <UniqueStreamerMozaique onClick={addToMultistream} onStream={false} streamer={val} token={props.token}/>
+                                    <UniqueStreamerMozaique change={loadForMultiStream} onClick={addToMultistream} onStream={false} streamer={val} token={props.token}/>
                                 )
                             })
                         }

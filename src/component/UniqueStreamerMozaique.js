@@ -24,14 +24,15 @@ function UniqueStreamerMozaique(props) {
             setUser(response.data);
         })
     }, [])
-    function changeStream(e) {
+
+    function addToMultistream() {
         props.change(e.target.value);
     }
     return (
         <>
             {user &&
                 <>
-                    <div onClick={changeStream} className="uniqueStreamerMozaique">
+                    <div onClick={addToMultistream} className="uniqueStreamerMozaique">
                         {props.onStream === true ?
                             <>
                                 <div style={{backgroundRepeat:"no-repeat",backgroundImage:"url(https://static-cdn.jtvnw.net/previews-ttv/live_user_"+props.streamer.infos[0].user_name.toLowerCase()+"-496x279.jpg)"}} className={"uniqueStreamerOnlineMozaique"}>
