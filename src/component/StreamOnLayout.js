@@ -20,10 +20,8 @@ function StreamOnLayout(props) {
                 setMultiStream(array);
             }
         }else{
-            setMultiStream(oldArrayMulti => [...oldArrayMulti, data]);
+            setMultiStream(oldArrayMulti => [...oldArrayMulti, data.toString()]);
         }
-        setUrl("/"+multiStream.map((val) => { return("/"+val) }))
-        console.log(url);
     }
     return (
         <div className={"containerStream"}>
