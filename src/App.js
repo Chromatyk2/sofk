@@ -47,11 +47,12 @@ function App() {
         .then(
             (result) => {
               setToken(result.data.access_token);
+              const currentToken = result.data.access_token;
               Axios.get(
                   'https://api.twitch.tv/helix/teams?name=streamon',
                   {
                     headers: {
-                      'Authorization': `Bearer ${token}`,
+                      'Authorization': `Bearer ${currentToken}`,
                       'Client-Id': process.env.REACT_APP_CLIENT_ID
                     }
                   }
@@ -63,7 +64,7 @@ function App() {
                         'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
                         {
                           headers: {
-                            'Authorization': `Bearer ${token}`,
+                            'Authorization': `Bearer ${currentToken}`,
                             'Client-Id': process.env.REACT_APP_CLIENT_ID
                           }
                         }
