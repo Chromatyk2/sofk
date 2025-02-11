@@ -14,14 +14,14 @@ function StreamOnLayout(props) {
                             props.onStream.map((val, key) => {
                                 return (
                                     <UniqueStreamerMozaique change={handleDataFromChild} onStream={true}
-                                                            streamer={val}/>
+                                                            streamer={val} token={props.token}/>
                                 )
                             })
                         }
                         {
                             props.offStream.map((val, key) => {
                                 return (
-                                    <UniqueStreamerMozaique change={handleDataFromChild} onStream={false} streamer={val}/>
+                                    <UniqueStreamerMozaique change={handleDataFromChild} onStream={false} streamer={val} token={props.token}/>
                                 )
                             })
                         }
