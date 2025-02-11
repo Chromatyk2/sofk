@@ -73,6 +73,10 @@ function App() {
       }
     })
   }
+
+  useEffect(() => {
+    reloadEffect()
+  }, []);
   return(
     <>
       <BrowserRouter>
