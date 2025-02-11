@@ -6,7 +6,7 @@ function Footer(props) {
         <>
           <div className={"footerContainer"}>
             <p>©StreamOnForKids</p>
-              <p>Site développé par <a style={{color:"#38617F",fontSize:"15px",textDecoration:"none"}} href={"https://twitch.tv/chromatyk"}>Chromatyk</a></p>
+              <p>Site développé par <a style={{color:"#fcc249",fontSize:"15px",textDecoration:"none"}} href={"https://twitch.tv/chromatyk"}>Chromatyk</a></p>
           </div>
         </>
       );
