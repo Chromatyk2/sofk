@@ -27,15 +27,6 @@ function Player(props) {
                                 width="1280">
                             </iframe>
                         </div>
-                        <div className="twitch-chat">
-                            <iframe
-                                frameBorder="0"
-                                scrolling="no"
-                                src={"https://www.twitch.tv/embed/" + streamer + "/chat?parent=preview--streamonforkids.netlify.app"}
-                                height="100%"
-                                width="100%">
-                            </iframe>
-                        </div>
                     </div>
                     <div style={{
                         display: "flex",
