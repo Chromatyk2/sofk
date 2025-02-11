@@ -86,8 +86,8 @@ function App() {
     setIsOpen(true);
   }
   function closeModal() {
-      setOnStream([]);
-      setOffStream([]);
+  setOnStream([]);
+  setOffStream([]);
     setIsOpen(false);
       Axios.post(
           'https://id.twitch.tv/oauth2/token',
@@ -136,8 +136,8 @@ function App() {
           )
   }
     function refreshStreamers() {
-        setOnStream([]);
-        setOffStream([]);
+    setOnStream([]);
+    setOffStream([]);
         Axios.post(
             'https://id.twitch.tv/oauth2/token',
             {
