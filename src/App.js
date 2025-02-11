@@ -34,7 +34,7 @@ function App() {
   };
 
   if(Object.keys(cookies).length == 0) {
-    return <Login change={reloadEffect} />
+    return <Login change={reloadEffect}/>
   }
   function openModal() {
     setIsOpen(true);
@@ -42,8 +42,7 @@ function App() {
   function closeModal() {
     setIsOpen(false);
   }
-
-  function reloadEffect(){
+function reloadEffect(){
     Axios.get(
         'https://api.twitch.tv/helix/teams?name=streamon',
         {
