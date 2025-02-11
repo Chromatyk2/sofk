@@ -26,6 +26,7 @@ function UniqueStreamerMozaique(props) {
     }, [])
 
     function addToMultistream(e) {
+        e.target.style.border = "solid red 3px"
         props.change(e.target.value);
     }
     return (
