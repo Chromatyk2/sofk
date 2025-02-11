@@ -7,10 +7,10 @@ function AuthService(props) {
 
   const [cookies, setCookie, removeCookie] = useCookies();
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+    const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
   const REDIRECT_URI = "https://preview--streamonforkids.netlify.app/";
   // const REDIRECT_URI = "https://chromatyk.fr/";
   const SCOPES = ['openid'];
-  const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
   console.log('log ON');
   const isAuthenticated = () => {
         Axios.post(
@@ -33,11 +33,6 @@ function AuthService(props) {
     useEffect(() => {
         isAuthenticated();
     }, []);
-
-    useEffect(() => {
-        console.log(cookies.token);
-        props.change();
-    }, [cookies]);
 
   return (
       <div className="homeContainer">
