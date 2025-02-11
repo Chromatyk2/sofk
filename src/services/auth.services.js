@@ -29,9 +29,14 @@ function AuthService(props) {
         )
   }
 
-  useEffect(() => {
-    isAuthenticated();
-  }, []);
+
+    useEffect(() => {
+        isAuthenticated();
+    }, []);
+
+    useEffect(() => {
+        props.change();
+    }, [cookies]);
 
   return (
       <div className="homeContainer">
