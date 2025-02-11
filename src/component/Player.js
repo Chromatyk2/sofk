@@ -45,12 +45,25 @@ function Player(props) {
                         flexWrap: "wrap",
                         marginTop: "20px"
                     }}>
-                        <a href={"https://streamlabs.com/"+streamer+"/tip"} target={"_blank"} className={"linkUnderStream"}>
+                        <a href={"https://streamlabs.com/" + streamer + "/tip"} target={"_blank"}
+                           className={"linkUnderStream"}>
                             <div>
                                 <img className={"linkUnderStreamImg"} src={logoEuro}/>
                             </div>
                             <div style={{width: "300px"}}>
-                                <p className={"linkUnderStreamTxt"}><span style={{fontSize: "20px", fontWeight: "bold"}}>Faire un don ! </span><br/>Soutien le 116 000 avec un don, le moindre euro compte !</p>
+                                <p className={"linkUnderStreamTxt"}><span
+                                    style={{fontSize: "20px", fontWeight: "bold"}}>Faire un don ! </span><br/>Soutien le
+                                    116 000 avec un don, le moindre euro compte !</p>
+                            </div>
+                        </a>
+                        <a href={"https://twitch.tv/"+streamer} target={"_blank"}
+                           className={"linkUnderStream"}>
+                            <div>
+                                <img className={"linkUnderStreamImg"} src={logoTwitch}/>
+                            </div>
+                            <div style={{width: "300px"}}>
+                                <p className={"linkUnderStreamTxt"}><span
+                                    style={{fontSize: "20px", fontWeight: "bold"}}>Viens sur Twitch !</span><br/>Rejoins nous sur Twitch pour discuter !</p>
                             </div>
                         </a>
                     </div>
