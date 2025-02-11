@@ -10,6 +10,7 @@ function StreamOnLayout(props) {
         props.change();
     }, []);
     const [multiStream, setMultiStream] = useState([]);
+    const [url, setUrl] = useState()
     function loadForMultiStream(data) {
         if(multiStream.find(streamer => streamer == data)){
             var array = [...multiStream]; // make a separate copy of the array
@@ -21,6 +22,8 @@ function StreamOnLayout(props) {
         }else{
             setMultiStream(oldArrayMulti => [...oldArrayMulti, data]);
         }
+        setUrl("/"+multiStream.map((val) => { return("/"+val) }))
+        console.log(url);
     }
     return (
         <div className={"containerStream"}>
