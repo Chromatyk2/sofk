@@ -10,8 +10,8 @@ function AuthService(props) {
   const REDIRECT_URI = "https://preview--streamonforkids.netlify.app/";
   // const REDIRECT_URI = "https://chromatyk.fr/";
   const SCOPES = ['openid'];
-  const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET
-
+  const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+  console.log("log On");
   const isAuthenticated = () => {
         Axios.post(
         'https://id.twitch.tv/oauth2/token',
