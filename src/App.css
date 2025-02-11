@@ -2611,6 +2611,27 @@ h1.titleEdition {
     justify-content: center;
     margin-bottom: 50px;
 }
+.runMultiStreamButton{
+    background-image: linear-gradient(180deg, #FCC249 24%, #b27d0d 155%);
+    border: none;
+    border-radius: 10px 10px 0px 0;
+    bottom: 50px;
+    color: #fff;
+    font-size: 20px;
+    width: 250px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-top: white solid 5px;
+    text-align: center;
+    text-decoration: none;
+    border-left: white solid 5px;
+    border-right: white solid 5px;
+}
+.runMultiStreamButton:hover{
+    background-image: linear-gradient(180deg, #b27d0d 24%, #FCC249 155%);
+}
 .editionsContainer {
      width: 303px;
      border: solid 2px white;

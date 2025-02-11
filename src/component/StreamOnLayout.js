@@ -12,6 +12,7 @@ function StreamOnLayout(props) {
     const [multiStream, setMultiStream] = useState([]);
     function loadForMultiStream(data) {
         setMultiStream(oldArrayMulti => [...oldArrayMulti, data]);
+        console.log(multiStream)
     }
     return (
         <div className={"containerStream"}>
@@ -33,7 +34,7 @@ function StreamOnLayout(props) {
                         }
                     </div>
                     {multiStream.length > 0 &&
-                        <a className={"buttonStreamers"} target="_blank" href={"https://multistre.am"+multiStream.map((val, key) => "/"+val)}>Lancer le Multi Stream</a>
+                        <a className={"runMultiStreamButton"} target="_blank" href={"https://multistre.am"+multiStream.map((val, key) => "/"+val)}>Lancer le Multi Stream</a>
                     }
                 </>
         </div>
