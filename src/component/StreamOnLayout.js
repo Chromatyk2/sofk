@@ -16,14 +16,14 @@ function StreamOnLayout(props) {
                         {
                             props.onStream.map((val, key) => {
                                 return (
-                                    <UniqueStreamerMozaique change={loadForMultiStream} onClick={addToMultistream} onStream={true} streamer={val} token={props.token}/>
+                                    <UniqueStreamerMozaique change={loadForMultiStream} onStream={true} streamer={val} token={props.token}/>
                                 )
                             })
                         }
                         {
                             props.offStream.map((val, key) => {
                                 return (
-                                    <UniqueStreamerMozaique change={loadForMultiStream} onClick={addToMultistream} onStream={false} streamer={val} token={props.token}/>
+                                    <UniqueStreamerMozaique change={loadForMultiStream} onStream={false} streamer={val} token={props.token}/>
                                 )
                             })
                         }
