@@ -2631,6 +2631,10 @@ h1.titleEdition {
 }
 .runMultiStreamButton:hover{
     background-image: linear-gradient(180deg, #b27d0d 24%, #FCC249 155%);
+    color: white;
+}
+a.navLink.linkFromNav:hover {
+    color:#fcc249;
 }
 .editionsContainer {
      width: 303px;
