@@ -25,6 +25,8 @@ function AuthService(props) {
         (result) => {
             setCookie('token', result.data,{days:1} );
           }
+        ).finally(
+            props.change()
         );
   }
 

@@ -34,8 +34,6 @@ function App() {
   };
   if(Object.keys(cookies).length == 0) {
     return (<Login change={reloadEffect}/>)
-  }else{
-    reloadEffect();
   }
   function openModal() {
     setIsOpen(true);
