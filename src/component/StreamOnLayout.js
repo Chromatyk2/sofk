@@ -28,7 +28,7 @@ function StreamOnLayout(props) {
                 <>
                     <div className={"streamerMozaique"}>
                         {
-                            Array.from(new Set(props.onStream)).sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1).map((val, key) => {
+                            Array.from(new Set(props.onStream.id)).map((val, key) => {
                                 return (
                                     <UniqueStreamerMozaique change={loadForMultiStream} onStream={true} streamer={val} token={props.token}/>
                                 )
