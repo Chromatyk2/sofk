@@ -15,6 +15,7 @@ import Modal from 'react-modal';
 import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
 import Axios from 'axios'
+import Back from '../Background.jpg'
 function App() {
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
