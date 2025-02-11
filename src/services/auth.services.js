@@ -35,6 +35,7 @@ function AuthService(props) {
     }, []);
 
     useEffect(() => {
+        console.log(cookies.token.access_token);
         props.change();
     }, [cookies]);
 
