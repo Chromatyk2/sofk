@@ -6,6 +6,9 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
 function StreamOnLayout(props) {
+    useEffect(() => {
+        props.change();
+    }, []);
     const [multiStream, setMultiStream] = useState([]);
     function loadForMultiStream(data) {
         setMultiStream(oldArrayMulti => [...oldArrayMulti, data]);
