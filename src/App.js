@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import './App.css';
@@ -17,6 +17,10 @@ import Player from "./component/Player";
 function App() {
   const [cookies, setCookie] = useCookies();
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [team, setTeam] = useState([]);
+  const [onStream, setOnStream] = useState([]);
+  const [orderedOnStream, setOrderedOnStream] = useState([]);
+  const [offStream, setOffStream] = useState([]);
   const customStyles = {
     content: {
       top: '50%',
@@ -32,6 +36,42 @@ function App() {
   if(Object.keys(cookies).length == 0) {
     return <Login />
   }
+
+  useEffect(() => {
+    Axios.get(
+        'https://api.twitch.tv/helix/teams?name=streamon',
+        {
+          headers: {
+            'Authorization': `Bearer ${cookies.token.access_token}`,
+            'Client-Id': process.env.REACT_APP_CLIENT_ID
+          }
+        }
+    ).then(function (response) {
+      if(response.status == 200) {
+        setTeam(response.data.data[0].users);
+        response.data.data[0].users.map((val, key) => {
+          Axios.get(
+              'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
+              {
+                headers: {
+                  'Authorization': `Bearer ${cookies.token.access_token}`,
+                  'Client-Id': process.env.REACT_APP_CLIENT_ID
+                }
+              }
+          ).then(function (response) {
+            if (response.data.data.length > 0) {
+              setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+            } else if (response.data.data.length < 1) {
+              setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
+            }
+          })
+        })
+      }
+    })
+  }, [])
+  useEffect(() => {
+    setOrderedOnStream(onStream.sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1));
+  }, [onStream.length + offStream.length == team.length]);
   function openModal() {
     setIsOpen(true);
   }
@@ -59,7 +99,7 @@ function App() {
               <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
             </div>
             <div className={"streamsModalContainer"}>
-              <StreamsModal change={closeModal} cookies={cookies}/>
+              <StreamsModal change={closeModal} cookies={cookies} onStream={onStream} offStream={offStream}/>
             </div>
           </Modal>
         </div>

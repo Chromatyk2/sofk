@@ -7,63 +7,21 @@ import Login from "../services/auth.services";
 import UniqueStreamerModal from "./UniqueStreamerModal";
 
 function StreamsModal(props) {
-    const [cookies, setCookie] = useCookies();
-    const [team, setTeam] = useState([]);
-    const [onStream, setOnStream] = useState([]);
-    const [orderedOnStream, setOrderedOnStream] = useState([]);
-    const [offStream, setOffStream] = useState([]);
-    useEffect(() => {
-        Axios.get(
-            'https://api.twitch.tv/helix/teams?name=streamon',
-            {
-                headers: {
-                    'Authorization': `Bearer ${cookies.token.access_token}`,
-                    'Client-Id': process.env.REACT_APP_CLIENT_ID
-                }
-            }
-        ).then(function (response) {
-            if(response.status == 200) {
-                setTeam(response.data.data[0].users);
-                response.data.data[0].users.map((val, key) => {
-                    Axios.get(
-                        'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
-                        {
-                            headers: {
-                                'Authorization': `Bearer ${cookies.token.access_token}`,
-                                'Client-Id': process.env.REACT_APP_CLIENT_ID
-                            }
-                        }
-                    ).then(function (response) {
-                        if (response.data.data.length > 0) {
-                            setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
-                        } else if (response.data.data.length < 1) {
-                            setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
-                        }
-                    })
-                })
-            }else{
-                return <Login />
-            }
-        })
-    }, [])
-    useEffect(() => {
-        setOrderedOnStream(onStream.sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1));
-    }, [onStream.length + offStream.length == team.length]);
 
     function handleDataFromChild(data) {
         props.change();
     }
     return (
             <>
-                {orderedOnStream.length > 0 &&
-                    onStream.map((val, key) => {
+                {
+                    props.onStream.map((val, key) => {
                         return (
                             <UniqueStreamerModal change={handleDataFromChild} onStream={true} streamer={val}/>
                         )
                     })
                 }
-                {offStream.length > 0 &&
-                    offStream.map((val, key) => {
+                {
+                    props.offStream.map((val, key) => {
                         return (
                             <UniqueStreamerModal change={handleDataFromChild} onStream={false} streamer={val}/>
                         )

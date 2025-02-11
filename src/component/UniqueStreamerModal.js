@@ -40,9 +40,11 @@ function UniqueStreamerModal(props) {
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer.infos[0].user_name} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>
-                                        {user &&
-                                            <img src={user.data[0].profile_image_url}/>
-                                        }
+                                        <div style={{width:"50px"}}>
+                                            {user &&
+                                                <img src={user.data[0].profile_image_url}/>
+                                            }
+                                        </div>
                                         <p>{props.streamer.infos[0].user_name}</p>
                                     </div>
                                     <div className={"uniqueStreamerStats"}>
@@ -56,9 +58,11 @@ function UniqueStreamerModal(props) {
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>
-                                        {user &&
-                                            <img style={{width: "50px", margin: "0"}} src={user.data[0].profile_image_url}/>
-                                        }
+                                        <div style={{width:"50px"}}>
+                                            {user &&
+                                                <img style={{width: "50px", margin: "0"}} src={user.data[0].profile_image_url}/>
+                                            }
+                                        </div>
                                         <p>{props.streamer}</p>
                                     </div>
                                 </div>
