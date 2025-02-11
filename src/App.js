@@ -90,15 +90,15 @@ function App() {
   return(
     <>
       <BrowserRouter>
-        <NavBar cookies={cookies}/>
+        <NavBar />
         <Routes>
-          <Route path="/" element={<HomePage cookies={cookies}/>}/>
-          <Route path="/Streams" element={<StreamOnLayout cookies={cookies}/>}/>
-          <Route path="/Clips" element={<ClipsLayout cookies={cookies}/>}/>
-          <Route path="/Stream" element={<Player cookies={cookies}/>}/>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/Streams" element={<StreamOnLayout token={token}/>}/>
+          <Route path="/Clips" element={<ClipsLayout token={token}/>}/>
+          <Route path="/Stream" element={<Player token={token}/>}/>
         </Routes>
         {/*<Partners cookies={cookies}/>*/}
-        <Footer cookies={cookies}/>
+        <Footer />
         <div className={"buttonStreamsContainer"}>
           <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
           <button className={"buttonStreamers"}>Boutique</button>
@@ -108,7 +108,7 @@ function App() {
               <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
             </div>
             <div className={"streamsModalContainer"}>
-              <StreamsModal change={closeModal} cookies={cookies} onStream={onStream} offStream={offStream} token={token}/>
+              <StreamsModal change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
             </div>
           </Modal>
         </div>

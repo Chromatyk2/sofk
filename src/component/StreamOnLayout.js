@@ -27,7 +27,7 @@ function StreamOnLayout() {
             'https://api.twitch.tv/helix/teams?name=streamon',
             {
                 headers: {
-                    'Authorization': `Bearer ${cookies.token.access_token}`,
+                    'Authorization': `Bearer ${props.token}`,
                     'Client-Id': process.env.REACT_APP_CLIENT_ID
                 }
             }
@@ -40,7 +40,7 @@ function StreamOnLayout() {
                         'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
                         {
                             headers: {
-                                'Authorization': `Bearer ${cookies.token.access_token}`,
+                                'Authorization': `Bearer ${props.token}`,
                                 'Client-Id': process.env.REACT_APP_CLIENT_ID
                             }
                         }
