@@ -34,7 +34,7 @@ function StreamOnLayout(props) {
                         }
                     </div>
                     {multiStream.length > 0 &&
-                        <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv"+multiStream.map((val, key) => "/"+val.replace(',',''))}>Lancer le Multi Stream</a>
+                        <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv"+multiStream.map((val, key) => { return("/"+val) })}>Lancer le Multi Stream</a>
                     }
                 </>
         </div>
