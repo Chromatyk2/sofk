@@ -6,8 +6,9 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
 function StreamOnLayout(props) {
+    const [multiStream, setMultiStream] = useState([]);
     function loadForMultiStream(data) {
-        console.log(data)
+        setMultiStream(oldArrayMulti => [...oldArrayMulti, data]);
     }
     return (
         <div className={"containerStream"}>
@@ -28,6 +29,9 @@ function StreamOnLayout(props) {
                             })
                         }
                     </div>
+                    <>
+                        <a href={"https://multistre.am/"+multiStream.map((val, key) => {"/"+val})}>Lancer le Multi Stream</a>
+                    </>
                 </>
         </div>
     )
