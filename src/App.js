@@ -14,6 +14,7 @@ import Partners from "./component/partners";
 import Modal from 'react-modal';
 import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
+import Axios from 'axios'
 function App() {
   const [cookies, setCookie] = useCookies();
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -32,11 +33,6 @@ function App() {
       background: '#325269'
     },
   };
-
-  // if(Object.keys(cookies).length == 0) {
-  //   return <Login />
-  // }
-
   useEffect(() => {
     Axios.get(
         'https://api.twitch.tv/helix/teams?name=streamon',
