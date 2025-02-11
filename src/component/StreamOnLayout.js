@@ -5,7 +5,7 @@ import UniqueStreamer from './uniqueStreamer.js';
 import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
-function StreamOnLayout() {
+function StreamOnLayout(props) {
     const [cookies, setCookie] = useCookies();
     const [streamToDisplay, setStreamToDisplay] = useState();
     const [team, setTeam] = useState([]);

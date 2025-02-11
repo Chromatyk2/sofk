@@ -6,7 +6,7 @@ import UniqueStreamerClip from "./uniqueStreamerClip";
 import UniqueStreamerMozaique from "./UniqueStreamerMozaique";
 import Login from "../services/auth.services";
 
-function ClipsLayout() {
+function ClipsLayout(props) {
     const [cookies, setCookie] = useCookies();
     const [team, setTeam] = useState([]);
     const [clips, setClips] = useState([]);
