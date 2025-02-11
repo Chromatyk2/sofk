@@ -16,7 +16,6 @@ import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
 import Axios from 'axios'
 function App() {
-  const [refreash, setRefreash] = React.useState(0);
   const [cookies, setCookie] = useCookies();
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [team, setTeam] = useState([]);
@@ -33,11 +32,9 @@ function App() {
       background: '#325269'
     },
   };
-  useEffect(() => {
-    if(Object.keys(cookies).length == 0) {
-      return (<Login change={reloadEffect}/>)
-    }
-  }, []);
+  if(Object.keys(cookies).length == 0) {
+    return (<Login change={reloadEffect}/>)
+  }
   function openModal() {
     setIsOpen(true);
   }
