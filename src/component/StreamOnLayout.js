@@ -11,8 +11,16 @@ function StreamOnLayout(props) {
     }, []);
     const [multiStream, setMultiStream] = useState([]);
     function loadForMultiStream(data) {
-        setMultiStream(oldArrayMulti => [...oldArrayMulti, data]);
-        console.log(multiStream)
+        if(multiStream.find(streamer => streamer == data)){
+            var array = [...multiStream]; // make a separate copy of the array
+            var index = multiStream.indexOf(data)
+            if (index !== -1) {
+                array.splice(index, 1);
+                setMultiStream(array);
+            }
+        }else{
+            setMultiStream(oldArrayMulti => [...oldArrayMulti, data]);
+        }
     }
     return (
         <div className={"containerStream"}>
@@ -34,7 +42,7 @@ function StreamOnLayout(props) {
                         }
                     </div>
                     {multiStream.length > 0 &&
-                        <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv"+multiStream.map((val, key) => { return("/"+val) })}>Lancer le Multi Stream</a>
+                        <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv"+multiStream.map((val) => { return("/"+val) })}>Lancer le Multi Stream</a>
                     }
                 </>
         </div>
