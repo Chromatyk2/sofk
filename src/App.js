@@ -33,9 +33,9 @@ function App() {
     },
   };
 
-  if(Object.keys(cookies).length == 0) {
-    return <Login />
-  }
+  // if(Object.keys(cookies).length == 0) {
+  //   return <Login />
+  // }
 
   useEffect(() => {
     Axios.get(
