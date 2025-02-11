@@ -15,14 +15,14 @@ function StreamsModal(props) {
                 {
                     props.onStream.map((val, key) => {
                         return (
-                            <UniqueStreamerModal change={handleDataFromChild} onStream={true} streamer={val}/>
+                            <UniqueStreamerModal change={handleDataFromChild} onStream={true} streamer={val} token={props.token}/>
                         )
                     })
                 }
                 {
                     props.offStream.map((val, key) => {
                         return (
-                            <UniqueStreamerModal change={handleDataFromChild} onStream={false} streamer={val}/>
+                            <UniqueStreamerModal change={handleDataFromChild} onStream={false} streamer={val} token={props.token}/>
                         )
                     })
                 }

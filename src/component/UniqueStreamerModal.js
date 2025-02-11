@@ -17,7 +17,7 @@ function UniqueStreamerModal(props) {
             'https://api.twitch.tv/helix/users?login='+streamerName,
             {
                 headers:{
-                    'Authorization': `Bearer ${cookies.token.access_token}`,
+                    'Authorization': `Bearer ${props.token}`,
                     'Client-Id': process.env.REACT_APP_CLIENT_ID
                 }
             }

@@ -18,7 +18,7 @@ import Axios from 'axios'
 function App() {
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-  const [cookies, setCookie] = useCookies();
+  const [token, setToken] = useState(null);
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [team, setTeam] = useState([]);
   const [onStream, setOnStream] = useState([]);
@@ -46,7 +46,7 @@ function App() {
     )
         .then(
             (result) => {
-              const token = result.data.access_token;
+              setToken(result.data.access_token);
               Axios.get(
                   'https://api.twitch.tv/helix/teams?name=streamon',
                   {
@@ -108,7 +108,7 @@ function App() {
               <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
             </div>
             <div className={"streamsModalContainer"}>
-              <StreamsModal change={closeModal} cookies={cookies} onStream={onStream} offStream={offStream}/>
+              <StreamsModal change={closeModal} cookies={cookies} onStream={onStream} offStream={offStream} token={token}/>
             </div>
           </Modal>
         </div>
