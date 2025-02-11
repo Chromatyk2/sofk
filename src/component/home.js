@@ -1,45 +1,7 @@
-import React,{useState, useEffect} from 'react';
-import Axios from 'axios'
-import {useCookies} from "react-cookie";
+import React from 'react';
 import '../App.css'
-import {Link} from "react-router-dom";
-import UniqueStreamerClip from "./uniqueStreamerClip";
-import Login from '../services/auth.services.js';
 
-function HomePage(props) {
-    const [cookies, setCookie] = useCookies();
-    const [user, setUser] = useState([]);
-    const [team, setTeam] = useState([]);
-
-    useEffect(() => {
-        Axios.get(
-            'https://api.twitch.tv/helix/teams?name=streamon',
-            {
-                headers: {
-                    'Authorization': `Bearer ${cookies.token.access_token}`,
-                    'Client-Id': process.env.REACT_APP_CLIENT_ID
-                }
-            }
-        ).then(function (response) {
-            if(response.status == 200){
-                response.data.data[0].users.map((val, key) => {
-                    Axios.get(
-                        'https://api.twitch.tv/helix/users?login='+val.user_name,
-                        {
-                            headers:{
-                                'Authorization': `Bearer ${cookies.token.access_token}`,
-                                'Client-Id': process.env.REACT_APP_CLIENT_ID
-                            }
-                        }
-                    ).then(function(response){
-                        setUser(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
-                    })
-                })
-            }else{
-                return <Login />
-            }
-        })
-    }, [])
+function HomePage() {
   return (
     <>
         <div className="homeContainer">
@@ -93,47 +55,6 @@ function HomePage(props) {
                         </div>
                     </div>
                 </div>
-            {/*<div className={"secondSectionHome"}>*/}
-            {/*    <div className={"homeContent"}>*/}
-            {/*        <img style={{minWidth: "250px", width: "30%"}} src={"images/116000logo.webp"}/>*/}
-            {/*        <div className={"linkContainerHome"}>*/}
-            {/*            <p>*/}
-            {/*                Le 116 000 est le numéro d’urgence gratuit accessible 24 h / 24 et 7 j / 7 en cas de*/}
-            {/*                disparition d’enfant.*/}
-            {/*                Nos équipes ont pour mission d’écouter et soutenir les familles d’enfants disparus.*/}
-            {/*                Nous intervenons auprès des familles dans le cadre de fugues, d’enlèvements parentaux en*/}
-            {/*                France ou à l’étranger, de disparitions inquiétantes de mineurs et de jeunes majeurs (de*/}
-            {/*                moins de 25 ans).*/}
-            {/*                Droit d’Enfance est membre de Missing Children Europe, fédération européenne pour les*/}
-            {/*                enfants disparus et exploités sexuellement.*/}
-            {/*            </p>*/}
-            {/*            <div className={"infosAssoLink"}>*/}
-            {/*                <a className="socialLink" target='_blank'*/}
-            {/*                   href="https://www.116000enfantsdisparus.fr/">116 000</a>*/}
-            {/*                <a className="socialLink" target='_blank'*/}
-            {/*                   href="https://www.droitdenfance.org/">Droit d'enfance</a>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-            {/*<div className={"thirdFakeContent"}></div>*/}
-            {/*<div className={"fourthSectionHome"}>*/}
-            {/*        <h1 className={"titleEdition"}>Streamer.euses 2024</h1>*/}
-            {/*        <div className={"streamListHome"}>*/}
-            {/*            {user.length > 0 &&*/}
-            {/*                user.map((val, key) => {*/}
-            {/*                    return (*/}
-            {/*                        <div className={"streamHomeContainer"}>*/}
-            {/*                            <a href={"https://twitch.tv/" + val.infos[0].login} target={"_blank"}>*/}
-            {/*                                <img src={val.infos[0].profile_image_url}/>*/}
-            {/*                            </a>*/}
-            {/*                            <p style={{textAlign: "center"}}>{val.infos[0].login}</p>*/}
-            {/*                        </div>*/}
-            {/*                    )*/}
-            {/*                })*/}
-            {/*            }*/}
-            {/*        </div>*/}
-            {/*</div>*/}
         </div>
     </>
   )
