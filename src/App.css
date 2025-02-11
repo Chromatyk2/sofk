@@ -2328,7 +2328,7 @@ a.linkUnderStream:hover {
     background-color: #5B8AA1;
 }
 img.linkUnderStreamImg {
-    width: 100%;
+    width: 64px;
 }
 .uniqueStreamerOnline {
     align-items: center;
