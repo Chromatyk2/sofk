@@ -32,9 +32,9 @@ function StreamOnLayout(props) {
                             })
                         }
                     </div>
-                    <>
-                        <a href={"https://multistre.am/"+multiStream.map((val, key) => {"/"+val})}>Lancer le Multi Stream</a>
-                    </>
+                    {multiStream.length > 0 &&
+                        <a href={"https://multistre.am/" + multiStream.map((val, key) => {"/" + val})}>Lancer le Multi Stream</a>
+                    }
                 </>
         </div>
     )
