@@ -2515,6 +2515,7 @@ img.linkUnderStreamImg {
     color: #fff;
     font-size: 18px;
     letter-spacing: 1px;
+    text-align: justify;
 }
 .paragraphHome span{
     color: #fcc249 ;
