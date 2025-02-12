@@ -6,15 +6,12 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
 function StreamOnLayout(props) {
-    props.change();
+    console.log(props.onStream)
+    console.log(props.offStream)
     useEffect(() => {
-
-        const interval = setInterval(
-            () => props.change(), 120000
-        );
-        return () => {
-            clearInterval(interval);
-        };
+        if(props.onStream.length == 0 && props.offStream.length == 0){
+            props.change();
+        }
     }, []);
     const [multiStream, setMultiStream] = useState([]);
     const [url, setUrl] = useState()

@@ -7,15 +7,6 @@ import UniqueStreamerModal from "./UniqueStreamerModal";
 
 function StreamsModal(props) {
 
-    useEffect(() => {
-        props.refresh();
-        const interval = setInterval(
-            () => props.refresh(), 120000
-        );
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
     function handleDataFromChild(data) {
         props.change();
     }
