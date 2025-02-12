@@ -135,6 +135,7 @@ function App() {
               }
           )
   }
+
     function refreshStreamers() {
     setOnStream([]);
     setOffStream([]);
@@ -205,7 +206,7 @@ function App() {
               <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
             </div>
             <div className={"streamsModalContainer"}>
-              <StreamsModal change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
+              <StreamsModal refresh={refreshStreamers} change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
             </div>
           </Modal>
         </div>
