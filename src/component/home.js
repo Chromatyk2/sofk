@@ -33,7 +33,7 @@ function HomePage(props) {
                             auprès du public.
                         </p>
                     </div>
-                    <div style={{marginTop:"30px", marginBottom:"30px"}}>
+                    <div style={{marginTop:"30px", marginBottom:"150px"}}>
                         <h1 className={"titleEdition"}>Editions précédentes</h1>
                         <div className={"editionsInfosContainer"}>
                             <div className={"editionsContainer"}>
