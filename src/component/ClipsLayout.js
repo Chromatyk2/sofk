@@ -113,10 +113,10 @@ function ClipsLayout(props) {
             {clips.length > 0 &&
                 <>
                     <div style={{display:"flex", width:"300px", gap:"10px", margin:"auto", marginBottom:"30px"}}>
-                        <button onClick={handleDate} value={"all"} className={"buttonStreamers"}>Tous</button>
-                        <button onClick={handleDate} value={"2024-05-23"} className={"buttonStreamers"}>Jour 1</button>
-                        <button onClick={handleDate} value={"2024-05-24"} className={"buttonStreamers"}>Jour 2</button>
-                        <button onClick={handleDate} value={"2024-05-25"} className={"buttonStreamers"}>Jour 3</button>
+                        <button onClick={handleDate} value={"all"} className={"buttonStreamers filterClipButton selected"}>Tous</button>
+                        <button onClick={handleDate} value={"2024-05-23"} className={"buttonStreamers filterClipButton"}>Jour 1</button>
+                        <button onClick={handleDate} value={"2024-05-24"} className={"buttonStreamers filterClipButton"}>Jour 2</button>
+                        <button onClick={handleDate} value={"2024-05-25"} className={"buttonStreamers filterClipButton"}>Jour 3</button>
                     </div>
                     <select style={{marginBottom:"15px", display:"block", margin:"auto"}} onChange={handleStreamer}>
                         <option style={{textAlign:"center"}} value={"all"}>Tous</option>
