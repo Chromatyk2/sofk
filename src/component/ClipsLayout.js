@@ -10,6 +10,7 @@ function ClipsLayout(props) {
     const [cookies, setCookie] = useCookies();
     const [clips, setClips] = useState([]);
     const [filteredClips, setFilteredClips] = useState([]);
+    const [filteredClipsByStreamer, setFilteredClipsByStreamer] = useState([]);
 
     useEffect(() => {
         if(props.team == 0){
@@ -49,6 +50,13 @@ function ClipsLayout(props) {
             setFilteredClips([])
         }
     }
+    function handleStreamer(data) {
+        const pseudo = data.target.value;
+        if(filteredClips.length > 0){
+            setFilteredClipsByStreamer(filteredClips.filter(item => item.creator_name == pseudo ))
+        }else{
+            setFilteredClipsByStreamer(clips.filter(item => item.creator_name == pseudo ))        }
+    }
     return (
         <>
             {/*{showStreamerList === false &&*/}
@@ -65,13 +73,18 @@ function ClipsLayout(props) {
                         <button onClick={handleDate} value={"2024-05-24"} className={"buttonStreamers"}>Jour 2</button>
                         <button onClick={handleDate} value={"2024-05-25"} className={"buttonStreamers"}>Jour 3</button>
                     </div>
+                    <select onChange={handleStreamer}>
+                        {props.team.map((val, key) => {
+                            return (<option value={val.user_login}>{val.user_login}</option>)
+                        })}
+                    </select>
                     <ClipsPaginate
                         itemsPerPage={32}
-                        items={filteredClips.length > 0 ? filteredClips : clips}
+                        items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer : filteredClips.length > 0 ? filteredClips : clips}
                     />
                 </>
             }
-        </>
+            </>
     )
 }
 
