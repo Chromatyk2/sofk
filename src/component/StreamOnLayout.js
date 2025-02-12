@@ -41,7 +41,7 @@ function StreamOnLayout(props) {
                     {multiStream.length > 0 ?
                         <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv/" + multiStream.join("/")}>Lancer le Multi Stream</a>
                         :
-                        <p style={{marginBottom: "30px", color: "white", textAlign: "center"}}>Clique sur les streams que tu veux voir !</p>
+                        <p style={{color: "white", textAlign: "center"}}>Clique sur les streams que tu veux voir !</p>
                     }
                     <div className={"streamerMozaique"}>
                         {
