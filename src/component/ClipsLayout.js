@@ -62,6 +62,13 @@ function ClipsLayout(props) {
             {/*            <i className="fa-solid fa-people-group"></i>*/}
             {/*        </div>*/}
             {/*    }*/}
+            <h1 style={{textAlign:"center", color:"white"}}>Les clips</h1>
+            <div>
+                <button className={"buttonStreamers"}>Tous</button>
+                <button className={"buttonStreamers"}>Jour 1</button>
+                <button className={"buttonStreamers"}>Jour 2</button>
+                <button className={"buttonStreamers"}>Jour 3</button>
+            </div>
             {clips.length > 0 &&
                 <ClipsPaginate
                     itemsPerPage={32}
