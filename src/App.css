@@ -2540,6 +2540,7 @@ button.buttonStreamers.filterClipButton.selected  {
 a.clipsLink {
     text-decoration: none;
     border-radius: 10px;
+    width: 340px;
 }
 a.clipsLink:hover{
     background-color: white;
