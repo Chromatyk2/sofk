@@ -12,6 +12,7 @@ function ClipsLayout(props) {
     const [filteredClips, setFilteredClips] = useState([]);
     const [filteredClipsByStreamer, setFilteredClipsByStreamer] = useState([]);
     const [selectedStreamer, setSelectedStreamer] = useState(null);
+    const [selectedDate, setSelectedDate] = useState(null);
     const [clipStreamer, setClipStreamer] = useState([]);
     useEffect(() => {
         if(props.team == 0){
@@ -50,6 +51,7 @@ function ClipsLayout(props) {
     }, [props.team]);
     function handleDate(data) {
         const date = data.target.value;
+        setSelectedDate(date);
         if(data.target.value != "all"){
             if(filteredClipsByStreamer.length > 0){
                 setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(date)).filter((item => item.broadcaster_name.includes(selectedStreamer))))
@@ -68,13 +70,21 @@ function ClipsLayout(props) {
     function handleStreamer(data) {
         const pseudo = data.target.value;
         setSelectedStreamer(pseudo);
-        if(filteredClips.length > 0){
-            setFilteredClipsByStreamer(filteredClips.filter(item => item.broadcaster_name == pseudo ))
+        if(data.target.value != "all"){
+            if(filteredClips.length > 0){
+                setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(selectedDate)).filter((item => item.broadcaster_name.includes(pseudo))))
+            }else{
+                setFilteredClipsByStreamer(clips.filter(item => item.broadcaster_name.includes(pseudo)))
+            }
         }else{
-            setFilteredClipsByStreamer(clips.filter(item => item.broadcaster_name == pseudo ))
+            if(filteredClips.length > 0){
+                setFilteredClipsByStreamer(clips.filter((item => item.created_at.includes(selectedDate))))
+            }else{
+                setFilteredClips([])
+                setFilteredClipsByStreamer([])
+            }
         }
     }
-    console.log(clipStreamer)
     return (
         <>
             {/*{showStreamerList === false &&*/}
@@ -92,12 +102,13 @@ function ClipsLayout(props) {
                         <button onClick={handleDate} value={"2024-05-25"} className={"buttonStreamers"}>Jour 3</button>
                     </div>
                     <select onChange={handleStreamer}>
+                        <option value={"all"}>Tous</option>
                         {clips.map(e => e['broadcaster_name'])
                             .map((e, i, final) => final.indexOf(e) === i && i)
                             .filter(e => clips[e]).map(e => clips[e])
                             .map((val, key) => {
-                            return (<option value={val.broadcaster_name}>{val.broadcaster_name}</option>)
-                        })}
+                                return (<option value={val.broadcaster_name}>{val.broadcaster_name}</option>)
+                            })}
                     </select>
                     <ClipsPaginate
                         itemsPerPage={32}
