@@ -2571,15 +2571,10 @@ ul.paginateLay {
     text-align: center;
     flex-wrap: wrap;
     width: 99vw;
-}
-.paginateLay li{
-    color: white;
-    margin: 15px;
-    width: auto;
+    gap: 20px;
 }
 .paginateLay li a{
     color: white;
-    margin: 15px;
 }
 .paginateLay li.selected{
     color:rgb(252, 194, 73);
