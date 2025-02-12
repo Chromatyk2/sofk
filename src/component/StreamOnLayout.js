@@ -59,8 +59,7 @@ function StreamOnLayout(props) {
                     </div>
                 </>
         </div>
-    )
-        ;
+    );
 }
 
 export default StreamOnLayout;
