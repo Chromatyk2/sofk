@@ -118,7 +118,7 @@ function ClipsLayout(props) {
                         <button onClick={handleDate} value={"2024-05-24"} className={selectedDate === "2024-05-24" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 2</button>
                         <button onClick={handleDate} value={"2024-05-25"} className={selectedDate === "2024-05-25" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 3</button>
                     </div>
-                    <select style={{marginBottom:"15px", display:"block", margin:"auto"}} onChange={handleStreamer}>
+                    <select style={{display:"block", margin:"auto", marginBottom:"15px", }} onChange={handleStreamer}>
                         <option style={{textAlign:"center"}} value={"all"}>Tous</option>
                         {clips.map(e => e['broadcaster_name'])
                             .map((e, i, final) => final.indexOf(e) === i && i)
