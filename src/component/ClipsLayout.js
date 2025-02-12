@@ -44,7 +44,11 @@ function ClipsLayout(props) {
     function handleDate(data) {
         const date = data.target.value;
         if(data.target.value != "all"){
-            setFilteredClips(clips.filter(item => item.created_at.includes(date)))
+            if(filteredClipsByStreamer.length > 0){
+                setFilteredClipsByStreamer(filteredClipsByStreamer.filter(item => item.created_at.includes(date)))
+            }else{
+                setFilteredClips(clips.filter(item => item.created_at.includes(date)))
+            }
         }else{
             setFilteredClips([])
         }
