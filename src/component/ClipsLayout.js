@@ -94,6 +94,7 @@ function ClipsLayout(props) {
                     <select onChange={handleStreamer}>
                         {clips.map(e => e['broadcaster_name'])
                             .map((e, i, final) => final.indexOf(e) === i && i)
+                            .filter(e => clips[e]).map(e => clips[e])
                             .map((val, key) => {
                             return (<option value={val.broadcaster_name}>{val.broadcaster_name}</option>)
                         })}
