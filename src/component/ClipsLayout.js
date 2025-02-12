@@ -9,6 +9,7 @@ import Login from "../services/auth.services";
 function ClipsLayout(props) {
     const [cookies, setCookie] = useCookies();
     const [clips, setClips] = useState([]);
+    const [filteredClips, setFilteredClips] = useState([]);
 
     useEffect(() => {
         if(props.team == 0){
@@ -39,21 +40,14 @@ function ClipsLayout(props) {
             })
         })
     }, [props.team]);
-    function handleDataFromChild(data) {
-        setClips([]);
-            Axios.get(
-                'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&&broadcaster_id='+data,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${cookies.token.access_token}`,
-                        'Client-Id': process.env.REACT_APP_CLIENT_ID
-                    }
-                }
-            ).then(function (response) {
-                response.data.data.map((val, key) => {
-                    setClips(oldArrayOn => [...oldArrayOn, val]);
-                })
-            })
+    function handleDate(data) {
+        const date = data.target.value;
+        const reg = new RegExp(date, /^date.*$/)
+        if(data.target.value != "all"){
+            setFilteredClips(clips.filter(item => item.created_at.match(reg)))
+        }else{
+            setFilteredClips([])
+        }
     }
     return (
         <>
@@ -62,18 +56,20 @@ function ClipsLayout(props) {
             {/*            <i className="fa-solid fa-people-group"></i>*/}
             {/*        </div>*/}
             {/*    }*/}
-            <h1 style={{textAlign:"center", color:"white"}}>Les clips</h1>
-            <div>
-                <button className={"buttonStreamers"}>Tous</button>
-                <button className={"buttonStreamers"}>Jour 1</button>
-                <button className={"buttonStreamers"}>Jour 2</button>
-                <button className={"buttonStreamers"}>Jour 3</button>
-            </div>
+            <h1 style={{marginTop:"30px", textAlign:"center", color:"white"}}>Les clips</h1>
             {clips.length > 0 &&
-                <ClipsPaginate
-                    itemsPerPage={32}
-                    items={clips}
-                />
+                <>
+                    <div style={{display:"flex", width:"300px", gap:"10px", margin:"auto", marginBottom:"30px"}}>
+                        <button value={"all"} className={"buttonStreamers"}>Tous</button>
+                        <button value={"2024-05-23"} className={"buttonStreamers"}>Jour 1</button>
+                        <button value={"2024-05-24"} className={"buttonStreamers"}>Jour 2</button>
+                        <button value={"2024-05-25"} className={"buttonStreamers"}>Jour 3</button>
+                    </div>
+                    <ClipsPaginate
+                        itemsPerPage={32}
+                        items={filteredClips.length > 0 ? filteredClips : clips}
+                    />
+                </>
             }
         </>
     )
