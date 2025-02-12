@@ -38,7 +38,11 @@ function StreamOnLayout(props) {
         <div className={"containerStream"}>
                 <>
                     <h1 style={{marginTop:"30px",color:"white", textAlign:"center"}}>Multi Stream</h1>
-                    <p style={{marginBottom:"30px",color:"white", textAlign:"center"}}>Clique sur les streams que tu veux voir !</p>
+                    {multiStream.length > 0 ?
+                        <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv/" + multiStream.join("/")}>Lancer le Multi Stream</a>
+                        :
+                        <p style={{marginBottom: "30px", color: "white", textAlign: "center"}}>Clique sur les streams que tu veux voir !</p>
+                    }
                     <div className={"streamerMozaique"}>
                         {
                             Array.from(new Set(props.onStream)).sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1).map((val, key) => {
@@ -55,9 +59,6 @@ function StreamOnLayout(props) {
                             })
                         }
                     </div>
-                    {multiStream.length > 0 &&
-                        <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv/"+multiStream.join("/")}>Lancer le Multi Stream</a>
-                    }
                 </>
         </div>
     )
