@@ -2588,6 +2588,7 @@ ul.paginateLay {
 }
 .paginateLay li:hover{
     color:rgb(252, 194, 73);
+    background: transparent;
 }
 .paginateLay li a:hover{
     color:rgb(252, 194, 73);
