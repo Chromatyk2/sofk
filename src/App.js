@@ -145,7 +145,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage change={refreshStreamers}/>}/>
           <Route path="/Streams" element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream} onStream={onStream}/>}/>
-          <Route path="/Clips" element={<ClipsLayout team={team} token={token}/>}/>
+          <Route path="/Clips" element={<ClipsLayout change={refreshStreamers} team={team} token={token}/>}/>
           <Route path="/Stream" element={<Player token={token}/>}/>
         </Routes>
         {/*<Partners cookies={cookies}/>*/}
