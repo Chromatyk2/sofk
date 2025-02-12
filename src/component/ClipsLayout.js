@@ -45,7 +45,7 @@ function ClipsLayout(props) {
     function handleDate(data) {
         const date = data.target.value;
         if(data.target.value != "all"){
-            if(selectedStreamer !== null){
+            if(filteredClipsByStreamer.length > 0){
                 setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(date)).filter((item => item.broadcaster_name.includes(selectedStreamer))))
             }else{
                 setFilteredClips(clips.filter(item => item.created_at.includes(date)))
@@ -57,6 +57,7 @@ function ClipsLayout(props) {
     }
     function handleStreamer(data) {
         const pseudo = data.target.value;
+        setSelectedStreamer(pseudo);
         if(filteredClips.length > 0){
             setFilteredClipsByStreamer(filteredClips.filter(item => item.broadcaster_name == pseudo ))
         }else{
