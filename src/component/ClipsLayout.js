@@ -51,7 +51,7 @@ function ClipsLayout(props) {
         })
     }, [props.team]);
     function handleDate(data) {
-        const selectedButton = document.getElementsByClassName("selected")
+        const selectedButton = document.querySelectorAll('.selected');
         selectedButton.classList.toggle("selected")
         data.target.classList.toggle("selected")
         const date = data.target.value;
