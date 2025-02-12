@@ -12,7 +12,8 @@ function ClipsLayout(props) {
     const [filteredClips, setFilteredClips] = useState([]);
     const [filteredClipsByStreamer, setFilteredClipsByStreamer] = useState([]);
     const [selectedStreamer, setSelectedStreamer] = useState(null);
-
+    const [clipStreamer, setClipStreamer] = useState([]);
+    console.log(clipStreamer)
     useEffect(() => {
         if(props.team == 0){
             props.change();
@@ -36,6 +37,7 @@ function ClipsLayout(props) {
                     }
                 }
             ).then(function (response) {
+                setClipStreamer([...new Set(response.data.data.broadcaster_name)])
                 response.data.data.map((val, key) => {
                     setClips(oldArrayOn => [...oldArrayOn, val]);
                 })
@@ -51,8 +53,12 @@ function ClipsLayout(props) {
                 setFilteredClips(clips.filter(item => item.created_at.includes(date)))
             }
         }else{
-            setFilteredClips([])
-            setFilteredClipsByStreamer([])
+            if(filteredClipsByStreamer.length > 0){
+                setFilteredClipsByStreamer(clips.filter((item => item.broadcaster_name.includes(selectedStreamer))))
+            }else{
+                setFilteredClips([])
+                setFilteredClipsByStreamer([])
+            }
         }
     }
     function handleStreamer(data) {
@@ -81,8 +87,8 @@ function ClipsLayout(props) {
                         <button onClick={handleDate} value={"2024-05-25"} className={"buttonStreamers"}>Jour 3</button>
                     </div>
                     <select onChange={handleStreamer}>
-                        {props.team.map((val, key) => {
-                            return (<option value={val.user_login}>{val.user_login}</option>)
+                        {clips.map((val, key) => {
+                            return (<option value={val.broadcaster_name}>{val.broadcaster_name}</option>)
                         })}
                     </select>
                     <ClipsPaginate
