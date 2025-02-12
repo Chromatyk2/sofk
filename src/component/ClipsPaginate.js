@@ -11,7 +11,7 @@ function Items(props) {
                 {clipList == [] ? (
                     <h1>Loading...</h1>
                 ) : (
-                    clipList.sort((a, b) => (a.view_count > b.view_count) ? 1 : -1).map((val, key) => {
+                    clipList.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1).map((val, key) => {
                         return (
                             <>
                                 <Link className="clipsLink navLink" to={val.url} target={"_blank"}>

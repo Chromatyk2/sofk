@@ -133,7 +133,7 @@ function ClipsLayout(props) {
                         :
                             <ClipsPaginate
                                 itemsPerPage={32}
-                                items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer : filteredClips.length > 0 ? filteredClips : clips}
+                                items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : filteredClips.length > 0 ? filteredClips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : clips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1)}
                             />
                     }
                 </>
