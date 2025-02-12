@@ -2418,7 +2418,7 @@ img.linkUnderStreamImg {
 li.previous, li.next {
     display: none;
 }
-.filterClipButton.selected:hover {
+button.buttonStreamers.filterClipButton.selected  {
     background-image: linear-gradient(180deg, #b27d0d 24%, #fcc249 155%);
     color: #fff;
 }
