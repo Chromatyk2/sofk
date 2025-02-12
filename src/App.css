@@ -2555,6 +2555,7 @@ a.clipsLink:hover{
 p.titleClip {
     font-size: 20px;
     text-align: center;
+    margin-top: 15px;
 }
 img.imgClip {
     width: 340px;
