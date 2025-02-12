@@ -2395,7 +2395,8 @@ img.linkUnderStreamImg {
     background: #5b8aa1;
     border-radius: 0 10px 0 10px;
     bottom: 60px;
-    display: flex;
+    display: flex
+;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
@@ -2403,7 +2404,7 @@ img.linkUnderStreamImg {
     margin: auto;
     padding: 5px;
     position: fixed;
-    width: 257px;
+    width: 175px;
 }
 .buttonStreamers {
     background-image: linear-gradient(180deg, #fcc249 24%, #b27d0d 155%);
@@ -2411,8 +2412,8 @@ img.linkUnderStreamImg {
     border-radius: 10px;
     bottom: 50px;
     color: #fff;
-    font-size: 20px;
-    width: 250px;
+    font-size: 100%;
+    width: 100%;
 }
 
 .buttonStreamers:hover {
