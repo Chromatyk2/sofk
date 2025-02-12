@@ -79,6 +79,7 @@ function ClipsPaginate(props) {
                     renderOnZeroPageCount={null}
                     style={{marginBottom:"150px"}}
                 />
+                <div style={{height:"150px"}}></div>
             </div>
         </>
     );
