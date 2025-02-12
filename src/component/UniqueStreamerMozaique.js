@@ -28,10 +28,10 @@ function UniqueStreamerMozaique(props) {
     function addToMultistream(e) {
         if(e.target.style.border != "none"){
             e.target.style.border = "none"
-            e.target.style.border = "0"
+            e.target.style.opacity = "0"
         }else{
             e.target.style.border = "solid #FCC249 3px"
-            e.target.style.border = "1"
+            e.target.style.opacity = "1"
         }
         props.change(e.target.value);
     }
