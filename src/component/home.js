@@ -2,9 +2,6 @@ import React, {useEffect} from 'react';
 import '../App.css'
 
 function HomePage(props) {
-    useEffect(() => {
-        props.change()
-    }, []);
   return (
     <>
         <div className="homeContainer">
