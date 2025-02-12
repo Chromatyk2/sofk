@@ -86,54 +86,7 @@ function App() {
     setIsOpen(true);
   }
   function closeModal() {
-  setOnStream([]);
-  setOffStream([]);
     setIsOpen(false);
-      Axios.post(
-          'https://id.twitch.tv/oauth2/token',
-          {
-              client_id:CLIENT_ID,
-              client_secret:CLIENT_SECRET,
-              grant_type:"client_credentials",
-              redirect_uri:"https://preview--streamonforkids.netlify.app/"
-          }
-      )
-          .then(
-              (result) => {
-                  setToken(result.data.access_token);
-                  const currentToken = result.data.access_token;
-                  Axios.get(
-                      'https://api.twitch.tv/helix/teams?name=streamon',
-                      {
-                          headers: {
-                              'Authorization': `Bearer ${currentToken}`,
-                              'Client-Id': process.env.REACT_APP_CLIENT_ID
-                          }
-                      }
-                  ).then(function (response) {
-                      if(response.status == 200) {
-                          setTeam(response.data.data[0].users);
-                          response.data.data[0].users.map((val, key) => {
-                              Axios.get(
-                                  'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
-                                  {
-                                      headers: {
-                                          'Authorization': `Bearer ${currentToken}`,
-                                          'Client-Id': process.env.REACT_APP_CLIENT_ID
-                                      }
-                                  }
-                              ).then(function (response) {
-                                  if (response.data.data.length > 0) {
-                                      setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
-                                  } else if (response.data.data.length < 1) {
-                                      setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
-                                  }
-                              })
-                          })
-                      }
-                  })
-              }
-          )
   }
     function refreshStreamers() {
     setOnStream([]);

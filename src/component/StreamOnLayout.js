@@ -6,6 +6,8 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
 function StreamOnLayout(props) {
+    console.log(props.onStream)
+    console.log(props.offStream)
     useEffect(() => {
         if(props.onStream.length == 0 && props.offStream.length == 0){
             props.change();
