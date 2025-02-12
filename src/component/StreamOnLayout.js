@@ -37,6 +37,8 @@ function StreamOnLayout(props) {
     return (
         <div className={"containerStream"}>
                 <>
+                    <h1 style={{textAlign:"center"}}>Multi Stream</h1>
+                    <small style={{textAlign:"center"}}>Clique sur les streams que tu veux voir !</small>
                     <div className={"streamerMozaique"}>
                         {
                             Array.from(new Set(props.onStream)).sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1).map((val, key) => {
