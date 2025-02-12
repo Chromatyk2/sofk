@@ -43,9 +43,8 @@ function ClipsLayout(props) {
     }, [props.team]);
     function handleDate(data) {
         const date = data.target.value;
-        const reg = new RegExp(date, "/^date.*$/")
         if(data.target.value != "all"){
-            setFilteredClips(clips.filter(item => item.created_at.match(reg)))
+            setFilteredClips(clips.filter(item => item.created_at.includes(date)))
         }else{
             setFilteredClips([])
         }
@@ -53,9 +52,9 @@ function ClipsLayout(props) {
     function handleStreamer(data) {
         const pseudo = data.target.value;
         if(filteredClips.length > 0){
-            setFilteredClipsByStreamer(filteredClips.filter(item => item.creator_name == pseudo ))
+            setFilteredClipsByStreamer(filteredClips.filter(item => item.broadcaster_name == pseudo ))
         }else{
-            setFilteredClipsByStreamer(clips.filter(item => item.creator_name == pseudo ))        }
+            setFilteredClipsByStreamer(clips.filter(item => item.broadcaster_name == pseudo ))        }
     }
     return (
         <>
