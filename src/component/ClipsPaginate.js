@@ -7,7 +7,7 @@ function Items(props) {
     const clipList = props.currentItems;
     return (
         <>
-            <div className="clipsGlobalContainer">
+            <>
                 {clipList == [] ? (
                     <h1>Loading...</h1>
                 ) : (
@@ -26,7 +26,7 @@ function Items(props) {
                         )
                     })
                 )}
-            </div>
+            </>
         </>
     );
 }
@@ -54,29 +54,31 @@ function ClipsPaginate(props) {
 
     return (
         <>
-            <ReactPaginate
-                className="paginateLay"
-                breakLabel="..."
-                nextLabel=""
-                previousLabel=""
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={1}
-                marginPagesDisplayed={1}
-                pageCount={pageCount}
-                renderOnZeroPageCount={null}
-            />
-            <Items currentItems={currentItems} />
-            <ReactPaginate
-                className="paginateLay"
-                breakLabel="..."
-                nextLabel=""
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={1}
-                marginPagesDisplayed={1}
-                pageCount={pageCount}
-                previousLabel=""
-                renderOnZeroPageCount={null}
-            />
+            <div className="clipsGlobalContainer">
+                <ReactPaginate
+                    className="paginateLay"
+                    breakLabel="..."
+                    nextLabel=""
+                    previousLabel=""
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={1}
+                    marginPagesDisplayed={1}
+                    pageCount={pageCount}
+                    renderOnZeroPageCount={null}
+                />
+                <Items currentItems={currentItems} />
+                <ReactPaginate
+                    className="paginateLay"
+                    breakLabel="..."
+                    nextLabel=""
+                    onPageChange={handlePageClick}
+                    pageRangeDisplayed={1}
+                    marginPagesDisplayed={1}
+                    pageCount={pageCount}
+                    previousLabel=""
+                    renderOnZeroPageCount={null}
+                />
+            </div>
         </>
     );
 }

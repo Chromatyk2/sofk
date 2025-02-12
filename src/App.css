@@ -2525,6 +2525,7 @@ li.previous, li.next {
     margin: auto;
     width: 75%;
     gap: 20px;
+    margin-bottom: 150px;
 }
 .infoClipContainer {
     display: flex;
