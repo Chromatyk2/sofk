@@ -14,44 +14,43 @@ function ClipsLayout(props) {
     const [orderedOnStream, setOrderedOnStream] = useState([]);
     const [offStream, setOffStream] = useState([]);
     const [showStreamerList, setShowStreamerList] = useState(false);
+
     useEffect(() => {
-        Axios.get(
-            'https://api.twitch.tv/helix/teams?name=streamon',
-            {
-                headers: {
-                    'Authorization': `Bearer ${props.token}`,
-                    'Client-Id': process.env.REACT_APP_CLIENT_ID
+        if(props.onStream.length == 0 && props.offStream.length == 0){
+            props.change();
+        }else{
+            const interval = setInterval(
+                () => props.change(), 120000
+            );
+            return () => {
+                clearInterval(interval);
+            };
+        }
+    }, []);
+
+    useEffect(() => {
+
+        props.team.map((val, key) => {
+            Axios.get(
+                'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + val.user_id,
+                {
+                    headers: {
+                        'Authorization': `Bearer ${cookies.token.access_token}`,
+                        'Client-Id': process.env.REACT_APP_CLIENT_ID
+                    }
                 }
-            }
-        ).then(function (response) {
-            if(response.status == 200) {
-                setTeam(response.data.data[0].users);
-                response.data.data[0].users.map((val, key) => {
-                    Axios.get(
-                        'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + val.user_id,
-                        {
-                            headers: {
-                                'Authorization': `Bearer ${props.token}`,
-                                'Client-Id': process.env.REACT_APP_CLIENT_ID
-                            }
-                        }
-                    ).then(function (response) {
-                        response.data.data.map((val, key) => {
-                            setClips(oldArrayOn => [...oldArrayOn, val]);
-                        })
-                    })
+            ).then(function (response) {
+                response.data.data.map((val, key) => {
+                    setClips(oldArrayOn => [...oldArrayOn, val]);
                 })
-            }else{
-                return <Login />
-            }
-        })
+            })
     }, [])
     useEffect(() => {
         Axios.get(
             'https://api.twitch.tv/helix/teams?name=streamon',
             {
                 headers: {
-                    'Authorization': `Bearer ${props.token}`,
+                    'Authorization': `Bearer ${cookies.token.access_token}`,
                     'Client-Id': process.env.REACT_APP_CLIENT_ID
                 }
             }
@@ -62,7 +61,7 @@ function ClipsLayout(props) {
                     'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
                     {
                         headers: {
-                            'Authorization': `Bearer ${props.token}`,
+                            'Authorization': `Bearer ${cookies.token.access_token}`,
                             'Client-Id': process.env.REACT_APP_CLIENT_ID
                         }
                     }
@@ -83,7 +82,7 @@ function ClipsLayout(props) {
                 'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&&broadcaster_id='+data,
                 {
                     headers: {
-                        'Authorization': `Bearer ${props.token}`,
+                        'Authorization': `Bearer ${cookies.token.access_token}`,
                         'Client-Id': process.env.REACT_APP_CLIENT_ID
                     }
                 }
