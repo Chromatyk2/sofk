@@ -6,6 +6,7 @@ import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
 
 function StreamOnLayout(props) {
+    props.change();
     useEffect(() => {
 
         const interval = setInterval(
