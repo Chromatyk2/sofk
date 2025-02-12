@@ -13,7 +13,6 @@ function ClipsLayout(props) {
     const [filteredClipsByStreamer, setFilteredClipsByStreamer] = useState([]);
     const [selectedStreamer, setSelectedStreamer] = useState(null);
     const [clipStreamer, setClipStreamer] = useState([]);
-    console.log(clipStreamer)
     useEffect(() => {
         if(props.team == 0){
             props.change();
@@ -37,7 +36,12 @@ function ClipsLayout(props) {
                     }
                 }
             ).then(function (response) {
-                setClipStreamer([...new Set(response.data.data.broadcaster_name)])
+                setClipStreamer(
+                    Array.from(new Set(response.data.data.map(a => a.broadcaster_name)))
+                        .map(id => {
+                            return response.data.data.find(a => a.broadcaster_name === id)
+                        })
+                )
                 response.data.data.map((val, key) => {
                     setClips(oldArrayOn => [...oldArrayOn, val]);
                 })
@@ -70,6 +74,7 @@ function ClipsLayout(props) {
             setFilteredClipsByStreamer(clips.filter(item => item.broadcaster_name == pseudo ))
         }
     }
+    console.log(clipStreamer)
     return (
         <>
             {/*{showStreamerList === false &&*/}
