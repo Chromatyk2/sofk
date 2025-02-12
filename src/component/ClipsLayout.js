@@ -11,6 +11,7 @@ function ClipsLayout(props) {
     const [clips, setClips] = useState([]);
     const [filteredClips, setFilteredClips] = useState([]);
     const [filteredClipsByStreamer, setFilteredClipsByStreamer] = useState([]);
+    const [selectedStreamer, setSelectedStreamer] = useState(null);
 
     useEffect(() => {
         if(props.team == 0){
@@ -45,12 +46,13 @@ function ClipsLayout(props) {
         const date = data.target.value;
         if(data.target.value != "all"){
             if(filteredClipsByStreamer.length > 0){
-                setFilteredClipsByStreamer(filteredClipsByStreamer.filter(item => item.created_at.includes(date)))
+                setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(date) && item.broadcaster_name.includes(selectedStreamer)))
             }else{
                 setFilteredClips(clips.filter(item => item.created_at.includes(date)))
             }
         }else{
             setFilteredClips([])
+            setFilteredClipsByStreamer([])
         }
     }
     function handleStreamer(data) {
@@ -58,7 +60,8 @@ function ClipsLayout(props) {
         if(filteredClips.length > 0){
             setFilteredClipsByStreamer(filteredClips.filter(item => item.broadcaster_name == pseudo ))
         }else{
-            setFilteredClipsByStreamer(clips.filter(item => item.broadcaster_name == pseudo ))        }
+            setFilteredClipsByStreamer(clips.filter(item => item.broadcaster_name == pseudo ))
+        }
     }
     return (
         <>
