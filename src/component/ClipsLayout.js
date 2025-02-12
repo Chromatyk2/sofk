@@ -14,6 +14,7 @@ function ClipsLayout(props) {
     const [selectedStreamer, setSelectedStreamer] = useState(null);
     const [selectedDate, setSelectedDate] = useState(null);
     const [clipStreamer, setClipStreamer] = useState([]);
+    const [emptyClips, setEmptyClips] = useState(false);
     useEffect(() => {
         if(props.team == 0){
             props.change();
@@ -54,14 +55,18 @@ function ClipsLayout(props) {
         setSelectedDate(date);
         if(data.target.value != "all"){
             if(filteredClipsByStreamer.length > 0){
+                setEmptyClips(true)
                 setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(date)).filter((item => item.broadcaster_name.includes(selectedStreamer))))
             }else{
+                setEmptyClips(false)
                 setFilteredClips(clips.filter(item => item.created_at.includes(date)))
             }
         }else{
             if(filteredClipsByStreamer.length > 0){
+                setEmptyClips(false)
                 setFilteredClipsByStreamer(clips.filter((item => item.broadcaster_name.includes(selectedStreamer))))
             }else{
+                setEmptyClips(false)
                 setFilteredClips([])
                 setFilteredClipsByStreamer([])
             }
@@ -72,14 +77,22 @@ function ClipsLayout(props) {
         setSelectedStreamer(pseudo);
         if(data.target.value != "all"){
             if(filteredClips.length > 0){
-                setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(selectedDate)).filter((item => item.broadcaster_name.includes(pseudo))))
+                if(clips.filter(item => item.created_at.includes(selectedDate)).filter((item => item.broadcaster_name.includes(pseudo))).length > 0){
+                    setEmptyClips(false)
+                    setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(selectedDate)).filter((item => item.broadcaster_name.includes(pseudo))))
+                }else{
+                    setEmptyClips(true)
+                }
             }else{
+                setEmptyClips(false)
                 setFilteredClipsByStreamer(clips.filter(item => item.broadcaster_name.includes(pseudo)))
             }
         }else{
             if(filteredClips.length > 0){
+                setEmptyClips(false)
                 setFilteredClipsByStreamer(clips.filter((item => item.created_at.includes(selectedDate))))
             }else{
+                setEmptyClips(false)
                 setFilteredClips([])
                 setFilteredClipsByStreamer([])
             }
@@ -110,10 +123,14 @@ function ClipsLayout(props) {
                                 return (<option value={val.broadcaster_name}>{val.broadcaster_name}</option>)
                             })}
                     </select>
-                    <ClipsPaginate
-                        itemsPerPage={32}
-                        items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer : filteredClips.length > 0 ? filteredClips : clips}
-                    />
+                    {emptyClips === true ?
+                            <p>Il n'y a pas de clips correspondants</p>
+                        :
+                            <ClipsPaginate
+                                itemsPerPage={32}
+                                items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer : filteredClips.length > 0 ? filteredClips : clips}
+                            />
+                    }
                 </>
             }
         </>
