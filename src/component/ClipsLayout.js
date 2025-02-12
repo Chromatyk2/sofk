@@ -42,8 +42,9 @@ function ClipsLayout(props) {
     }, [props.team]);
     function handleDate(data) {
         const date = data.target.value;
+        const reg = new RegExp(date, "/^date.*$/")
         if(data.target.value != "all"){
-            setFilteredClips(clips.filter(item => item.created_at.includes(date)))
+            setFilteredClips(clips.filter(item => item.created_at.match(reg)))
         }else{
             setFilteredClips([])
         }
