@@ -12,7 +12,7 @@ function ClipsLayout(props) {
     const [filteredClips, setFilteredClips] = useState([]);
     const [filteredClipsByStreamer, setFilteredClipsByStreamer] = useState([]);
     const [selectedStreamer, setSelectedStreamer] = useState(null);
-    const [selectedDate, setSelectedDate] = useState(null);
+    const [selectedDate, setSelectedDate] = useState("all");
     const [clipStreamer, setClipStreamer] = useState([]);
     const [emptyClips, setEmptyClips] = useState(false);
     useEffect(() => {
@@ -51,9 +51,6 @@ function ClipsLayout(props) {
         })
     }, [props.team]);
     function handleDate(data) {
-        const selectedButton = document.querySelectorAll('.selected');
-        selectedButton.classList.toggle("selected")
-        data.target.classList.toggle("selected")
         const date = data.target.value;
         setSelectedDate(date);
         if(data.target.value != "all"){
