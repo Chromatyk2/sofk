@@ -2679,26 +2679,28 @@ button.disableStreamerListButton {
     display: none;
 
 }
-.streamerMozaique{
+.streamerMozaique {
     display: flex;
     flex-wrap: wrap;
-    overflow: overlay;
-    justify-content: center;
     gap: 20px;
+    height: 72vh;
+    justify-content: center;
     margin: 20px;
-    scrollbar-color: white transparent;
+    overflow: overlay;
+    scrollbar-color: #fff #0000;
     scrollbar-width: thin;
-    height: 89vh;
+    width: 75%;
+    margin: auto;
 }
 .uniqueStreamerMozaique {
-    width: 496px;
-    height: 279px;
-    position: relative;
     filter: drop-shadow(2px 4px 6px black);
+    height: 200px;
+    position: relative;
+    width: 355px;
 }
 button.buttonToDisplayStreamMozaique {
+    height: 200px;
     width: 100%;
-    height: 279px;
     border: none;
     background: rgba(0, 0, 0, 0.5);
 }
@@ -2863,6 +2865,29 @@ a.socialLink {
 @media screen and (max-width: 850px) {
     .uniqueStreamer {
         width: 49%;
+    }
+    .streamerMozaique {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        height: 45vh;
+        justify-content: center;
+        margin: 20px;
+        overflow: overlay;
+        scrollbar-color: #fff #0000;
+        scrollbar-width: thin;
+        width: 100%;
+        margin: auto;
+    }
+    .uniqueStreamerMozaique {
+        filter: drop-shadow(2px 4px 6px black);
+        height: 140px;
+        position: relative;
+        width: 260px;
+    }
+    button.buttonToDisplayStreamMozaique {
+        height: 140px;
+        width: 100%;
     }
 }
 @media screen and (max-width: 541px) {
