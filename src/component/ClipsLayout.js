@@ -38,7 +38,7 @@ function ClipsLayout(props) {
                 })
             })
         })
-    }, []);
+    }, [props.team]);
     function handleDataFromChild(data) {
         setClips([]);
             Axios.get(
