@@ -123,7 +123,7 @@ function ClipsLayout(props) {
                         {clips.map(e => e['broadcaster_name'])
                             .map((e, i, final) => final.indexOf(e) === i && i)
                             .filter(e => clips[e]).map(e => clips[e])
-                            .sort((a, b) => (a.broadcaster_name < b.broadcaster_name) ? 1 : -1)
+                            .sort((a, b) => (a.broadcaster_name > b.broadcaster_name) ? 1 : -1)
                             .map((val, key) => {
                                 return (<option style={{textAlign:"center"}} value={val.broadcaster_name}>{val.broadcaster_name}</option>)
                             })}
