@@ -57,24 +57,20 @@ function ClipsPaginate(props) {
             <ReactPaginate
                 className="paginateLay"
                 breakLabel="..."
-                nextLabel=">>"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={1}
                 marginPagesDisplayed={1}
                 pageCount={pageCount}
-                previousLabel="<<"
                 renderOnZeroPageCount={null}
             />
             <Items currentItems={currentItems} />
             <ReactPaginate
                 className="paginateLay"
                 breakLabel="..."
-                nextLabel=">>"
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={1}
                 marginPagesDisplayed={1}
                 pageCount={pageCount}
-                previousLabel="<<"
                 renderOnZeroPageCount={null}
             />
         </>
