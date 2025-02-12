@@ -55,8 +55,12 @@ function ClipsLayout(props) {
         setSelectedDate(date);
         if(data.target.value != "all"){
             if(filteredClipsByStreamer.length > 0){
-                setEmptyClips(true)
-                setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(date)).filter((item => item.broadcaster_name.includes(selectedStreamer))))
+                if(clips.filter(item => item.created_at.includes(date)).filter((item => item.broadcaster_name.includes(selectedStreamer))).length > 0){
+                    setEmptyClips(false)
+                    setFilteredClipsByStreamer(clips.filter(item => item.created_at.includes(date)).filter((item => item.broadcaster_name.includes(selectedStreamer))))
+                }else{
+                    setEmptyClips(true)
+                }
             }else{
                 setEmptyClips(false)
                 setFilteredClips(clips.filter(item => item.created_at.includes(date)))
