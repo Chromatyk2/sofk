@@ -2415,7 +2415,9 @@ img.linkUnderStreamImg {
     font-size: 100%;
     width: 100%;
 }
-
+li.previous, li.next {
+    display: none;
+}
 .buttonStreamers:hover {
     background-image: linear-gradient(180deg, #b27d0d 24%, #fcc249 155%);
     color: #fff;
@@ -2582,17 +2584,13 @@ ul.paginateLay {
     margin: 15px;
 }
 .paginateLay li.selected{
-    background-color: white;
-    color:#38617f;
-    border-radius: 10px;
+    color:rgb(252, 194, 73);
 }
 .paginateLay li:hover{
-    background-color: white;
-    color:#38617f;
-    border-radius: 10px;
+    color:rgb(252, 194, 73);
 }
 .paginateLay li a:hover{
-    color:#38617f;
+    color:rgb(252, 194, 73);
 }
 h1.titleEdition {
     color: #fff;

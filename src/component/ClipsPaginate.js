@@ -58,6 +58,7 @@ function ClipsPaginate(props) {
                 className="paginateLay"
                 breakLabel="..."
                 nextLabel=""
+                previousLabel=""
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={1}
                 marginPagesDisplayed={1}
