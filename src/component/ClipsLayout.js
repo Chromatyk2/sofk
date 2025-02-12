@@ -11,7 +11,7 @@ function ClipsLayout(props) {
     const [clips, setClips] = useState([]);
 
     useEffect(() => {
-        if(props.onStream.length == 0 && props.offStream.length == 0){
+        if(props.team == 0){
             props.change();
         }else{
             const interval = setInterval(
