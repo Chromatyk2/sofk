@@ -92,7 +92,9 @@ function ClipsLayout(props) {
                         <button onClick={handleDate} value={"2024-05-25"} className={"buttonStreamers"}>Jour 3</button>
                     </div>
                     <select onChange={handleStreamer}>
-                        {clips.map((val, key) => {
+                        {clips.map(e => e['broadcaster_name'])
+                            .map((e, i, final) => final.indexOf(e) === i && i)
+                            .map((val, key) => {
                             return (<option value={val.broadcaster_name}>{val.broadcaster_name}</option>)
                         })}
                     </select>
