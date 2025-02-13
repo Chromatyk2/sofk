@@ -9,13 +9,6 @@ function StreamsModal(props) {
     useEffect(() => {
         if(props.onStream.length == 0 && props.offStream.length == 0){
             props.refresh();
-        }else{
-            const interval = setInterval(
-                () => props.refresh(), 120000
-            );
-            return () => {
-                clearInterval(interval);
-            };
         }
     }, []);
     function handleDataFromChild(data) {

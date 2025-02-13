@@ -18,13 +18,6 @@ function ClipsLayout(props) {
     useEffect(() => {
         if(props.team == 0){
             props.change();
-        }else{
-            const interval = setInterval(
-                () => props.change(), 120000
-            );
-            return () => {
-                clearInterval(interval);
-            };
         }
     }, []);
     useEffect(() => {
