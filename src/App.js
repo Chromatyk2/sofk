@@ -141,15 +141,34 @@ function App() {
     return(
         <>
             <BrowserRouter>
-                <NavBar />
+                <NavBar/>
+                <div className={"buttonStreamsContainer"}>
+                    <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
+                    <button className={"buttonStreamers"}>Boutique</button>
+                    <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
+                           contentLabel="Example Modal">
+                        <div style={{display: "flex", justifyContent: "space-between", alignItems: "baseline"}}>
+                            <p style={{color: "white"}}>Streameur.euses</p>
+                            <button style={{color: "white", border: "none", background: "none"}}
+                                    onClick={closeModal}>X
+                            </button>
+                        </div>
+                        <div className={"streamsModalContainer"}>
+                            <StreamsModal refresh={refreshStreamers} change={closeModal} onStream={onStream}
+                                          offStream={offStream} token={token}/>
+                        </div>
+                    </Modal>
+                </div>
                 <Routes>
                     <Route path="/" element={<HomePage change={refreshStreamers}/>}/>
-                    <Route path="/Streams" element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream} onStream={onStream}/>}/>
+                    <Route path="/Streams"
+                           element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream}
+                                                    onStream={onStream}/>}/>
                     <Route path="/Clips" element={<ClipsLayout change={refreshStreamers} team={team} token={token}/>}/>
                     <Route path="/Stream" element={<Player token={token}/>}/>
                 </Routes>
                 {/*<Partners cookies={cookies}/>*/}
-                <Footer />
+                <Footer/>
             </BrowserRouter>
         </>
     );
