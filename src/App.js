@@ -154,10 +154,9 @@ function App() {
     function closeModal() {
         setIsOpen(false);
     }
-    console.log(window.location.pathname);
     return(
         <>
-            <div>
+            <div className={window.location.pathname !== "/zqds" ? "globalDiv" : "globalDivTransparent"}>
                 {donations.length > 0 &&
                     <BrowserRouter>
                         <NavBar/>
