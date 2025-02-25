@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react';
 import logoTwitch from '../twitch.png'
 import logoReplay from '../film.png'
 import logoEuro from '../euro.png'
+import './App.css';
 
 
 function Player(props) {

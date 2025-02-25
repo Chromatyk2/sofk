@@ -4,7 +4,7 @@ import {useCookies} from "react-cookie";
 import {BrowserRouter, Link} from "react-router-dom";
 import {ca} from "date-fns/locale";
 import donationGoal from '../donationGoal.json'
-import overlayCss from '../Overlay.css'
+import './Overlay.css'
 
 function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState([]);
@@ -32,7 +32,11 @@ function PersonalBar(props) {
     }, [])
     return (
         <>
-            <style>{overlayCss}</style>
+            <style>
+                #root{
+
+            }
+            </style>
             <p style={{
                 fontSize: "13px",
                 textAlign: "right",

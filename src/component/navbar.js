@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 import env from "react-dotenv";
+import './App.css';
 
 function NavBar(props) {
     const [count, setCount] = useState(0);

@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import { useCookies } from 'react-cookie';
-import './App.css';
 import 'react-tooltip/dist/react-tooltip.css'
 import HomePage from './component/home.js';
 import NavBar from './component/navbar.js';

@@ -4,6 +4,7 @@ import {useCookies} from "react-cookie";
 import UniqueStreamer from './uniqueStreamer.js';
 import UniqueStreamerMozaique from './UniqueStreamerMozaique.js';
 import Login from "../services/auth.services";
+import './App.css';
 
 function StreamOnLayout(props) {
     useEffect(() => {
