@@ -1,14 +1,33 @@
 {
-  "donationgoal" : [
+  "chromatyk" : [
     {
-      "pseudo": "chromatyk",
+    "montant": 100,
+    "description": "Faire un live de 1h"
+    },
+    {
       "montant": 300,
       "description": "Faire un live de 12h"
+    },
+    {
+      "montant": 500,
+      "description": "Faire un live de 24h"
+    }
+  ],
+  "valenderiaoff" : [
+    {
+      "pseudo": "valenderiaoff",
+      "montant": 100,
+      "description": "IRL au Macumba"
     },
     {
       "pseudo": "valenderiaoff",
       "montant": 600,
       "description": "IRL au Capt'ain"
+    },
+    {
+      "pseudo": "valenderiaoff",
+      "montant": 600,
+      "description": "IRL au Defqon.1"
     }
   ]
 }

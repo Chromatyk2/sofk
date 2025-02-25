@@ -10,6 +10,7 @@ function UniqueStreamerModal(props) {
     const [user, setUser] = useState(null);
     const [data, setData] = useState("");
     const [cagnotte, setCagnotte] = useState([]);
+    const [donation, setDonation] = useState([]);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -22,17 +23,18 @@ function UniqueStreamerModal(props) {
         }
     }
     useEffect(() => {
-        console.log(donationGoal);
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
+            setDonation(donationGoal.streamerName)
         }else{
             var streamerName = props.streamer;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
+            setDonation(donationGoal.streamerName)
         }
         Axios.get(
             'https://api.twitch.tv/helix/users?login='+streamerName,
@@ -52,6 +54,7 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
+    console.log(donation)
     return (
         <>
                 <>
