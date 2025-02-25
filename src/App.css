@@ -2259,7 +2259,7 @@ span.navbar-brand {
     color:white;
 }
 
-#root{
+.globalContainer{
     background-image: url("../public/images/Background.jpg");
     /*background-image: linear-gradient(0deg, #38617f 20%, #9AD4DF 238%, #38617f 60%);*/
     min-height: 100vh;
