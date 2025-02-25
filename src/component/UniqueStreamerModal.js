@@ -13,12 +13,12 @@ function UniqueStreamerModal(props) {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
-                console.log(val.donation)
+                setCagnotte(cagnotte + val.donation.original_amount)
             });
         }else{
             var streamerName = props.streamer;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
-                console.log(val.donation)
+                setCagnotte(cagnotte + val.donation.original_amount)
             });
         }
         Axios.get(
@@ -59,6 +59,7 @@ function UniqueStreamerModal(props) {
                                     <div className={"uniqueStreamerStats"}>
                                         <img src={"/images/redCircle.png"}/>
                                         <p>{props.streamer.infos[0].viewer_count}</p>
+                                        <p>{cagnotte}</p>
                                     </div>
                                 </div>
                             </Link>
@@ -67,12 +68,14 @@ function UniqueStreamerModal(props) {
                                 <div className={"uniqueStreamerOnline"}>
                                     <button className={"buttonToDisplayStream"} value={props.streamer} onClick={changeStream}></button>
                                     <div className={"uniqueStreamerProfile"}>
-                                        <div style={{width:"50px"}}>
+                                        <div style={{width: "50px"}}>
                                             {user &&
-                                                <img style={{width: "50px", margin: "0"}} src={user.data[0].profile_image_url}/>
+                                                <img style={{width: "50px", margin: "0"}}
+                                                     src={user.data[0].profile_image_url}/>
                                             }
                                         </div>
                                         <p>{props.streamer}</p>
+                                        <p>{cagnotte}</p>
                                     </div>
                                 </div>
                             </Link>
