@@ -69,6 +69,7 @@ import donationGoal from '../donationGoal.json'
 
 function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState(0);
+    const [donation, setDonation] = useState([]);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -80,6 +81,14 @@ function PersonalBar(props) {
             height: "30px"
         }
     }
+
+    useEffect(() => {
+        const queryParameters = new URLSearchParams(window.location.search)
+        var streamerName = queryParameters.get("streamer");
+        if (donationGoal[streamerName.toLowerCase()] != undefined) {
+            setDonation(donationGoal[streamerName.toLowerCase()])
+        }
+    }, [])
     useEffect(() => {
         const interval = setInterval(() =>
             {
