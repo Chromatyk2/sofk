@@ -9,6 +9,17 @@ function UniqueStreamerModal(props) {
     const [user, setUser] = useState(null);
     const [data, setData] = useState("");
     const [cagnotte, setCagnotte] = useState([]);
+    const customStyles = {
+        extBar: {
+            width: '75%',
+            backgroundColor: '#38617f',
+            position: 'relative',
+            zIndex: '1',
+            borderRadius: '50px',
+            margin: 'auto',
+            marginBottom: '15px'
+        }
+    }
     useEffect(() => {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
@@ -62,8 +73,20 @@ function UniqueStreamerModal(props) {
                                         <p>{props.streamer.infos[0].viewer_count}</p>
                                     </div>
                                 </div>
-                                <div style={{width:"100%"}}>
-                                    <p style={{margin:0, letterSpacing:"1px"}}>{cagnotte.reduce((a, v) => a = a + v, 0) / 100} €</p>
+
+                                <div style={customStyles.extBar} className="fullProgressBar">
+                                    <div
+                                     style={{
+                                         width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0)/cagnotte.reduce((a, v) => a = a + v, 0)+100 * 100).toFixed(2) + "%",
+                                         position: 'relative',
+                                         background: '#120747',
+                                         textWrap: 'nowrap',
+                                         color: 'white',
+                                         padding: '15px',
+                                         borderRadius: '50px 50px 50px 50px',
+                                         filter: "drop-shadow(0px 0px 6px blue)"}}>
+                                        {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
+                                    </div>
                                 </div>
                             </Link>
                             :
@@ -81,7 +104,21 @@ function UniqueStreamerModal(props) {
                                         <p>{props.streamer}</p>
                                     </div>
                                 </div>
-                                <p>{cagnotte.reduce((a, v) => a = a + v, 0) / 100} €</p>
+                                <div style={customStyles.extBar} className="fullProgressBar">
+                                    <div
+                                        style={{
+                                            width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0)/cagnotte.reduce((a, v) => a = a + v, 0)+100 * 100).toFixed(2) + "%",
+                                            position: 'relative',
+                                            backgroundImage: 'linear-gradient(180deg,#fff 24%,#9ad4de 155%)',
+                                            textWrap: 'nowrap',
+                                            color: 'white',
+                                            padding: '15px',
+                                            borderRadius: '50px 50px 50px 50px',
+                                            filter: "drop-shadow(0px 0px 6px blue)"
+                                        }}>
+                                        {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
+                                    </div>
+                                </div>
                             </Link>
                         }
                     </div>
