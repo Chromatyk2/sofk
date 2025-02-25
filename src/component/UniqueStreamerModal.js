@@ -28,13 +28,15 @@ function UniqueStreamerModal(props) {
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
-            setDonation(donationGoal[streamerName])
+            console.log(streamerName)
+            console.log(donationGoal[streamerName])
         }else{
             var streamerName = props.streamer;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
-            setDonation(donationGoal[streamerName])
+            console.log(streamerName)
+            console.log(donationGoal[streamerName])
         }
         Axios.get(
             'https://api.twitch.tv/helix/users?login='+streamerName,
@@ -54,7 +56,6 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
-    console.log(donation)
     return (
         <>
                 <>
