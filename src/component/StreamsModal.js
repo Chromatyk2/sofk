@@ -6,7 +6,7 @@ import Login from "../services/auth.services";
 import UniqueStreamerModal from "./UniqueStreamerModal";
 
 function StreamsModal(props) {
-    console.log(props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk"));
+    console.log(props.donations.filter(donation => donation.team_member_id.user.display_name == 643451342437880398));
     useEffect(() => {
         if(props.onStream.length == 0 && props.offStream.length == 0){
             props.refresh();
