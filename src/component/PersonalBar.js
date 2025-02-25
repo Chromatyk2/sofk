@@ -32,11 +32,6 @@ function PersonalBar(props) {
     }, [])
     return (
         <>
-            <style>
-                #root{
-
-            }
-            </style>
             <p style={{
                 fontSize: "13px",
                 textAlign: "right",
