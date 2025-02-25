@@ -77,14 +77,17 @@ function UniqueStreamerModal(props) {
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                      style={{
-                                         width: parseFloat((cagnotte.reduce((a, v) => a = a + v, 0)/cagnotte.reduce((a, v) => a = a + v, 0)  + 100 )*100).toFixed(2) + "%",
+                                         width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / (cagnotte.reduce((a, v) => a = a + v, 0) + 100) * 100).toFixed(2) + "%",
                                          position: 'relative',
                                          textWrap: 'nowrap',
                                          color: '#38617f',
                                          padding: '15px',
                                          borderRadius: '50px 50px 50px 50px',
                                          filter: "drop-shadow(0px 0px 6px blue)",
-                                         height: "30px" }}>
+                                         height: "30px",
+                                         lineHeight:0,
+                                         backgroundImage:"linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
+                                        }}>
                                         {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
                                     </div>
                                 </div>
@@ -107,14 +110,16 @@ function UniqueStreamerModal(props) {
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
-                                            width: parseFloat((cagnotte.reduce((a, v) => a = a + v, 0) / cagnotte.reduce((a, v) => a = a + v, 0) + 100) * 100).toFixed(2) + "%",
+                                            width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / (cagnotte.reduce((a, v) => a = a + v, 0) + 100) * 100).toFixed(2) + "%",
                                             position: 'relative',
                                             textWrap: 'nowrap',
                                             color: '#38617f',
                                             padding: '15px',
                                             borderRadius: '50px 50px 50px 50px',
                                             filter: "drop-shadow(0px 0px 6px blue)",
-                                            height: "30px"
+                                            height: "30px",
+                                            lineHeight:0,
+                                            backgroundImage:"linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
                                         }}>
                                         {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
                                     </div>
