@@ -1,0 +1,14 @@
+{
+  "donationgoal" : [
+    {
+      "pseudo": "chromatyk",
+      "montant": 300,
+      "description": "Faire un live de 12h"
+    },
+    {
+      "pseudo": "valenderiaoff",
+      "montant": 600,
+      "description": "IRL au Capt'ain"
+    }
+  ]
+}

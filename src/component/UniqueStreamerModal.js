@@ -3,6 +3,7 @@ import Axios from 'axios'
 import {useCookies} from "react-cookie";
 import {BrowserRouter, Link} from "react-router-dom";
 import {ca} from "date-fns/locale";
+import donationGoal from '../donationGoal.json'
 
 function UniqueStreamerModal(props) {
     const [cookies, setCookie] = useCookies();
@@ -21,6 +22,7 @@ function UniqueStreamerModal(props) {
         }
     }
     useEffect(() => {
+        console.log(donationGoal);
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
