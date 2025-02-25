@@ -12,10 +12,10 @@ function UniqueStreamerModal(props) {
     useEffect(() => {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
-            console.log(props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").donation)
+            console.log(props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk"))
         }else{
             var streamerName = props.streamer;
-            console.log(props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").donation)
+            console.log(props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk"))
 
         }
         Axios.get(
