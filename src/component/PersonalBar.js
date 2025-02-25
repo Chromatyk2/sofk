@@ -92,8 +92,8 @@ function PersonalBar(props) {
     useEffect(() => {
         const interval = setInterval(() =>
             {
-                setCagnotte(prevCount => prevCount + 200)
-            },1000
+                setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 100))
+            },10000
         );
         return () => {
             clearInterval(interval);

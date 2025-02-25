@@ -1,18 +1,23 @@
 {
   "chromatyk" : [
     {
-    "montant": 100,
-    "description": "Faire un live de 1h"
-    },
-    {
-      "pseudo": "valenderiaoff",
-      "montant": 600,
-      "description": "IRL au Capt'ain"
-    },
-    {
-      "pseudo": "valenderiaoff",
-      "montant": 800,
-      "description": "IRL au Defqon.1"
+    "montant": 1204,
+    "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
     }
   ],
   "valenderiaoff" : [
