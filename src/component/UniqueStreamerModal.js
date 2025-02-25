@@ -12,12 +12,12 @@ function UniqueStreamerModal(props) {
     useEffect(() => {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
-            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
+            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
         }else{
             var streamerName = props.streamer;
-            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
+            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
         }
@@ -58,7 +58,7 @@ function UniqueStreamerModal(props) {
                                     <div className={"uniqueStreamerStats"}>
                                         <img src={"/images/redCircle.png"}/>
                                         <p>{props.streamer.infos[0].viewer_count}</p>
-                                        <p>{cagnotte.reduce((a,v) =>  a = a + v , 0 )}</p>
+                                        <p>{cagnotte.reduce((a,v) =>  a = a + v , 0 )/100} €</p>
                                     </div>
                                 </div>
                             </Link>
@@ -74,7 +74,7 @@ function UniqueStreamerModal(props) {
                                             }
                                         </div>
                                         <p>{props.streamer}</p>
-                                        <p>{cagnotte.reduce((a, v) => a = a + v, 0)}</p>
+                                        <p>{cagnotte.reduce((a, v) => a = a + v, 0)/100} €</p>
                                     </div>
                                 </div>
                             </Link>
