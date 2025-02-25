@@ -39,7 +39,6 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
-    console.log(cagnotte.reduce((a,v) =>  a = a + v , 0 ))
     return (
         <>
                 <>
@@ -59,6 +58,7 @@ function UniqueStreamerModal(props) {
                                     <div className={"uniqueStreamerStats"}>
                                         <img src={"/images/redCircle.png"}/>
                                         <p>{props.streamer.infos[0].viewer_count}</p>
+                                        <p>{cagnotte.reduce((a,v) =>  a = a + v , 0 )}</p>
                                     </div>
                                 </div>
                             </Link>
@@ -74,6 +74,7 @@ function UniqueStreamerModal(props) {
                                             }
                                         </div>
                                         <p>{props.streamer}</p>
+                                        <p>{cagnotte.reduce((a, v) => a = a + v, 0)}</p>
                                     </div>
                                 </div>
                             </Link>
