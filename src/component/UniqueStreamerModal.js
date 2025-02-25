@@ -30,7 +30,7 @@ function UniqueStreamerModal(props) {
             });
             console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
-                console.log(donationGoal[streamerName.toLowerCase()].filter(donation => donation.montant >= 800))
+                setDonation(donationGoal[streamerName.toLowerCase()])
             }
         }else{
             var streamerName = props.streamer;
@@ -39,7 +39,7 @@ function UniqueStreamerModal(props) {
             });
             console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
-                console.log(donationGoal[streamerName.toLowerCase()].filter(donation => donation.montant >= 800))
+                setDonation(donationGoal[streamerName.toLowerCase()])
             }
         }
         Axios.get(
@@ -87,7 +87,7 @@ function UniqueStreamerModal(props) {
                                     fontSize: "13px",
                                     textAlign: "right",
                                     margin: 0
-                                }}>{parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / 100 + 500).toFixed(2)} €</p>
+                                }}>{donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0)).length > 0 ? item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0)[0].montant : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}</p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
@@ -124,7 +124,7 @@ function UniqueStreamerModal(props) {
                                     fontSize: "13px",
                                     textAlign: "right",
                                     margin:0
-                                }}>{ parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / 100 + 500).toFixed(2)} €</p>
+                                }}>{donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0)).length > 0 ? item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0)[0].montant : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}</p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
