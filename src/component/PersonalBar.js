@@ -93,7 +93,7 @@ function PersonalBar(props) {
         const interval = setInterval(() =>
             {
                 setCagnotte(cagnotte + 200)
-            },60000
+            },1000
         );
         return () => {
             clearInterval(interval);
