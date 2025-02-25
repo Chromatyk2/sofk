@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react';
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import 'react-tooltip/dist/react-tooltip.css'
 import HomePage from './component/home.js';
@@ -17,6 +17,8 @@ import Axios from 'axios'
 import PersonalBar from "./component/PersonalBar";
 import './App.css';
 function App() {
+    const location = useLocation();
+    const { hash, pathname, search } = location;
     const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
     const [token, setToken] = useState(null);
@@ -156,7 +158,7 @@ function App() {
     }
     return(
         <>
-            <div className={"globalDiv"}>
+            <div className={pathname !== "/zqds" ? "globalDiv" : "globalDivTransparent"}>
                 {donations.length > 0 &&
                     <BrowserRouter>
                         <NavBar/>
