@@ -2,18 +2,24 @@ import React,{useState, useEffect} from 'react';
 import Axios from 'axios'
 import {useCookies} from "react-cookie";
 import {BrowserRouter, Link} from "react-router-dom";
+import {ca} from "date-fns/locale";
 
 function UniqueStreamerModal(props) {
     const [cookies, setCookie] = useCookies();
     const [user, setUser] = useState(null);
     const [data, setData] = useState("");
+    const [cagnotte, setCagnotte] = useState(0);
     useEffect(() => {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
-            console.log(props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName));
+            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                setCagnotte(cagnotte + val.donation.converted_amount);
+            })
         }else{
             var streamerName = props.streamer;
-            console.log(props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName));
+            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                setCagnotte(cagnotte + val.donation.converted_amount);
+            });
         }
         Axios.get(
             'https://api.twitch.tv/helix/users?login='+streamerName,
@@ -33,6 +39,7 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
+    console.log(cagnotte)
     return (
         <>
                 <>
