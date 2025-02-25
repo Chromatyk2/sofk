@@ -54,7 +54,7 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
-    console.log(donation)
+    console.log(donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0))[0].montant)
     return (
         <>
             {donation.length > 0 &&
