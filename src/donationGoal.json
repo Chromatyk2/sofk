@@ -3,6 +3,16 @@
     {
     "montant": 100,
     "description": "Faire un live de 1h"
+    },
+    {
+      "pseudo": "valenderiaoff",
+      "montant": 600,
+      "description": "IRL au Capt'ain"
+    },
+    {
+      "pseudo": "valenderiaoff",
+      "montant": 800,
+      "description": "IRL au Defqon.1"
     }
   ],
   "valenderiaoff" : [
