@@ -4,6 +4,7 @@ import {useCookies} from "react-cookie";
 import {BrowserRouter, Link} from "react-router-dom";
 import {ca} from "date-fns/locale";
 import donationGoal from '../donationGoal.json'
+import overlayCss from '../Overlay.css'
 
 function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState([]);
@@ -25,12 +26,13 @@ function PersonalBar(props) {
         props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
             setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
         });
-        if(donationGoal[streamerName.toLowerCase()] != undefined){
+        if (donationGoal[streamerName.toLowerCase()] != undefined) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
     }, [])
     return (
         <>
+            <style>{overlayCss}</style>
             <p style={{
                 fontSize: "13px",
                 textAlign: "right",
