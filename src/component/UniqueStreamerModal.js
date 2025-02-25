@@ -126,7 +126,7 @@ function UniqueStreamerModal(props) {
                                     textAlign: "right",
                                     margin:0
                                 }}>
-                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? "DonationGoal" : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
+                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
                                 </p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
