@@ -3,14 +3,6 @@
     {
     "montant": 100,
     "description": "Faire un live de 1h"
-    },
-    {
-      "montant": 300,
-      "description": "Faire un live de 12h"
-    },
-    {
-      "montant": 500,
-      "description": "Faire un live de 24h"
     }
   ],
   "valenderiaoff" : [
