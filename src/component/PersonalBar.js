@@ -92,7 +92,8 @@ function PersonalBar(props) {
     useEffect(() => {
         const interval = setInterval(() =>
             {
-                setCagnotte(cagnotte + 200)
+                var newCagnotte = cagnotte + 200;
+                setCagnotte(newCagnotte)
             },1000
         );
         return () => {
