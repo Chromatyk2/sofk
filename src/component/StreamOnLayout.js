@@ -9,13 +9,6 @@ function StreamOnLayout(props) {
     useEffect(() => {
         if(props.onStream.length == 0 && props.offStream.length == 0){
             props.change();
-        }else{
-            const interval = setInterval(
-                () => props.change(), 120000
-            );
-            return () => {
-                clearInterval(interval);
-            };
         }
     }, []);
     const [multiStream, setMultiStream] = useState([]);
@@ -34,30 +27,30 @@ function StreamOnLayout(props) {
     }
     return (
         <div className={"containerStream"}>
-                <>
-                    <h1 style={{marginTop:"30px",color:"white", textAlign:"center"}}>Multi Stream</h1>
-                    {multiStream.length > 0 ?
-                        <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv/" + multiStream.join("/")}>Lancer le Multi Stream</a>
-                        :
-                        <p style={{marginBottom:"12px",color: "white", textAlign: "center"}}>Clique sur les streams que tu veux voir !</p>
+            <>
+                <h1 style={{marginTop:"30px",color:"white", textAlign:"center"}}>Multi Stream</h1>
+                {multiStream.length > 0 ?
+                    <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv/" + multiStream.join("/")}>Lancer le Multi Stream</a>
+                    :
+                    <p style={{marginBottom:"12px",color: "white", textAlign: "center"}}>Clique sur les streams que tu veux voir !</p>
+                }
+                <div className={"streamerMozaique"}>
+                    {
+                        Array.from(new Set(props.onStream)).sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1).map((val, key) => {
+                            return (
+                                <UniqueStreamerMozaique change={loadForMultiStream} onStream={true} streamer={val} token={props.token}/>
+                            )
+                        })
                     }
-                    <div className={"streamerMozaique"}>
-                        {
-                            Array.from(new Set(props.onStream)).sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1).map((val, key) => {
-                                return (
-                                    <UniqueStreamerMozaique change={loadForMultiStream} onStream={true} streamer={val} token={props.token}/>
-                                )
-                            })
-                        }
-                        {
-                            props.offStream.map((val, key) => {
-                                return (
-                                    <UniqueStreamerMozaique change={loadForMultiStream} onStream={false} streamer={val} token={props.token}/>
-                                )
-                            })
-                        }
-                    </div>
-                </>
+                    {
+                        props.offStream.map((val, key) => {
+                            return (
+                                <UniqueStreamerMozaique change={loadForMultiStream} onStream={false} streamer={val} token={props.token}/>
+                            )
+                        })
+                    }
+                </div>
+            </>
         </div>
     );
 }

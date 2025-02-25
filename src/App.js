@@ -16,82 +16,87 @@ import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
 import Axios from 'axios'
 function App() {
-  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-  const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-  const [token, setToken] = useState(null);
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [team, setTeam] = useState([]);
-  const [onStream, setOnStream] = useState([]);
-  const [offStream, setOffStream] = useState([]);
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      background: '#325269'
-    },
-  };
-  // useEffect(() => {
-  //   Axios.post(
-  //       'https://id.twitch.tv/oauth2/token',
-  //       {
-  //         client_id:CLIENT_ID,
-  //         client_secret:CLIENT_SECRET,
-  //         grant_type:"client_credentials",
-  //         redirect_uri:"https://preview--streamonforkids.netlify.app/"
-  //       }
-  //   )
-  //       .then(
-  //           (result) => {
-  //             setToken(result.data.access_token);
-  //             const currentToken = result.data.access_token;
-  //             Axios.get(
-  //                 'https://api.twitch.tv/helix/teams?name=streamon',
-  //                 {
-  //                   headers: {
-  //                     'Authorization': `Bearer ${currentToken}`,
-  //                     'Client-Id': process.env.REACT_APP_CLIENT_ID
-  //                   }
-  //                 }
-  //             ).then(function (response) {
-  //               if(response.status == 200) {
-  //                 setTeam(response.data.data[0].users);
-  //                 response.data.data[0].users.map((val, key) => {
-  //                   Axios.get(
-  //                       'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
-  //                       {
-  //                         headers: {
-  //                           'Authorization': `Bearer ${currentToken}`,
-  //                           'Client-Id': process.env.REACT_APP_CLIENT_ID
-  //                         }
-  //                       }
-  //                   ).then(function (response) {
-  //                     if (response.data.data.length > 0) {
-  //                       setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
-  //                     } else if (response.data.data.length < 1) {
-  //                       setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
-  //                     }
-  //                   })
-  //                 })
-  //               }
-  //             })
-  //           }
-  //       )
-  //
-  // }, []);
-  function openModal() {
-    setIsOpen(true);
-  }
-  function closeModal() {
-    setIsOpen(false);
-  }
+    const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+    const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+    const [token, setToken] = useState(null);
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [team, setTeam] = useState([]);
+    const [onStream, setOnStream] = useState([]);
+    const [offStream, setOffStream] = useState([]);
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            background: '#325269'
+        },
+    };
+    useEffect(() => {
+        Axios.get(
+            'https://streamlabscharity.com/api/v1/teams/643437249115068091'
+        )
+    }, []);
+    // useEffect(() => {
+    //   Axios.post(
+    //       'https://id.twitch.tv/oauth2/token',
+    //       {
+    //         client_id:CLIENT_ID,
+    //         client_secret:CLIENT_SECRET,
+    //         grant_type:"client_credentials",
+    //         redirect_uri:"https://preview--streamonforkids.netlify.app/"
+    //       }
+    //   )
+    //       .then(
+    //           (result) => {
+    //             setToken(result.data.access_token);
+    //             const currentToken = result.data.access_token;
+    //             Axios.get(
+    //                 'https://api.twitch.tv/helix/teams?name=streamon',
+    //                 {
+    //                   headers: {
+    //                     'Authorization': `Bearer ${currentToken}`,
+    //                     'Client-Id': process.env.REACT_APP_CLIENT_ID
+    //                   }
+    //                 }
+    //             ).then(function (response) {
+    //               if(response.status == 200) {
+    //                 setTeam(response.data.data[0].users);
+    //                 response.data.data[0].users.map((val, key) => {
+    //                   Axios.get(
+    //                       'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
+    //                       {
+    //                         headers: {
+    //                           'Authorization': `Bearer ${currentToken}`,
+    //                           'Client-Id': process.env.REACT_APP_CLIENT_ID
+    //                         }
+    //                       }
+    //                   ).then(function (response) {
+    //                     if (response.data.data.length > 0) {
+    //                       setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+    //                     } else if (response.data.data.length < 1) {
+    //                       setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
+    //                     }
+    //                   })
+    //                 })
+    //               }
+    //             })
+    //           }
+    //       )
+    //
+    // }, []);
+    function openModal() {
+        setIsOpen(true);
+    }
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     function refreshStreamers() {
-    setOnStream([]);
-    setOffStream([]);
+        setOnStream([]);
+        setOffStream([]);
         Axios.post(
             'https://id.twitch.tv/oauth2/token',
             {
@@ -138,34 +143,40 @@ function App() {
                 }
             )
     }
-  return(
-    <>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage change={refreshStreamers}/>}/>
-          <Route path="/Streams" element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream} onStream={onStream}/>}/>
-          <Route path="/Clips" element={<ClipsLayout change={refreshStreamers} team={team} token={token}/>}/>
-          <Route path="/Stream" element={<Player token={token}/>}/>
-        </Routes>
-        {/*<Partners cookies={cookies}/>*/}
-        <Footer />
-        <div className={"buttonStreamsContainer"}>
-          <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
-          <button className={"buttonStreamers"}>Boutique</button>
-          <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
-            <div style={{display:"flex", justifyContent:"space-between", alignItems:"baseline"}}>
-              <p style={{color: "white"}}>Streameur.euses</p>
-              <button style={{color:"white", border:"none", background:"none"}} onClick={closeModal}>X</button>
-            </div>
-            <div className={"streamsModalContainer"}>
-              <StreamsModal refresh={refreshStreamers} change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
-            </div>
-          </Modal>
-        </div>
-      </BrowserRouter>
-    </>
-  );
+    return(
+        <>
+            <BrowserRouter>
+                <NavBar/>
+                <div className={"buttonStreamsContainer"}>
+                    <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
+                    <button className={"buttonStreamers"}>Boutique</button>
+                    <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
+                           contentLabel="Example Modal">
+                        <div style={{display: "flex", justifyContent: "space-between", alignItems: "baseline"}}>
+                            <p style={{color: "white"}}>Streameur.euses</p>
+                            <button style={{color: "white", border: "none", background: "none"}}
+                                    onClick={closeModal}>X
+                            </button>
+                        </div>
+                        <div className={"streamsModalContainer"}>
+                            <StreamsModal refresh={refreshStreamers} change={closeModal} onStream={onStream}
+                                          offStream={offStream} token={token}/>
+                        </div>
+                    </Modal>
+                </div>
+                <Routes>
+                    <Route path="/" element={<HomePage change={refreshStreamers}/>}/>
+                    <Route path="/Streams"
+                           element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream}
+                                                    onStream={onStream}/>}/>
+                    <Route path="/Clips" element={<ClipsLayout change={refreshStreamers} team={team} token={token}/>}/>
+                    <Route path="/Stream" element={<Player token={token}/>}/>
+                </Routes>
+                {/*<Partners cookies={cookies}/>*/}
+                <Footer/>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;

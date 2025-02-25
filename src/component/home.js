@@ -2,9 +2,9 @@ import React, {useEffect} from 'react';
 import '../App.css'
 
 function HomePage(props) {
-  return (
-    <>
-        <div className="homeContainer">
+    return (
+        <>
+            <div className="homeContainer">
                 <div className={"homeContent"}>
                     <img style={{width: "250px", marginBottom: "25px"}} src={"images/logoSofk.png"}/>
                     <div style={{maxWidth:"650px", display:"block", margin:"auto", marginTop:"60px", marginBottom:"60px"}}>
@@ -55,9 +55,9 @@ function HomePage(props) {
                         </div>
                     </div>
                 </div>
-        </div>
-    </>
-  )
+            </div>
+        </>
+    )
 }
 
 export default HomePage
