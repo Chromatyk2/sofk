@@ -68,6 +68,10 @@ p.myNetworks {
     width: 13rem;
     background: linear-gradient(45deg,#c6ec9b,#88e4b9);
 }
+.intBar{
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
 .top3Desktop .item .pic {
     position: absolute;
     top: -2rem;

@@ -110,6 +110,7 @@ function PersonalBar(props) {
             </p>
             <div style={customStyles.extBar} className="fullProgressBar">
                 <div
+                    className={"intBar"}
                     style={{
                         width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat(cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant).toFixed(2) + "%" : "100%",
                         position: 'relative',
