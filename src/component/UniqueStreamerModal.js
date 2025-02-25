@@ -24,22 +24,22 @@ function UniqueStreamerModal(props) {
     }
     useEffect(() => {
         if(props.onStream === true){
-            var streamerName = props.streamer.infos[0].user_name;
+            var streamerName = toLowerCase(props.streamer.infos[0].user_name);
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
             console.log(streamerName)
             if(donationGoal[streamerName] != undefined){
-                console.log(donationGoal[toLowerCase(streamerName)])
+                console.log(donationGoal[streamerName])
             }
         }else{
-            var streamerName = props.streamer;
+            var streamerName = toLowerCase(props.streamer);
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
             console.log(streamerName)
             if(donationGoal[streamerName] != undefined){
-                console.log(donationGoal[toLowerCase(streamerName)])
+                console.log(donationGoal[streamerName])
             }
         }
         Axios.get(
