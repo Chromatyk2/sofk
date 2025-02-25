@@ -10,7 +10,7 @@ function UniqueStreamerModal(props) {
     const [user, setUser] = useState(null);
     const [data, setData] = useState("");
     const [cagnotte, setCagnotte] = useState([]);
-    const [donation, setDonation] = useState([]);
+    const [donation, setDonation] = useState(null);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -28,16 +28,22 @@ function UniqueStreamerModal(props) {
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
+            console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
                 setDonation(donationGoal[streamerName.toLowerCase()])
+            }else{
+                setDonation([])
             }
         }else{
             var streamerName = props.streamer;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
+            console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
                 setDonation(donationGoal[streamerName.toLowerCase()])
+            }else{
+                setDonation([])
             }
         }
         Axios.get(
@@ -60,6 +66,7 @@ function UniqueStreamerModal(props) {
     }
     return (
         <>
+            {donation &&
                 <div onClick={changeStream} className="uniqueStreamer">
                     {props.onStream === true ?
                         <Link onClick={handleState} className="navLink linkFromNav"
@@ -141,6 +148,7 @@ function UniqueStreamerModal(props) {
                         </Link>
                     }
                 </div>
+            }
         </>
     );
 }
