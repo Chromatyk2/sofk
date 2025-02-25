@@ -124,12 +124,12 @@ function PersonalBar(props) {
                         width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat(cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant).toFixed(2) + "%" : "100%",
                         position: 'relative',
                         textWrap: 'nowrap',
-                        color: '#38617f',
+                        color: 'white',
                         padding: '15px',
                         borderRadius: '50px 50px 50px 50px',
                         height: "30px",
                         lineHeight: 0,
-                        backgroundImage: "linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
+                        backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)"
                     }}>
                     {cagnotte} €
                 </div>
