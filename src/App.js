@@ -18,7 +18,6 @@ import PersonalBar from "./component/PersonalBar";
 import './App.css';
 function App() {
     const location = useLocation();
-    const { hash, pathname, search } = location;
     const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
     const [token, setToken] = useState(null);
@@ -156,9 +155,10 @@ function App() {
     function closeModal() {
         setIsOpen(false);
     }
+    console.log(location);
     return(
         <>
-            <div className={pathname !== "/zqds" ? "globalDiv" : "globalDivTransparent"}>
+            <div>
                 {donations.length > 0 &&
                     <BrowserRouter>
                         <NavBar/>
