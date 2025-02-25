@@ -93,7 +93,7 @@ function PersonalBar(props) {
         const interval = setInterval(() =>
             {
                 setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 100))
-            },3000
+            },1000
         );
         return () => {
             clearInterval(interval);
