@@ -29,7 +29,7 @@ function UniqueStreamerModal(props) {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
             console.log(streamerName)
-            if(donationGoal[streamerName] != undefined){
+            if(donationGoal[streamerName.toLowerCase()] != undefined){
                 console.log(donationGoal[streamerName.toLowerCase()])
             }
         }else{
@@ -38,7 +38,7 @@ function UniqueStreamerModal(props) {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
             console.log(streamerName)
-            if(donationGoal[streamerName] != undefined){
+            if(donationGoal[streamerName.toLowerCase()] != undefined){
                 console.log(donationGoal[streamerName.toLowerCase()])
             }
         }
