@@ -30,7 +30,7 @@ function UniqueStreamerModal(props) {
             });
             console.log(streamerName)
             if(donationGoal[streamerName] != undefined){
-                console.log(donationGoal[streamerName])
+                console.log(donationGoal[toLowerCase(streamerName)])
             }
         }else{
             var streamerName = props.streamer;
@@ -39,7 +39,7 @@ function UniqueStreamerModal(props) {
             });
             console.log(streamerName)
             if(donationGoal[streamerName] != undefined){
-                console.log(donationGoal[streamerName])
+                console.log(donationGoal[toLowerCase(streamerName)])
             }
         }
         Axios.get(

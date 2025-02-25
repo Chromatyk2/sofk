@@ -13,7 +13,7 @@
       "description": "Faire un live de 24h"
     }
   ],
-  "Valenderiaoff" : [
+  "valenderiaoff" : [
     {
       "pseudo": "valenderiaoff",
       "montant": 100,
@@ -26,7 +26,7 @@
     },
     {
       "pseudo": "valenderiaoff",
-      "montant": 600,
+      "montant": 800,
       "description": "IRL au Defqon.1"
     }
   ]
