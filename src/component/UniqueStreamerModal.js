@@ -62,7 +62,9 @@ function UniqueStreamerModal(props) {
                                         <p>{props.streamer.infos[0].viewer_count}</p>
                                     </div>
                                 </div>
-                                <p>{cagnotte.reduce((a, v) => a = a + v, 0) / 100} €</p>
+                                <div style={{width:"100%"}}>
+                                    <p style={{margin:0, letterSpacing:"1px"}}>{cagnotte.reduce((a, v) => a = a + v, 0) / 100} €</p>
+                                </div>
                             </Link>
                             :
                             <Link className="navLink linkFromNav" to={"/stream?streamer=" + props.streamer}>

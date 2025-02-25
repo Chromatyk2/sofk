@@ -3096,3 +3096,6 @@ a.socialLink {
         width: 25%;
     }
 }
+a.navLink.linkFromNav {
+    text-decoration: none;
+}
