@@ -10,7 +10,7 @@ function UniqueStreamerModal(props) {
     const [user, setUser] = useState(null);
     const [data, setData] = useState("");
     const [cagnotte, setCagnotte] = useState([]);
-    const [donation, setDonation] = useState([]);
+    const [donation, setDonation] = useState();
     const customStyles = {
         extBar: {
             width: "100%",
