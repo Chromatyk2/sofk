@@ -8,19 +8,17 @@ function UniqueStreamerModal(props) {
     const [cookies, setCookie] = useCookies();
     const [user, setUser] = useState(null);
     const [data, setData] = useState("");
-    const [cagnotte, setCagnotte] = useState(0);
+    const [cagnotte, setCagnotte] = useState([]);
     useEffect(() => {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
-                console.log(val.donation)
-                console.log(val.donation.original_amount)
+                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
         }else{
             var streamerName = props.streamer;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
-                console.log(val.donation)
-                console.log(val.donation.original_amount)
+                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
         }
         Axios.get(
@@ -41,6 +39,7 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
+    console.log(cagnotte.reduce((a,v) =>  a = a + v , 0 ))
     return (
         <>
                 <>
