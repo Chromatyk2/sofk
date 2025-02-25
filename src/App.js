@@ -156,39 +156,46 @@ function App() {
     }
     return(
         <>
-            <div className={"globalContainer"}>
                 {donations.length > 0 &&
                     <BrowserRouter>
-                        <NavBar/>
-                        <div className={"buttonStreamsContainer"}>
-                            <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
-                            <button className={"buttonStreamers"}>Boutique</button>
-                            <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
-                                   contentLabel="Example Modal">
-                                <div style={{display: "flex", justifyContent: "space-between", alignItems: "baseline"}}>
-                                    <p style={{color: "white"}}>Streameur.euses</p>
-                                    <button style={{color: "white", border: "none", background: "none"}}
-                                            onClick={closeModal}>X
-                                    </button>
-                                </div>
-                                <div className={"streamsModalContainer"}>
-                                    <StreamsModal donations={donations} charityStreamers={charityStreamers} change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
-                                </div>
-                            </Modal>
+                        <div className={"globalContainer"}>
+                            <NavBar/>
+                            <div className={"buttonStreamsContainer"}>
+                                <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
+                                <button className={"buttonStreamers"}>Boutique</button>
+                                <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
+                                       contentLabel="Example Modal">
+                                    <div style={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "baseline"
+                                    }}>
+                                        <p style={{color: "white"}}>Streameur.euses</p>
+                                        <button style={{color: "white", border: "none", background: "none"}}
+                                                onClick={closeModal}>X
+                                        </button>
+                                    </div>
+                                    <div className={"streamsModalContainer"}>
+                                        <StreamsModal donations={donations} charityStreamers={charityStreamers}
+                                                      change={closeModal} onStream={onStream} offStream={offStream}
+                                                      token={token}/>
+                                    </div>
+                                </Modal>
+                            </div>
+                            <Routes>
+                                <Route path="/" element={<HomePage/>}/>
+                                <Route path="/Streams"
+                                       element={<StreamOnLayout token={token} offStream={offStream}
+                                                                onStream={onStream}/>}/>
+                                <Route path="/Clips" element={<ClipsLayout team={team} token={token}/>}/>
+                                <Route path="/Stream" element={<Player token={token}/>}/>
+                            </Routes>
+                            {/*<Partners cookies={cookies}/>*/}
+                            <Footer/>
                         </div>
-                        <Routes>
-                            <Route path="/" element={<HomePage />}/>
-                            <Route path="/Streams"
-                                   element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream}/>}/>
-                            <Route path="/Clips" element={<ClipsLayout team={team} token={token}/>}/>
-                            <Route path="/Stream" element={<Player token={token}/>}/>
-                        </Routes>
-                        {/*<Partners cookies={cookies}/>*/}
-                        <Footer/>
+                        <Route path="/zqds" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                     </BrowserRouter>
                 }
-            </div>
-            <Route path="/zqds" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
         </>
     );
 }
