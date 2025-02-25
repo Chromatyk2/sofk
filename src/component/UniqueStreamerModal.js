@@ -13,12 +13,12 @@ function UniqueStreamerModal(props) {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
             props.donations.filter(donation => donation.donation.team_member_id == "643451342437880398").map((val, key) => {
-                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.amount_usd]);
             });
         }else{
             var streamerName = props.streamer;
             props.donations.filter(donation => donation.donation.team_member_id == "643451342437880398").map((val, key) => {
-                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.amount_usd]);
             });
         }
         Axios.get(
