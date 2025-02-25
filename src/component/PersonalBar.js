@@ -101,13 +101,22 @@ function PersonalBar(props) {
     }, [])
     return (
         <div style={{display:"block",margin:"auto", width:"500px", marginTop:"250px"}}>
-            <p style={{
-                fontSize: "13px",
-                textAlign: "right",
-                margin: 0
-            }}>
-                {donation.filter(item => item.montant >= cagnotte).length > 0 ? cagnotte : "Plus de donations goal ! Merci !"}
-            </p>
+            <div style={{display:"flex", flexFlow:"row", justifyContent:"space-between"}}>
+                <p style={{
+                    fontSize: "13px",
+                    textAlign: "right",
+                    margin: 0
+                }}>
+                    {donation.filter(item => item.montant >= cagnotte).length > 0 ? donation.filter(item => item.montant >= cagnotte)[0].description : "Plus de donations goal ! Merci !"}
+                </p>
+                <p style={{
+                    fontSize: "13px",
+                    textAlign: "right",
+                    margin: 0
+                }}>
+                    {donation.filter(item => item.montant >= cagnotte).length > 0 ? donation.filter(item => item.montant >= cagnotte)[0].montant : "Plus de donations goal ! Merci !"}
+                </p>
+            </div>
             <div style={customStyles.extBar} className="fullProgressBar">
                 <div
                     className={"intBar"}
