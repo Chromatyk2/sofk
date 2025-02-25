@@ -28,7 +28,6 @@ function UniqueStreamerModal(props) {
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                 setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
-            console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
                 setDonation(donationGoal[streamerName.toLowerCase()])
             }
@@ -87,7 +86,9 @@ function UniqueStreamerModal(props) {
                                     fontSize: "13px",
                                     textAlign: "right",
                                     margin: 0
-                                }}></p>
+                                }}>
+                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? "DonationGoal" : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
+                                </p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
@@ -124,7 +125,9 @@ function UniqueStreamerModal(props) {
                                     fontSize: "13px",
                                     textAlign: "right",
                                     margin:0
-                                }}></p>
+                                }}>
+                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? "DonationGoal" : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
+                                </p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
