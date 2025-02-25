@@ -30,7 +30,7 @@ function UniqueStreamerModal(props) {
             });
             console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
-                console.log(donationGoal[streamerName.toLowerCase()])
+                console.log(donationGoal[streamerName.toLowerCase()].filter(donation => donation.montant >= 800))
             }
         }else{
             var streamerName = props.streamer;
@@ -39,7 +39,7 @@ function UniqueStreamerModal(props) {
             });
             console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
-                console.log(donationGoal[streamerName.toLowerCase()])
+                console.log(donationGoal[streamerName.toLowerCase()].filter(donation => donation.montant >= 800))
             }
         }
         Axios.get(
