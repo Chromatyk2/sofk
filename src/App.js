@@ -156,7 +156,7 @@ function App() {
     }
     return(
         <>
-            <div className={window.location.pathname !== "/zqds" ? "globalDiv" : "globalDivTransparent"}>
+            <div className={window.location.pathname != "/zqds" ? "globalDiv" : "globalDivTransparent"}>
                 {donations.length > 0 &&
                     <BrowserRouter>
                         <NavBar/>
