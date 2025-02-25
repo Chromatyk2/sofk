@@ -92,7 +92,7 @@ function UniqueStreamerModal(props) {
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
-                                            width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / (cagnotte.reduce((a, v) => a = a + v, 0) + 500) * 100).toFixed(2) + "%",
+                                            width: donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant).toFixed(2) + "%" : "100%" : "100%",
                                             position: 'relative',
                                             textWrap: 'nowrap',
                                             color: '#38617f',
@@ -126,12 +126,12 @@ function UniqueStreamerModal(props) {
                                     textAlign: "right",
                                     margin:0
                                 }}>
-                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? (cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant) * 100 : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
+                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
                                 </p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
-                                            width: donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? (cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant) * 100 : "100%" : "100%",
+                                            width: donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant).toFixed(2) + "%" : "100%" : "100%",
                                             position: 'relative',
                                             textWrap: 'nowrap',
                                             color: '#38617f',
