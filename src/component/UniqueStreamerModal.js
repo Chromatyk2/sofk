@@ -31,6 +31,8 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
+    console.log(props.donations);
+    console.log(props.charityStreamers);
     return (
         <>
                 <>

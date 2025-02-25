@@ -26,6 +26,8 @@ function App() {
     const [charityTeam, setCharityTeam] = useState(null);
     const [charityStreamers, setCharityStreamers] = useState([]);
     const [load, setLoad] = useState(true);
+    const [charityLoad, setCharityLoad] = useState(true);
+    const [donations, setDonations] = useState([]);
     const customStyles = {
         content: {
             top: '50%',
@@ -53,18 +55,41 @@ function App() {
                                     Axios.get(response.data.next_page_url)
                                         .then(function (response) {
                                             setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data]);
-                                            setLoad(false);
+                                            setCharityLoad(false);
                                         })
                                 }else{
-                                    setLoad(false);
+                                    setCharityLoad(false);
                                 }
                             })
                     }else{
-                        setLoad(false);
+                        setCharityLoad(false);
                     }
             })
         })
     }, []);
+    useEffect(() => {
+        Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
+            .then(function (response) {
+                setDonations(oldDonations => [...oldDonations, response.data]);
+                if(response.data.length === 500){
+                    Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
+                        .then(function (response) {
+                            setDonations(oldDonations => [...oldDonations, response.data]);
+                            if(response.data.length === 500){
+                                Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
+                                    .then(function (response) {
+                                        setDonations(oldDonations => [...oldDonations, response.data]);
+                                        setLoad(false);
+                                    })
+                            }else{
+                                setLoad(false);
+                            }
+                        })
+                }else{
+                    setLoad(false);
+                }
+            })
+    }, [charityLoad]);
     // useEffect(() => {
     //   Axios.post(
     //       'https://id.twitch.tv/oauth2/token',
@@ -119,56 +144,6 @@ function App() {
     function closeModal() {
         setIsOpen(false);
     }
-
-    function refreshStreamers() {
-        setOnStream([]);
-        setOffStream([]);
-        Axios.post(
-            'https://id.twitch.tv/oauth2/token',
-            {
-                client_id:CLIENT_ID,
-                client_secret:CLIENT_SECRET,
-                grant_type:"client_credentials",
-                redirect_uri:"https://preview--streamonforkids.netlify.app/"
-            }
-        )
-            .then(
-                (result) => {
-                    setToken(result.data.access_token);
-                    const currentToken = result.data.access_token;
-                    Axios.get(
-                        'https://api.twitch.tv/helix/teams?name=streamon',
-                        {
-                            headers: {
-                                'Authorization': `Bearer ${currentToken}`,
-                                'Client-Id': process.env.REACT_APP_CLIENT_ID
-                            }
-                        }
-                    ).then(function (response) {
-                        if(response.status == 200) {
-                            setTeam(response.data.data[0].users);
-                            response.data.data[0].users.map((val, key) => {
-                                Axios.get(
-                                    'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
-                                    {
-                                        headers: {
-                                            'Authorization': `Bearer ${currentToken}`,
-                                            'Client-Id': process.env.REACT_APP_CLIENT_ID
-                                        }
-                                    }
-                                ).then(function (response) {
-                                    if (response.data.data.length > 0) {
-                                        setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
-                                    } else if (response.data.data.length < 1) {
-                                        setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
-                                    }
-                                })
-                            })
-                        }
-                    })
-                }
-            )
-    }
     return(
         <>
             {load === false &&
@@ -186,16 +161,14 @@ function App() {
                                 </button>
                             </div>
                             <div className={"streamsModalContainer"}>
-                                <StreamsModal refresh={refreshStreamers} change={closeModal} onStream={onStream}
-                                              offStream={offStream} token={token}/>
+                                <StreamsModal donations={donations} charityStreamers={charityStreamers} refresh={refreshStreamers} change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
                             </div>
                         </Modal>
                     </div>
                     <Routes>
                         <Route path="/" element={<HomePage change={refreshStreamers}/>}/>
                         <Route path="/Streams"
-                               element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream}
-                                                        onStream={onStream}/>}/>
+                               element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream} onStream={onStream}/>}/>
                         <Route path="/Clips" element={<ClipsLayout change={refreshStreamers} team={team} token={token}/>}/>
                         <Route path="/Stream" element={<Player token={token}/>}/>
                     </Routes>
