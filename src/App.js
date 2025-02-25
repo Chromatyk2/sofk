@@ -181,7 +181,7 @@ function App() {
                                element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream}/>}/>
                         <Route path="/Clips" element={<ClipsLayout team={team} token={token}/>}/>
                         <Route path="/Stream" element={<Player token={token}/>}/>
-                        <Route path="/zqds?streamer=:foo" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                        <Route path="/zqds" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                     </Routes>
                     {/*<Partners cookies={cookies}/>*/}
                     <Footer/>
