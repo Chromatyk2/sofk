@@ -47,19 +47,19 @@ function App() {
             Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/members?page=1')
                 .then(function (response) {
                     response.data.data.map((val, key) => {
-                        setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, value]);
+                        setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, val]);
                     })
                     if(response.data.next_page_url !== null){
                         Axios.get(response.data.next_page_url)
                             .then(function (response) {
                                 response.data.data.map((val, key) => {
-                                    setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, value]);
+                                    setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, val]);
                                 })
                                 if(response.data.next_page_url !== null){
                                     Axios.get(response.data.next_page_url)
                                         .then(function (response) {
                                             response.data.data.map((val, key) => {
-                                                setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, value]);
+                                                setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, val]);
                                             })
                                             setCharityLoad(false);
                                         })
