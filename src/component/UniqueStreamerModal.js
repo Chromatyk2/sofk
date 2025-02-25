@@ -12,12 +12,12 @@ function UniqueStreamerModal(props) {
     useEffect(() => {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
-            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
                 setCagnotte(cagnotte + val.donation.converted_amount);
             })
         }else{
             var streamerName = props.streamer;
-            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
                 setCagnotte(cagnotte + val.donation.converted_amount);
             });
         }
