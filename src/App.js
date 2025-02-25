@@ -23,6 +23,9 @@ function App() {
     const [team, setTeam] = useState([]);
     const [onStream, setOnStream] = useState([]);
     const [offStream, setOffStream] = useState([]);
+    const [charityTeam, setCharityTeam] = useState(null);
+    const [charityStreamers, setCharityStreamers] = useState([]);
+    const [load, setLoad] = useState(true);
     const customStyles = {
         content: {
             top: '50%',
@@ -37,7 +40,30 @@ function App() {
     useEffect(() => {
         Axios.get(
             'https://streamlabscharity.com/api/v1/teams/643437249115068091'
-        )
+        ).then(function (response) {
+            setCharityTeam(response.data);
+            Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/members?page=1')
+                .then(function (response) {
+                    setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data]);
+                    if(response.data.next_page_url !== null){
+                        Axios.get(response.data.next_page_url)
+                            .then(function (response) {
+                                setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data]);
+                                if(response.data.next_page_url !== null){
+                                    Axios.get(response.data.next_page_url)
+                                        .then(function (response) {
+                                            setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data]);
+                                            setLoad(false);
+                                        })
+                                }else{
+                                    setLoad(false);
+                                }
+                            })
+                    }else{
+                        setLoad(false);
+                    }
+            })
+        })
     }, []);
     // useEffect(() => {
     //   Axios.post(
@@ -145,36 +171,38 @@ function App() {
     }
     return(
         <>
-            <BrowserRouter>
-                <NavBar/>
-                <div className={"buttonStreamsContainer"}>
-                    <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
-                    <button className={"buttonStreamers"}>Boutique</button>
-                    <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
-                           contentLabel="Example Modal">
-                        <div style={{display: "flex", justifyContent: "space-between", alignItems: "baseline"}}>
-                            <p style={{color: "white"}}>Streameur.euses</p>
-                            <button style={{color: "white", border: "none", background: "none"}}
-                                    onClick={closeModal}>X
-                            </button>
-                        </div>
-                        <div className={"streamsModalContainer"}>
-                            <StreamsModal refresh={refreshStreamers} change={closeModal} onStream={onStream}
-                                          offStream={offStream} token={token}/>
-                        </div>
-                    </Modal>
-                </div>
-                <Routes>
-                    <Route path="/" element={<HomePage change={refreshStreamers}/>}/>
-                    <Route path="/Streams"
-                           element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream}
-                                                    onStream={onStream}/>}/>
-                    <Route path="/Clips" element={<ClipsLayout change={refreshStreamers} team={team} token={token}/>}/>
-                    <Route path="/Stream" element={<Player token={token}/>}/>
-                </Routes>
-                {/*<Partners cookies={cookies}/>*/}
-                <Footer/>
-            </BrowserRouter>
+            {load === false &&
+                <BrowserRouter>
+                    <NavBar/>
+                    <div className={"buttonStreamsContainer"}>
+                        <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
+                        <button className={"buttonStreamers"}>Boutique</button>
+                        <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
+                               contentLabel="Example Modal">
+                            <div style={{display: "flex", justifyContent: "space-between", alignItems: "baseline"}}>
+                                <p style={{color: "white"}}>Streameur.euses</p>
+                                <button style={{color: "white", border: "none", background: "none"}}
+                                        onClick={closeModal}>X
+                                </button>
+                            </div>
+                            <div className={"streamsModalContainer"}>
+                                <StreamsModal refresh={refreshStreamers} change={closeModal} onStream={onStream}
+                                              offStream={offStream} token={token}/>
+                            </div>
+                        </Modal>
+                    </div>
+                    <Routes>
+                        <Route path="/" element={<HomePage change={refreshStreamers}/>}/>
+                        <Route path="/Streams"
+                               element={<StreamOnLayout change={refreshStreamers} token={token} offStream={offStream}
+                                                        onStream={onStream}/>}/>
+                        <Route path="/Clips" element={<ClipsLayout change={refreshStreamers} team={team} token={token}/>}/>
+                        <Route path="/Stream" element={<Player token={token}/>}/>
+                    </Routes>
+                    {/*<Partners cookies={cookies}/>*/}
+                    <Footer/>
+                </BrowserRouter>
+            }
         </>
     );
 }
