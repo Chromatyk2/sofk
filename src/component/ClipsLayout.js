@@ -5,7 +5,7 @@ import ClipsPaginate from "./ClipsPaginate";
 import UniqueStreamerClip from "./uniqueStreamerClip";
 import UniqueStreamerMozaique from "./UniqueStreamerMozaique";
 import Login from "../services/auth.services";
-import '../Component';
+import '../Component.css';
 
 function ClipsLayout(props) {
     const [cookies, setCookie] = useCookies();
