@@ -121,7 +121,7 @@ function PersonalBar(props) {
                 <div
                     className={"intBar"}
                     style={{
-                        width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat(cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant).toFixed(2) + "%" : "100%",
+                        width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
                         position: 'relative',
                         textWrap: 'nowrap',
                         color: 'white',
