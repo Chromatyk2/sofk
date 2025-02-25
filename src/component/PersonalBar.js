@@ -107,14 +107,14 @@ function PersonalBar(props) {
                     textAlign: "right",
                     margin: 0
                 }}>
-                    {donation.filter(item => item.montant >= cagnotte).length > 0 ? donation.filter(item => item.montant >= cagnotte)[0].description : "Plus de donations goal ! Merci !"}
+                    {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
                 </p>
                 <p style={{
                     fontSize: "13px",
                     textAlign: "right",
                     margin: 0
                 }}>
-                    {donation.filter(item => item.montant >= cagnotte).length > 0 ? donation.filter(item => item.montant >= cagnotte)[0].montant : "Plus de donations goal ! Merci !"}
+                    {donation.filter(item => item.montant >= cagnotte).length > 0 ? donation.filter(item => item.montant >= cagnotte)[0].montant + " €" : "Plus de donations goal ! Merci !"}
                 </p>
             </div>
             <div style={customStyles.extBar} className="fullProgressBar">
