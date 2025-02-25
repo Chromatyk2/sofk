@@ -152,7 +152,7 @@ function App() {
     }
     return(
         <>
-            {load === false &&
+            {donations.length > 0 &&
                 <BrowserRouter>
                     <NavBar/>
                     <div className={"buttonStreamsContainer"}>
