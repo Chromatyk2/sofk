@@ -2258,15 +2258,6 @@ span.navbar-brand {
     border:none;
     color:white;
 }
-
-#root{
-    background-image: url("../public/images/Background.jpg");
-    /*background-image: linear-gradient(0deg, #38617f 20%, #9AD4DF 238%, #38617f 60%);*/
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
 nav.navbar.navbar-expand-lg.navbar-light {
     background-color: #38617F!important;
     border-bottom: #325269 solid 2px;
