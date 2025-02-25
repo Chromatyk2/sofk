@@ -34,6 +34,7 @@ function UniqueStreamerModal(props) {
         ).then(function(response){
             setUser(response.data);
         })
+        console.log(cagnotte)
     }, [])
     function changeStream(e) {
         props.change(e.target.value);
