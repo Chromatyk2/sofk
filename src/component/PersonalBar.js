@@ -4,6 +4,7 @@ import {useCookies} from "react-cookie";
 import {BrowserRouter, Link} from "react-router-dom";
 import {ca} from "date-fns/locale";
 import donationGoal from '../donationGoal.json'
+import '../Overlay.css'
 
 function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState([]);
