@@ -100,7 +100,7 @@ function PersonalBar(props) {
         };
     }, [])
     return (
-        <>
+        <div style={{display:"block",margin:"auto", width:"500px", marginTop:"250px"}}>
             <p style={{
                 fontSize: "13px",
                 textAlign: "right",
@@ -124,7 +124,7 @@ function PersonalBar(props) {
                     {cagnotte} €
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
