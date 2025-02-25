@@ -46,15 +46,15 @@ function App() {
             setCharityTeam(response.data);
             Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/members?page=1')
                 .then(function (response) {
-                    setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data]);
+                    setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data.data]);
                     if(response.data.next_page_url !== null){
                         Axios.get(response.data.next_page_url)
                             .then(function (response) {
-                                setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data]);
+                                setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data.data]);
                                 if(response.data.next_page_url !== null){
                                     Axios.get(response.data.next_page_url)
                                         .then(function (response) {
-                                            setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data]);
+                                            setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, response.data.data]);
                                             setCharityLoad(false);
                                         })
                                 }else{
@@ -70,24 +70,30 @@ function App() {
     useEffect(() => {
         Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
             .then(function (response) {
-                setDonations(oldDonations => [...oldDonations, response.data]);
-                if(response.data.length === 500){
-                    Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
-                        .then(function (response) {
-                            setDonations(oldDonations => [...oldDonations, response.data]);
-                            if(response.data.length === 500){
-                                Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
-                                    .then(function (response) {
-                                        setDonations(oldDonations => [...oldDonations, response.data]);
-                                        setLoad(false);
-                                    })
-                            }else{
-                                setLoad(false);
-                            }
-                        })
-                }else{
-                    setLoad(false);
-                }
+                response.data.map((val, key) => {
+                    setDonations(oldDonations => [...oldDonations, val]);
+                })
+                // if(response.data.length === 500){
+                //     Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
+                //         .then(function (response) {
+                //             response.data.map((val, key) => {
+                //                 setDonations(oldDonations => [...oldDonations, val]);
+                //             })
+                //             if(response.data.length === 500){
+                //                 Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
+                //                     .then(function (response) {
+                //                         response.data.map((val, key) => {
+                //                             setDonations(oldDonations => [...oldDonations, val]);
+                //                         })
+                //                         setLoad(false);
+                //                     })
+                //             }else{
+                //                 setLoad(false);
+                //             }
+                //         })
+                // }else{
+                //     setLoad(false);
+                // }
             })
     }, [charityLoad]);
     useEffect(() => {
