@@ -15,6 +15,7 @@ import Modal from 'react-modal';
 import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
 import Axios from 'axios'
+import PersonalBar from "./component/PersonalBar";
 function App() {
     const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
@@ -180,6 +181,7 @@ function App() {
                                element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream}/>}/>
                         <Route path="/Clips" element={<ClipsLayout team={team} token={token}/>}/>
                         <Route path="/Stream" element={<Player token={token}/>}/>
+                        <Route path="/zqds?streamer=:foo" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                     </Routes>
                     {/*<Partners cookies={cookies}/>*/}
                     <Footer/>
