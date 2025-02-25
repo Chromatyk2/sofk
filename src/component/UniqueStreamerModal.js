@@ -123,7 +123,7 @@ function UniqueStreamerModal(props) {
                             <div style={customStyles.extBar} className="fullProgressBar">
                                 <div
                                     style={{
-                                        width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0))[0].montant) * 100).toFixed(2) + "%",
+                                        width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0))[0].montant * 100).toFixed(2) + "%",
                                         position: 'relative',
                                         textWrap: 'nowrap',
                                         color: '#38617f',
