@@ -62,7 +62,7 @@ function UniqueStreamerModal(props) {
     }
     return (
         <>
-            {donation && 
+            {donation &&
                 <div onClick={changeStream} className="uniqueStreamer">
                     {props.onStream === true ?
                         <Link onClick={handleState} className="navLink linkFromNav"
@@ -87,7 +87,7 @@ function UniqueStreamerModal(props) {
                                 fontSize: "13px",
                                 textAlign: "right",
                                 margin: 0
-                            }}>{donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100) : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}</p>
+                            }}></p>
                             <div style={customStyles.extBar} className="fullProgressBar">
                                 <div
                                     style={{
@@ -124,7 +124,7 @@ function UniqueStreamerModal(props) {
                                 fontSize: "13px",
                                 textAlign: "right",
                                 margin: 0
-                            }}>{donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100) : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}</p>
+                            }}></p>
                             <div style={customStyles.extBar} className="fullProgressBar">
                                 <div
                                     style={{
