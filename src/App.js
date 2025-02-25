@@ -15,7 +15,7 @@ import StreamsModal from "./component/StreamsModal";
 import Player from "./component/Player";
 import Axios from 'axios'
 import PersonalBar from "./component/PersonalBar";
-import '../App.css';
+import './App.css';
 function App() {
     const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
