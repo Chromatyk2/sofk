@@ -14,11 +14,13 @@ function UniqueStreamerModal(props) {
             var streamerName = props.streamer.infos[0].user_name;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
                 console.log(val.donation)
+                console.log(val.donation.original_amount)
             });
         }else{
             var streamerName = props.streamer;
             props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk").map((val, key) => {
                 console.log(val.donation)
+                console.log(val.donation.original_amount)
             });
         }
         Axios.get(
