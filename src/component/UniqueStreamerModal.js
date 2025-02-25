@@ -54,92 +54,92 @@ function UniqueStreamerModal(props) {
     function handleState() {
         props.change();
     }
-    console.log(donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0)))
+    console.log(donation)
     return (
         <>
-            {donation.length > 0 &&
-                <div onClick={changeStream} className="uniqueStreamer">
-                    {props.onStream === true ?
-                        <Link onClick={handleState} className="navLink linkFromNav"
-                              to={"/stream?streamer=" + props.streamer.infos[0].user_name}>
-                            <div className={"uniqueStreamerOnline"}>
-                                <button className={"buttonToDisplayStream"}
-                                        value={props.streamer.infos[0].user_name} onClick={changeStream}></button>
-                                <div className={"uniqueStreamerProfile"}>
-                                    <div style={{width: "50px"}}>
-                                        {user &&
-                                            <img src={user.data[0].profile_image_url}/>
-                                        }
+                <>
+                    <div onClick={changeStream} className="uniqueStreamer">
+                        {props.onStream === true ?
+                            <Link onClick={handleState} className="navLink linkFromNav"
+                                  to={"/stream?streamer=" + props.streamer.infos[0].user_name}>
+                                <div className={"uniqueStreamerOnline"}>
+                                    <button className={"buttonToDisplayStream"}
+                                            value={props.streamer.infos[0].user_name} onClick={changeStream}></button>
+                                    <div className={"uniqueStreamerProfile"}>
+                                        <div style={{width: "50px"}}>
+                                            {user &&
+                                                <img src={user.data[0].profile_image_url}/>
+                                            }
+                                        </div>
+                                        <p>{props.streamer.infos[0].user_name}</p>
                                     </div>
-                                    <p>{props.streamer.infos[0].user_name}</p>
-                                </div>
-                                <div className={"uniqueStreamerStats"}>
-                                    <img src={"/images/redCircle.png"}/>
-                                    <p>{props.streamer.infos[0].viewer_count}</p>
-                                </div>
-                            </div>
-                            <p style={{
-                                fontSize: "13px",
-                                textAlign: "right",
-                                margin: 0
-                            }}>{donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0))[0].montant} €</p>
-                            <div style={customStyles.extBar} className="fullProgressBar">
-                                <div
-                                    style={{
-                                        width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0))[0].montant * 100).toFixed(2) + "%",
-                                        position: 'relative',
-                                        textWrap: 'nowrap',
-                                        color: '#38617f',
-                                        padding: '15px',
-                                        borderRadius: '50px 50px 50px 50px',
-                                        height: "30px",
-                                        lineHeight: 0,
-                                        backgroundImage: "linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
-                                    }}>
-                                    {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
-                                </div>
-                            </div>
-                        </Link>
-                        :
-                        <Link className="navLink linkFromNav" to={"/stream?streamer=" + props.streamer}>
-                            <div className={"uniqueStreamerOnline"}>
-                                <button className={"buttonToDisplayStream"} value={props.streamer}
-                                        onClick={changeStream}></button>
-                                <div className={"uniqueStreamerProfile"}>
-                                    <div style={{width: "50px"}}>
-                                        {user &&
-                                            <img style={{width: "50px", margin: "0"}}
-                                                 src={user.data[0].profile_image_url}/>
-                                        }
+                                    <div className={"uniqueStreamerStats"}>
+                                        <img src={"/images/redCircle.png"}/>
+                                        <p>{props.streamer.infos[0].viewer_count}</p>
                                     </div>
-                                    <p>{props.streamer}</p>
                                 </div>
-                            </div>
-                            <p style={{
-                                fontSize: "13px",
-                                textAlign: "right",
-                                margin: 0
-                            }}>{donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0))[0].montant} €</p>
-                            <div style={customStyles.extBar} className="fullProgressBar">
-                                <div
-                                    style={{
-                                        width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(donation => donation.montant > cagnotte.reduce((a, v) => a = a + v, 0))[0].montant * 100).toFixed(2) + "%",
-                                        position: 'relative',
-                                        textWrap: 'nowrap',
-                                        color: '#38617f',
-                                        padding: '15px',
-                                        borderRadius: '50px 50px 50px 50px',
-                                        height: "30px",
-                                        lineHeight: 0,
-                                        backgroundImage: "linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
-                                    }}>
-                                    {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
+                                <p style={{
+                                    fontSize: "13px",
+                                    textAlign: "right",
+                                    margin: 0
+                                }}>{parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / 100 + 500).toFixed(2)} €</p>
+                                <div style={customStyles.extBar} className="fullProgressBar">
+                                    <div
+                                        style={{
+                                            width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / (cagnotte.reduce((a, v) => a = a + v, 0) + 500) * 100).toFixed(2) + "%",
+                                            position: 'relative',
+                                            textWrap: 'nowrap',
+                                            color: '#38617f',
+                                            padding: '15px',
+                                            borderRadius: '50px 50px 50px 50px',
+                                            height: "30px",
+                                            lineHeight: 0,
+                                            backgroundImage: "linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
+                                        }}>
+                                        {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
+                                    </div>
                                 </div>
-                            </div>
-                        </Link>
-                    }
-                </div>
-            }
+                            </Link>
+                            :
+                            <Link className="navLink linkFromNav" to={"/stream?streamer=" + props.streamer}>
+                                <div className={"uniqueStreamerOnline"}>
+                                    <button className={"buttonToDisplayStream"} value={props.streamer}
+                                            onClick={changeStream}></button>
+                                    <div className={"uniqueStreamerProfile"}>
+                                        <div style={{width: "50px"}}>
+                                            {user &&
+                                                <img style={{width: "50px", margin: "0"}}
+                                                     src={user.data[0].profile_image_url}/>
+                                            }
+                                        </div>
+                                        <p>{props.streamer}</p>
+                                    </div>
+                                </div>
+                                <p style={{
+                                    fontSize: "13px",
+                                    textAlign: "right",
+                                    margin:0
+                                }}>{ parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / 100 + 500).toFixed(2)} €</p>
+                                <div style={customStyles.extBar} className="fullProgressBar">
+                                    <div
+                                        style={{
+                                            width: parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / (cagnotte.reduce((a, v) => a = a + v, 0) + 500) * 100).toFixed(2) + "%",
+                                            position: 'relative',
+                                            textWrap: 'nowrap',
+                                            color: '#38617f',
+                                            padding: '15px',
+                                            borderRadius: '50px 50px 50px 50px',
+                                            height: "30px",
+                                            lineHeight: 0,
+                                            backgroundImage: "linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
+                                        }}>
+                                        {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
+                                    </div>
+                                </div>
+                            </Link>
+                        }
+                    </div>
+                </>
         </>
     );
 }
