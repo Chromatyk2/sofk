@@ -189,7 +189,7 @@ function App() {
     }
     return(
         <>
-            <div className={window.location.pathname != "/zqds" ? "globalDiv" : "globalDivTransparent"}>
+            <div className={window.location.pathname != "/OoqZvHhdnIrOGL" ? "globalDiv" : "globalDivTransparent"}>
                 {donations.length > 0 &&
                     <BrowserRouter>
                         <NavBar/>
@@ -215,7 +215,7 @@ function App() {
                                    element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream}/>}/>
                             <Route path="/Clips" element={<ClipsLayout team={team} token={token}/>}/>
                             <Route path="/Stream" element={<Player token={token}/>}/>
-                            <Route path="/zqds" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                            <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                         </Routes>
                         {/*<Partners cookies={cookies}/>*/}
                         <Footer/>

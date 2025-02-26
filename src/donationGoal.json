@@ -22,19 +22,233 @@
   ],
   "valenderiaoff" : [
     {
-      "pseudo": "valenderiaoff",
-      "montant": 100,
-      "description": "IRL au Macumba"
-    },
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "kaito_kuro_joker" : [
     {
-      "pseudo": "valenderiaoff",
-      "montant": 600,
-      "description": "IRL au Capt'ain"
-    },
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "clem_brule" : [
     {
-      "pseudo": "valenderiaoff",
-      "montant": 800,
-      "description": "IRL au Defqon.1"
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "lokdonus" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "d3sty_n0v4" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "gwendyana" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "zor3l" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "zor3l" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "hebi_scarlet" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "asarhell" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "vaykhin" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
     }
   ]
 }
