@@ -129,7 +129,7 @@ function PersonalBar(props) {
                         borderRadius: '50px 50px 50px 50px',
                         height: "30px",
                         lineHeight: 0,
-                        backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)"
+                        backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign:"center"
                     }}>
                     {cagnotte} €
                 </div>
