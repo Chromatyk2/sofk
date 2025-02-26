@@ -70,6 +70,7 @@ import donationGoal from '../donationGoal.json'
 function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState(0);
     const [donation, setDonation] = useState([]);
+    const [logo, setLogo] = useState("images/logoSofk.png")
     const customStyles = {
         extBar: {
             width: "100%",
@@ -90,8 +91,10 @@ function PersonalBar(props) {
         }
     }, [])
     useEffect(() => {
+        const logos = ["images/logoSofk.png", "images/bar.webp","images/burger.png","images/coeur.png","images/dominos.png","images/faches.png","images/manga.png","images/mister.png"]
         const interval = setInterval(() =>
             {
+                setLogo(logos[Math.floor(Math.random() * logos.length)])
                 setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 100))
             },1000
         );
@@ -101,7 +104,7 @@ function PersonalBar(props) {
     }, [])
     return (
         <div className={"personalBarContainer"}>
-            <img style={{width: "200px",position: "relative",top: "-87px",marginBottom: "-80px"}} src={"images/logoSofk.png"}/>
+            <img style={{width: "200px",position: "relative",top: "-87px",marginBottom: "-80px"}} src={logo}/>
             {donation.filter(item => item.montant >= cagnotte).length > 0 ?
                 <>
                     <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
