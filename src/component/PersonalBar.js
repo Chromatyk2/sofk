@@ -114,7 +114,7 @@ function PersonalBar(props) {
                 </>
             :
                 <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>
-                    Plus de donations goal ! Merci
+                    Plus de donations goal ! Merci !
                 </p>
             }
             <div style={customStyles.extBar} className="fullProgressBar">
