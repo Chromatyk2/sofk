@@ -2012,9 +2012,24 @@ span.navbar-brand {
     position: absolute;
     top: 300px;
 }
+.donationBarMobile{
+    display: none;
+
+}
 @media screen and (min-width: 0px) and (max-width: 1500px) {
     .personalBarContainerPlayer {
         display: none;
+    }
+    .donationBarMobile{
+        width: 50%;
+        background-color: rgb(50, 82, 105);
+        position: relative;
+        z-index: 1;
+        border-radius: 50px;
+        height: 30px;
+        display:block;
+        margin:auto
+
     }
 }
 @media screen and (min-width: 944px) and (max-width: 1659px) {

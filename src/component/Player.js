@@ -21,16 +21,6 @@ function Player(props) {
             borderRadius: "50px",
             margin: 0,
             height: "30px"
-        },
-        extBarMobile: {
-            width: "50%",
-            backgroundColor: "rgb(50, 82, 105)",
-            position: "relative",
-            zIndex: 1,
-            borderRadius: "50px",
-            height: "30px",
-            display:"block",
-            margin:"auto"
         }
     }
 
