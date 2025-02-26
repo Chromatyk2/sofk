@@ -3094,3 +3094,13 @@ a.socialLink {
 a.navLink.linkFromNav {
     text-decoration: none;
 }
+.personalBarContainer{
+    display: block;
+    margin: 250px auto auto;
+    width: 350px;
+    height: 350px;
+    background: #38617f;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #325269;
+}

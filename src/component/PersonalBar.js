@@ -100,23 +100,14 @@ function PersonalBar(props) {
         };
     }, [])
     return (
-        <div style={{display:"block",margin:"auto", width:"500px", marginTop:"250px"}}>
-            <div style={{display:"flex", flexFlow:"row", justifyContent:"space-between"}}>
-                <p style={{
-                    fontSize: "13px",
-                    textAlign: "right",
-                    margin: 0
-                }}>
-                    {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
-                </p>
-                <p style={{
-                    fontSize: "13px",
-                    textAlign: "right",
-                    margin: 0
-                }}>
-                    {donation.filter(item => item.montant >= cagnotte).length > 0 ? donation.filter(item => item.montant >= cagnotte)[0].montant + " €" : "Plus de donations goal ! Merci !"}
-                </p>
-            </div>
+        <div className={"personalBarContainer"}>
+            <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
+            <p style={{fontSize: "20px", textAlign: "right", margin: 0, color: "#fcc249"}}>
+                {donation.filter(item => item.montant >= cagnotte).length > 0 ? donation.filter(item => item.montant >= cagnotte)[0].montant + " €" : "Plus de donations goal ! Merci !"}
+            </p>
+            <p style={{fontSize: "20px", textAlign: "center", color:"white"}}>
+                {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description} €
+            </p>
             <div style={customStyles.extBar} className="fullProgressBar">
                 <div
                     className={"intBar"}
