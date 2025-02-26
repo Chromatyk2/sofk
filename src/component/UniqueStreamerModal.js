@@ -87,7 +87,7 @@ function UniqueStreamerModal(props) {
                                     textAlign: "right",
                                     margin: 0
                                 }}>
-                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
+                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant + " €" : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
                                 </p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
@@ -95,12 +95,12 @@ function UniqueStreamerModal(props) {
                                             width: donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant).toFixed(2) + "%" : "100%" : "100%",
                                             position: 'relative',
                                             textWrap: 'nowrap',
-                                            color: '#38617f',
+                                            color: 'white',
                                             padding: '15px',
                                             borderRadius: '50px 50px 50px 50px',
                                             height: "30px",
                                             lineHeight: 0,
-                                            backgroundImage: "linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
+                                            backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign:"center"
                                         }}>
                                         {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
                                     </div>
@@ -126,7 +126,7 @@ function UniqueStreamerModal(props) {
                                     textAlign: "right",
                                     margin:0
                                 }}>
-                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
+                                    {donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant + " €" : "Plus de donations goal ! Merci !" : "Plus de donations goal ! Merci !"}
                                 </p>
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
@@ -134,12 +134,12 @@ function UniqueStreamerModal(props) {
                                             width: donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant).toFixed(2) + "%" : "100%" : "100%",
                                             position: 'relative',
                                             textWrap: 'nowrap',
-                                            color: '#38617f',
+                                            color: 'white',
                                             padding: '15px',
                                             borderRadius: '50px 50px 50px 50px',
                                             height: "30px",
                                             lineHeight: 0,
-                                            backgroundImage: "linear-gradient(180deg,#9ad4de 24%,#fff 155%)"
+                                            backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign:"center"
                                         }}>
                                         {cagnotte.reduce((a, v) => a = a + v, 0) / 100} €
                                     </div>
