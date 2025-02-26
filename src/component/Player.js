@@ -119,23 +119,6 @@ function Player(props) {
                         Plus de donations goal ! Merci !
                     </p>
                 }
-                <div style={customStyles.extBar} className="fullProgressBar">
-                    <div
-                        className={"intBar"}
-                        style={{
-                            width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
-                            position: 'relative',
-                            textWrap: 'nowrap',
-                            color: 'white',
-                            padding: '15px',
-                            borderRadius: '50px 50px 50px 50px',
-                            height: "30px",
-                            lineHeight: 0,
-                            backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"
-                        }}>
-                        {cagnotte} €
-                    </div>
-                </div>
             </div>
         </>
     );
