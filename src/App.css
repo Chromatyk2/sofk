@@ -3107,3 +3107,18 @@ a.navLink.linkFromNav {
     flex-flow: column;
     justify-content: center;
 }
+.personalBarContainerPlayer {
+    background: #38617f;
+    border: 2px solid #325269;
+    border-radius: 10px;
+    display: block;
+    display: flex
+;
+    flex-flow: column;
+    height: 350px;
+    justify-content: center;
+    padding: 20px;
+    width: 350px;
+    position: absolute;
+    top: 300px;
+}

@@ -83,7 +83,7 @@ function Player(props) {
                     </div>
                 </div>
             }
-            <div className={"personalBarContainer"}>
+            <div className={"personalBarContainerPlayer"}>
                 <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}
                      src={"images/logoSofk.png"}/>
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
