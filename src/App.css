@@ -2012,6 +2012,11 @@ span.navbar-brand {
     position: absolute;
     top: 300px;
 }
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+    .personalBarContainerPlayer {
+        display: none;
+    }
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
     .clipsGlobalContainer {
         display: flex;
@@ -2020,10 +2025,6 @@ span.navbar-brand {
         justify-content: center;
         margin: auto;
         width: 88%;
-    }
-
-    .personalBarContainerPlayer {
-        display: none;
     }
 }
 @media screen and (min-width: 380px) and (max-width: 943px) {

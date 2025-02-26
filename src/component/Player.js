@@ -21,6 +21,16 @@ function Player(props) {
             borderRadius: "50px",
             margin: 0,
             height: "30px"
+        },
+        extBarMobile: {
+            width: "50%",
+            backgroundColor: "rgb(50, 82, 105)",
+            position: "relative",
+            zIndex: 1,
+            borderRadius: "50px",
+            height: "30px",
+            display:"block",
+            margin:"auto"
         }
     }
 
@@ -49,7 +59,7 @@ function Player(props) {
             {streamer &&
                 <div>
                     <h1 style={{marginTop: "30px", textAlign: "center", color: "white"}}>{streamer}</h1>
-                    <div class={"donationBarMobile"} style={customStyles.extBar} className="fullProgressBar">
+                    <div class={"donationBarMobile"} style={customStyles.extBarMobile} className="fullProgressBar">
                         <div
                             className={"intBar"}
                             style={{
