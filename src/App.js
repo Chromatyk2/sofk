@@ -75,32 +75,6 @@ function App() {
         })
     }, []);
     useEffect(() => {
-                if (charityLoad === false) {
-                    Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
-                        .then(function (response) {
-                            response.data.map((val, key) => {
-                                setDonations(oldDonations => [...oldDonations, val]);
-                            })
-                            if (response.data.length == 500) {
-                                Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=2')
-                                    .then(function (response) {
-                                        response.data.map((val, key) => {
-                                            setDonations(oldDonations => [...oldDonations, val]);
-                                        })
-                                        if (response.data.length == 500) {
-                                            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=3')
-                                                .then(function (response) {
-                                                    response.data.map((val, key) => {
-                                                        setDonations(oldDonations => [...oldDonations, val]);
-                                                    })
-                                                })
-                                        }
-                                    })
-                            }
-                        })
-                }
-    }, [charityLoad]);
-    useEffect(() => {
         const interval = setInterval(() => {
                 if (charityLoad === false) {
                     Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
@@ -156,9 +130,8 @@ function App() {
                       }
                     }
                 ).then(function (response) {
-                  if(response.status == 200) {
-                    setTeam(response.data.data[0].users);
-                    response.data.data[0].users.map((val, key) => {
+                    console.log(charityStreamers)
+                    charityStreamers.map((val, key) => {
                       Axios.get(
                           'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
                           {
@@ -175,12 +148,11 @@ function App() {
                         }
                       })
                     })
-                  }
                 })
               }
           )
 
-    }, []);
+    }, [charityLoad]);
     function openModal() {
         setIsOpen(true);
     }
