@@ -133,8 +133,7 @@ function App() {
                             }
                         })
                 }
-            }
-            , 60000
+            }, 60000
         );
         return () => {
             clearInterval(interval);
@@ -149,7 +148,6 @@ function App() {
     return(
         <>
             <div className={window.location.pathname != "/OoqZvHhdnIrOGL" ? "globalDiv" : "globalDivTransparent"}>
-                {donations.length > 0 &&
                     <BrowserRouter>
                         <NavBar/>
                         <div className={"buttonStreamsContainer"}>
@@ -179,7 +177,6 @@ function App() {
                         {/*<Partners cookies={cookies}/>*/}
                         <Footer/>
                     </BrowserRouter>
-                }
             </div>
         </>
     );
