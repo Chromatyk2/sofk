@@ -17,6 +17,11 @@ function ClipsLayout(props) {
     const [clipStreamer, setClipStreamer] = useState([]);
     const [emptyClips, setEmptyClips] = useState(false);
     useEffect(() => {
+        if(props.team == 0){
+            props.change();
+        }
+    }, []);
+    useEffect(() => {
         props.team.map((val, key) => {
             Axios.get(
                 'https://api.twitch.tv/helix/users?login=' + val.user.display_name,
