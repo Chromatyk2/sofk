@@ -102,7 +102,7 @@ function App() {
                             if (response.data.data.length > 0) {
                                 setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
                             } else if (response.data.data.length < 1) {
-                                setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
+                                setOffStream(oldArrayOff => [...oldArrayOff, val.user.display_name]);
                             }
                         })
                     })
@@ -145,8 +145,6 @@ function App() {
     function closeModal() {
         setIsOpen(false);
     }
-    console.log(onStream)
-    console.log(offStream)
     return(
         <>
             <div className={window.location.pathname != "/OoqZvHhdnIrOGL" ? "globalDiv" : "globalDivTransparent"}>
