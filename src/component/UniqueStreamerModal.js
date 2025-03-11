@@ -6,6 +6,7 @@ import {ca} from "date-fns/locale";
 import donationGoal from '../donationGoal.json'
 
 function UniqueStreamerModal(props) {
+    console.log(props.streamer)
     const [cookies, setCookie] = useCookies();
     const [user, setUser] = useState(null);
     const [data, setData] = useState("");
@@ -40,7 +41,6 @@ function UniqueStreamerModal(props) {
                     setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
                 });
             }
-            console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
                 setDonation(donationGoal[streamerName.toLowerCase()])
             }
