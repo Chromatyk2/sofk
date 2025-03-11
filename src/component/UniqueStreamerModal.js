@@ -25,17 +25,21 @@ function UniqueStreamerModal(props) {
     useEffect(() => {
         if(props.onStream === true){
             var streamerName = props.streamer.infos[0].user_name;
-            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-            });
+            if(props.donations.length>0){
+                props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                    setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+                });
+            }
             if(donationGoal[streamerName.toLowerCase()] != undefined){
                 setDonation(donationGoal[streamerName.toLowerCase()])
             }
         }else{
             var streamerName = props.streamer;
-            props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-            });
+            if(props.donations.length>0) {
+                props.donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                    setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+                });
+            }
             console.log(streamerName)
             if(donationGoal[streamerName.toLowerCase()] != undefined){
                 setDonation(donationGoal[streamerName.toLowerCase()])
