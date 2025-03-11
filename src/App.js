@@ -145,6 +145,40 @@ function App() {
     function closeModal() {
         setIsOpen(false);
     }
+    function refresh() {
+        Axios.get(
+            'https://streamlabscharity.com/api/v1/teams/781834327792162028'
+        ).then(function (response) {
+            setCharityTeam(response.data);
+            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/members?page=1')
+                .then(function (response) {
+                    response.data.data.map((val, key) => {
+                        setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, val]);
+                    })
+                    if(response.data.next_page_url !== null){
+                        Axios.get(response.data.next_page_url)
+                            .then(function (response) {
+                                response.data.data.map((val, key) => {
+                                    setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, val]);
+                                })
+                                if(response.data.next_page_url !== null){
+                                    Axios.get(response.data.next_page_url)
+                                        .then(function (response) {
+                                            response.data.data.map((val, key) => {
+                                                setCharityStreamers(oldArrayCharityStreamers => [...oldArrayCharityStreamers, val]);
+                                            })
+                                            setCharityLoad(false);
+                                        })
+                                }else{
+                                    setCharityLoad(false);
+                                }
+                            })
+                    }else{
+                        setCharityLoad(false);
+                    }
+                })
+        })
+    }
     return(
         <>
             <div className={window.location.pathname != "/OoqZvHhdnIrOGL" ? "globalDiv" : "globalDivTransparent"}>
@@ -169,7 +203,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<HomePage />}/>
                             <Route path="/Streams"
-                                   element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream}/>}/>
+                                   element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream} change={refresh}/>}/>
                             <Route path="/Clips" element={<ClipsLayout team={charityStreamers} token={token}/>}/>
                             <Route path="/Stream" element={<Player team={charityStreamers} token={token}/>}/>
                             <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
