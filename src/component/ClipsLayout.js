@@ -19,7 +19,7 @@ function ClipsLayout(props) {
     useEffect(() => {
         props.team.map((val, key) => {
             Axios.get(
-                'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + val.user.id,
+                'https://api.twitch.tv/helix/users?login=' + val.user.display_name,
                 {
                     headers: {
                         'Authorization': `Bearer ${props.token}`,
@@ -27,14 +27,24 @@ function ClipsLayout(props) {
                     }
                 }
             ).then(function (response) {
-                setClipStreamer(
-                    Array.from(new Set(response.data.data.map(a => a.broadcaster_name)))
-                        .map(id => {
-                            return response.data.data.find(a => a.broadcaster_name === id)
-                        })
-                )
-                response.data.data.map((val, key) => {
-                    setClips(oldArrayOn => [...oldArrayOn, val]);
+                Axios.get(
+                    'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + response.data.data.id,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${props.token}`,
+                            'Client-Id': process.env.REACT_APP_CLIENT_ID
+                        }
+                    }
+                ).then(function (response) {
+                    setClipStreamer(
+                        Array.from(new Set(response.data.data.map(a => a.broadcaster_name)))
+                            .map(id => {
+                                return response.data.data.find(a => a.broadcaster_name === id)
+                            })
+                    )
+                    response.data.data.map((val, key) => {
+                        setClips(oldArrayOn => [...oldArrayOn, val]);
+                    })
                 })
             })
         })
