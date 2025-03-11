@@ -17,7 +17,7 @@ function ClipsLayout(props) {
     const [clipStreamer, setClipStreamer] = useState([]);
     const [emptyClips, setEmptyClips] = useState(false);
     useEffect(() => {
-        if(props.team == 0){
+        if(props.team.length == 0){
             props.change();
         }
     }, []);

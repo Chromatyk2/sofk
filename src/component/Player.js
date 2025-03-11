@@ -12,6 +12,11 @@ function Player(props) {
     const streamerUrl = queryParameters.get('streamer')
     const [cagnotte, setCagnotte] = useState(0);
     const [donation, setDonation] = useState([]);
+    useEffect(() => {
+        if(props.team.length == 0){
+            props.change();
+        }
+    }, []);
     const customStyles = {
         extBar: {
             width: "100%",
