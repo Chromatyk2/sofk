@@ -27,6 +27,7 @@ function Player(props) {
     useEffect(() => {
         const queryParameters = new URLSearchParams(window.location.search)
         var streamerName = queryParameters.get("streamer");
+        console.log(props.team.filter(item => item.user.display_name == streamerName))
         if (donationGoal[streamerName.toLowerCase()] != undefined) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
