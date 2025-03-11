@@ -88,7 +88,7 @@ function Player(props) {
                         flexWrap: "wrap",
                         marginTop: "20px"
                     }}>
-                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member="+props.team.filter(item => item.user.display_name == streamer)[0].id +"&l=fr-FR"} target={"_blank"}
+                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member="+props.team.filter(item => item.user.display_name == streamer)[0].user.id +"&l=fr-FR"} target={"_blank"}
                            className={"linkUnderStream"}>
                             <div>
                                 <img className={"linkUnderStreamImg"} src={logoEuro}/>
