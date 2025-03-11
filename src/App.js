@@ -75,6 +75,34 @@ function App() {
         })
     }, []);
     useEffect(() => {
+        Axios.post(
+            'https://id.twitch.tv/oauth2/token',
+            {
+                client_id: CLIENT_ID,
+                client_secret: CLIENT_SECRET,
+                grant_type: "client_credentials",
+                redirect_uri: "https://preview--streamonforkids.netlify.app/"
+            }
+        ).then(function (response) {
+            console.log(charityStreamers)
+            charityStreamers.map((val, key) => {
+                Axios.get(
+                    'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${currentToken}`,
+                            'Client-Id': process.env.REACT_APP_CLIENT_ID
+                        }
+                    }
+                ).then(function (response) {
+                    if (response.data.data.length > 0) {
+                        setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
+                    } else if (response.data.data.length < 1) {
+                        setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
+                    }
+                })
+            })
+        })
         const interval = setInterval(() => {
                 if (charityLoad === false) {
                     Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
@@ -106,36 +134,6 @@ function App() {
         return () => {
             clearInterval(interval);
         };
-    }, [charityLoad]);
-    useEffect(() => {
-        Axios.post(
-            'https://id.twitch.tv/oauth2/token',
-            {
-                client_id: CLIENT_ID,
-                client_secret: CLIENT_SECRET,
-                grant_type: "client_credentials",
-                redirect_uri: "https://preview--streamonforkids.netlify.app/"
-            }
-        ).then(function (response) {
-            console.log(charityStreamers)
-            charityStreamers.map((val, key) => {
-                Axios.get(
-                    'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
-                    {
-                        headers: {
-                            'Authorization': `Bearer ${currentToken}`,
-                            'Client-Id': process.env.REACT_APP_CLIENT_ID
-                        }
-                    }
-                ).then(function (response) {
-                    if (response.data.data.length > 0) {
-                        setOnStream(oldArrayOn => [...oldArrayOn, {infos: response.data.data}]);
-                    } else if (response.data.data.length < 1) {
-                        setOffStream(oldArrayOff => [...oldArrayOff, val.user_name]);
-                    }
-                })
-            })
-        })
     }, [charityLoad]);
     function openModal() {
         setIsOpen(true);
