@@ -24,7 +24,7 @@ function ClipsLayout(props) {
     useEffect(() => {
         props.team.map((val, key) => {
             Axios.get(
-                'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + val.user_id,
+                'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + val.user.display_name,
                 {
                     headers: {
                         'Authorization': `Bearer ${props.token}`,
