@@ -145,6 +145,8 @@ function App() {
     function closeModal() {
         setIsOpen(false);
     }
+    console.log(onStream)
+    console.log(offStream)
     return(
         <>
             <div className={window.location.pathname != "/OoqZvHhdnIrOGL" ? "globalDiv" : "globalDivTransparent"}>
