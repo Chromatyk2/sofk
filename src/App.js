@@ -75,7 +75,6 @@ function App() {
         })
     }, []);
     useEffect(() => {
-
         Axios.post(
             'https://id.twitch.tv/oauth2/token',
             {
@@ -92,7 +91,7 @@ function App() {
                     console.log(charityStreamers)
                     charityStreamers.map((val, key) => {
                         Axios.get(
-                            'https://api.twitch.tv/helix/streams?user_login=' + val.user_name,
+                            'https://api.twitch.tv/helix/streams?user_login=' + val.user.display_name,
                             {
                                 headers: {
                                     'Authorization': `Bearer ${currentToken}`,
