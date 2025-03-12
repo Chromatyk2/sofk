@@ -101,47 +101,47 @@ function PersonalBar(props) {
     }, [])
     return (
         <>
-            <div className={"personalBarContainer"}>
-                <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}
-                     src={"images/logoSofk.png"}/>
-                {donation.filter(item => item.montant >= cagnotte).length > 0 ?
-                    <>
-                        <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
-                        <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
-                            {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
-                        </p>
-                        <p style={{fontSize: "20px", textAlign: "center", color: "white"}}>
-                            {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
-                        </p>
-                    </>
-                    :
-                    <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>
-                        Plus de donations goal ! Merci !
-                    </p>
-                }
-                <div style={customStyles.extBar} className="fullProgressBar">
-                    <div
-                        className={"intBar"}
-                        style={{
-                            width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
-                            position: 'relative',
-                            textWrap: 'nowrap',
-                            color: 'white',
-                            padding: '15px',
-                            borderRadius: '50px 50px 50px 50px',
-                            height: "30px",
-                            lineHeight: 0,
-                            backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"
-                        }}>
-                        {cagnotte} €
-                    </div>
-                </div>
-            </div>
+            {/*<div className={"personalBarContainer"}>*/}
+            {/*    <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}*/}
+            {/*         src={"images/logoSofk.png"}/>*/}
+            {/*    {donation.filter(item => item.montant >= cagnotte).length > 0 ?*/}
+            {/*        <>*/}
+            {/*            <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>*/}
+            {/*            <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>*/}
+            {/*                {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}*/}
+            {/*            </p>*/}
+            {/*            <p style={{fontSize: "20px", textAlign: "center", color: "white"}}>*/}
+            {/*                {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}*/}
+            {/*            </p>*/}
+            {/*        </>*/}
+            {/*        :*/}
+            {/*        <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>*/}
+            {/*            Plus de donations goal ! Merci !*/}
+            {/*        </p>*/}
+            {/*    }*/}
+            {/*    <div style={customStyles.extBar} className="fullProgressBar">*/}
+            {/*        <div*/}
+            {/*            className={"intBar"}*/}
+            {/*            style={{*/}
+            {/*                width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",*/}
+            {/*                position: 'relative',*/}
+            {/*                textWrap: 'nowrap',*/}
+            {/*                color: 'white',*/}
+            {/*                padding: '15px',*/}
+            {/*                borderRadius: '50px 50px 50px 50px',*/}
+            {/*                height: "30px",*/}
+            {/*                lineHeight: 0,*/}
+            {/*                backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"*/}
+            {/*            }}>*/}
+            {/*            {cagnotte} €*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className={"personalBarContainerInline"}>
-                <img style={{width: "200px"}}
+                <img style={{width: "200px", height:"fit-content", margin:0}}
                      src={"images/logoSofk.png"}/>
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
-                    <div>
+                    <div style={{width:"100%"}}>
                         <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
                         <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
                             {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}

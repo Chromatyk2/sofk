@@ -3148,5 +3148,6 @@ a.navLink.linkFromNav {
     justify-content: center;
     margin: 250px auto auto;
     padding: 20px;
-    width: 100%;
+    width: 75%;
+    align-items: anchor-center;
 }
