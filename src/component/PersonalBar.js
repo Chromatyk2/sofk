@@ -81,14 +81,13 @@ function PersonalBar(props) {
             height: "30px"
         },
         extBarInline: {
-            width: "50%",
+            width: "75%",
             backgroundColor: "rgb(50, 82, 105)",
             position: "relative",
             zIndex: 1,
             borderRadius: "10px",
-            margin: 0,
             height: "40px",
-            marginTop:"15px"
+            margin:"0",
         }
     }
 
@@ -167,7 +166,8 @@ function PersonalBar(props) {
                                         height: "40px",
                                         lineHeight: 0,
                                         backgroundColor: "rgb(252, 194, 73)",
-                                        textAlign: "left"
+                                        textAlign: "left",
+                                        margin: 0
                                     }}>
                                     <p style={{
                                         fontSize: "25px",
@@ -177,22 +177,25 @@ function PersonalBar(props) {
                                     }}>
                                         {cagnotte} €
                                     </p>
-                                    <p style={{
-                                        fontSize: "25px",
-                                        textAlign: "right",
-                                        color: "white",
-                                        lineHeight: "12px"
-                                    }}>
-                                        {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
-                                    </p>
                                 </div>
+                                <p style={{
+                                    fontSize: "25px",
+                                    textAlign: "right",
+                                    color: "white",
+                                    position: absolute,
+                                    right: "12px",
+                                    zIndex: 1,
+                                    top: "3px"
+                                }}>
+                                    {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                                </p>
                             </div>
                         </div>
                     </div>
                     :
                     <>
                         <p style={{fontSize: "25px", textAlign: "left", color: "white"}}>
-                        Plus de donations goal ! Merci !
+                            Plus de donations goal ! Merci !
                         </p>
                         <div style={customStyles.extBarInline} className="fullProgressBar">
                             <div
