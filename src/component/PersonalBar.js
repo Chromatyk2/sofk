@@ -93,27 +93,22 @@ function PersonalBar(props) {
     }
     useEffect(() => {
         const queryParameters = new URLSearchParams(window.location.search);
-        if(queryParameters.get("streamer") == "Vaykhin"){
-            setCagnotte(2)
-        }else if(queryParameters.get("streamer") == "hebi_scarlet") {
-            setCagnotte(1)
-        }
         Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
             .then(function (response) {
                 response.data.map((val, key) => {
-                    setDonations(oldDonations => [...oldDonations, val]);
+                    setDonations(oldDonations => [...oldDonations, val.filter(item => item.member.user.display_name = queryParameters.get("streamer"))]);
                 })
                 if (response.data.length == 500) {
                     Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
                         .then(function (response) {
                             response.data.map((val, key) => {
-                                setDonations(oldDonations => [...oldDonations, val]);
+                                setDonations(oldDonations => [...oldDonations, val.filter(item => item.member.user.display_name = queryParameters.get("streamer"))]);
                             })
                             if (response.data.length == 500) {
                                 Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
                                     .then(function (response) {
                                         response.data.map((val, key) => {
-                                            setDonations(oldDonations => [...oldDonations, val]);
+                                            setDonations(oldDonations => [...oldDonations, val.filter(item => item.member.user.display_name = queryParameters.get("streamer"))]);
                                         })
                                     })
                             }
@@ -138,6 +133,7 @@ function PersonalBar(props) {
             clearInterval(interval);
         };
     }, [])
+    console.log(donations)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
