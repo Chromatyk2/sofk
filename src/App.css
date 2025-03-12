@@ -1,11 +1,5 @@
-@font-face {
-    font-family: 'Charge Vector Black';
-    src: url('../public/Charge Vector Black.otf') format('truetype');
-}
-@font-face {
-    font-family: 'RetroTypo';
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
-}
 :root {
     --card-height: 700px;
     --card-width: calc(var(--card-height) / 1.5);
@@ -33,14 +27,14 @@ iframe{
 }
 .loginContainer p {
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 30px;
     line-height: 33px;
     text-align: center;
 }
 p.myNetworks {
     color: #3b6887;
-    font-family: "Charge Vector Black";
+    font-family: "Bungee";
     font-size: 30px;
     text-align: center;
 }
@@ -131,7 +125,7 @@ p.myNetworks {
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     border: solid gold 4px;
 }
 .top3Mobile .itemOne .pos {
@@ -193,7 +187,7 @@ p.myNetworks {
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     border: solid silver 4px;
 }
 .top3Mobile .itemTwo .pos {
@@ -254,7 +248,7 @@ p.myNetworks {
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     border : solid #F1AB70 4px;
 }
 .top3Mobile .itemThree .pos {
@@ -593,7 +587,7 @@ p.filterTitle {
     font-weight: 700;
     line-height: 28px;
     text-align: center;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     color: #255748;
     font-size: 30px;
 }
@@ -688,11 +682,11 @@ p.numberPokemonPage {
     text-align: center;
     font-size: 50px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 p.namePokemonPage {
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 50px;
     text-align: center;
     line-height: 10px;
@@ -713,7 +707,7 @@ p.namePokemonPage {
 }
 .capturesContainer {
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     text-align: center;
     width: 100%;
     display: flex;
@@ -732,7 +726,7 @@ p.titleMyCaptures {
 .myCapturesContainer {
     text-align: center;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 
 .myCaptureItem {
@@ -755,7 +749,7 @@ p.shinyPokemonList{
 }
 p.titleMyCaptures{
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 20px;
     text-align: center;
 }
@@ -794,7 +788,7 @@ p.titleMyCaptures{
 .pokemonNameTrade{
     text-align: center;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 15px;
     margin-top: 5px;
 }
@@ -818,7 +812,7 @@ button.deleteTrade {
     padding: 8px;
     width: 100%;
     color: white;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     letter-spacing: 2px;
 }
 .lastCardUsername {
@@ -845,7 +839,7 @@ button.deleteTrade {
     border: none;
     display: block;
     margin-top: 10px;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     width: 100%;
     letter-spacing: 2px;
     width: 236px;
@@ -870,7 +864,7 @@ img.imgPokemonTrade {
 }
 .guessedPokemonName{
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 30px;
     margin-top: 5px;
     text-align: center;
@@ -891,12 +885,12 @@ img.imgPokemonTrade {
     width:300px;
     font-size: 25px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 .autoCompleteSearch input{
     font-size: 25px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 ul{
     flex-wrap: wrap;
@@ -907,7 +901,7 @@ li{
     font-size: 25px;
     width: 300px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 li:hover{
     cursor: pointer;
@@ -926,7 +920,7 @@ li svg{
     border:none;
     display: block;
     margin: auto;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 
 }
 .validateGuessButton{
@@ -939,7 +933,7 @@ li svg{
     border:none;
     display: block;
     margin: auto;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 .validateGuessButton:hover{
     background: white;
@@ -1674,7 +1668,7 @@ a.linkOnAirOff {
 }
 .introTCGLink{
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 25px;
 }
 .validationSellContainer {
@@ -2053,7 +2047,7 @@ span.navbar-brand {
         margin-bottom: 10px;
         font-size: 25px;
         color: #255748;
-        font-family: Charge Vector Black;
+        font-family: Bungee;
         text-align: center;
     }
     .leaderBoardSwitch{
@@ -2107,7 +2101,7 @@ span.navbar-brand {
         margin: auto;
         width: 300px;
         color: #255748;
-        font-family: Charge Vector Black;
+        font-family: Bungee;
         text-align: center;
     }
 }
@@ -2192,7 +2186,7 @@ span.navbar-brand {
         margin: auto;
         width: 300px;
         color: #255748;
-        font-family: Charge Vector Black;
+        font-family: Bungee;
         text-align: center;
     }
 }
@@ -2636,7 +2630,7 @@ ul.paginateLay {
 }
 h1.titleEdition {
     color: #fff;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     text-align: center;
     margin-bottom:60px;
 }
