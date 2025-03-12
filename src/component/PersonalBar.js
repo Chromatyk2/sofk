@@ -92,6 +92,12 @@ function PersonalBar(props) {
         }
     }
     useEffect(() => {
+        const queryParameters = new URLSearchParams(window.location.search);
+        if(queryParameters.get("streamer") == "Vaykhin"){
+            setCagnotte(2)
+        }else if(queryParameters.get("streamer") == "hebi_scarlet") {
+            setCagnotte(1)
+        }
         Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
             .then(function (response) {
                 response.data.map((val, key) => {
@@ -123,23 +129,15 @@ function PersonalBar(props) {
         }
     }, [])
     useEffect(() => {
-        const queryParameters = new URLSearchParams(window.location.search);
         const interval = setInterval(() =>
             {
-                if(queryParameters.get("streamer") == "Vaykhin"){
-                    setCagnotte(prevCount => prevCount + 2 + Math.floor(Math.random() * 3))
-                }else if(queryParameters.get("streamer") == "hebi_scarlet"){
-                    setCagnotte(prevCount => prevCount + 2 + Math.floor(Math.random() * 3))
-                }else{
                     setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3))
-                }
             },1000
         );
         return () => {
             clearInterval(interval);
         };
     }, [])
-    console.log(donations)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
