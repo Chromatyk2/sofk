@@ -85,23 +85,50 @@
   ],
   "kaito_kuro_joker" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Le poussin Piou en allemand pendant 10min"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "Je demande à ChatGPT pourquoi Sonic est meilleur que Mario"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 15,
+      "description": "Retour vers le passé sur Just Dance 3"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "React Mario Kart 8 Direct pendant le SOFK"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 25,
+      "description": "Le retour de pablo la Moustache"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 30,
+      "description": "Round 3 contre AlexKirby8 sur MK8D"
+    },{
+      "montant": 40,
+      "description": "Captain Catastropha et ses acolytes"
+    },{
+      "montant": 50,
+      "description": "Ouverture ETB Pokémon"
+    },{
+      "montant": 75,
+      "description": "J'écris un texte qui explique pourquoi Mario est meilleur que Sonic"
+    },{
+      "montant": 100,
+      "description": "Soirée Halloween jeu d'horreur le 31/10"
+    },{
+      "montant": 150,
+      "description": "Stream découverte 'Driving is Hard'"
+    },{
+      "montant": 200,
+      "description": "Tournoi MK8 des voleurs fantômes"
+    },{
+      "montant": 300,
+      "description": ""
+    },{
+      "montant": 435,
+      "description": "Stream Cuisine"
+    },{
+      "montant": 500,
+      "description": "DJe me teins les cheveux en blond"
     }
   ],
   "clem_brule" : [
