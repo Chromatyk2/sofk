@@ -70,6 +70,7 @@ import donationGoal from '../donationGoal.json'
 function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState(0);
     const [donation, setDonation] = useState([]);
+    const [donations, setDonations] = useState([]);
     const customStyles = {
         extBar: {
             width: "100%",
