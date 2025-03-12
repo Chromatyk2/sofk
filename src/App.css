@@ -3139,8 +3139,8 @@ a.navLink.linkFromNav {
 }
 
 .personalBarContainerInline {
-    background: #38617f;
-    border: 2px solid #325269;
+    background: transparent;
+    border: none;
     border-radius: 10px;
     display: flex;
     flex-flow: column;
