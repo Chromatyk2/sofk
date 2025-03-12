@@ -170,10 +170,10 @@ function PersonalBar(props) {
                                         textAlign: "left"
                                     }}>
                                     {cagnotte} €
+                                    <p style={{fontSize: "17px", textAlign: "right", color: "white"}}>
+                                        {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                                    </p>
                                 </div>
-                                <p style={{fontSize: "40px", textAlign: "left", color: "#fcc249"}}>
-                                    {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
-                                </p>
                             </div>
                         </div>
                     </div>
