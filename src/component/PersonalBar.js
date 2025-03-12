@@ -81,13 +81,13 @@ function PersonalBar(props) {
             height: "30px"
         },
         extBarInline: {
-            width: "100%",
+            width: "50%",
             backgroundColor: "rgb(50, 82, 105)",
             position: "relative",
             zIndex: 1,
             borderRadius: "10px",
             margin: 0,
-            height: "30px",
+            height: "40px",
             marginTop:"15px"
         }
     }
@@ -164,7 +164,7 @@ function PersonalBar(props) {
                                         color: 'white',
                                         padding: '15px',
                                         borderRadius: '10px 10px 10px 10px',
-                                        height: "30px",
+                                        height: "40px",
                                         lineHeight: 0,
                                         backgroundColor: "rgb(252, 194, 73)",
                                         textAlign: "left"
