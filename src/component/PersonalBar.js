@@ -169,8 +169,20 @@ function PersonalBar(props) {
                                         backgroundColor: "rgb(252, 194, 73)",
                                         textAlign: "left"
                                     }}>
-                                    {cagnotte} €
-                                    <p style={{fontSize: "17px", textAlign: "right", color: "white"}}>
+                                    <p style={{
+                                        fontSize: "25px",
+                                        textAlign: "left",
+                                        color: "white",
+                                        lineHeight: "12px"
+                                    }}>
+                                        {cagnotte} €
+                                    </p>
+                                    <p style={{
+                                        fontSize: "25px",
+                                        textAlign: "right",
+                                        color: "white",
+                                        lineHeight: "12px"
+                                    }}>
                                         {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
                                     </p>
                                 </div>
@@ -180,7 +192,7 @@ function PersonalBar(props) {
                     :
                     <>
                         <p style={{fontSize: "25px", textAlign: "left", color: "white"}}>
-                            Plus de donations goal ! Merci !
+                        Plus de donations goal ! Merci !
                         </p>
                         <div style={customStyles.extBarInline} className="fullProgressBar">
                             <div
