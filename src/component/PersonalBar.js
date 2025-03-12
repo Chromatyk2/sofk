@@ -149,39 +149,62 @@ function PersonalBar(props) {
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
-                    <div style={{width: "100%", flexFlow:"row",display: "flex",gap: "20px"}}>
+                    <div style={{width: "100%", flexFlow: "row", display: "flex", gap: "20px"}}>
                         <div>
                             <p style={{fontSize: "20px", textAlign: "left", color: "white"}}>
                                 {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
                             </p>
+                            <div style={customStyles.extBarInline} className="fullProgressBar">
+                                <div
+                                    className={"intBar"}
+                                    style={{
+                                        width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                        position: 'relative',
+                                        textWrap: 'nowrap',
+                                        color: 'white',
+                                        padding: '15px',
+                                        borderRadius: '50px 50px 50px 50px',
+                                        height: "30px",
+                                        lineHeight: 0,
+                                        backgroundColor: "rgb(252, 194, 73)",
+                                        textAlign: "center"
+                                    }}>
+                                    {cagnotte} €
+                                </div>
+                                <p style={{fontSize: "40px", textAlign: "left", color: "#fcc249"}}>
+                                    {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                                </p>
+                            </div>
                         </div>
                     </div>
                     :
-                    <p style={{fontSize: "25px", textAlign: "left", color: "white"}}>
-                        Plus de donations goal ! Merci !
-                    </p>
+                    <>
+                        <p style={{fontSize: "25px", textAlign: "left", color: "white"}}>
+                            Plus de donations goal ! Merci !
+                        </p>
+                        <div style={customStyles.extBarInline} className="fullProgressBar">
+                            <div
+                                className={"intBar"}
+                                style={{
+                                    width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                    position: 'relative',
+                                    textWrap: 'nowrap',
+                                    color: 'white',
+                                    padding: '15px',
+                                    borderRadius: '50px 50px 50px 50px',
+                                    height: "30px",
+                                    lineHeight: 0,
+                                    backgroundColor: "rgb(252, 194, 73)",
+                                    textAlign: "center"
+                                }}>
+                                {cagnotte} €
+                            </div>
+                            <p style={{fontSize: "40px", textAlign: "left", color: "#fcc249"}}>
+                                {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                            </p>
+                        </div>
+                    </>
                 }
-                <div style={customStyles.extBarInline} className="fullProgressBar">
-                    <div
-                        className={"intBar"}
-                        style={{
-                            width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
-                            position: 'relative',
-                            textWrap: 'nowrap',
-                            color: 'white',
-                            padding: '15px',
-                            borderRadius: '50px 50px 50px 50px',
-                            height: "30px",
-                            lineHeight: 0,
-                            backgroundColor: "rgb(252, 194, 73)",
-                            textAlign: "center"
-                        }}>
-                        {cagnotte} €
-                    </div>
-                    <p style={{fontSize: "40px", textAlign: "left", color: "#fcc249"}}>
-                        {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
-                    </p>
-                </div>
             </div>
         </>
     )
