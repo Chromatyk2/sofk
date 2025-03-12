@@ -96,19 +96,25 @@ function PersonalBar(props) {
         Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
             .then(function (response) {
                 response.data.map((val, key) => {
-                    setDonations(oldDonations => [...oldDonations, val.filter(item => item.member.user.display_name = queryParameters.get("streamer"))]);
+                    if(val.member.user.display_name = queryParameters.get("streamer")){
+                        setDonations(oldDonations => [...oldDonations, val]);
+                    }
                 })
                 if (response.data.length == 500) {
                     Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
                         .then(function (response) {
                             response.data.map((val, key) => {
-                                setDonations(oldDonations => [...oldDonations, val.filter(item => item.member.user.display_name = queryParameters.get("streamer"))]);
+                                if(val.member.user.display_name = queryParameters.get("streamer")){
+                                    setDonations(oldDonations => [...oldDonations, val]);
+                                }
                             })
                             if (response.data.length == 500) {
                                 Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
                                     .then(function (response) {
                                         response.data.map((val, key) => {
-                                            setDonations(oldDonations => [...oldDonations, val.filter(item => item.member.user.display_name = queryParameters.get("streamer"))]);
+                                            if(val.member.user.display_name = queryParameters.get("streamer")){
+                                                setDonations(oldDonations => [...oldDonations, val]);
+                                            }
                                         })
                                     })
                             }
