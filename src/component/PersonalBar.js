@@ -82,7 +82,7 @@ function PersonalBar(props) {
         },
         extBarInline: {
             width: "100%",
-            backgroundColor: "rgb(252, 194, 73)",
+            backgroundColor: "rgb(50, 82, 105)",
             position: "relative",
             zIndex: 1,
             borderRadius: "10px",
@@ -150,21 +150,14 @@ function PersonalBar(props) {
             <div className={"personalBarContainerInline"}>
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
                     <div style={{width: "100%", flexFlow:"row",display: "flex",gap: "20px"}}>
-                        <img style={{width: "200px", height: "fit-content", margin: 0}}
-                             src={"images/logoSofk.png"}/>
                         <div>
-                            <p style={{color: "white", fontSize: "25px", textAlign: "left"}}>Prochain donation
-                                Goal</p>
-                            <p style={{fontSize: "40px", textAlign: "left", color: "#fcc249"}}>
-                                {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
-                            </p>
                             <p style={{fontSize: "20px", textAlign: "left", color: "white"}}>
                                 {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
                             </p>
                         </div>
                     </div>
                     :
-                    <p style={{fontSize: "25px", textAlign: "left", color: "#fcc249"}}>
+                    <p style={{fontSize: "25px", textAlign: "left", color: "white"}}>
                         Plus de donations goal ! Merci !
                     </p>
                 }
@@ -177,13 +170,17 @@ function PersonalBar(props) {
                             textWrap: 'nowrap',
                             color: 'white',
                             padding: '15px',
-                            borderRadius: '10px 10px 10px 10px',
+                            borderRadius: '50px 50px 50px 50px',
                             height: "30px",
                             lineHeight: 0,
-                            backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"
+                            backgroundColor: "rgb(252, 194, 73)",
+                            textAlign: "center"
                         }}>
                         {cagnotte} €
                     </div>
+                    <p style={{fontSize: "40px", textAlign: "left", color: "#fcc249"}}>
+                        {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                    </p>
                 </div>
             </div>
         </>
