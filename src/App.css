@@ -3137,3 +3137,16 @@ a.navLink.linkFromNav {
     flex-flow: column;
     justify-content: center;
 }
+
+.personalBarContainerInline {
+    background: #38617f;
+    border: 2px solid #325269;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row;
+    height: 350px;
+    justify-content: center;
+    margin: 250px auto auto;
+    padding: 20px;
+    width: 100%;
+}

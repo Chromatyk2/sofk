@@ -137,11 +137,11 @@ function PersonalBar(props) {
                     </div>
                 </div>
             </div>
-            <div className={"personalBarContainer"}>
-                <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}
+            <div className={"personalBarContainerInline"}>
+                <img style={{width: "200px"}}
                      src={"images/logoSofk.png"}/>
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
-                    <>
+                    <div>
                         <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
                         <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
                             {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
@@ -149,7 +149,7 @@ function PersonalBar(props) {
                         <p style={{fontSize: "20px", textAlign: "center", color: "white"}}>
                             {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
                         </p>
-                    </>
+                    </div>
                     :
                     <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>
                         Plus de donations goal ! Merci !
