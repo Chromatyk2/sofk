@@ -97,7 +97,7 @@ function PersonalBar(props) {
             .then(function (response) {
                 response.data.map((val, key) => {
                     if(val.member.user.display_name == queryParameters.get("streamer")){
-                        setDonations(oldDonations => [...oldDonations, val]);
+                        setDonations(oldDonations => [...oldDonations, val.donation.converted_amount]);
                     }
                 })
                 if (response.data.length == 500) {
@@ -105,7 +105,7 @@ function PersonalBar(props) {
                         .then(function (response) {
                             response.data.map((val, key) => {
                                 if(val.member.user.display_name == queryParameters.get("streamer")){
-                                    setDonations(oldDonations => [...oldDonations, val]);
+                                    setDonations(oldDonations => [...oldDonations, val.donation.converted_amount]);
                                 }
                             })
                             if (response.data.length == 500) {
@@ -113,7 +113,7 @@ function PersonalBar(props) {
                                     .then(function (response) {
                                         response.data.map((val, key) => {
                                             if(val.member.user.display_name == queryParameters.get("streamer")){
-                                                setDonations(oldDonations => [...oldDonations, val]);
+                                                setDonations(oldDonations => [...oldDonations, val.donation.converted_amount]);
                                             }
                                         })
                                     })
@@ -139,7 +139,6 @@ function PersonalBar(props) {
             clearInterval(interval);
         };
     }, [])
-    console.log(donations)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
