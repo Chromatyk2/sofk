@@ -3143,7 +3143,7 @@ a.navLink.linkFromNav {
     border: 2px solid #325269;
     border-radius: 10px;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     height: 350px;
     justify-content: center;
     margin: 250px auto auto;
