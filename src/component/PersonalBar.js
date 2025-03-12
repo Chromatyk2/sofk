@@ -82,10 +82,10 @@ function PersonalBar(props) {
         },
         extBarInline: {
             width: "100%",
-            backgroundColor: "rgb(50, 82, 105)",
+            backgroundColor: "rgb(252, 194, 73)",
             position: "relative",
             zIndex: 1,
-            borderRadius: "50px",
+            borderRadius: "10px",
             margin: 0,
             height: "30px",
             marginTop:"15px"
@@ -177,12 +177,18 @@ function PersonalBar(props) {
                             textWrap: 'nowrap',
                             color: 'white',
                             padding: '15px',
-                            borderRadius: '50px 50px 50px 50px',
+                            borderRadius: '10px 10px 10px 10px',
                             height: "30px",
                             lineHeight: 0,
                             backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"
                         }}>
                         {cagnotte} €
+                        <p style={{fontSize: "20px", textAlign: "left", color: "white"}}>
+                            {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
+                        </p>
+                        <p style={{fontSize: "40px", textAlign: "left", color: "white"}}>
+                            {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                        </p>
                     </div>
                 </div>
             </div>
