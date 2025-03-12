@@ -135,6 +135,7 @@ function PersonalBar(props) {
                     const queryParameters = new URLSearchParams(window.location.search)
                     var streamerName = queryParameters.get("streamer");
                     donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                        console.log(val)
                         setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
                     });
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
