@@ -71,6 +71,7 @@ function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState(0);
     const [donation, setDonation] = useState([]);
     const [donations, setDonations] = useState([]);
+    const [load, setLoad] = useState(true);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -96,29 +97,27 @@ function PersonalBar(props) {
         Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
             .then(function (response) {
                 response.data.map((val, key) => {
-                    if(val.member.user.display_name == queryParameters.get("streamer")){
-                        setDonations(oldDonations => [...oldDonations, val.donation.converted_amount]);
-                    }
+                        setDonations(oldDonations => [...oldDonations, val]);
                 })
                 if (response.data.length == 500) {
                     Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
                         .then(function (response) {
                             response.data.map((val, key) => {
-                                if(val.member.user.display_name == queryParameters.get("streamer")){
-                                    setDonations(oldDonations => [...oldDonations, val.donation.converted_amount]);
-                                }
+                                    setDonations(oldDonations => [...oldDonations, val]);
                             })
                             if (response.data.length == 500) {
                                 Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
                                     .then(function (response) {
                                         response.data.map((val, key) => {
-                                            if(val.member.user.display_name == queryParameters.get("streamer")){
-                                                setDonations(oldDonations => [...oldDonations, val.donation.converted_amount]);
-                                            }
+                                                setDonations(oldDonations => [...oldDonations, val]);
                                         })
                                     })
+                            }else{
+                                setLoad(false)
                             }
                         })
+                }else{
+                    setLoad(false)
                 }
             })
     }, []);
@@ -130,15 +129,18 @@ function PersonalBar(props) {
         }
     }, [])
     useEffect(() => {
-        const interval = setInterval(() =>
-            {
+        if(load === false){
+            const interval = setInterval(() =>
+                {
                     setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3))
-            },1000
-        );
-        return () => {
-            clearInterval(interval);
-        };
-    }, [])
+                },1000
+            );
+            return () => {
+                clearInterval(interval);
+            };
+        }
+    }, [load])
+    console.log(donations)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
