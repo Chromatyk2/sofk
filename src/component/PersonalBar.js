@@ -150,7 +150,7 @@ function PersonalBar(props) {
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
                     <div style={{width: "100%"}}>
                         <div>
-                            <p style={{fontSize: "20px", textAlign: "left", color: "white"}}>
+                            <p style={{fontSize: "30px", textAlign: "left", color: "white", margin:0}}>
                                 {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
                             </p>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
