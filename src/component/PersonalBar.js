@@ -116,19 +116,20 @@ function PersonalBar(props) {
             })
     }, []);
     useEffect(() => {
-        const queryParameters = new URLSearchParams(window.location.search)
+        const queryParameters = new URLSearchParams(window.location.search);
         var streamerName = queryParameters.get("streamer");
         if (donationGoal[streamerName.toLowerCase()] != undefined) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
     }, [])
     useEffect(() => {
+        const queryParameters = new URLSearchParams(window.location.search);
         const interval = setInterval(() =>
             {
                 if(queryParameters.get("streamer") == "Vaykhin"){
-                    setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3)+2)
+                    setCagnotte(prevCount => prevCount + 2 + Math.floor(Math.random() * 3))
                 }else if(queryParameters.get("streamer") == "hebi_scarlet"){
-                    setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3)+1)
+                    setCagnotte(prevCount => prevCount + 2 + Math.floor(Math.random() * 3))
                 }else{
                     setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3))
                 }
