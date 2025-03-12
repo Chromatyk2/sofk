@@ -96,7 +96,7 @@ function PersonalBar(props) {
         Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
             .then(function (response) {
                 response.data.map((val, key) => {
-                    if(val.member.user.display_name = queryParameters.get("streamer")){
+                    if(val.member.user.display_name == queryParameters.get("streamer")){
                         setDonations(oldDonations => [...oldDonations, val]);
                     }
                 })
@@ -104,7 +104,7 @@ function PersonalBar(props) {
                     Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
                         .then(function (response) {
                             response.data.map((val, key) => {
-                                if(val.member.user.display_name = queryParameters.get("streamer")){
+                                if(val.member.user.display_name == queryParameters.get("streamer")){
                                     setDonations(oldDonations => [...oldDonations, val]);
                                 }
                             })
@@ -112,7 +112,7 @@ function PersonalBar(props) {
                                 Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
                                     .then(function (response) {
                                         response.data.map((val, key) => {
-                                            if(val.member.user.display_name = queryParameters.get("streamer")){
+                                            if(val.member.user.display_name == queryParameters.get("streamer")){
                                                 setDonations(oldDonations => [...oldDonations, val]);
                                             }
                                         })
