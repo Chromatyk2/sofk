@@ -149,7 +149,7 @@ function PersonalBar(props) {
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
-                    <div style={{width: "100%", flexFlow: "row", display: "flex", gap: "20px"}}>
+                    <div style={{width: "100%"}}>
                         <div>
                             <p style={{fontSize: "20px", textAlign: "left", color: "white"}}>
                                 {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
@@ -163,11 +163,11 @@ function PersonalBar(props) {
                                         textWrap: 'nowrap',
                                         color: 'white',
                                         padding: '15px',
-                                        borderRadius: '50px 50px 50px 50px',
+                                        borderRadius: '10px 10px 10px 10px',
                                         height: "30px",
                                         lineHeight: 0,
                                         backgroundColor: "rgb(252, 194, 73)",
-                                        textAlign: "center"
+                                        textAlign: "left"
                                     }}>
                                     {cagnotte} €
                                 </div>
