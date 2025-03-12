@@ -138,17 +138,20 @@ function PersonalBar(props) {
             {/*    </div>*/}
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
-                <img style={{width: "200px", height:"fit-content", margin:0}}
-                     src={"images/logoSofk.png"}/>
                 {donation.filter(item => item.montant >= cagnotte).length > 0 ?
-                    <div style={{width:"100%"}}>
-                        <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
-                        <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
-                            {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
-                        </p>
-                        <p style={{fontSize: "20px", textAlign: "center", color: "white"}}>
-                            {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
-                        </p>
+                    <div style={{width: "100%", flexFlow:"row"}}>
+                        <img style={{width: "200px", height: "fit-content", margin: 0}}
+                             src={"images/logoSofk.png"}/>
+                        <div>
+                            <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation
+                                Goal</p>
+                            <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
+                                {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                            </p>
+                            <p style={{fontSize: "20px", textAlign: "center", color: "white"}}>
+                                {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
+                            </p>
+                        </div>
                     </div>
                     :
                     <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>
