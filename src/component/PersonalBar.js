@@ -183,12 +183,6 @@ function PersonalBar(props) {
                             backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"
                         }}>
                         {cagnotte} €
-                        <p style={{fontSize: "20px", textAlign: "left", color: "white"}}>
-                            {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
-                        </p>
-                        <p style={{fontSize: "40px", textAlign: "left", color: "white"}}>
-                            {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
-                        </p>
                     </div>
                 </div>
             </div>
