@@ -125,7 +125,13 @@ function PersonalBar(props) {
     useEffect(() => {
         const interval = setInterval(() =>
             {
-                setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3))
+                if(queryParameters.get("streamer") == "Vaykhin"){
+                    setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3)+2)
+                }else if(queryParameters.get("streamer") == "hebi_scarlet"){
+                    setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3)+1)
+                }else{
+                    setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 3))
+                }
             },1000
         );
         return () => {
