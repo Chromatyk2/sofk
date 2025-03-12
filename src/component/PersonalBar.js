@@ -140,6 +140,7 @@ function PersonalBar(props) {
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
                     }
+                    console.log(cagnotte)
                 },60000
             );
             return () => {
