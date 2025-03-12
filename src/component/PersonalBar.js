@@ -182,7 +182,7 @@ function PersonalBar(props) {
                                     fontSize: "25px",
                                     textAlign: "right",
                                     color: "white",
-                                    position: absolute,
+                                    position: "absolute",
                                     right: "12px",
                                     zIndex: 1,
                                     top: "3px"
