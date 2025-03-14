@@ -152,7 +152,7 @@ function PersonalBar(props) {
     useEffect(() => {
         const queryParameters = new URLSearchParams(window.location.search);
         var streamerName = queryParameters.get("streamer");
-        if(streamerName == "Vaykhin"){
+        if(streamerName == "Vaykhin" || streamerName == "vaykhin"){
             setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 2)
         }else if (streamerName == "hebi_scarlet"){
             setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 1)
