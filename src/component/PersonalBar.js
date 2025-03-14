@@ -148,6 +148,7 @@ function PersonalBar(props) {
     }, [])
     function setupCagnotte() {
         console.log("Check Cagnotte")
+        console.log(donations)
         setDonations([]);
         setCagnotte([])
         const queryParameters = new URLSearchParams(window.location.search)
