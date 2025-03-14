@@ -132,6 +132,7 @@ function PersonalBar(props) {
         if(load === false){
             const interval = setInterval(() =>
                 {
+                    setCagnotte([])
                     const queryParameters = new URLSearchParams(window.location.search)
                     var streamerName = queryParameters.get("streamer");
                     donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
@@ -188,17 +189,17 @@ function PersonalBar(props) {
             {/*    </div>*/}
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
-                {donation.filter(item => item.montant >= cagnotte).length > 0 ?
+                {donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0)).length > 0 ?
                     <div style={{width: "100%"}}>
                         <div>
                             <p style={{fontSize: "30px", textAlign: "left", color: "white", margin:0}}>
-                                {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
+                                {donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0)).length > 0 && donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0))[0].description}
                             </p>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
                                 <div
                                     className={"intBar"}
                                     style={{
-                                        width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                        width: donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0)).length > 0 ? parseFloat((cagnotte.reduce((a, b) => a + b, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0))[0].montant) * 100).toFixed(2) + "%" : "100%",
                                         position: 'relative',
                                         textWrap: 'nowrap',
                                         color: 'white',
@@ -216,7 +217,7 @@ function PersonalBar(props) {
                                         color: "white",
                                         lineHeight: "12px"
                                     }}>
-                                        {cagnotte} €
+                                        {cagnotte.reduce((a, b) => a + b, 0)} €
                                     </p>
                                 </div>
                                 <p style={{
@@ -228,7 +229,7 @@ function PersonalBar(props) {
                                     zIndex: 1,
                                     top: "3px"
                                 }}>
-                                    {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                                    {donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0))[0].montant + " €"}
                                 </p>
                             </div>
                         </div>
@@ -242,7 +243,7 @@ function PersonalBar(props) {
                             <div
                                 className={"intBar"}
                                 style={{
-                                    width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                    width: donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0)).length > 0 ? parseFloat((cagnotte.reduce((a, b) => a + b, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, b) => a + b, 0))[0].montant) * 100).toFixed(2) + "%" : "100%",
                                     position: 'relative',
                                     textWrap: 'nowrap',
                                     color: 'white',
@@ -253,7 +254,7 @@ function PersonalBar(props) {
                                     backgroundColor: "rgb(252, 194, 73)",
                                     textAlign: "center"
                                 }}>
-                                {cagnotte} €
+                                {cagnotte.reduce((a, b) => a + b, 0)} €
                             </div>
                         </div>
                     </>
