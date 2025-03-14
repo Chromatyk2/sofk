@@ -71,7 +71,7 @@ function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState([]);
     const [donation, setDonation] = useState([]);
     const [donations, setDonations] = useState([]);
-    const [load, setLoad] = useState([]);
+    const [load, setLoad] = useState(0);
     const [montant, setMontant] = useState(true);
     const customStyles = {
         extBar: {
@@ -121,10 +121,16 @@ function PersonalBar(props) {
                                                         setDonations(oldDonations => [...oldDonations, val]);
                                                     })
                                                 })
+                                        }else{
+                                            setLoad(Math.random())
                                         }
                                     })
+                            }else{
+                                setLoad(Math.random())
                             }
                         })
+                }else{
+                    setLoad(Math.random())
                 }
             })}
             ,5000
@@ -152,7 +158,7 @@ function PersonalBar(props) {
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
                     }
-    }, [donations])
+    }, [load])
     useEffect(() => {
         setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
     }, [cagnotte])
