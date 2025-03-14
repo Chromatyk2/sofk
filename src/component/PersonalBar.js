@@ -89,7 +89,7 @@ function PersonalBar(props) {
             position: "relative",
             zIndex: 1,
             borderRadius: "10px",
-            height: "45px",
+            height: "40px",
             margin:"0",
         }
     }
@@ -216,7 +216,7 @@ function PersonalBar(props) {
                                         color: 'white',
                                         padding: '15px',
                                         borderRadius: '10px 10px 10px 10px',
-                                        height: "45px",
+                                        height: "40px",
                                         lineHeight: 0,
                                         backgroundColor: "rgb(252, 194, 73)",
                                         textAlign: "left",
@@ -263,7 +263,7 @@ function PersonalBar(props) {
                                     color: 'white',
                                     padding: '15px',
                                     borderRadius: '10px 10px 10px 10px',
-                                    height: "45px",
+                                    height: "40px",
                                     lineHeight: 0,
                                     backgroundColor: "rgb(252, 194, 73)",
                                     textAlign: "left",
@@ -276,7 +276,7 @@ function PersonalBar(props) {
                                     position: "absolute",
                                     left: "12px",
                                     zIndex: 1,
-                                    top: "0px"
+                                    top: "22px"
                                 }}>
                                     {montant} €
                                 </p>
