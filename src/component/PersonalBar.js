@@ -161,7 +161,7 @@ function PersonalBar(props) {
         }
     }, [cagnotte])
 
-    console.log(donations)
+    console.log(montant)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
