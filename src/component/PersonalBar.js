@@ -141,7 +141,7 @@ function PersonalBar(props) {
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
                     }
-                },60000
+                },5000
             );
             return () => {
                 clearInterval(interval);
