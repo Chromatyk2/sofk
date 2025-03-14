@@ -203,7 +203,7 @@ function PersonalBar(props) {
                 {donation.filter(item => item.montant > montant).length > 0 ?
                     <div style={{width: "100%"}}>
                         <div>
-                            <p style={{fontSize: "30px", textAlign: "left", color: "white", margin:0}}>
+                            <p style={{fontSize: "30px", textAlign: "left", color: "white", margin:0, marginBottom:"-8px"}}>
                                 {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
                             </p>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
@@ -250,7 +250,7 @@ function PersonalBar(props) {
                     </div>
                     :
                     <>
-                        <p style={{fontSize: "30px", textAlign: "left", color: "white", margin: 0}}>
+                        <p style={{fontSize: "30px", textAlign: "left", color: "white", margin: 0, marginBottom:"-8px"}}>
                             Plus de donations goal ! Merci !
                         </p>
                         <div style={customStyles.extBarInline} className="fullProgressBar">
