@@ -259,14 +259,33 @@ function PersonalBar(props) {
                                     textWrap: 'nowrap',
                                     color: 'white',
                                     padding: '15px',
-                                    borderRadius: '50px 50px 50px 50px',
-                                    height: "30px",
+                                    borderRadius: '10px 10px 10px 10px',
+                                    height: "40px",
                                     lineHeight: 0,
                                     backgroundColor: "rgb(252, 194, 73)",
-                                    textAlign: "center"
+                                    textAlign: "left",
+                                    margin: 0
                                 }}>
-                                {montant} €
+                                <p style={{
+                                    fontSize: "25px",
+                                    textAlign: "left",
+                                    color: "white",
+                                    lineHeight: "12px"
+                                }}>
+                                    {montant} €
+                                </p>
                             </div>
+                            <p style={{
+                                fontSize: "25px",
+                                textAlign: "right",
+                                color: "white",
+                                position: "absolute",
+                                right: "12px",
+                                zIndex: 1,
+                                top: "3px"
+                            }}>
+                                {donation.filter(item => item.montant > montant)[0].montant + " €"}
+                            </p>
                         </div>
                     </>
                 }
