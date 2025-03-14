@@ -1,23 +1,8 @@
 {
   "chromatyk" : [
     {
-    "montant": 3,
-    "description": "Donation Goal 1"
-    },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
-    },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
-    },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
-    },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
-    },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 3,
+      "description": "Donation Goal 1"
     }
   ],
   "vaykhin" : [
