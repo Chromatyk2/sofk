@@ -161,6 +161,8 @@ function PersonalBar(props) {
         }
     }, [cagnotte])
 
+    console.log(donations)
+    console.log(cagnotte)
     console.log(montant)
     return (
         <>
