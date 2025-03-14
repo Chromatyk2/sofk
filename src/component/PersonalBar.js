@@ -84,12 +84,12 @@ function PersonalBar(props) {
             height: "30px"
         },
         extBarInline: {
-            width: "75%",
+            width: "50%",
             backgroundColor: "rgb(50, 82, 105)",
             position: "relative",
             zIndex: 1,
             borderRadius: "10px",
-            height: "40px",
+            height: "50px",
             margin:"0",
         }
     }
@@ -216,7 +216,7 @@ function PersonalBar(props) {
                                         color: 'white',
                                         padding: '15px',
                                         borderRadius: '10px 10px 10px 10px',
-                                        height: "40px",
+                                        height: "50px",
                                         lineHeight: 0,
                                         backgroundColor: "rgb(252, 194, 73)",
                                         textAlign: "left",
@@ -224,7 +224,7 @@ function PersonalBar(props) {
                                     }}>
                                 </div>
                                 <p style={{
-                                    fontSize: "25px",
+                                    fontSize: "32px",
                                     textAlign: "right",
                                     color: "white",
                                     position: "absolute",
@@ -235,7 +235,7 @@ function PersonalBar(props) {
                                     {montant} €
                                 </p>
                                 <p style={{
-                                    fontSize: "25px",
+                                    fontSize: "32px",
                                     textAlign: "right",
                                     color: "white",
                                     position: "absolute",
