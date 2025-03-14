@@ -95,19 +95,19 @@ function PersonalBar(props) {
     }
     useEffect(() => {
         const queryParameters = new URLSearchParams(window.location.search);
-        Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations')
+        Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
             .then(function (response) {
                 response.data.map((val, key) => {
                         setDonations(oldDonations => [...oldDonations, val]);
                 })
                 if (response.data.length == 500) {
-                    Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
+                    Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
                         .then(function (response) {
                             response.data.map((val, key) => {
                                     setDonations(oldDonations => [...oldDonations, val]);
                             })
                             if (response.data.length == 500) {
-                                Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
+                                Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
                                     .then(function (response) {
                                         response.data.map((val, key) => {
                                                 setDonations(oldDonations => [...oldDonations, val]);
@@ -133,7 +133,6 @@ function PersonalBar(props) {
         if(load === false){
             const interval = setInterval(() =>
                 {
-                    console.log(donations)
                     setCagnotte([])
                     const queryParameters = new URLSearchParams(window.location.search)
                     var streamerName = queryParameters.get("streamer");
@@ -143,7 +142,7 @@ function PersonalBar(props) {
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
                     }
-                },30000
+                },5000
             );
             return () => {
                 clearInterval(interval);
@@ -161,6 +160,8 @@ function PersonalBar(props) {
             setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
         }
     }, [cagnotte])
+
+    console.log(donations)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
