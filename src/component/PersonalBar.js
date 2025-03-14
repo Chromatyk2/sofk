@@ -96,6 +96,8 @@ function PersonalBar(props) {
     useEffect(() => {
         const interval = setInterval(() =>
         {
+            setDonations([]);
+            setCagnotte([])
         const queryParameters = new URLSearchParams(window.location.search);
         Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
             .then(function (response) {
@@ -147,10 +149,6 @@ function PersonalBar(props) {
         }
     }, [])
     function setupCagnotte() {
-        console.log("Check Cagnotte")
-        console.log(donations)
-        setDonations([]);
-        setCagnotte([])
         const queryParameters = new URLSearchParams(window.location.search)
         var streamerName = queryParameters.get("streamer");
         donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
