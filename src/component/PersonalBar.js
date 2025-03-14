@@ -263,14 +263,14 @@ function PersonalBar(props) {
                                     color: 'white',
                                     padding: '15px',
                                     borderRadius: '10px 10px 10px 10px',
-                                    height: "40px",
+                                    height: "50px",
                                     lineHeight: 0,
                                     backgroundColor: "rgb(252, 194, 73)",
                                     textAlign: "left",
                                     margin: 0
                                 }}>
                                 <p style={{
-                                    fontSize: "25px",
+                                    fontSize: "32px",
                                     textAlign: "left",
                                     color: "white",
                                     lineHeight: "12px"
