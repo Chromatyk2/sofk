@@ -130,7 +130,6 @@ function PersonalBar(props) {
     }, [])
     useEffect(() => {
         if(load === false){
-            console.log(cagnotte)
             const interval = setInterval(() =>
                 {
                     const queryParameters = new URLSearchParams(window.location.search)
@@ -148,6 +147,8 @@ function PersonalBar(props) {
             };
         }
     }, [load])
+
+    console.log(cagnotte)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
