@@ -71,7 +71,7 @@ function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState([]);
     const [donation, setDonation] = useState([]);
     const [donations, setDonations] = useState([]);
-    const [load, setLoad] = useState(true);
+    const [load, setLoad] = useState(-1);
     const [montant, setMontant] = useState(true);
     const customStyles = {
         extBar: {
@@ -94,6 +94,8 @@ function PersonalBar(props) {
         }
     }
     useEffect(() => {
+        const interval = setInterval(() =>
+        {
         const queryParameters = new URLSearchParams(window.location.search);
         Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
             .then(function (response) {
@@ -120,17 +122,22 @@ function PersonalBar(props) {
                                                     })
                                                 })
                                         }else{
-                                            setLoad(false)
+                                            setLoad(load + 1)
                                         }
                                     })
                             }else{
-                                setLoad(false)
+                                setLoad(load + 1)
                             }
                         })
                 }else{
-                    setLoad(false)
+                    setLoad(load + 1)
                 }
-            })
+            })}
+            ,5000
+        );
+            return () => {
+                clearInterval(interval);
+            };
     }, []);
     useEffect(() => {
         const queryParameters = new URLSearchParams(window.location.search);
@@ -140,47 +147,10 @@ function PersonalBar(props) {
         }
     }, [])
     useEffect(() => {
-        if(load === false){
-            const interval = setInterval(() =>
-                {
+        if(load > -1){
+            console.log("check")
                     setDonations([]);
                     setCagnotte([])
-                    Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
-                        .then(function (response) {
-                            response.data.map((val, key) => {
-                                setDonations(oldDonations => [...oldDonations, val]);
-                            })
-                            if (response.data.length == 500) {
-                                Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
-                                    .then(function (response) {
-                                        response.data.map((val, key) => {
-                                            setDonations(oldDonations => [...oldDonations, val]);
-                                        })
-                                        if (response.data.length == 500) {
-                                            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=2')
-                                                .then(function (response) {
-                                                    response.data.map((val, key) => {
-                                                        setDonations(oldDonations => [...oldDonations, val]);
-                                                    })
-                                                    if (response.data.length == 500) {
-                                                        Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=3')
-                                                            .then(function (response) {
-                                                                response.data.map((val, key) => {
-                                                                    setDonations(oldDonations => [...oldDonations, val]);
-                                                                })
-                                                            })
-                                                    }else{
-                                                        setLoad(false)
-                                                    }
-                                                })
-                                        }else{
-                                            setLoad(false)
-                                        }
-                                    })
-                            }else{
-                                setLoad(false)
-                            }
-                        })
                     const queryParameters = new URLSearchParams(window.location.search)
                     var streamerName = queryParameters.get("streamer");
                     donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
@@ -189,11 +159,6 @@ function PersonalBar(props) {
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
                     }
-                },5000
-            );
-            return () => {
-                clearInterval(interval);
-            };
         }
     }, [load])
     useEffect(() => {
