@@ -153,11 +153,11 @@ function PersonalBar(props) {
         const queryParameters = new URLSearchParams(window.location.search);
         var streamerName = queryParameters.get("streamer");
         if(streamerName == "Vaykhin"){
-            setMontant((montant) + 2)
+            setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 2)
         }else if (streamerName == "hebi_scarlet"){
-            setMontant((montant) + 1)
+            setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 1)
         }else{
-            setMontant(montant)
+            setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
         }
     }, [cagnotte])
 
