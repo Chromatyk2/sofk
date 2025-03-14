@@ -143,8 +143,44 @@ function PersonalBar(props) {
         if(load === false){
             const interval = setInterval(() =>
                 {
-                    console.log(donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk"))
+                    setDonations([]);
                     setCagnotte([])
+                    Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations')
+                        .then(function (response) {
+                            response.data.map((val, key) => {
+                                setDonations(oldDonations => [...oldDonations, val]);
+                            })
+                            if (response.data.length == 500) {
+                                Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
+                                    .then(function (response) {
+                                        response.data.map((val, key) => {
+                                            setDonations(oldDonations => [...oldDonations, val]);
+                                        })
+                                        if (response.data.length == 500) {
+                                            Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
+                                                .then(function (response) {
+                                                    response.data.map((val, key) => {
+                                                        setDonations(oldDonations => [...oldDonations, val]);
+                                                    })
+                                                    if (response.data.length == 500) {
+                                                        Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
+                                                            .then(function (response) {
+                                                                response.data.map((val, key) => {
+                                                                    setDonations(oldDonations => [...oldDonations, val]);
+                                                                })
+                                                            })
+                                                    }else{
+                                                        setLoad(false)
+                                                    }
+                                                })
+                                        }else{
+                                            setLoad(false)
+                                        }
+                                    })
+                            }else{
+                                setLoad(false)
+                            }
+                        })
                     const queryParameters = new URLSearchParams(window.location.search)
                     var streamerName = queryParameters.get("streamer");
                     donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
@@ -161,15 +197,7 @@ function PersonalBar(props) {
         }
     }, [load])
     useEffect(() => {
-        const queryParameters = new URLSearchParams(window.location.search);
-        var streamerName = queryParameters.get("streamer");
-        if(streamerName == "Vaykhin" || streamerName == "vaykhin"){
-            setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 2)
-        }else if (streamerName == "hebi_scarlet"){
-            setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 1)
-        }else{
-            setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
-        }
+        setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
     }, [cagnotte])
     return (
         <>
