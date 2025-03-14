@@ -148,7 +148,7 @@ function PersonalBar(props) {
     }, [])
     useEffect(() => {
         if(load > -1){
-            console.log("check")
+            console.log(load)
                     setDonations([]);
                     setCagnotte([])
                     const queryParameters = new URLSearchParams(window.location.search)
