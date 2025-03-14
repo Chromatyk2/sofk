@@ -112,6 +112,16 @@ function PersonalBar(props) {
                                         response.data.map((val, key) => {
                                                 setDonations(oldDonations => [...oldDonations, val]);
                                         })
+                                        if (response.data.length == 500) {
+                                            Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=3')
+                                                .then(function (response) {
+                                                    response.data.map((val, key) => {
+                                                        setDonations(oldDonations => [...oldDonations, val]);
+                                                    })
+                                                })
+                                        }else{
+                                            setLoad(false)
+                                        }
                                     })
                             }else{
                                 setLoad(false)
