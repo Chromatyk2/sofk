@@ -148,8 +148,6 @@ function PersonalBar(props) {
     }, [])
     useEffect(() => {
         console.log("check donations")
-        if(load === false){
-            console.log("check donations")
                     setDonations([]);
                     setCagnotte([])
                     const queryParameters = new URLSearchParams(window.location.search)
@@ -160,7 +158,6 @@ function PersonalBar(props) {
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
                     }
-        }
     }, [load])
     useEffect(() => {
         setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
