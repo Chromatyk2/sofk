@@ -133,6 +133,7 @@ function PersonalBar(props) {
         if(load === false){
             const interval = setInterval(() =>
                 {
+                    console.log(donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == "chromatyk"))
                     setCagnotte([])
                     const queryParameters = new URLSearchParams(window.location.search)
                     var streamerName = queryParameters.get("streamer");
@@ -160,8 +161,6 @@ function PersonalBar(props) {
             setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
         }
     }, [cagnotte])
-
-    console.log(donations)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
