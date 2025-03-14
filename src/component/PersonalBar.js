@@ -122,15 +122,15 @@ function PersonalBar(props) {
                                                     })
                                                 })
                                         }else{
-                                            setLoad(load + 1)
+                                            setupCagnotte()
                                         }
                                     })
                             }else{
-                                setLoad(load + 1)
+                                setupCagnotte()
                             }
                         })
                 }else{
-                    setLoad(load + 1)
+                    setupCagnotte()
                 }
             })}
             ,5000
@@ -146,22 +146,21 @@ function PersonalBar(props) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
     }, [])
-    useEffect(() => {
-        if(load > -1){
-            console.log(load)
-                    setDonations([]);
-                    setCagnotte([])
-                    const queryParameters = new URLSearchParams(window.location.search)
-                    var streamerName = queryParameters.get("streamer");
-                    donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-                        setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-                    });
-                    if (donationGoal[streamerName.toLowerCase()] != undefined) {
-                        setDonation(donationGoal[streamerName.toLowerCase()])
-                    }
+    function setupCagnotte() {
+        console.log("Check Cagnotte")
+        setDonations([]);
+        setCagnotte([])
+        const queryParameters = new URLSearchParams(window.location.search)
+        var streamerName = queryParameters.get("streamer");
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+        });
+        if (donationGoal[streamerName.toLowerCase()] != undefined) {
+            setDonation(donationGoal[streamerName.toLowerCase()])
         }
-    }, [load])
+    }
     useEffect(() => {
+        console.log("Check Montant")
         setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
     }, [cagnotte])
     return (
