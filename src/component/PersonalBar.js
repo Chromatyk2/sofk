@@ -160,7 +160,7 @@ function PersonalBar(props) {
         }else{
             setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
         }
-    }, [cagnotte])*
+    }, [cagnotte])
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
