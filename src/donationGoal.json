@@ -1,8 +1,39 @@
 {
   "chromatyk" : [
     {
-      "montant": 3,
-      "description": "Donation Goal 1"
+      "montant": 10,
+      "description": "Truc avec Taelth"
+    },{
+      "montant": 20,
+      "description": "Truc avec Clem"
+    },
+    {
+      "montant": 30,
+      "description": "Doublage avec Chloe"
+    },
+    {
+      "montant": 40,
+      "description": "Truc avec Valenderia"
+    },
+    {
+      "montant": 100,
+      "description": "Fresh Save de Elden Ring + DLC"
+    },
+    {
+      "montant": 200,
+      "description": "DJ Set Techno en live avant 2026"
+    },
+    {
+      "montant": 200,
+      "description": "DJ Set Techno en live avant 2026"
+    },
+    {
+      "montant": 409,
+      "description": "Je pratique le speedrun pour participer à un event"
+    },
+    {
+      "montant": 1000000,
+      "description": "Je deviens chauve"
     }
   ],
   "vaykhin" : [
@@ -409,26 +440,68 @@
       "montant": 6721,
       "description": "Donation Goal 6"
     }
-  ],
-  "suriimii" : [
-    {
-      "montant": 1204,
-      "description": "Donation Goal 1"
-    },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
-    },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
-    },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
-    },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
-    },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
-    }
-  ]
+    ],
+    "suriimii" : [
+      {
+        "montant": 1204,
+        "description": "Donation Goal 1"
+      },{
+        "montant": 2451,
+        "description": "Donation Goal 2"
+      },{
+        "montant": 3278,
+        "description": "Donation Goal 3"
+      },{
+        "montant": 4257,
+        "description": "Donation Goal 4"
+      },{
+        "montant": 5671,
+        "description": "Donation Goal 5"
+      },{
+        "montant": 6721,
+        "description": "Donation Goal 6"
+      }
+    ],
+    "mrskulrex" : [
+      {
+        "montant": 1204,
+        "description": "Donation Goal 1"
+      },{
+        "montant": 2451,
+        "description": "Donation Goal 2"
+      },{
+        "montant": 3278,
+        "description": "Donation Goal 3"
+      },{
+        "montant": 4257,
+        "description": "Donation Goal 4"
+      },{
+        "montant": 5671,
+        "description": "Donation Goal 5"
+      },{
+        "montant": 6721,
+        "description": "Donation Goal 6"
+      }
+    ],
+    "khei" : [
+      {
+        "montant": 1204,
+        "description": "Donation Goal 1"
+      },{
+        "montant": 2451,
+        "description": "Donation Goal 2"
+      },{
+        "montant": 3278,
+        "description": "Donation Goal 3"
+      },{
+        "montant": 4257,
+        "description": "Donation Goal 4"
+      },{
+        "montant": 5671,
+        "description": "Donation Goal 5"
+      },{
+        "montant": 6721,
+        "description": "Donation Goal 6"
+      }
+    ]
 }
