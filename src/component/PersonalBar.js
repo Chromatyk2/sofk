@@ -222,15 +222,18 @@ function PersonalBar(props) {
                                         textAlign: "left",
                                         margin: 0
                                     }}>
-                                    <p style={{
-                                        fontSize: "25px",
-                                        textAlign: "left",
-                                        color: "white",
-                                        lineHeight: "12px"
-                                    }}>
-                                        {montant} €
-                                    </p>
                                 </div>
+                                <p style={{
+                                    fontSize: "25px",
+                                    textAlign: "right",
+                                    color: "white",
+                                    position: "absolute",
+                                    left: "12px",
+                                    zIndex: 1,
+                                    top: "3px"
+                                }}>
+                                    {montant} €
+                                </p>
                                 <p style={{
                                     fontSize: "25px",
                                     textAlign: "right",
@@ -251,7 +254,7 @@ function PersonalBar(props) {
                             Plus de donations goal ! Merci !
                         </p>
                         <div style={customStyles.extBarInline} className="fullProgressBar">
-                            <div
+                        <div
                                 className={"intBar"}
                                 style={{
                                     width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
