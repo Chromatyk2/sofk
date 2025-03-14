@@ -124,15 +124,15 @@ function PersonalBar(props) {
                                                     })
                                                 })
                                         }else{
-                                            setupCagnotte()
+                                            setupCagnotte(donations)
                                         }
                                     })
                             }else{
-                                setupCagnotte()
+                                setupCagnotte(donations)
                             }
                         })
                 }else{
-                    setupCagnotte()
+                    setupCagnotte(donations)
                 }
             })}
             ,5000
@@ -148,7 +148,7 @@ function PersonalBar(props) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
     }, [])
-    function setupCagnotte() {
+    function setupCagnotte(donations) {
         const queryParameters = new URLSearchParams(window.location.search)
         var streamerName = queryParameters.get("streamer");
         donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
