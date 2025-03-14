@@ -131,14 +131,12 @@ function PersonalBar(props) {
     useEffect(() => {
         if(load === false){
             console.log(cagnotte)
-            console.log(donations)
             const interval = setInterval(() =>
                 {
                     const queryParameters = new URLSearchParams(window.location.search)
                     var streamerName = queryParameters.get("streamer");
                     donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-                        const montant = val.donation.original_amount
-                        setCagnotte(oldCagnotte => [...oldCagnotte, montant]);
+                        setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
                     });
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
