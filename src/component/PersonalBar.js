@@ -143,6 +143,7 @@ function PersonalBar(props) {
         if(load === false){
             const interval = setInterval(() =>
                 {
+                    setDonations([])
                     setCagnotte([])
                     Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations')
                         .then(function (response) {
