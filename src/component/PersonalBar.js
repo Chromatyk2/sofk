@@ -84,7 +84,7 @@ function PersonalBar(props) {
             height: "30px"
         },
         extBarInline: {
-            width: "50%",
+            width: "687px",
             backgroundColor: "rgb(50, 82, 105)",
             position: "relative",
             zIndex: 1,
