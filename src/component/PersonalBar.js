@@ -95,7 +95,7 @@ function PersonalBar(props) {
     }
     useEffect(() => {
         const queryParameters = new URLSearchParams(window.location.search);
-        Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
+        Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations')
             .then(function (response) {
                 response.data.map((val, key) => {
                         setDonations(oldDonations => [...oldDonations, val]);
