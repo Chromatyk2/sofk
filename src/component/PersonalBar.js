@@ -138,6 +138,7 @@ function PersonalBar(props) {
                     var streamerName = queryParameters.get("streamer");
                     donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
                         const montant = val.donation.original_amount
+                        console.log(montant)
                         setCagnotte(oldCagnotte => [...oldCagnotte, montant]);
                     });
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
