@@ -134,15 +134,47 @@ function PersonalBar(props) {
             const interval = setInterval(() =>
                 {
                     setCagnotte([])
-                    const queryParameters = new URLSearchParams(window.location.search)
-                    var streamerName = queryParameters.get("streamer");
-                    donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-                        setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-                    });
-                    if (donationGoal[streamerName.toLowerCase()] != undefined) {
-                        setDonation(donationGoal[streamerName.toLowerCase()])
-                    }
-                },30000
+                    Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations')
+                        .then(function (response) {
+                            response.data.map((val, key) => {
+                                setDonations(oldDonations => [...oldDonations, val]);
+                            })
+                            if (response.data.length == 500) {
+                                Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=1')
+                                    .then(function (response) {
+                                        response.data.map((val, key) => {
+                                            setDonations(oldDonations => [...oldDonations, val]);
+                                        })
+                                        if (response.data.length == 500) {
+                                            Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations?page=2')
+                                                .then(function (response) {
+                                                    response.data.map((val, key) => {
+                                                        setDonations(oldDonations => [...oldDonations, val]);
+                                                    })
+                                                })
+                                        }else{
+                                            const queryParameters = new URLSearchParams(window.location.search)
+                                            var streamerName = queryParameters.get("streamer");
+                                            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                                                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+                                            });
+                                            if (donationGoal[streamerName.toLowerCase()] != undefined) {
+                                                setDonation(donationGoal[streamerName.toLowerCase()])
+                                            }
+                                        }
+                                    })
+                            }else{
+                                const queryParameters = new URLSearchParams(window.location.search)
+                                var streamerName = queryParameters.get("streamer");
+                                donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                                    setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+                                });
+                                if (donationGoal[streamerName.toLowerCase()] != undefined) {
+                                    setDonation(donationGoal[streamerName.toLowerCase()])
+                                }
+                            }
+                        })
+                },5000
             );
             return () => {
                 clearInterval(interval);
