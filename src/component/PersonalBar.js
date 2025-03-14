@@ -72,7 +72,7 @@ function PersonalBar(props) {
     const [donation, setDonation] = useState([]);
     const [donations, setDonations] = useState([]);
     const [load, setLoad] = useState(true);
-    const [montant, setMontant] = useState(true);
+    const [montant, setMontant] = useState(0);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -143,6 +143,9 @@ function PersonalBar(props) {
         if(load === false){
             const interval = setInterval(() =>
                 {
+                    const queryParameters = new URLSearchParams(window.location.search)
+                    var streamerName = queryParameters.get("streamer");
+                    console.log(donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName))
                     setDonations([])
                     setCagnotte([])
                     Axios.get('https://streamlabscharity.com/api/v1/teams/643437249115068091/donations')
@@ -203,10 +206,6 @@ function PersonalBar(props) {
             setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
         }
     }, [cagnotte])
-
-    console.log(donations)
-    console.log(cagnotte)
-    console.log(montant)
     return (
         <>
             {/*<div className={"personalBarContainer"}>*/}
