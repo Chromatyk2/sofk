@@ -147,7 +147,6 @@ function PersonalBar(props) {
         }
     }, [])
     useEffect(() => {
-        console.log("check donations")
                     setDonations([]);
                     setCagnotte([])
                     const queryParameters = new URLSearchParams(window.location.search)
@@ -201,17 +200,17 @@ function PersonalBar(props) {
             {/*    </div>*/}
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
-                {donation.filter(item => item.montant >= montant).length > 0 ?
+                {donation.filter(item => item.montant > montant).length > 0 ?
                     <div style={{width: "100%"}}>
                         <div>
                             <p style={{fontSize: "30px", textAlign: "left", color: "white", margin:0}}>
-                                {donation.filter(item => item.montant >= montant).length > 0 && donation.filter(item => item.montant >= montant)[0].description}
+                                {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
                             </p>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
                                 <div
                                     className={"intBar"}
                                     style={{
-                                        width: donation.filter(item => item.montant >= montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant >= montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                        width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
                                         position: 'relative',
                                         textWrap: 'nowrap',
                                         color: 'white',
@@ -241,7 +240,7 @@ function PersonalBar(props) {
                                     zIndex: 1,
                                     top: "3px"
                                 }}>
-                                    {donation.filter(item => item.montant >= montant)[0].montant + " €"}
+                                    {donation.filter(item => item.montant > montant)[0].montant + " €"}
                                 </p>
                             </div>
                         </div>
@@ -255,7 +254,7 @@ function PersonalBar(props) {
                             <div
                                 className={"intBar"}
                                 style={{
-                                    width: donation.filter(item => item.montant >= montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant >= montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                    width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
                                     position: 'relative',
                                     textWrap: 'nowrap',
                                     color: 'white',
