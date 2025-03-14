@@ -72,6 +72,7 @@ function PersonalBar(props) {
     const [donation, setDonation] = useState([]);
     const [donations, setDonations] = useState([]);
     const [load, setLoad] = useState(true);
+    const [montant, setMontant] = useState(true);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -141,13 +142,24 @@ function PersonalBar(props) {
                     if (donationGoal[streamerName.toLowerCase()] != undefined) {
                         setDonation(donationGoal[streamerName.toLowerCase()])
                     }
-                },5000
+                },30000
             );
             return () => {
                 clearInterval(interval);
             };
         }
     }, [load])
+    useEffect(() => {
+        const queryParameters = new URLSearchParams(window.location.search);
+        var streamerName = queryParameters.get("streamer");
+        if(streamerName == "Vaykhin"){
+            setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 2)
+        }else if (streamerName == "hebi_scarlet"){
+            setMontant((cagnotte.reduce((a, b) => a + b, 0) / 100) + 1)
+        }else{
+            setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
+        }
+    }, [cagnotte])
 
     console.log(cagnotte)
     return (
