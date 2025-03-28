@@ -16,6 +16,10 @@
       "description": "Truc avec Valenderia"
     },
     {
+      "montant": 50,
+      "description": "Tierlist des Dessin Animés des années 90-2000 avec Kaito"
+    },
+    {
       "montant": 100,
       "description": "Fresh Save de Elden Ring + DLC"
     },
@@ -24,7 +28,7 @@
       "description": "DJ Set Techno en live avant 2026"
     },
     {
-      "montant": 200,
+      "montant": 300,
       "description": "DJ Set Techno en live avant 2026"
     },
     {
@@ -59,23 +63,143 @@
   ],
   "hebi_scarlet" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Coeur avec mes mains"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "Day routine ensemble"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 15,
+      "description": "Je signe un autographe"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "Free Hug"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 25,
+      "description": "Je fais peur à quelqu'un"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 30,
+      "description": "Dessin d'un streamer"
+    },{
+      "montant": 35,
+      "description": "Check Meuh Meuh"
+    },{
+      "montant": 40,
+      "description": "Tuto Maquillage"
+    },{
+      "montant": 45,
+      "description": "Etoile en crochet"
+    },{
+      "montant": 50,
+      "description": "Photo avec tous le monde"
+    },{
+      "montant": 60,
+      "description": "Tuto Make-Up"
+    },{
+      "montant": 70,
+      "description": "Apprendre une danse TikTok"
+    },{
+      "montant": 80,
+      "description": "J'apprends à Vogue"
+    },{
+      "montant": 90,
+      "description": "Je roule à ravers la salle"
+    },{
+      "montant": 100,
+      "description": "Pokédance V2"
+    },{
+      "montant": 110,
+      "description": "Bras de fer chinois avec @Clem_Brule"
+    },{
+      "montant": 120,
+      "description": "Mon 2e talent caché"
+    },{
+      "montant": 130,
+      "description": "Night Routine"
+    },{
+      "montant": 140,
+      "description": "Peinture"
+    },{
+      "montant": 150,
+      "description": "Just Dance avec @Kaito"
+    },{
+      "montant": 200,
+      "description": "Edit d'un streamer"
+    },{
+      "montant": 250,
+      "description": "ASMR"
+    },{
+      "montant": 300,
+      "description": "Moustache de Waluigi"
+    },{
+      "montant": 350,
+      "description": "Karaoké"
+    },{
+      "montant": 400,
+      "description": "J'écris une Fan-Fiction"
+    },{
+      "montant": 450,
+      "description": "Jeux d'horreur"
+    },{
+      "montant": 500,
+      "description": "Colorer mes cheveux"
+    },{
+      "montant": 550,
+      "description": "Tuto cuisine (Salade de fruit)"
+    },{
+      "montant": 600,
+      "description": "Manucure"
+    },{
+      "montant": 650,
+      "description": "Je vole quelqu'un mouahahahah"
+    },{
+      "montant": 700,
+      "description": "Logo SoFK en crochet"
+    },{
+      "montant": 733.04,
+      "description": "Record à battre !!"
+    },{
+      "montant": 750,
+      "description": "Je roast quelqu'un"
+    },{
+      "montant": 800,
+      "description": "Je drague une fille du SoFK UwU"
+    },{
+      "montant": 850,
+      "description": "Parodie de Bref"
+    },{
+      "montant": 900,
+      "description": "Let's Play Undertale"
+    },{
+      "montant": 950,
+      "description": "Je mange du fromage"
+    },{
+      "montant": 1000,
+      "description": "Rasage de sourcils !"
+    },{
+      "montant": 2500,
+      "description": "Je fais une fausse Pub"
+    },{
+      "montant": 5000,
+      "description": "Je fais le poirier"
+    },{
+      "montant": 10000,
+      "description": "Je demande en mariage"
+    },{
+      "montant": 25000,
+      "description": "RDV sur le Ring"
+    },{
+      "montant": 50000,
+      "description": "Compet' de Roller"
+    },{
+      "montant": 100000,
+      "description": "J'ouvre mon café"
+    },{
+      "montant": 500000,
+      "description": "J'ouvre un OnlyFan"
+    },{
+      "montant": 1000000,
+      "description": "Kaizen avec @Chloë_Lëcho"
     }
   ],
   "asarhell" : [
@@ -149,23 +273,53 @@
   ],
   "clem_brule" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Je dis bonjour à mes voisins"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "On fait une session impro ou doublage sur des extraits de films/séries avec qui le veux dans le week-end"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 20,
+      "description": "On joue à SUper Seducer dans le Week-end avec Valenderia"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 30,
+      "description": "J'organise un Royal Rumble (match de Catch) entre les streameur.euses sur WWE2k24"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 40,
+      "description": "Sesion Just Dance chez @Kaito"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 49.3,
+      "description": "J'impose ma loi sans vote de l'assemblée (surprise)"
+    },{
+      "montant": 60,
+      "description": "Ah c'est pas ici la plage ?"
+    },{
+      "montant": 70,
+      "description": "On écrit des mots dox à tous les participants du SoFK parcequ'on est doux"
+    },{
+      "montant": 80,
+      "description": "Je me fais maquiller par Hebi_Scarlett"
+    },{
+      "montant": 90,
+      "description": "Le hasard choisit ce que je fais pendant 2h"
+    },{
+      "montant": 100,
+      "description": "@Gwendyana me transforme en boule à facette durant le week-end"
+    },{
+      "montant": 200,
+      "description": "Je gravis un Terril du Nord (Peut-être avec Vlog) - Mon kaizen à moi quoi"
+    },{
+      "montant": 300,
+      "description": "Je m'inscrit au V-Rush sur un jeu pour enfant."
+    },{
+      "montant": 400,
+      "description": "On écrit et on s'inscrit en 2025/2026 pour du stand-up"
+    },{
+      "montant": 500,
+      "description": "On choisit ensemble une idée pour mon premier tatouage"
+    },{
+      "montant": 1000,
+      "description": "J'organise un voyage en turquie pour une greffe de cheveux"
     }
   ],
   "lokdonus" : [
@@ -191,23 +345,71 @@
   ],
   "d3sty_n0v4" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "J'allume la cam pour vous faire un petit coucou"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "Je commence à mixer et à préparer le set pour vous"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 50,
+      "description": "Set 'Blind Test' : Je miwe des instrus et es viewers doivent deviner les morceaux"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 100,
+      "description": "Set Thématique #1 : IAM Edition"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 150,
+      "description": "Set spécial Hip-Hop & Cinéma"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 200,
+      "description": "Set Thématique #2 : NTM Edition"
+    },{
+      "montant": 250,
+      "description": "Set 'Samples Only'"
+    },{
+      "montant": 300,
+      "description": "Set Spécial 'Instru Only'"
+    },{
+      "montant": 350,
+      "description": "Live Analyse d'un classique hip-hop"
+    },{
+      "montant": 400,
+      "description": "Set Thématique #3 : Boot Camp Click Edition"
+    },{
+      "montant": 450,
+      "description": "Set Spécial 'Année 80'"
+    },{
+      "montant": 500,
+      "description": "Set Thématique #4 : Rap Français"
+    },{
+      "montant": 550,
+      "description": "Set Thématique #5 : Neo-Soul Edition"
+    },{
+      "montant": 600,
+      "description": "Set Thématique #6 : Mobb Deep Edition"
+    },{
+      "montant": 650,
+      "description": "Set Thématique #7 : Wu-Tang Clan Edition"
+    },{
+      "montant": 700,
+      "description": "Set Thématique #8 : Produced by Dr. Dre"
+    },{
+      "montant": 750,
+      "description": "React en live sur les clips classiques de l'histoire du rap"
+    },{
+      "montant": 800,
+      "description": "Set Thématique #9 : DJ Premier Only"
+    },{
+      "montant": 850,
+      "description": "Set Thématique #10 : R.I.P Edition"
+    },{
+      "montant": 900,
+      "description": "Un Mix de 1h construit à partir des suggestions des Followers"
+    },{
+      "montant": 950,
+      "description": "Je rap un morceau en live"
+    },{
+      "montant": 1000,
+      "description": "Mega mix de 2h avec tous les classiques du hip-hop 90/2000, dispo en téléchrgement pour tous ceux qui ont contribués"
     }
   ],
   "gwendyana" : [
@@ -464,26 +666,98 @@
     ],
     "mrskulrex" : [
       {
-        "montant": 1204,
-        "description": "Donation Goal 1"
+        "montant": 1,
+        "description": "J'allume la cam"
       },{
-        "montant": 2451,
-        "description": "Donation Goal 2"
+        "montant": 5,
+        "description": "On sors des nouvelles chansons parodie"
       },{
-        "montant": 3278,
-        "description": "Donation Goal 3"
+        "montant": 10,
+        "description": "Je mange un giga tacos en stream"
       },{
-        "montant": 4257,
-        "description": "Donation Goal 4"
+        "montant": 15,
+        "description": "Je joue à fortnite mais je peux jouer que la premiere arme que je vois"
       },{
-        "montant": 5671,
-        "description": "Donation Goal 5"
+        "montant": 30,
+        "description": "Je joue à Mario Odyssey si je meurt je reset la save"
       },{
-        "montant": 6721,
-        "description": "Donation Goal 6"
+        "montant": 45,
+        "description": "On fait du doublage"
+      },{
+        "montant": 60,
+        "description": "J'ouvre une display Pokemon"
+      },{
+        "montant": 75,
+        "description": "On juge mes imitations"
+      },{
+        "montant": 90,
+        "description": "Karaoké"
+      },{
+        "montant": 95,
+        "description": "Je fais une commande uber eat d'un resto 1 ou 2 étoiles"
+      },{
+        "montant": 100,
+        "description": "Je mange en spiderman"
+      },{
+        "montant": 120,
+        "description": "Je joue a un jeux d'horreur"
+      },{
+        "montant": 140,
+        "description": "Tierlist fast food + armes fortnite"
+      },{
+        "montant": 160,
+        "description": "Je prend une cuillere de sauce pimenté"
+      },{
+        "montant": 165,
+        "description": "Je peux boire du lait etc"
+      },{
+        "montant": 170,
+        "description": "Je prend une cuillere de sauce pimenté"
+      },{
+        "montant": 180,
+        "description": "Je dessine les streamer de l'event sur paint"
+      },{
+        "montant": 200,
+        "description": "On ouvre un server Cobblemon"
+      },{
+        "montant": 300,
+        "description": "Je doi monter GC sur Rocket League avec un nouveau compte soloQ"
+      },{
+        "montant": 400,
+        "description": "Miku"
+      },{
+        "montant": 500,
+        "description": "Je cours un 20km"
+      },{
+        "montant": 600,
+        "description": "Je fais quelque donnation sur certains lives"
+      },{
+        "montant": 700,
+        "description": "Donation Goal"
+      },{
+        "montant": 800,
+        "description": "Je fais gagner des jeux sur Instant Gaming"
+      },{
+        "montant": 1000,
+        "description": "Je me change en deesse grec"
+      },{
+        "montant": 1500,
+        "description": "Je me rase les cheveux"
+      },{
+        "montant": 2000,
+        "description": "Chain together vraiment enchainé tant qu'on a pas fini avec Random"
+      },{
+        "montant": 2500,
+        "description": "Je fais un live cuisine"
+      },{
+        "montant": 3000,
+        "description": "On fait une team avec Random/Snays/Smilly/White Wolf sur Pokemon Unite et on doit faire un tournois"
+      },{
+        "montant": 4000,
+        "description": "Je coach mon pere sur fortnite en live"
       }
     ],
-    "khei" : [
+    "shurtutu" : [
       {
         "montant": 1204,
         "description": "Donation Goal 1"
@@ -503,5 +777,152 @@
         "montant": 6721,
         "description": "Donation Goal 6"
       }
-    ]
+  ],
+  "sun_shahine" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "apen___" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "parradox59" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "taelth" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "bios" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "leroios" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "shakalica" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ]
 }
