@@ -1,23 +1,40 @@
 {
   "chromatyk" : [
     {
+      "montant": 5,
+      "description": "Robin nous honore de sa présence tous le long de l'event"
+    },
+    {
       "montant": 10,
-      "description": "Truc avec Taelth"
-    },{
+      "description": "Je change de casquette"
+    },
+    {
       "montant": 20,
-      "description": "Truc avec Clem"
+      "description": "On reproduis les streameur.euses de l'event sur Sims avec Taelth"
     },
     {
       "montant": 30,
-      "description": "Doublage avec Chloe"
+      "description": "Jeu d'horreur avec Clem ( promis )"
     },
     {
       "montant": 40,
-      "description": "Truc avec Valenderia"
+      "description": "Doublage avec Chloe"
     },
     {
       "montant": 50,
+      "description": "Techno'confess avec Valenderia, on parle musique techno et de nos vies"
+    },
+    {
+      "montant": 60,
       "description": "Tierlist des Dessin Animés des années 90-2000 avec Kaito"
+    },
+    {
+      "montant": 70,
+      "description": "Blindtest avec les viewers et qui veux dans le SoFK"
+    },
+    {
+      "montant": 80,
+      "description": "Je passe le lvl 1 de Last Action Hero sur SNES"
     },
     {
       "montant": 100,
@@ -25,19 +42,23 @@
     },
     {
       "montant": 200,
-      "description": "DJ Set Techno en live avant 2026"
+      "description": "Retour du Nostal Pick v9999"
     },
     {
       "montant": 300,
-      "description": "DJ Set Techno en live avant 2026"
+      "description": "Try Hard Speedrun de Dora ( promis ) pour le V-Rush"
     },
     {
       "montant": 409,
-      "description": "Je pratique le speedrun pour participer à un event"
+      "description": "DJ Set Techno en live avant 2026"
+    },
+    {
+      "montant": 500,
+      "description": "Je vais enfin voir un Psy pour mes insomnies"
     },
     {
       "montant": 1000000,
-      "description": "Je deviens chauve"
+      "description": "Je rase mes cheveux et mes poils de visage"
     }
   ],
   "vaykhin" : [
@@ -435,23 +456,44 @@
   ],
   "valenderiaoff" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Je dois répondre à toutes les questions du chat honnêtement pendant 10min"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "Maquillage par Hebi Scarlet"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 20,
+      "description": "On joue à Mulan sur PC de 1998"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 40,
+      "description": "On invente les métiers idéaux pour les streamers du SOFK"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 100,
+      "description": "Je joue à un jeu d'horreur en pleine nuit"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 175,
+      "description": "Je me fais livrer par le pire resto proche du SOFK"
+    },{
+      "montant": 250,
+      "description": "Ouvertured'un pack Lorcana complet"
+    },{
+      "montant": 300,
+      "description": "Je lance un podcast entre meuf"
+    },{
+      "montant": 369,
+      "description": "Ma soeur anime un live"
+    },{
+      "montant": 450,
+      "description": "Live IRL Festival"
+    },{
+      "montant": 500,
+      "description": "Live IRL pêche des Guest"
+    },{
+      "montant": 600,
+      "description": "Resto avec le plus gros donateur"
+    },{
+      "montant": 1500,
+      "description": "Pool Party avec des invités !"
     }
   ],
   "zor3l" : [
