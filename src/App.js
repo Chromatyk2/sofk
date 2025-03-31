@@ -16,6 +16,7 @@ import Player from "./component/Player";
 import Axios from 'axios'
 import PersonalBar from "./component/PersonalBar";
 import './App.css';
+import TestImg from "./component/testImg";
 function App() {
     const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
@@ -206,6 +207,8 @@ function App() {
                             <Route path="/Clips" element={<ClipsLayout change={refresh} team={charityStreamers} token={token}/>}/>
                             <Route path="/Stream" element={<Player change={refresh} team={charityStreamers} token={token}/>}/>
                             <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                            <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
+
                         </Routes>
                         {/*<Partners cookies={cookies}/>*/}
                         <Footer/>

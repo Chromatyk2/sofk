@@ -519,23 +519,41 @@
   ],
   "lacafet" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Coupure du livre audio de sarko"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "Allumage du micro"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 15,
+      "description": "Ajouter un mot absurde choisi par chatgpt dans toute mes phrases pendant 10min"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "Jouer avec un handicap visuel ou physique"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 50,
+      "description": "Pour le reste du sofk je suis en princesse"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 100,
+      "description": "Boire un café bizarre"
+    },{
+      "montant": 200,
+      "description": "Streamer fallguys penant 1h"
+    },{
+      "montant": 300,
+      "description": "Demander a catgpt une chanson sur l'event avec la compo musicale et la chanter"
+    },{
+      "montant": 500,
+      "description": "Faire une game sur minecraft mais c'est le chat qui me guide"
+    },{
+      "montant": 1000,
+      "description": "Toute l'aprem sur un jeu répuré difficile sans rager"
+    },{
+      "montant": 2000,
+      "description": "Top 10 monde sur barbie et le cheval magique"
+    },{
+      "montant": 5000,
+      "description": "Rasage de la barbe directement puis ous les jours pendant 1an"
     }
   ],
   "guiguisan_" : [
@@ -947,6 +965,27 @@
     }
   ],
   "shakalica" : [
+    {
+      "montant": 1204,
+      "description": "Donation Goal 1"
+    },{
+      "montant": 2451,
+      "description": "Donation Goal 2"
+    },{
+      "montant": 3278,
+      "description": "Donation Goal 3"
+    },{
+      "montant": 4257,
+      "description": "Donation Goal 4"
+    },{
+      "montant": 5671,
+      "description": "Donation Goal 5"
+    },{
+      "montant": 6721,
+      "description": "Donation Goal 6"
+    }
+  ],
+  "domar_kius" : [
     {
       "montant": 1204,
       "description": "Donation Goal 1"
