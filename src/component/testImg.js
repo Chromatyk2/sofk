@@ -5,7 +5,7 @@ import {useCookies} from "react-cookie";
 function TestImg() {
     return (
         <>
-            <svg style={{width: "100%"}} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 2048 2048">
+            <svg style={{width: "100%"}} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"  viewBox="0 0 2048 2048">
                 <image src={"images/team.png"} style="width: 2048px;"></image>
                 <a href="#" title="">
                     <g>
