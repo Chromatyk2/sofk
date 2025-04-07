@@ -6,7 +6,7 @@ function TestImg() {
     return (
         <>
             <svg style={{width: "100%"}} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"  viewBox="0 0 2048 2048">
-                <image src={"images/team.png"} style="width: 2048px;"></image>
+                <img src={"images/team.png"} style="width: 2048px;"></img>
                 <a href="#" title="">
                     <g>
                         <polygon className="image-mapper-shape selected" data-index="1"
