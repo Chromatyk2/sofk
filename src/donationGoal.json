@@ -609,14 +609,20 @@
       "montant": 50,
       "description": "Pour le reste du sofk je suis en princesse"
     },{
+      "montant": 60,
+      "description": "Je me fait maquiller par la queen Hebui"
+    },{
+      "montant": 70,
+      "description": "On participe au Qui veut gagner des millions de Clem"
+    },{
       "montant": 100,
       "description": "Boire un café bizarre"
     },{
       "montant": 200,
-      "description": "Streamer fallguys penant 1h"
+      "description": "Streamer Fallguys penant 1h"
     },{
       "montant": 300,
-      "description": "Demander a catgpt une chanson sur l'event avec la compo musicale et la chanter"
+      "description": "Demander a Chatgpt une chanson sur l'event avec la compo musicale et la chanter"
     },{
       "montant": 500,
       "description": "Faire une game sur minecraft mais c'est le chat qui me guide"
