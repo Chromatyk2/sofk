@@ -1,6 +1,10 @@
 {
   "chromatyk" : [
     {
+      "montant": 4,
+      "description": "Ceci est un donation goal avec un texte relativement long ce qui est relativement relou pour l'affichage du coup on va le faire scroller"
+    },
+    {
       "montant": 5,
       "description": "Robin nous honore de sa présence tous le long de l'event"
     },
@@ -681,23 +685,44 @@
   ],
   "god_thetroll" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "Pour la forme"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "J'allume la caméra"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Je vouvoie chaque personnes donnant 10€"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "Vous choisissez mon personnage LoL"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 40,
+      "description": "Games Viewers ( LoL, Fortnite ou autre )"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 60,
+      "description": "Je me déguise en cochon pendant 1h30"
+    },{
+      "montant": 100,
+      "description": "Test de pureté Griffor"
+    },{
+      "montant": 150,
+      "description": "Live 24h"
+    },{
+      "montant": 200,
+      "description": "Je me teint les cheveux de la couleur de votre choix"
+    },{
+      "montant": 300,
+      "description": "J'éssai de monter minimum emeraude sur league of legends avant 2026"
+    },{
+      "montant": 400,
+      "description": "Je joue avec un handicap"
+    },{
+      "montant": 500,
+      "description": "J'ouvre enfin une chaine Youtube"
+    },{
+      "montant": 700,
+      "description": "Je goute la chips la plus piquante !"
     }
   ],
   "axiatis" : [
