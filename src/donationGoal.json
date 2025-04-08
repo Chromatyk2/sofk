@@ -1,10 +1,6 @@
 {
   "chromatyk" : [
     {
-      "montant": 4,
-      "description": "Ceci est un donation goal avec un texte relativement long ce qui est relativement relou pour l'affichage du coup on va le faire scroller"
-    },
-    {
       "montant": 5,
       "description": "Robin nous honore de sa présence tous le long de l'event"
     },
