@@ -206,7 +206,7 @@ function PersonalBar(props) {
                     <div style={{width: "100%"}}>
                         <div>
 
-                            <MarqueeText  style={{fontSize: "27px", textAlign: "left", color: "white", margin:0, marginBottom:"-8px"}}>
+                            <MarqueeText className={"scrollText"}>
                                 {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
                             </MarqueeText>
                             <div style={customStyles.extBarInline} className="fullProgressBar">

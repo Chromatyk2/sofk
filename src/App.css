@@ -32,6 +32,13 @@ iframe{
     line-height: 33px;
     text-align: center;
 }
+.scrollText{
+    font-size: 27px;
+    text-align: left;
+    color: white;
+    margin:0;
+    margin-bottom:-8px
+}
 p.myNetworks {
     color: #3b6887;
     font-family: "Bungee";
