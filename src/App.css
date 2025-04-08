@@ -37,7 +37,8 @@ iframe{
     text-align: left;
     color: white;
     margin:0;
-    margin-bottom:-8px
+    margin-bottom:-8px;
+    width:685px;
 }
 p.myNetworks {
     color: #3b6887;
