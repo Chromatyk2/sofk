@@ -66,6 +66,8 @@ import {useCookies} from "react-cookie";
 import {BrowserRouter, Link} from "react-router-dom";
 import {ca} from "date-fns/locale";
 import donationGoal from '../donationGoal.json'
+import MarqueeText from "react-marquee-text"
+import "MarqueeText/styles.css"
 
 function PersonalBar(props) {
     const [cagnotte, setCagnotte] = useState([]);
@@ -203,9 +205,10 @@ function PersonalBar(props) {
                 {donation.filter(item => item.montant > montant).length > 0 ?
                     <div style={{width: "100%"}}>
                         <div>
-                            <p style={{fontSize: "27px", textAlign: "left", color: "white", margin:0, marginBottom:"-8px"}}>
+
+                            <MarqueeText  style={{fontSize: "27px", textAlign: "left", color: "white", margin:0, marginBottom:"-8px"}}>
                                 {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
-                            </p>
+                            </MarqueeText>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
                                 <div
                                     className={"intBar"}
