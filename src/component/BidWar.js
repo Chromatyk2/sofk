@@ -239,29 +239,23 @@ function BidWar(props) {
                                 <p>{bidValueThree}</p>
                             </div>
                             <div style={customStyles.extBarInline} id="bar">
-                                {valueOne > 0 &&
                                     <span className="seg1" style={{
-                                        width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
+                                        width: valueOne > 0 ? parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%" : "0",
                                         backgroundColor: "#38617f",
                                         color: 'white',
                                         borderRadius: '10px 0 0 10px',
                                     }}>{valueOne+' €'}</span>
-                                }
-                                {valueTwo > 0 &&
                                     <span className="seg2" style={{
-                                        width: parseFloat((valueTwo / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
+                                        width: valueTwo > 0 ? parseFloat((valueTwo / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%" : "0",
                                         backgroundColor: "#fcc249",
                                         color: 'white',
                                     }}>{valueTwo+' €'}</span>
-                                }
-                                {valueThree > 0 &&
                                     <span className="seg3"  style={{
-                                        width: parseFloat((valueThree / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
+                                        width: valueThree > 0 ? parseFloat((valueThree / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%" : "0",
                                         backgroundColor: "#5b8aa1",
                                         color: 'white',
                                         borderRadius: '0 10px 10px 0',
                                     }}>{valueThree+' €'}</span>
-                                }
                             </div>
                             {/*<div style={customStyles.extBarInline} className="fullProgressBar">*/}
                             {/*    <div*/}
