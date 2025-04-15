@@ -216,13 +216,13 @@ function BidWar(props) {
                         <div>
 
                             <MarqueeText textSpacing={"1em"} className={"scrollText"}>
-                                {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
+                                {valueOne + valueTwo}
                             </MarqueeText>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
                                 <div
                                     className={"intBar"}
                                     style={{
-                                        width: (valueOne/(valueOne += valueTwo)) * 100+"%",
+                                        width: parseFloat((valueOne / (valueOne + valueTwo)) * 100) + "%",
                                         position: 'relative',
                                         textWrap: 'nowrap',
                                         color: 'white',
