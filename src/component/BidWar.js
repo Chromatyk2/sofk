@@ -75,7 +75,7 @@ function BidWar(props) {
     const [donations, setDonations] = useState([]);
     const [load, setLoad] = useState(0);
     const [montant, setMontant] = useState(true);
-    let [valueOne, setValueOne] = useState(0);
+    const [valueOne, setValueOne] = useState(0);
     const [valueTwo, setValueTwo] = useState(0);
     const customStyles = {
         extBar: {
@@ -275,7 +275,7 @@ function BidWar(props) {
                             <div
                                 className={"intBar"}
                                 style={{
-                                    width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                    width: (valueOne/(valueOne += valueTwo)) * 100+"%",
                                     position: 'relative',
                                     textWrap: 'nowrap',
                                     color: 'white',
