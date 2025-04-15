@@ -233,19 +233,24 @@ function BidWar(props) {
                             <div className={"bidWarValues"}>
                                 <p>{bidValueOne}</p>
                                 <p>{bidValueTwo}</p>
+                                <p>{bidValueThree}</p>
                             </div>
-                            <div id="bar">
+                            <div style={customStyles.extBarInline} id="bar">
                                 <span className="seg1" style={{
                                     width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
-                                    backgroundColor: "#38617f"
+                                    backgroundColor: "#38617f",
+                                    color: 'white',
                                 }}>F</span>
                                 <span className="seg2" style={{
                                     width: parseFloat((valueTwo / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
-                                    backgroundColor: "#fcc249"
+                                    backgroundColor: "#fcc249",
+                                    color: 'white',
                                 }}>D</span>
                                 <span className="seg3"  style={{
                                     width: parseFloat((valueThree / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
-                                    backgroundColor: "#3a829b"
+                                    backgroundColor: "#3a829b",
+                                    color: 'white',
+                                    borderRadius: '10px 10px 10px 10px',
                                 }}>D</span>
                             </div>
                             {/*<div style={customStyles.extBarInline} className="fullProgressBar">*/}
@@ -292,12 +297,10 @@ function BidWar(props) {
                     </div>
                     :
                     <div>
-                        <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}
-                               onChange={changeNumberOne}/>
-                        <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}
-                               onChange={changeNumberTwo}/>
-                        <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}
-                               onChange={changeNumberTwo}/>
+                        <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}/>
+                        <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}/>
+                        <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}/>
+                        <input placeholder={"Troisième Valeure"} type={"text"} id={"bidValueThree"}/>
                         <button onClick={runBid}>GO !</button>
                     </div>
                 }
