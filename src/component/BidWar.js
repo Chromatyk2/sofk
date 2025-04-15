@@ -230,7 +230,7 @@ function BidWar(props) {
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
                 {bidName ?
-                    <div style={{width: "100%"}}>
+                    <div style={{width: "100%", justifyContent:"center", display:"flex"}}>
                         <div>
                             <p className={"bidWarName"}>{bidName}</p>
                             <div className={"bidWarValues"}>
