@@ -873,9 +873,6 @@
     ],
     "mrskulrex" : [
       {
-        "montant": 1,
-        "description": "J'allume la cam"
-      },{
         "montant": 5,
         "description": "On sors des nouvelles chansons parodie"
       },{
@@ -883,16 +880,16 @@
         "description": "Je mange un giga tacos en stream"
       },{
         "montant": 15,
-        "description": "Je joue à fortnite mais je peux jouer que la premiere arme que je vois"
+        "description": "Je joue à Fortnite, mais je peux jouer que la première arme que je vois"
       },{
         "montant": 30,
-        "description": "Je joue à Mario Odyssey si je meurt je reset la save"
-      },{
-        "montant": 45,
         "description": "On fait du doublage"
       },{
+        "montant": 45,
+        "description": "Je joue à mario odyssey si je meurt je reset la save"
+      },{
         "montant": 60,
-        "description": "J'ouvre une display Pokemon"
+        "description": "Tierlist fast food + arme fortnite"
       },{
         "montant": 75,
         "description": "On juge mes imitations"
@@ -900,65 +897,71 @@
         "montant": 90,
         "description": "Karaoké"
       },{
-        "montant": 95,
-        "description": "Je fais une commande uber eat d'un resto 1 ou 2 étoiles"
-      },{
         "montant": 100,
-        "description": "Je mange en spiderman"
+        "description": "Je fais une commande Uber Eat d'un resto 1 ou 2 étoiles"
       },{
         "montant": 120,
-        "description": "Je joue a un jeux d'horreur"
+        "description": "Je me change en Spiderman"
       },{
-        "montant": 140,
-        "description": "Tierlist fast food + armes fortnite"
-      },{
-        "montant": 160,
-        "description": "Je prend une cuillere de sauce pimenté"
-      },{
-        "montant": 165,
-        "description": "Je peux boire du lait etc"
+        "montant": 150,
+        "description": "Je dessine les streamers de l'event sur Paint"
       },{
         "montant": 170,
-        "description": "Je prend une cuillere de sauce pimenté"
+        "description": "J'ouvre un serveur cobblemon privé"
       },{
-        "montant": 180,
-        "description": "Je dessine les streamer de l'event sur paint"
+        "montant": 185,
+        "description": "Je prend une cuillère de sauce pimenté"
+      },{
+        "montant": 190,
+        "description": "Je peux boire du lait etc"
+      },{
+        "montant": 195,
+        "description": "Je reprends une cuillère de sauce pimentée"
       },{
         "montant": 200,
-        "description": "On ouvre un server Cobblemon"
+        "description": "J'ouvre une display Pokémon"
+      },{
+        "montant": 250,
+        "description": "Je joue à un jeu d'horreur ( + happenng )"
       },{
         "montant": 300,
-        "description": "Je doi monter GC sur Rocket League avec un nouveau compte soloQ"
+        "description": "Je dois monter GC sur Rocket League avec un nouveau compte en soloS"
       },{
         "montant": 400,
-        "description": "Miku"
+        "description": "Je cours un 20Km"
       },{
         "montant": 500,
-        "description": "Je cours un 20km"
+        "description": "Miku"
       },{
         "montant": 600,
-        "description": "Je fais quelque donnation sur certains lives"
+        "description": "Je fais quelques donations sur certains lives"
       },{
         "montant": 700,
-        "description": "Donation Goal"
+        "description": "Live 12h ou 24h"
       },{
         "montant": 800,
-        "description": "Je fais gagner des jeux sur Instant Gaming"
+        "description": "Je fais gagner des jeux sur instant gaming (pour les donateur)"
+      },{
+        "montant": 900,
+        "description": "Tuto faire une pizza ou autre 2 + remaster ou HI ou AH AH"
       },{
         "montant": 1000,
-        "description": "Je me change en deesse grec"
+        "description": "Je me change en déesse Grec"
       },{
         "montant": 1500,
         "description": "Je me rase les cheveux"
       },{
         "montant": 2000,
-        "description": "Chain together vraiment enchainé tant qu'on a pas fini avec Random"
+        "description": "Live Cuisine"
       },{
         "montant": 2500,
-        "description": "Je fais un live cuisine"
+        "description": "Chain Together enchainé avec Random tant qu'on a pas fini"
       },{
         "montant": 3000,
-        "description": "On fait une team avec Random/Snays/Smilly/White Wolf sur Pokemon Unite et on doit faire un tournois"
+        "description": "On fait une team Pokemon Unite avec la commu"
+      },{
+        "montant": 3500,
+        "description": "Je fais 6 reprises de musique (dispo spotify etc)"
       },{
         "montant": 4000,
         "description": "Je coach mon pere sur fortnite en live"
@@ -966,23 +969,47 @@
     ],
     "shurtutu" : [
       {
-        "montant": 1204,
-        "description": "Donation Goal 1"
+        "montant": 1,
+        "description": "On dit bonjour à toute la salle"
       },{
-        "montant": 2451,
-        "description": "Donation Goal 2"
+        "montant": 10,
+        "description": "On lance le légendaire Fortnite avec gage du tchat"
       },{
-        "montant": 3278,
-        "description": "Donation Goal 3"
+        "montant": 25,
+        "description": "Louve nous fait manger un piment doux"
       },{
-        "montant": 4257,
-        "description": "Donation Goal 4"
+        "montant": 47,
+        "description": "Viva el crepa-maroilla"
       },{
-        "montant": 5671,
-        "description": "Donation Goal 5"
+        "montant": 62,
+        "description": "On fait le portrait d'un streamer au hasard sur pain"
       },{
-        "montant": 6721,
-        "description": "Donation Goal 6"
+        "montant": 81,
+        "description": "Hebi Scarlet nous fait un superbe maquillage"
+      },{
+        "montant": 105,
+        "description": "On fait Outlast 2 en pleine nuit ( hurlement garantie )"
+      },{
+        "montant": 135,
+        "description": "Louve revient pour un piment qui arrache"
+      },{
+        "montant": 155,
+        "description": "Louve revient pour un piment qui arrache"
+      },{
+        "montant": 183,
+        "description": "On me fait une petite teinture verte"
+      },{
+        "montant": 210,
+        "description": "On recommence la course après 10ans de pose, objectif 20km !"
+      },{
+        "montant": 250,
+        "description": "On recommence la course après 10ans de pose, objectif 20km !"
+      },{
+        "montant": 350,
+        "description": "On recommence la course après 10ans de pose, objectif 20km !"
+      },{
+        "montant": 500,
+        "description": "On recommence la course après 10 ans de pause, objectif 20km !"
       }
   ],
   "sun_shahine" : [
@@ -1134,44 +1161,107 @@
   ],
   "domar_kius" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "Je me retourne"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 25,
+      "description": "Faire un 100% succès pendant le stream on for kids"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 75,
+      "description": "Je sort un best of Twitch"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 100,
+      "description": "Live 12h en Juin"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 150,
+      "description": "Live Horreur"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 200,
+      "description": "Montage lego pendant le Sofk"
+    },{
+      "montant": 250,
+      "description": "Zebella prend le controle du live pendant 1h !"
+    },{
+      "montant": 300,
+      "description": "Compilation vidéo de mon chat tout mignon "
+    },{
+      "montant": 350,
+      "description": "Finir spec ops the line en fubar"
+    },{
+      "montant": 400,
+      "description": "Giveaway Pizza"
+    },{
+      "montant": 500,
+      "description": "1 live/jour jusqu'à ce que je trouve un taff"
+    },{
+      "montant": 2000,
+      "description": "Création onlyfan 'Pied de Hobbit'"
     }
   ],
   "lesdeliresdenunu" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Maquillage par Hebi_Scarlet"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "On joue à Fortnite"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 15,
+      "description": "On y joue avec des faux ongles"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "On Noote Noote sur tous les streams"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 25,
+      "description": "Darksouls 3 toute la nuit"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 50,
+      "description": "Retour de cooking netra cet été"
+    },{
+      "montant": 55,
+      "description": "1v1 Street Fighter avec Gage épicé"
+    },{
+      "montant": 60,
+      "description": "On rajoute un handicap"
+    },{
+      "montant": 65,
+      "description": "1v1 Tekken random contre Thetowandaa"
+    },{
+      "montant": 75,
+      "description": "On participe à un tournoi Street Fighter"
+    },{
+      "montant": 100,
+      "description": "On se met à fond sur Storycraft"
+    },{
+      "montant": 105,
+      "description": "Shooting Photo par Acrux"
+    },{
+      "montant": 110,
+      "description": "Just Dance chez Kaito"
+    },{
+      "montant": 115,
+      "description": "Qui veut gagner des millions chez Clem"
+    },{
+      "montant": 120,
+      "description": "live Horreur VR chez Asarhell"
+    },{
+      "montant": 125,
+      "description": "Teinture temporaire des cheveux"
+    },{
+      "montant": 150,
+      "description": "N Couple sur Ring Fit Adventure"
+    },{
+      "montant": 300,
+      "description": "Live Randonné"
+    },{
+      "montant": 500,
+      "description": "On Masterise notre premier JDR"
+    },{
+      "montant": 1000,
+      "description": "On ouvre un Onlyfans"
+    },{
+      "montant": 1500,
+      "description": "On réalise un clip musical"
     }
   ],
   "chloelecho" : [

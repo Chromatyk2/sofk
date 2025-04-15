@@ -207,6 +207,7 @@ function App() {
                             <Route path="/Clips" element={<ClipsLayout change={refresh} team={charityStreamers} token={token}/>}/>
                             <Route path="/Stream" element={<Player change={refresh} team={charityStreamers} token={token}/>}/>
                             <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                            <Route path="/OoqZvHhdnIrOGLB" element={<BidWar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                             <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
 
                         </Routes>
