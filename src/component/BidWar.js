@@ -244,7 +244,7 @@ function BidWar(props) {
                                     zIndex: 1,
                                     top: "0px"
                                 }}>
-                                    {montant} €
+                                    {valueOne} €
                                 </p>
                                 <p style={{
                                     fontSize: "28px",
@@ -255,7 +255,7 @@ function BidWar(props) {
                                     zIndex: 1,
                                     top: "0px"
                                 }}>
-                                    {donation.filter(item => item.montant > montant)[0].montant + " €"}
+                                    {valueTwo + " €"}
                                 </p>
                             </div>
                         </div>
