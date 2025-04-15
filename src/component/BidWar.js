@@ -90,10 +90,7 @@ function BidWar(props) {
             zIndex: 1,
             borderRadius: "50px",
             margin: 0,
-            height: "30px",
-            textAlign: "center",
-            lineHeight: "1",
-            fontSize:" 40px"
+            height: "30px"
         },
         extBarInline: {
             width: "685px",
@@ -103,6 +100,9 @@ function BidWar(props) {
             borderRadius: "10px",
             height: "37px",
             margin:"0",
+            textAlign: "center",
+            lineHeight: "1",
+            fontSize:" 40px"
         }
     }
     useEffect(() => {
