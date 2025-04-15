@@ -174,7 +174,7 @@ function BidWar(props) {
     }
     function changeNumberTwo(e) {
         setValueTwo(e.target.value);
-    }nction changeNumberThree(e) {
+    }function changeNumberThree(e) {
         setValueThree(e.target.value);
     }
     function runBid(e) {
