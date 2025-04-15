@@ -240,6 +240,7 @@ function BidWar(props) {
                                     width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
                                     backgroundColor: "#38617f",
                                     color: 'white',
+                                    borderRadius: '10px 0 0 10px',
                                 }}>F</span>
                                 <span className="seg2" style={{
                                     width: parseFloat((valueTwo / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
@@ -248,9 +249,9 @@ function BidWar(props) {
                                 }}>D</span>
                                 <span className="seg3"  style={{
                                     width: parseFloat((valueThree / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
-                                    backgroundColor: "#3a829b",
+                                    backgroundColor: "#5b8aa1",
                                     color: 'white',
-                                    borderRadius: '10px 10px 10px 10px',
+                                    borderRadius: '0 10px 10px 0',
                                 }}>D</span>
                             </div>
                             {/*<div style={customStyles.extBarInline} className="fullProgressBar">*/}
