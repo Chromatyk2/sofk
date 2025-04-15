@@ -81,6 +81,7 @@ function BidWar(props) {
     const [bidName, setBidName] = useState(null);
     const [bidValueOne, setBidValueOne] = useState(null);
     const [bidValueTwo, setBidValueTwo] = useState(null);
+    const [bidValueTree, setBidValueThree] = useState(null);
     const customStyles = {
         extBar: {
             width: "100%",
