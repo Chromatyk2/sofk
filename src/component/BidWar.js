@@ -222,7 +222,7 @@ function BidWar(props) {
                                 <div
                                     className={"intBar"}
                                     style={{
-                                        width: parseFloat((valueOne / (valueOne + valueTwo)) * 100) + "%",
+                                        width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo))) * 100) + "%",
                                         position: 'relative',
                                         textWrap: 'nowrap',
                                         color: 'white',
@@ -275,7 +275,7 @@ function BidWar(props) {
                             <div
                                 className={"intBar"}
                                 style={{
-                                    width: parseFloat((valueOne / (valueOne + valueTwo)) * 100) + "%",
+                                    width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo))) * 100) + "%",
                                     position: 'relative',
                                     textWrap: 'nowrap',
                                     color: 'white',
