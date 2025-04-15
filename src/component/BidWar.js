@@ -226,45 +226,12 @@ function BidWar(props) {
                                 <p>{bidValueOne}</p>
                                 <p>{bidValueTwo}</p>
                             </div>
-                            <div style={customStyles.extBarInline} className="fullProgressBar">
-                                <div
-                                    className={"intBar"}
-                                    style={{
-                                        width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo))) * 100) + "%",
-                                        position: 'relative',
-                                        textWrap: 'nowrap',
-                                        color: 'white',
-                                        padding: '15px',
-                                        borderRadius: '10px 10px 10px 10px',
-                                        height: "37px",
-                                        lineHeight: 0,
-                                        backgroundColor: "rgb(252, 194, 73)",
-                                        textAlign: "left",
-                                        margin: 0
-                                    }}>
-                                </div>
-                                <p style={{
-                                    fontSize: "28px",
-                                    textAlign: "right",
-                                    color: "white",
-                                    position: "absolute",
-                                    left: "12px",
-                                    zIndex: 1,
-                                    top: "0px"
-                                }}>
-                                    {valueOne} €
-                                </p>
-                                <p style={{
-                                    fontSize: "28px",
-                                    textAlign: "right",
-                                    color: "white",
-                                    position: "absolute",
-                                    right: "12px",
-                                    zIndex: 1,
-                                    top: "0px"
-                                }}>
-                                    {valueTwo + " €"}
-                                </p>
+                            <div id="bar">
+                                <span className="seg1">F</span>
+                                <span className="seg2">D</span>
+                                <span className="seg3">C</span>
+                                <span className="seg4">B</span>
+                                <span className="seg5">A</span>
                             </div>
                         </div>
                     </div>

@@ -3170,3 +3170,54 @@ a.navLink.linkFromNav {
     width: 75%;
     align-items: anchor-center;
 }
+#bar {
+    width: 100%;
+    height: 40px;
+    background: #eee;
+    _border: 1px solid black;
+}
+/* standard unit to incremenet is 4 for 1% */
+.seg1 {
+    _display: inline-block;
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background: red;
+}
+
+.seg2 {
+    _display: inline-block;
+    width: 25%;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background-color: orangered;
+}
+
+.seg3 {
+    _display: inline-block;
+    width: 10%;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background-color: orange;
+}
+
+.seg4 {
+    _display: inline-block;
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background-color: yellow;
+}
+
+.seg5 {
+    _display: inline-block;
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background-color: green;
+}
