@@ -218,21 +218,18 @@ function BidWar(props) {
             {/*    </div>*/}
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
-                <input type={"text"} id={"bidName"} onChange={changeNumberOne}/>
-                <input type={"text"} id={"bidValueOne"} onChange={changeNumberTwo}/>
-                <input type={"text"} id={"bidValueTwo"} onChange={changeNumberTwo}/>
+                <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"} onChange={changeNumberOne}/>
+                <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"} onChange={changeNumberTwo}/>
+                <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"} onChange={changeNumberTwo}/>
                 <button onClick={runBid}/>
-                {bidValueTwo &&
-                    bidValueOne &&
-                    <div>
-                        <p>{bidValueOne}</p>
-                        <p>{bidValueTwo}</p>
-                    </div>
-                }
                 {bidName &&
                     <div style={{width: "100%"}}>
                         <div>
                             <p>{bidName}</p>
+                            <div>
+                                <p>{bidValueOne}</p>
+                                <p>{bidValueTwo}</p>
+                            </div>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
                                 <div
                                     className={"intBar"}
