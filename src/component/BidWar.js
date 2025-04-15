@@ -75,7 +75,7 @@ function BidWar(props) {
     const [donations, setDonations] = useState([]);
     const [load, setLoad] = useState(0);
     const [montant, setMontant] = useState(true);
-    const [valueOne, setValueOne] = useState(0);
+    let [valueOne, setValueOne] = useState(0);
     const [valueTwo, setValueTwo] = useState(0);
     const customStyles = {
         extBar: {
@@ -222,7 +222,7 @@ function BidWar(props) {
                                 <div
                                     className={"intBar"}
                                     style={{
-                                        width: (valueOne/(parseFloat(valueOne + valueTwo))) * 100+ "%",
+                                        width: (valueOne/(valueOne += valueTwo)) * 100+"%",
                                         position: 'relative',
                                         textWrap: 'nowrap',
                                         color: 'white',
