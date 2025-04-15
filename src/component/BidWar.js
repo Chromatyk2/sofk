@@ -218,11 +218,7 @@ function BidWar(props) {
             {/*    </div>*/}
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
-                <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"} onChange={changeNumberOne}/>
-                <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"} onChange={changeNumberTwo}/>
-                <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"} onChange={changeNumberTwo}/>
-                <button onClick={runBid}/>
-                {bidName &&
+                {bidName ?
                     <div style={{width: "100%"}}>
                         <div>
                             <p>{bidName}</p>
@@ -271,6 +267,16 @@ function BidWar(props) {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    :
+                    <div>
+                        <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}
+                               onChange={changeNumberOne}/>
+                        <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}
+                               onChange={changeNumberTwo}/>
+                        <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}
+                               onChange={changeNumberTwo}/>
+                        <button onClick={runBid}/>
                     </div>
                 }
             </div>
