@@ -3183,6 +3183,8 @@ a.navLink.linkFromNav {
     box-sizing: border-box;
     float: left;
     background: red;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
 }
 
 .seg2 {
@@ -3191,6 +3193,8 @@ a.navLink.linkFromNav {
     box-sizing: border-box;
     float: left;
     background-color: orangered;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
 }
 
 .seg3 {
@@ -3199,4 +3203,6 @@ a.navLink.linkFromNav {
     box-sizing: border-box;
     float: left;
     background-color: orange;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
 }
