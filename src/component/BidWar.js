@@ -300,14 +300,14 @@ function BidWar(props) {
                         </div>
                     </div>
                     :
-                    <div>
-                        <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}/>
+                    <div style={{display: "flex",flexFlow: "column",gap: "5px"}}>
+                        <input style={{width:"100%"}} placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}/>
                         <div>
-                            <div>
+                            <div className={"inputBid"}>
                                 <div style={{height:"20px",width:"20px",backgroundColor:"#38617f", borderRadius:"100px"}}></div>
                                 <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}/>
                             </div>
-                            <div>
+                            <div className={"inputBid"}>
                                 <div style={{
                                     height: "20px",
                                     width: "20px",
@@ -316,7 +316,7 @@ function BidWar(props) {
                                 }}></div>
                                 <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}/>
                             </div>
-                            <div>
+                            <div className={"inputBid"}>
                                 <div style={{
                                     height: "20px",
                                     width: "20px",

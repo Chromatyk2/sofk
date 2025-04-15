@@ -3206,3 +3206,10 @@ a.navLink.linkFromNav {
     -webkit-transition: width 0.5s;
     transition: width 0.5s;
 }
+.inputBid{
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 2px;
+    gap: 4px;
+}
