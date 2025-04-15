@@ -90,7 +90,10 @@ function BidWar(props) {
             zIndex: 1,
             borderRadius: "50px",
             margin: 0,
-            height: "30px"
+            height: "30px",
+            textAlign: "center",
+            lineHeight: "1",
+            fontSize:" 40px"
         },
         extBarInline: {
             width: "685px",
@@ -241,18 +244,18 @@ function BidWar(props) {
                                     backgroundColor: "#38617f",
                                     color: 'white',
                                     borderRadius: '10px 0 0 10px',
-                                }}>F</span>
+                                }}>{valueOne+' €'}</span>
                                 <span className="seg2" style={{
                                     width: parseFloat((valueTwo / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
                                     backgroundColor: "#fcc249",
                                     color: 'white',
-                                }}>D</span>
+                                }}>{valueTwo+' €'}</span>
                                 <span className="seg3"  style={{
                                     width: parseFloat((valueThree / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
                                     backgroundColor: "#5b8aa1",
                                     color: 'white',
                                     borderRadius: '0 10px 10px 0',
-                                }}>D</span>
+                                }}>{valueThree+' €'}</span>
                             </div>
                             {/*<div style={customStyles.extBarInline} className="fullProgressBar">*/}
                             {/*    <div*/}
