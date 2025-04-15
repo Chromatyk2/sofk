@@ -3179,7 +3179,6 @@ a.navLink.linkFromNav {
 /* standard unit to incremenet is 4 for 1% */
 .seg1 {
     _display: inline-block;
-    width: 25%;
     height: 100%;
     box-sizing: border-box;
     float: left;
@@ -3188,7 +3187,6 @@ a.navLink.linkFromNav {
 
 .seg2 {
     _display: inline-block;
-    width: 25%;
     height: 100%;
     box-sizing: border-box;
     float: left;
@@ -3197,27 +3195,8 @@ a.navLink.linkFromNav {
 
 .seg3 {
     _display: inline-block;
-    width: 10%;
     height: 100%;
     box-sizing: border-box;
     float: left;
     background-color: orange;
-}
-
-.seg4 {
-    _display: inline-block;
-    width: 20%;
-    height: 100%;
-    box-sizing: border-box;
-    float: left;
-    background-color: yellow;
-}
-
-.seg5 {
-    _display: inline-block;
-    width: 30%;
-    height: 100%;
-    box-sizing: border-box;
-    float: left;
-    background-color: green;
 }
