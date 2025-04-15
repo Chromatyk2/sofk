@@ -77,6 +77,9 @@ function BidWar(props) {
     const [montant, setMontant] = useState(true);
     const [valueOne, setValueOne] = useState(0);
     const [valueTwo, setValueTwo] = useState(0);
+    const [bidName, setBidName] = useState(null);
+    const [bidValueOne, setBidValueOne] = useState(null);
+    const [bidValueTwo, setBidValueTwo] = useState(null);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -169,6 +172,10 @@ function BidWar(props) {
         setValueOne(e.target.value);
     }function changeNumberTwo(e) {
         setValueTwo(e.target.value);
+    }function runBid(e) {
+        setBidName(document.getElementById("bidName").value);
+        setBidValueOne(document.getElementById("bidValueOne").value);
+        setBidValueTwo(document.getElementById("bidValueTwo").value);
     }
     return (
         <>
@@ -211,13 +218,21 @@ function BidWar(props) {
             {/*    </div>*/}
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
-                {donation.filter(item => item.montant > montant).length > 0 ?
+                <input type={"text"} id={"bidName"} onChange={changeNumberOne}/>
+                <input type={"text"} id={"bidValueOne"} onChange={changeNumberTwo}/>
+                <input type={"text"} id={"bidValueTwo"} onChange={changeNumberTwo}/>
+                <button onClick={runBid}/>
+                {bidValueTwo &&
+                    bidValueOne &&
+                    <div>
+                        <p>{bidValueOne}</p>
+                        <p>{bidValueTwo}</p>
+                    </div>
+                }
+                {bidName &&
                     <div style={{width: "100%"}}>
                         <div>
-
-                            <MarqueeText textSpacing={"1em"} className={"scrollText"}>
-                                {valueOne + valueTwo}
-                            </MarqueeText>
+                            <p>{bidName}</p>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
                                 <div
                                     className={"intBar"}
@@ -260,47 +275,6 @@ function BidWar(props) {
                             </div>
                         </div>
                     </div>
-                    :
-                    <>
-                        <p style={{
-                            fontSize: "27px",
-                            textAlign: "left",
-                            color: "white",
-                            margin: 0,
-                            marginBottom: "-8px"
-                        }}>
-                            Plus de donations goal ! Merci !
-                        </p>
-                        <div style={customStyles.extBarInline} className="fullProgressBar">
-                            <div
-                                className={"intBar"}
-                                style={{
-                                    width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo))) * 100) + "%",
-                                    position: 'relative',
-                                    textWrap: 'nowrap',
-                                    color: 'white',
-                                    padding: '15px',
-                                    borderRadius: '10px 10px 10px 10px',
-                                    height: "37px",
-                                    lineHeight: 0,
-                                    backgroundColor: "rgb(252, 194, 73)",
-                                    textAlign: "left",
-                                    margin: 0
-                                }}>
-                                <p style={{
-                                    fontSize: "28px",
-                                    textAlign: "right",
-                                    color: "white",
-                                    position: "absolute",
-                                    left: "12px",
-                                    zIndex: 1,
-                                    top: "22px"
-                                }}>
-                                    {montant} €
-                                </p>
-                            </div>
-                        </div>
-                    </>
                 }
             </div>
         </>
