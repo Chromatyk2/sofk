@@ -25,6 +25,17 @@ iframe{
 .loginButton i{
     margin-right:25px;
 }
+.bidWarName{
+    color: rgb(252, 194, 73);
+    font-size: 35px;
+}
+.bidWarValues{
+    display: flex;
+    justify-content: space-between;
+    width: 685px;
+    color: white;
+    font-size: 25px;
+}
 .loginContainer p {
     color: #255748;
     font-family: Bungee;

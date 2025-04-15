@@ -221,8 +221,8 @@ function BidWar(props) {
                 {bidName ?
                     <div style={{width: "100%"}}>
                         <div>
-                            <p>{bidName}</p>
-                            <div>
+                            <p className={"bidWarName"}>{bidName}</p>
+                            <div className={"bidWarValues"}>
                                 <p>{bidValueOne}</p>
                                 <p>{bidValueTwo}</p>
                             </div>
@@ -276,7 +276,7 @@ function BidWar(props) {
                                onChange={changeNumberTwo}/>
                         <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}
                                onChange={changeNumberTwo}/>
-                        <button onClick={runBid}/>
+                        <button onClick={runBid}>GO !</button>
                     </div>
                 }
             </div>
