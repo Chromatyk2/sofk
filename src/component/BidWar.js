@@ -143,13 +143,13 @@ function BidWar(props) {
             clearInterval(interval);
         };
     }, []);
-    useEffect(() => {
-        const queryParameters = new URLSearchParams(window.location.search);
-        var streamerName = queryParameters.get("streamer");
-        if (donationGoal[streamerName.toLowerCase()] != undefined) {
-            setDonation(donationGoal[streamerName.toLowerCase()])
-        }
-    }, [])
+    // useEffect(() => {
+    //     const queryParameters = new URLSearchParams(window.location.search);
+    //     var streamerName = queryParameters.get("streamer");
+    //     if (donationGoal[streamerName.toLowerCase()] != undefined) {
+    //         setDonation(donationGoal[streamerName.toLowerCase()])
+    //     }
+    // }, [])
     useEffect(() => {
         setDonations([]);
         setCagnotte([])
@@ -222,7 +222,7 @@ function BidWar(props) {
                                 <div
                                     className={"intBar"}
                                     style={{
-                                        width: parseFloat(((valueOne + valueTwo)/valueOne) * 100).toFixed(2) + "%",
+                                        width: parseFloat(((valueOne)/(valueOne+valueTwo)) * 100).toFixed(2) + "%",
                                         position: 'relative',
                                         textWrap: 'nowrap',
                                         color: 'white',
