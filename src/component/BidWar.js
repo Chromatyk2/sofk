@@ -302,9 +302,30 @@ function BidWar(props) {
                     :
                     <div>
                         <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}/>
-                        <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}/>
-                        <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}/>
-                        <input placeholder={"Troisième Valeure"} type={"text"} id={"bidValueThree"}/>
+                        <div>
+                            <div>
+                                <div style={{height:"20px",width:"20px",backgroundColor:"#38617f", borderRadius:"100px"}}></div>
+                                <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}/>
+                            </div>
+                            <div>
+                                <div style={{
+                                    height: "20px",
+                                    width: "20px",
+                                    backgroundColor: "#fcc249",
+                                    borderRadius: "100px"
+                                }}></div>
+                                <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}/>
+                            </div>
+                            <div>
+                                <div style={{
+                                    height: "20px",
+                                    width: "20px",
+                                    backgroundColor: "#5b8aa1",
+                                    borderRadius: "100px"
+                                }}></div>
+                                <input placeholder={"Troisième Valeure"} type={"text"} id={"bidValueThree"}/>
+                            </div>
+                        </div>
                         <button onClick={runBid}>GO !</button>
                     </div>
                 }
