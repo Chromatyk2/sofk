@@ -100,7 +100,7 @@ function Player(props) {
                             </div>
                             <div style={{width: "300px"}}>
                                 <p className={"linkUnderStreamTxt"}><span
-                                    style={{fontSize: "20px", fontWeight: "bold"}}>Faire un don ! </span><br/>Soutien le
+                                    style={{fontSize: "20px", fontWeight: "bold"}}>Clique pour faire un don ! </span><br/>Soutien le
                                     116 000 avec un don, le moindre euro compte !</p>
                             </div>
                         </a>
