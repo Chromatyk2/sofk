@@ -77,9 +77,11 @@ function BidWar(props) {
     const [montant, setMontant] = useState(true);
     const [valueOne, setValueOne] = useState(0);
     const [valueTwo, setValueTwo] = useState(0);
+    const [valueThree, setValueThree] = useState(0);
     const [bidName, setBidName] = useState(null);
     const [bidValueOne, setBidValueOne] = useState(null);
     const [bidValueTwo, setBidValueTwo] = useState(null);
+    const [bidValueThree, setBidValueThree] = useState(null);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -98,6 +100,9 @@ function BidWar(props) {
             borderRadius: "10px",
             height: "37px",
             margin:"0",
+            textAlign: "center",
+            lineHeight: "38px",
+            fontSize:" 25px"
         }
     }
     useEffect(() => {
@@ -170,17 +175,23 @@ function BidWar(props) {
     }, [cagnotte])
     function changeNumberOne(e) {
         setValueOne(e.target.value);
-    }function changeNumberTwo(e) {
+    }
+    function changeNumberTwo(e) {
         setValueTwo(e.target.value);
-    }function runBid(e) {
+    }function changeNumberThree(e) {
+        setValueThree(e.target.value);
+    }
+    function runBid(e) {
         setBidName(document.getElementById("bidName").value);
         setBidValueOne(document.getElementById("bidValueOne").value);
         setBidValueTwo(document.getElementById("bidValueTwo").value);
+        setBidValueThree(document.getElementById("bidValueThree").value);
     }
     return (
         <>
             <input type={"number"} onChange={changeNumberOne}/>
             <input type={"number"} onChange={changeNumberTwo}/>
+            <input type={"number"} onChange={changeNumberThree}/>
             {/*<div className={"personalBarContainer"}>*/}
             {/*    <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}*/}
             {/*         src={"images/logoSofk.png"}/>*/}
@@ -219,63 +230,102 @@ function BidWar(props) {
             {/*</div>*/}
             <div className={"personalBarContainerInline"}>
                 {bidName ?
-                    <div style={{width: "100%"}}>
+                    <div style={{width: "100%", justifyContent:"center", display:"flex"}}>
                         <div>
                             <p className={"bidWarName"}>{bidName}</p>
                             <div className={"bidWarValues"}>
                                 <p>{bidValueOne}</p>
                                 <p>{bidValueTwo}</p>
+                                <p>{bidValueThree}</p>
                             </div>
-                            <div style={customStyles.extBarInline} className="fullProgressBar">
-                                <div
-                                    className={"intBar"}
-                                    style={{
-                                        width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo))) * 100) + "%",
-                                        position: 'relative',
-                                        textWrap: 'nowrap',
+                            <div style={customStyles.extBarInline} id="bar">
+                                    <span className="seg1" style={{
+                                        width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
+                                        backgroundColor: "#38617f",
                                         color: 'white',
-                                        padding: '15px',
-                                        borderRadius: '10px 10px 10px 10px',
-                                        height: "37px",
-                                        lineHeight: 0,
-                                        backgroundColor: "rgb(252, 194, 73)",
-                                        textAlign: "left",
-                                        margin: 0
-                                    }}>
-                                </div>
-                                <p style={{
-                                    fontSize: "28px",
-                                    textAlign: "right",
-                                    color: "white",
-                                    position: "absolute",
-                                    left: "12px",
-                                    zIndex: 1,
-                                    top: "0px"
-                                }}>
-                                    {valueOne} €
-                                </p>
-                                <p style={{
-                                    fontSize: "28px",
-                                    textAlign: "right",
-                                    color: "white",
-                                    position: "absolute",
-                                    right: "12px",
-                                    zIndex: 1,
-                                    top: "0px"
-                                }}>
-                                    {valueTwo + " €"}
-                                </p>
+                                        borderRadius: '10px 0 0 10px',
+                                    }}>{valueOne > 0 && valueOne+' €'}</span>
+                                    <span className="seg2" style={{
+                                        width:  parseFloat((valueTwo / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%",
+                                        backgroundColor: "#fcc249",
+                                        color: 'white',
+                                    }}>{valueTwo > 0 &&  valueTwo+' €'}</span>
+                                    <span className="seg3"  style={{
+                                        width: parseFloat((valueThree / (parseInt(valueOne) + parseInt(valueTwo) + parseInt(valueThree))) * 100) + "%" ,
+                                        backgroundColor: "#5b8aa1",
+                                        color: 'white',
+                                        borderRadius: '0 10px 10px 0',
+                                    }}>{valueThree > 0 && valueThree+' €'}</span>
                             </div>
+                            {/*<div style={customStyles.extBarInline} className="fullProgressBar">*/}
+                            {/*    <div*/}
+                            {/*        className={"intBar"}*/}
+                            {/*        style={{*/}
+                            {/*            width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo))) * 100) + "%",*/}
+                            {/*            position: 'relative',*/}
+                            {/*            textWrap: 'nowrap',*/}
+                            {/*            color: 'white',*/}
+                            {/*            padding: '15px',*/}
+                            {/*            borderRadius: '10px 10px 10px 10px',*/}
+                            {/*            height: "37px",*/}
+                            {/*            lineHeight: 0,*/}
+                            {/*            backgroundColor: "rgb(252, 194, 73)",*/}
+                            {/*            textAlign: "left",*/}
+                            {/*            margin: 0*/}
+                            {/*        }}>*/}
+                            {/*    </div>*/}
+                            {/*    <p style={{*/}
+                            {/*        fontSize: "28px",*/}
+                            {/*        textAlign: "right",*/}
+                            {/*        color: "white",*/}
+                            {/*        position: "absolute",*/}
+                            {/*        left: "12px",*/}
+                            {/*        zIndex: 1,*/}
+                            {/*        top: "0px"*/}
+                            {/*    }}>*/}
+                            {/*        {valueOne} €*/}
+                            {/*    </p>*/}
+                            {/*    <p style={{*/}
+                            {/*        fontSize: "28px",*/}
+                            {/*        textAlign: "right",*/}
+                            {/*        color: "white",*/}
+                            {/*        position: "absolute",*/}
+                            {/*        right: "12px",*/}
+                            {/*        zIndex: 1,*/}
+                            {/*        top: "0px"*/}
+                            {/*    }}>*/}
+                            {/*        {valueTwo + " €"}*/}
+                            {/*    </p>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                     :
-                    <div>
-                        <input placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}
-                               onChange={changeNumberOne}/>
-                        <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}
-                               onChange={changeNumberTwo}/>
-                        <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}
-                               onChange={changeNumberTwo}/>
+                    <div style={{display: "flex",flexFlow: "column",gap: "5px"}}>
+                        <input style={{width:"100%"}} placeholder={"Intitulé de la bidwar"} type={"text"} id={"bidName"}/>
+                        <div>
+                            <div className={"inputBid"}>
+                                <div style={{height:"20px",width:"20px",backgroundColor:"#38617f", borderRadius:"100px"}}></div>
+                                <input placeholder={"Première valeure"} type={"text"} id={"bidValueOne"}/>
+                            </div>
+                            <div className={"inputBid"}>
+                                <div style={{
+                                    height: "20px",
+                                    width: "20px",
+                                    backgroundColor: "#fcc249",
+                                    borderRadius: "100px"
+                                }}></div>
+                                <input placeholder={"Deuxième Valeure"} type={"text"} id={"bidValueTwo"}/>
+                            </div>
+                            <div className={"inputBid"}>
+                                <div style={{
+                                    height: "20px",
+                                    width: "20px",
+                                    backgroundColor: "#5b8aa1",
+                                    borderRadius: "100px"
+                                }}></div>
+                                <input placeholder={"Troisième Valeure"} type={"text"} id={"bidValueThree"}/>
+                            </div>
+                        </div>
                         <button onClick={runBid}>GO !</button>
                     </div>
                 }
