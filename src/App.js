@@ -111,23 +111,31 @@ function App() {
             )
         const interval = setInterval(() => {
                 if (charityLoad === false) {
-                    Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
+                    Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
                         .then(function (response) {
                             response.data.map((val, key) => {
                                 setDonations(oldDonations => [...oldDonations, val]);
                             })
                             if (response.data.length == 500) {
-                                Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=2')
+                                Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
                                     .then(function (response) {
                                         response.data.map((val, key) => {
                                             setDonations(oldDonations => [...oldDonations, val]);
                                         })
                                         if (response.data.length == 500) {
-                                            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=3')
+                                            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=2')
                                                 .then(function (response) {
                                                     response.data.map((val, key) => {
                                                         setDonations(oldDonations => [...oldDonations, val]);
                                                     })
+                                                    if (response.data.length == 500) {
+                                                        Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=3')
+                                                            .then(function (response) {
+                                                                response.data.map((val, key) => {
+                                                                    setDonations(oldDonations => [...oldDonations, val]);
+                                                                })
+                                                            })
+                                                    }
                                                 })
                                         }
                                     })
