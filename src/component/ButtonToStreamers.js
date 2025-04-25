@@ -88,7 +88,7 @@ function ButtonToStreamers(props) {
                 offStream.length > 0 &&
                 <div className={"buttonStreamsContainer"}>
                     <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
-                    <button className={"buttonStreamers"}>Boutique</button>
+                    {/*<button className={"buttonStreamers"}>Boutique</button>*/}
                     <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
                            contentLabel="Example Modal">
                         <div style={{display: "flex", justifyContent: "space-between", alignItems: "baseline"}}>
