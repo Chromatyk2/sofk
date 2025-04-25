@@ -204,7 +204,7 @@ function Player(props) {
                                 position: "absolute",
                                 left: "12px",
                                 zIndex: 1,
-                                top: "0px"
+                                top: "-1.5px"
                             }}>
                                 {montant} €
                             </p>
