@@ -4,6 +4,8 @@ import logoReplay from '../film.png'
 import logoEuro from '../euro.png'
 import '../Component.css';
 import donationGoal from "../donationGoal.json";
+import Axios from "axios";
+import MarqueeText from "react-marquee-text";
 
 
 function Player(props) {
@@ -11,7 +13,7 @@ function Player(props) {
     const queryParameters = new URLSearchParams(window.location.search)
     const streamerUrl = queryParameters.get('streamer')
     const [cagnotte, setCagnotte] = useState(0);
-    const [donation, setDonation] = useState([]);
+    const [donations, setDonations] = useState([]);
     useEffect(() => {
         if(props.team.length == 0){
             props.change();
@@ -29,23 +31,75 @@ function Player(props) {
         }
     }
 
+
     useEffect(() => {
-        const queryParameters = new URLSearchParams(window.location.search)
+        const interval = setInterval(() =>
+            {
+                const queryParameters = new URLSearchParams(window.location.search);
+                Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
+                    .then(function (response) {
+                        response.data.map((val, key) => {
+                            setDonations(oldDonations => [...oldDonations, val]);
+                        })
+                        if (response.data.length == 500) {
+                            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
+                                .then(function (response) {
+                                    response.data.map((val, key) => {
+                                        setDonations(oldDonations => [...oldDonations, val]);
+                                    })
+                                    if (response.data.length == 500) {
+                                        Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=2')
+                                            .then(function (response) {
+                                                response.data.map((val, key) => {
+                                                    setDonations(oldDonations => [...oldDonations, val]);
+                                                })
+                                                if (response.data.length == 500) {
+                                                    Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=3')
+                                                        .then(function (response) {
+                                                            response.data.map((val, key) => {
+                                                                setDonations(oldDonations => [...oldDonations, val]);
+                                                            })
+                                                        })
+                                                }else{
+                                                    setLoad(Math.random())
+                                                }
+                                            })
+                                    }else{
+                                        setLoad(Math.random())
+                                    }
+                                })
+                        }else{
+                            setLoad(Math.random())
+                        }
+                    })}
+            ,1000
+        );
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+    useEffect(() => {
+        const queryParameters = new URLSearchParams(window.location.search);
         var streamerName = queryParameters.get("streamer");
         if (donationGoal[streamerName.toLowerCase()] != undefined) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
     }, [])
     useEffect(() => {
-        const interval = setInterval(() =>
-            {
-                setCagnotte(prevCount => prevCount + Math.floor(Math.random() * 100))
-            },1000
-        );
-        return () => {
-            clearInterval(interval);
-        };
-    }, [])
+        setDonations([]);
+        setCagnotte([])
+        const queryParameters = new URLSearchParams(window.location.search)
+        var streamerName = queryParameters.get("streamer");
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+        });
+        if (donationGoal[streamerName.toLowerCase()] != undefined) {
+            setDonation(donationGoal[streamerName.toLowerCase()])
+        }
+    }, [load])
+    useEffect(() => {
+        setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
+    }, [cagnotte])
     useEffect(() => {
         setStreamer(streamerUrl)
     }, [streamerUrl]);
@@ -110,38 +164,61 @@ function Player(props) {
             <div className={"personalBarContainerPlayer"}>
                 <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}
                      src={"images/logoSofk.png"}/>
-                {donation.filter(item => item.montant >= cagnotte).length > 0 ?
+                {donation.filter(item => item.montant > montant).length > 0 ?
                     <>
                         <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
                         <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
-                            {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}
+                            {donation.filter(item => item.montant > montant)[0].montant + " €"}
                         </p>
-                        <p style={{fontSize: "20px", textAlign: "center", color: "white"}}>
-                            {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}
-                        </p>
+                        <MarqueeText direction={"right"} textSpacing={"1em"} className={"scrollTextCard"}>
+                            {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
+                        </MarqueeText>
+                        <div style={customStyles.extBarInlineCard} className="fullProgressBar">
+                            <div
+                                className={"intBar"}
+                                style={{
+                                    width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                    position: 'relative',
+                                    textWrap: 'nowrap',
+                                    color: 'white',
+                                    padding: '15px',
+                                    borderRadius: '10px 10px 10px 10px',
+                                    height: "37px",
+                                    lineHeight: 0,
+                                    backgroundColor: "rgb(252, 194, 73)",
+                                    textAlign: "left",
+                                    margin: 0
+                                }}>
+                            </div>
+                            <p style={{
+                                fontSize: "28px",
+                                textAlign: "right",
+                                color: "white",
+                                position: "absolute",
+                                left: "12px",
+                                zIndex: 1,
+                                top: "0px"
+                            }}>
+                                {montant} €
+                            </p>
+                            <p style={{
+                                fontSize: "28px",
+                                textAlign: "right",
+                                color: "white",
+                                position: "absolute",
+                                right: "12px",
+                                zIndex: 1,
+                                top: "0px"
+                            }}>
+                                {donation.filter(item => item.montant > montant)[0].montant + " €"}
+                            </p>
+                        </div>
                     </>
                     :
                     <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>
                         Plus de donations goal ! Merci !
                     </p>
                 }
-                <div style={customStyles.extBar} className="fullProgressBar">
-                    <div
-                        className={"intBar"}
-                        style={{
-                            width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
-                            position: 'relative',
-                            textWrap: 'nowrap',
-                            color: 'white',
-                            padding: '15px',
-                            borderRadius: '50px 50px 50px 50px',
-                            height: "30px",
-                            lineHeight: 0,
-                            backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"
-                        }}>
-                        {cagnotte} €
-                    </div>
-                </div>
             </div>
         </>
     );
