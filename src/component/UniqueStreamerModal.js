@@ -11,6 +11,7 @@ function UniqueStreamerModal(props) {
     const [data, setData] = useState("");
     const [cagnotte, setCagnotte] = useState([]);
     const [donation, setDonation] = useState([]);
+    const [montant, setMontant] = useState(0);
     const customStyles = {
         extBar: {
             width: "100%",
@@ -56,6 +57,9 @@ function UniqueStreamerModal(props) {
             setUser(response.data);
         })
     }, [])
+    useEffect(() => {
+        setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
+    }, [cagnotte])
     function changeStream(e) {
         props.change(e.target.value);
     }
