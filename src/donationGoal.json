@@ -639,23 +639,35 @@
   ],
   "guiguisan_" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Reveal des cosplays du Stream On"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 7,
+      "description": "Je me fais maquiller par Hebi_scarlet"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Je fais une danse Just Dance avec Kaito"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 30,
+      "description": "Je chante tous les opening de One Piece"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 40,
+      "description": "Je fais la dance mystère"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 50,
+      "description": "Je construit un Lego"
+    },{
+      "montant": 60,
+      "description": "Gras_TV me fait découvrir un jeu mystere"
+    },{
+      "montant": 100,
+      "description": "Je joue à 5 jeux Rayman pendant 30minutes chacun"
+    },{
+      "montant": 250,
+      "description": "Je joue à Outlast"
+    },{
+      "montant": 500,
+      "description": "Je croque dans un citron (à l'ide)"
     }
   ],
   "akaihige_" : [
@@ -810,44 +822,98 @@
   ],
   "gras_tv" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "J'allume la cam"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "J'allume le micro"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 20,
+      "description": "Skribbl.io avec vous"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 40,
+      "description": "Je croque le Maroilles"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 60,
+      "description": "Pepper Mario Party"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 80,
+      "description": "Je fais un test de QI"
+    },{
+      "montant": 100,
+      "description": "Je me fait maquiller par Hebi_Scarlet"
+    },{
+      "montant": 120,
+      "description": "Grand Chelem sur Mario Kart ( 96 courses )"
+    },{
+      "montant": 140,
+      "description": "Je vais sur VRChat pour trouver des dons"
+    },{
+      "montant": 160,
+      "description": "Je fais un jeu d'horreur seul"
+    },{
+      "montant": 180,
+      "description": "Je fais un Karaoke avec des chansons que je ne connais pas"
+    },{
+      "montant": 200,
+      "description": "Je fais Rennes - Lille dans Flight Simulator"
+    },{
+      "montant": 220,
+      "description": "Session Ring Fit Adventure"
+    },{
+      "montant": 240,
+      "description": "Montage d'un gros Lego"
+    },{
+      "montant": 500,
+      "description": "Je fait enfin le premier Stream/Concert 'Mange Disque'"
     }
   ],
   "tchotebibinne" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 0.69,
+      "description": "Bandes de petits coquins"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 1.10,
+      "description": "Je vais masser Paradox pendant 5min"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 4.40,
+      "description": "On se prend pour un trader pendant 5min"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 10.25,
+      "description": "J'enfile un costume de Sumo"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 15.31,
+      "description": "Je léche la joue de Parradox"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 16.64,
+      "description": "Je bois une 1664 cannette sans alcool"
+    },{
+      "montant": 21.50,
+      "description": "Je vais m'asseoire sur les genoux de Parradox"
+    },{
+      "montant": 25.69,
+      "description": "Choix du donateur (dans la limite du raisonnable)"
+    },{
+      "montant": 29.52,
+      "description": "J'offre un costume à Asarhell pendant 5 min"
+    },{
+      "montant": 35.12,
+      "description": "Je vais m'asseoire sur les genoux de Valenderia pendant 5min"
+    },{
+      "montant": 39.01,
+      "description": "Je vais titiller les oreilles de Parradox"
+    },{
+      "montant": 42.25,
+      "description": "Jeu d'horreur en pleine nuit"
+    },{
+      "montant": 55.36,
+      "description": "Live IRL Pêche avec Valenderia"
+    },{
+      "montant": 70.10,
+      "description": "Je joue à Dead Space en pleine nuit"
+    },{
+      "montant": 100.99,
+      "description": "J'applati Asarhell en Sumo"
     }
     ],
     "suriimii" : [
@@ -976,13 +1042,13 @@
         "description": "On lance le légendaire Fortnite avec gage du tchat"
       },{
         "montant": 25,
-        "description": "Louve nous fait manger un piment doux"
-      },{
-        "montant": 47,
         "description": "Viva el crepa-maroilla"
       },{
+        "montant": 47,
+        "description": "Louve nous fait manger un piment doux"
+      },{
         "montant": 62,
-        "description": "On fait le portrait d'un streamer au hasard sur pain"
+        "description": "Qui veut gagner des millions avec Clem"
       },{
         "montant": 81,
         "description": "Hebi Scarlet nous fait un superbe maquillage"
@@ -991,25 +1057,25 @@
         "description": "On fait Outlast 2 en pleine nuit ( hurlement garantie )"
       },{
         "montant": 135,
-        "description": "Louve revient pour un piment qui arrache"
+        "description": "On fait le portrait d'un streamer au hasard sur paint"
       },{
         "montant": 155,
-        "description": "Louve revient pour un piment qui arrache"
+        "description": "Jeu mystere ou l'on passe du côté obscure de la force"
       },{
         "montant": 183,
-        "description": "On me fait une petite teinture verte"
+        "description": "On me fait une teinture verte"
       },{
         "montant": 210,
-        "description": "On recommence la course après 10ans de pose, objectif 20km !"
+        "description": "Vous choisissez une danse à faire devant la cam"
       },{
         "montant": 250,
-        "description": "On recommence la course après 10ans de pose, objectif 20km !"
+        "description": "Louve revient pour un piment qui arrache"
       },{
         "montant": 350,
-        "description": "On recommence la course après 10ans de pose, objectif 20km !"
+        "description": "On recommence la course après 10 ans de pause, objectif 20km !!"
       },{
         "montant": 500,
-        "description": "On recommence la course après 10 ans de pause, objectif 20km !"
+        "description": "On s'inscrit à un semi-marathon"
       }
   ],
   "sun_shahine" : [
