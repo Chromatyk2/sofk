@@ -2055,7 +2055,7 @@ span.navbar-brand {
         display: none;
     }
     .donationBarMobile{
-        width: 50%;
+        width: 75%;
         background-color: rgb(50, 82, 105);
         position: relative;
         z-index: 1;
