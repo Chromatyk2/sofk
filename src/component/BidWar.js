@@ -192,42 +192,6 @@ function BidWar(props) {
             <input type={"number"} onChange={changeNumberOne}/>
             <input type={"number"} onChange={changeNumberTwo}/>
             <input type={"number"} onChange={changeNumberThree}/>
-            {/*<div className={"personalBarContainer"}>*/}
-            {/*    <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}*/}
-            {/*         src={"images/logoSofk.png"}/>*/}
-            {/*    {donation.filter(item => item.montant >= cagnotte).length > 0 ?*/}
-            {/*        <>*/}
-            {/*            <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>*/}
-            {/*            <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>*/}
-            {/*                {donation.filter(item => item.montant >= cagnotte)[0].montant + " €"}*/}
-            {/*            </p>*/}
-            {/*            <p style={{fontSize: "20px", textAlign: "center", color: "white"}}>*/}
-            {/*                {donation.filter(item => item.montant >= cagnotte).length > 0 && donation.filter(item => item.montant >= cagnotte)[0].description}*/}
-            {/*            </p>*/}
-            {/*        </>*/}
-            {/*        :*/}
-            {/*        <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>*/}
-            {/*            Plus de donations goal ! Merci !*/}
-            {/*        </p>*/}
-            {/*    }*/}
-            {/*    <div style={customStyles.extBar} className="fullProgressBar">*/}
-            {/*        <div*/}
-            {/*            className={"intBar"}*/}
-            {/*            style={{*/}
-            {/*                width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",*/}
-            {/*                position: 'relative',*/}
-            {/*                textWrap: 'nowrap',*/}
-            {/*                color: 'white',*/}
-            {/*                padding: '15px',*/}
-            {/*                borderRadius: '50px 50px 50px 50px',*/}
-            {/*                height: "30px",*/}
-            {/*                lineHeight: 0,*/}
-            {/*                backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)", textAlign: "center"*/}
-            {/*            }}>*/}
-            {/*            {cagnotte} €*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <div className={"personalBarContainerInline"}>
                 {bidName ?
                     <div style={{width: "100%", justifyContent:"center", display:"flex"}}>
@@ -257,46 +221,6 @@ function BidWar(props) {
                                         borderRadius: '0 10px 10px 0',
                                     }}>{valueThree > 0 && valueThree+' €'}</span>
                             </div>
-                            {/*<div style={customStyles.extBarInline} className="fullProgressBar">*/}
-                            {/*    <div*/}
-                            {/*        className={"intBar"}*/}
-                            {/*        style={{*/}
-                            {/*            width: parseFloat((valueOne / (parseInt(valueOne) + parseInt(valueTwo))) * 100) + "%",*/}
-                            {/*            position: 'relative',*/}
-                            {/*            textWrap: 'nowrap',*/}
-                            {/*            color: 'white',*/}
-                            {/*            padding: '15px',*/}
-                            {/*            borderRadius: '10px 10px 10px 10px',*/}
-                            {/*            height: "37px",*/}
-                            {/*            lineHeight: 0,*/}
-                            {/*            backgroundColor: "rgb(252, 194, 73)",*/}
-                            {/*            textAlign: "left",*/}
-                            {/*            margin: 0*/}
-                            {/*        }}>*/}
-                            {/*    </div>*/}
-                            {/*    <p style={{*/}
-                            {/*        fontSize: "28px",*/}
-                            {/*        textAlign: "right",*/}
-                            {/*        color: "white",*/}
-                            {/*        position: "absolute",*/}
-                            {/*        left: "12px",*/}
-                            {/*        zIndex: 1,*/}
-                            {/*        top: "0px"*/}
-                            {/*    }}>*/}
-                            {/*        {valueOne} €*/}
-                            {/*    </p>*/}
-                            {/*    <p style={{*/}
-                            {/*        fontSize: "28px",*/}
-                            {/*        textAlign: "right",*/}
-                            {/*        color: "white",*/}
-                            {/*        position: "absolute",*/}
-                            {/*        right: "12px",*/}
-                            {/*        zIndex: 1,*/}
-                            {/*        top: "0px"*/}
-                            {/*    }}>*/}
-                            {/*        {valueTwo + " €"}*/}
-                            {/*    </p>*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                     :
