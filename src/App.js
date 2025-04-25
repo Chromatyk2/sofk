@@ -110,6 +110,7 @@ function App() {
                 }
             )
         const interval = setInterval(() => {
+            setDonations([]);
                 if (charityLoad === false) {
                     Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
                         .then(function (response) {
