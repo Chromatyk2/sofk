@@ -164,17 +164,6 @@ function Player(props) {
                             }}>
                                 {montant} €
                             </p>
-                            <p style={{
-                                fontSize: "28px",
-                                textAlign: "right",
-                                color: "white",
-                                position: "absolute",
-                                right: "12px",
-                                zIndex: 1,
-                                top: "0px"
-                            }}>
-                                {donation.filter(item => item.montant > montant)[0].montant + " €"}
-                            </p>
                         </div>
                     </>
                     :
