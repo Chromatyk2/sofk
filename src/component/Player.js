@@ -76,7 +76,7 @@ function Player(props) {
                     <div style={{marginTop: "30px"}} className="twitch">
                         <div className="twitch-video">
                             <iframe
-                                src={"https://player.twitch.tv/?channel=" + streamer + "&parent=preview--streamonforkids.netlify.app&autoplay=true&muted=false"}
+                                src={"https://player.twitch.tv/?channel=" + streamer + "&parent=streamonforkids.fr&autoplay=true&muted=false"}
                                 frameBorder="0"
                                 scrolling="no"
                                 allowFullScreen="true"

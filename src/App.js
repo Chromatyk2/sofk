@@ -82,7 +82,7 @@ function App() {
                 client_id:CLIENT_ID,
                 client_secret:CLIENT_SECRET,
                 grant_type:"client_credentials",
-                redirect_uri:"https://preview--streamonforkids.netlify.app/"
+                redirect_uri:"https://streamonforkids.fr/"
             }
         )
             .then(
