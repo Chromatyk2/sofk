@@ -22,6 +22,7 @@ function Player(props) {
             props.change();
         }
     }, []);
+
     const customStyles = {
         extBar: {
             width: "100%",
@@ -31,6 +32,25 @@ function Player(props) {
             borderRadius: "50px",
             margin: 0,
             height: "30px"
+        },
+        extBarInline: {
+            width: "685px",
+            backgroundColor: "rgb(50, 82, 105)",
+            position: "relative",
+            zIndex: 1,
+            borderRadius: "10px",
+            height: "37px",
+            margin:"0",
+        },
+        extBarInlineCard: {
+            width: "100%",
+            backgroundColor: "rgb(50, 82, 105)",
+            position: "relative",
+            zIndex: 1,
+            borderRadius: "10px",
+            height: "37px",
+            margin:"0",
+            marginTop:"10px"
         }
     }
 
