@@ -108,9 +108,6 @@ function App() {
                     })
                 }
             )
-        return () => {
-            clearInterval(interval);
-        };
     }, [charityLoad]);
     function openModal() {
         setIsOpen(true);
