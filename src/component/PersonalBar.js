@@ -174,7 +174,7 @@ function PersonalBar(props) {
         setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
     }, [cagnotte])
     return (
-        <>
+        <div>
             <div className={"personalBarContainer"}>
                 <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}
                      src={"images/logoSofk.png"}/>
@@ -321,7 +321,7 @@ function PersonalBar(props) {
                     </>
                 }
             </div>
-        </>
+        </div>
     )
         ;
 }
