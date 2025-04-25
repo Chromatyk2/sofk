@@ -2048,7 +2048,6 @@ span.navbar-brand {
 }
 .donationBarMobile{
     visibility: hidden;
-
 }
 @media screen and (min-width: 0px) and (max-width: 1500px) {
     .personalBarContainerPlayer {
@@ -2062,7 +2061,8 @@ span.navbar-brand {
         border-radius: 50px;
         height: 30px;
         display:block;
-        margin:auto
+        margin:auto;
+        visibility: visible;
 
     }
 }
