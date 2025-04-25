@@ -173,6 +173,105 @@ function Player(props) {
                     </div>
                 </div>
             }
+
+            <div className={"donationBarMobile"}>
+                {donation.filter(item => item.montant > montant).length > 0 ?
+                    <>
+                        <div style={customStyles.extBarInline} className="fullProgressBar">
+                            <div
+                                className={"intBar"}
+                                style={{
+                                    width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                    position: 'relative',
+                                    textWrap: 'nowrap',
+                                    color: 'white',
+                                    padding: '15px',
+                                    borderRadius: '10px 10px 10px 10px',
+                                    height: "37px",
+                                    lineHeight: 0,
+                                    backgroundColor: "rgb(252, 194, 73)",
+                                    textAlign: "left",
+                                    margin: 0
+                                }}>
+                            </div>
+                            <p style={{
+                                fontSize: "28px",
+                                textAlign: "right",
+                                color: "white",
+                                position: "absolute",
+                                left: "12px",
+                                zIndex: 1,
+                                top: "0px"
+                            }}>
+                                {montant} €
+                            </p>
+                            <p style={{
+                                fontSize: "28px",
+                                textAlign: "right",
+                                color: "white",
+                                position: "absolute",
+                                right: "12px",
+                                zIndex: 1,
+                                top: "0px"
+                            }}>
+                                {donation.filter(item => item.montant > montant)[0].montant + " €"}
+                            </p>
+                        </div>
+                    </>
+                    :
+                    <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>
+                        Plus de donations goal ! Merci !
+                    </p>
+                }
+            </div>
+            <div className={"personalBarContainerPlayer"}>
+                <img style={{width: "200px", position: "relative", top: "-87px", marginBottom: "-80px"}}
+                     src={"images/logoSofk.png"}/>
+                {donation.filter(item => item.montant > montant).length > 0 ?
+                    <>
+                        <p style={{color: "white", fontSize: "25px", textAlign: "center"}}>Prochain donation Goal</p>
+                        <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
+                            {donation.filter(item => item.montant > montant)[0].montant + " €"}
+                        </p>
+                        <MarqueeText duration={10} direction={"right"} textSpacing={"8em"} className={"scrollTextCard"}>
+                            {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
+                        </MarqueeText>
+                        <div style={customStyles.extBarInlineCard} className="fullProgressBar">
+                            <p style={{
+                                fontSize: "28px",
+                                textAlign: "right",
+                                color: "white",
+                                position: "absolute",
+                                left: "12px",
+                                zIndex: 1,
+                                top: "-1.5px"
+                            }}>
+                                {montant} €
+                            </p>
+                            <div
+                                className={"intBar"}
+                                style={{
+                                    width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                    position: 'relative',
+                                    textWrap: 'nowrap',
+                                    color: 'white',
+                                    padding: '15px',
+                                    borderRadius: '10px 10px 10px 10px',
+                                    height: "37px",
+                                    lineHeight: 0,
+                                    backgroundColor: "rgb(252, 194, 73)",
+                                    textAlign: "left",
+                                    margin: 0
+                                }}>
+                            </div>
+                        </div>
+                    </>
+                    :
+                    <p style={{fontSize: "25px", textAlign: "center", color: "#fcc249"}}>
+                        Plus de donations goal ! Merci !
+                    </p>
+                }
+            </div>
         </>
     );
 }
