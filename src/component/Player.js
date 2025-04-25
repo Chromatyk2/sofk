@@ -132,7 +132,7 @@ function Player(props) {
                 streamer &&
                 <div>
                     <h1 style={{marginTop: "30px", textAlign: "center", color: "white"}}>{streamer}</h1>
-                    <div className={"donationBarMobile"}>
+                    <div className={"personalBarContainerInline donationBarMobile"}>
                         {donation.filter(item => item.montant > montant).length > 0 ?
                             <div style={{width: "100%"}}>
                                 <div>
