@@ -2051,9 +2051,9 @@ span.navbar-brand {
 
 }
 @media screen and (min-width: 0px) and (max-width: 1500px) {
-    .personalBarContainerPlayer {
-        display: none;
-    }
+    /*.personalBarContainerPlayer {*/
+    /*    display: none;*/
+    /*}*/
     .donationBarMobile{
         width: 75%;
         background-color: rgb(50, 82, 105);
