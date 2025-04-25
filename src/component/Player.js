@@ -12,8 +12,11 @@ function Player(props) {
     const [streamer, setStreamer] = React.useState(null);
     const queryParameters = new URLSearchParams(window.location.search)
     const streamerUrl = queryParameters.get('streamer')
-    const [cagnotte, setCagnotte] = useState(0);
+    const [cagnotte, setCagnotte] = useState([]);
+    const [donation, setDonation] = useState([]);
     const [donations, setDonations] = useState([]);
+    const [load, setLoad] = useState(0);
+    const [montant, setMontant] = useState(true);
     useEffect(() => {
         if(props.team.length == 0){
             props.change();
