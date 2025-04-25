@@ -53,7 +53,13 @@ function Player(props) {
             marginTop:"10px"
         }
     }
-
+    useEffect(() => {
+        const queryParameters = new URLSearchParams(window.location.search)
+        var streamerName = queryParameters.get("streamer");
+        if (donationGoal[streamerName.toLowerCase()] != undefined) {
+            setDonation(donationGoal[streamerName.toLowerCase()])
+        }
+    }, [])
 
     useEffect(() => {
         const interval = setInterval(() =>
@@ -102,23 +108,12 @@ function Player(props) {
         };
     }, []);
     useEffect(() => {
-        const queryParameters = new URLSearchParams(window.location.search);
-        var streamerName = queryParameters.get("streamer");
-        if (donationGoal[streamerName.toLowerCase()] != undefined) {
-            setDonation(donationGoal[streamerName.toLowerCase()])
-        }
-    }, [])
-    useEffect(() => {
-        setDonations([]);
         setCagnotte([])
         const queryParameters = new URLSearchParams(window.location.search)
         var streamerName = queryParameters.get("streamer");
         donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
             setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
         });
-        if (donationGoal[streamerName.toLowerCase()] != undefined) {
-            setDonation(donationGoal[streamerName.toLowerCase()])
-        }
     }, [load])
     useEffect(() => {
         setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
