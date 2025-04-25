@@ -50,7 +50,8 @@ iframe{
     margin:0;
     margin-bottom:-8px;
     width:685px!important;
-}.scrollTextCard{
+}
+.scrollTextCard{
     font-size: 27px;
     text-align: left;
     color: white;
@@ -58,6 +59,13 @@ iframe{
     margin-bottom:-8px;
     margin-left:-25px;
      width: 350px !important;
+}
+.scrollTextCardInlinePlayer{
+    font-size: 27px;
+    text-align: left;
+    color: white;
+    margin:0;
+    margin-bottom:-8px;
 }
 p.myNetworks {
     color: #3b6887;
