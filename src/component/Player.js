@@ -233,7 +233,7 @@ function Player(props) {
                         <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
                             {donation.filter(item => item.montant > montant)[0].montant + " €"}
                         </p>
-                        <MarqueeText duration={10} direction={"right"} textSpacing={"10em"} className={"scrollTextCard"}>
+                        <MarqueeText duration={10} direction={"right"} textSpacing={"8em"} className={"scrollTextCard"}>
                             {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
                         </MarqueeText>
                         <div style={customStyles.extBarInlineCard} className="fullProgressBar">
