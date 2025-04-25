@@ -95,7 +95,7 @@ function UniqueStreamerModal(props) {
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
-                                            width: donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant).toFixed(2) + "%" : "100%" : "100%",
+                                            width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
                                             position: 'relative',
                                             textWrap: 'nowrap',
                                             color: 'white',
@@ -134,7 +134,7 @@ function UniqueStreamerModal(props) {
                                 <div style={customStyles.extBar} className="fullProgressBar">
                                     <div
                                         style={{
-                                            width: donation.length > 0 ? donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100).length > 0 ? parseFloat(cagnotte.reduce((a, v) => a = a + v, 0) / donation.filter(item => item.montant >= cagnotte.reduce((a, v) => a = a + v, 0) / 100)[0].montant).toFixed(2) + "%" : "100%" : "100%",
+                                            width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
                                             position: 'relative',
                                             textWrap: 'nowrap',
                                             color: 'white',
