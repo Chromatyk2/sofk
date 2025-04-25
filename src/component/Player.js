@@ -136,9 +136,6 @@ function Player(props) {
             <div className={"donationBarMobile"}>
                 {donation.filter(item => item.montant > montant).length > 0 ?
                     <>
-                        <MarqueeText direction={"right"} textSpacing={"10em"} className={"scrollTextCard"}>
-                            {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
-                        </MarqueeText>
                         <div style={customStyles.extBarInline} className="fullProgressBar">
                             <div
                                 className={"intBar"}
