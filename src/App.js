@@ -142,7 +142,7 @@ function App() {
                             }
                         })
                 }
-            }, 60000
+            }, 1000
         );
         return () => {
             clearInterval(interval);
