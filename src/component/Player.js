@@ -132,23 +132,98 @@ function Player(props) {
                 streamer &&
                 <div>
                     <h1 style={{marginTop: "30px", textAlign: "center", color: "white"}}>{streamer}</h1>
-                    <div class={"donationBarMobile"} style={customStyles.extBarMobile}>
-                        <div
-                            className={"intBar"}
-                            style={{
-                                width: donation.filter(item => item.montant >= cagnotte).length > 0 ? parseFloat((cagnotte / donation.filter(item => item.montant >= cagnotte)[0].montant) * 100).toFixed(2) + "%" : "100%",
-                                position: 'relative',
-                                textWrap: 'nowrap',
-                                color: 'white',
-                                padding: '15px',
-                                borderRadius: '50px 50px 50px 50px',
-                                height: "30px",
-                                lineHeight: 0,
-                                backgroundImage: "linear-gradient(180deg, #b27d0d 24%, #fcc249 155%)",
-                                textAlign: "center"
-                            }}>
-                            {cagnotte} €
-                        </div>
+                    <div className={"personalBarContainerInline"}>
+                        {donation.filter(item => item.montant > montant).length > 0 ?
+                            <div style={{width: "100%"}}>
+                                <div>
+
+                                    <MarqueeText textSpacing={"1em"} className={"scrollText"}>
+                                        {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
+                                    </MarqueeText>
+                                    <div style={customStyles.extBarInline} className="fullProgressBar">
+                                        <div
+                                            className={"intBar"}
+                                            style={{
+                                                width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                                position: 'relative',
+                                                textWrap: 'nowrap',
+                                                color: 'white',
+                                                padding: '15px',
+                                                borderRadius: '10px 10px 10px 10px',
+                                                height: "37px",
+                                                lineHeight: 0,
+                                                backgroundColor: "rgb(252, 194, 73)",
+                                                textAlign: "left",
+                                                margin: 0
+                                            }}>
+                                        </div>
+                                        <p style={{
+                                            fontSize: "28px",
+                                            textAlign: "right",
+                                            color: "white",
+                                            position: "absolute",
+                                            left: "12px",
+                                            zIndex: 1,
+                                            top: "0px"
+                                        }}>
+                                            {montant} €
+                                        </p>
+                                        <p style={{
+                                            fontSize: "28px",
+                                            textAlign: "right",
+                                            color: "white",
+                                            position: "absolute",
+                                            right: "12px",
+                                            zIndex: 1,
+                                            top: "0px"
+                                        }}>
+                                            {donation.filter(item => item.montant > montant)[0].montant + " €"}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            :
+                            <>
+                                <p style={{
+                                    fontSize: "27px",
+                                    textAlign: "left",
+                                    color: "white",
+                                    margin: 0,
+                                    marginBottom: "-8px"
+                                }}>
+                                    Plus de donations goal ! Merci !
+                                </p>
+                                <div style={customStyles.extBarInline} className="fullProgressBar">
+                                    <div
+                                        className={"intBar"}
+                                        style={{
+                                            width: donation.filter(item => item.montant > montant).length > 0 ? parseFloat((montant / donation.filter(item => item.montant > montant)[0].montant) * 100).toFixed(2) + "%" : "100%",
+                                            position: 'relative',
+                                            textWrap: 'nowrap',
+                                            color: 'white',
+                                            padding: '15px',
+                                            borderRadius: '10px 10px 10px 10px',
+                                            height: "37px",
+                                            lineHeight: 0,
+                                            backgroundColor: "rgb(252, 194, 73)",
+                                            textAlign: "left",
+                                            margin: 0
+                                        }}>
+                                        <p style={{
+                                            fontSize: "28px",
+                                            textAlign: "right",
+                                            color: "white",
+                                            position: "absolute",
+                                            left: "12px",
+                                            zIndex: 1,
+                                            top: "22px"
+                                        }}>
+                                            {montant} €
+                                        </p>
+                                    </div>
+                                </div>
+                            </>
+                        }
                     </div>
                     <div style={{marginTop: "30px"}} className="twitch">
                         <div className="twitch-video">
@@ -170,14 +245,18 @@ function Player(props) {
                         flexWrap: "wrap",
                         marginTop: "20px"
                     }}>
-                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member="+props.team.filter(item => item.user.display_name == streamer)[0].user.id +"&l=fr-FR"} target={"_blank"}
+                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member=" + props.team.filter(item => item.user.display_name == streamer)[0].user.id + "&l=fr-FR"}
+                           target={"_blank"}
                            className={"linkUnderStream"}>
                             <div>
                                 <img className={"linkUnderStreamImg"} src={logoEuro}/>
                             </div>
                             <div style={{width: "300px"}}>
                                 <p className={"linkUnderStreamTxt"}><span
-                                    style={{fontSize: "20px", fontWeight: "bold"}}>Clique pour faire un don ! </span><br/>Soutien le
+                                    style={{
+                                        fontSize: "20px",
+                                        fontWeight: "bold"
+                                    }}>Clique pour faire un don ! </span><br/>Soutien le
                                     116 000 avec un don, le moindre euro compte !</p>
                             </div>
                         </a>
