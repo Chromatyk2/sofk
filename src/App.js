@@ -30,7 +30,6 @@ function App() {
     const [charityStreamers, setCharityStreamers] = useState([]);
     const [load, setLoad] = useState(true);
     const [charityLoad, setCharityLoad] = useState(true);
-    const [donations, setDonations] = useState([]);
     const customStyles = {
         content: {
             top: '50%',
@@ -109,42 +108,6 @@ function App() {
                     })
                 }
             )
-        const interval = setInterval(() => {
-            setDonations([]);
-                if (charityLoad === false) {
-                    Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
-                        .then(function (response) {
-                            response.data.map((val, key) => {
-                                setDonations(oldDonations => [...oldDonations, val]);
-                            })
-                            if (response.data.length == 500) {
-                                Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
-                                    .then(function (response) {
-                                        response.data.map((val, key) => {
-                                            setDonations(oldDonations => [...oldDonations, val]);
-                                        })
-                                        if (response.data.length == 500) {
-                                            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=2')
-                                                .then(function (response) {
-                                                    response.data.map((val, key) => {
-                                                        setDonations(oldDonations => [...oldDonations, val]);
-                                                    })
-                                                    if (response.data.length == 500) {
-                                                        Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=3')
-                                                            .then(function (response) {
-                                                                response.data.map((val, key) => {
-                                                                    setDonations(oldDonations => [...oldDonations, val]);
-                                                                })
-                                                            })
-                                                    }
-                                                })
-                                        }
-                                    })
-                            }
-                        })
-                }
-            }, 5000
-        );
         return () => {
             clearInterval(interval);
         };
@@ -206,7 +169,7 @@ function App() {
                                     </button>
                                 </div>
                                 <div className={"streamsModalContainer"}>
-                                    <StreamsModal donations={donations} charityStreamers={charityStreamers} change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
+                                    <StreamsModal charityStreamers={charityStreamers} change={closeModal} onStream={onStream} offStream={offStream} token={token}/>
                                 </div>
                             </Modal>
                         </div>
@@ -216,8 +179,8 @@ function App() {
                                    element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream} change={refresh}/>}/>
                             <Route path="/Clips" element={<ClipsLayout change={refresh} team={charityStreamers} token={token}/>}/>
                             <Route path="/Stream" element={<Player change={refresh} team={charityStreamers} token={token}/>}/>
-                            <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
-                            <Route path="/OoqZvHhdnIrOGLB" element={<BidWar  donations={donations} charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                            <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                            <Route path="/OoqZvHhdnIrOGLB" element={<BidWar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                             <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
 
                         </Routes>
