@@ -49,14 +49,14 @@ function StreamsModal(props) {
     }
     return (
         <>
-            {
+            {donations.length > 0 &&
                 Array.from(new Set(props.onStream)).sort((a, b) => (a.infos[0].viewer_count < b.infos[0].viewer_count) ? 1 : -1).map((val, key) => {
                     return (
                         <UniqueStreamerModal donations={donations} charityStreamers={props.charityStreamers} change={handleDataFromChild} onStream={true} streamer={val} token={props.token}/>
                     )
                 })
             }
-            {
+            {donations.length > 0 &&
                 props.offStream.map((val, key) => {
                     return (
                         <UniqueStreamerModal donations={donations} charityStreamers={props.charityStreamers} change={handleDataFromChild} onStream={false} streamer={val} token={props.token}/>
