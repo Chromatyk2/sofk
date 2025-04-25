@@ -151,13 +151,6 @@ function BidWar(props) {
             clearInterval(interval);
         };
     }, []);
-    // useEffect(() => {
-    //     const queryParameters = new URLSearchParams(window.location.search);
-    //     var streamerName = queryParameters.get("streamer");
-    //     if (donationGoal[streamerName.toLowerCase()] != undefined) {
-    //         setDonation(donationGoal[streamerName.toLowerCase()])
-    //     }
-    // }, [])
     useEffect(() => {
         setDonations([]);
         setCagnotte([])
