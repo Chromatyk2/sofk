@@ -219,7 +219,7 @@ function Player(props) {
             {props.team.length > 0 &&
                 streamer &&
                 <div>
-                    <div style={{marginTop: "50px"}} className="twitch">
+                    <div className="twitch">
                         <div className="twitch-video">
                             <iframe
                                 src={"https://player.twitch.tv/?channel=" + streamer + "&parent=streamonforkids.fr&autoplay=true&muted=false"}
