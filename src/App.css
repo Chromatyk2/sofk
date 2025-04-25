@@ -2047,7 +2047,7 @@ span.navbar-brand {
     align-items: anchor-center;
 }
 .donationBarMobile{
-    display: none;
+    visibility: hidden;
 
 }
 @media screen and (min-width: 0px) and (max-width: 1500px) {
