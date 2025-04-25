@@ -177,6 +177,17 @@ function Player(props) {
                             {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
                         </MarqueeText>
                         <div style={customStyles.extBarInlineCard} className="fullProgressBar">
+                            <p style={{
+                                fontSize: "28px",
+                                textAlign: "right",
+                                color: "white",
+                                position: "absolute",
+                                left: "12px",
+                                zIndex: 1,
+                                top: "0px"
+                            }}>
+                                {montant} €
+                            </p>
                             <div
                                 className={"intBar"}
                                 style={{
@@ -193,28 +204,6 @@ function Player(props) {
                                     margin: 0
                                 }}>
                             </div>
-                            <p style={{
-                                fontSize: "28px",
-                                textAlign: "right",
-                                color: "white",
-                                position: "absolute",
-                                left: "12px",
-                                zIndex: 1,
-                                top: "0px"
-                            }}>
-                                {montant} €
-                            </p>
-                            <p style={{
-                                fontSize: "28px",
-                                textAlign: "right",
-                                color: "white",
-                                position: "absolute",
-                                right: "12px",
-                                zIndex: 1,
-                                top: "0px"
-                            }}>
-                                {donation.filter(item => item.montant > montant)[0].montant + " €"}
-                            </p>
                         </div>
                     </>
                     :
