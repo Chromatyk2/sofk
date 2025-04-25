@@ -93,6 +93,16 @@ function PersonalBar(props) {
             borderRadius: "10px",
             height: "37px",
             margin:"0",
+        },
+        extBarInlineCard: {
+            width: "100%",
+            backgroundColor: "rgb(50, 82, 105)",
+            position: "relative",
+            zIndex: 1,
+            borderRadius: "10px",
+            height: "37px",
+            margin:"0",
+            marginTop:"10px"
         }
     }
     useEffect(() => {
@@ -174,10 +184,10 @@ function PersonalBar(props) {
                         <p style={{fontSize: "50px", textAlign: "center", color: "#fcc249"}}>
                             {donation.filter(item => item.montant > montant)[0].montant + " €"}
                         </p>
-                        <MarqueeText textSpacing={"1em"} className={"scrollText"}>
+                        <MarqueeText textSpacing={"1em"} className={"scrollTextCard"}>
                             {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
                         </MarqueeText>
-                        <div style={customStyles.extBarInline} className="fullProgressBar">
+                        <div style={customStyles.extBarInlineCard} className="fullProgressBar">
                             <div
                                 className={"intBar"}
                                 style={{
