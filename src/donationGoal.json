@@ -573,23 +573,53 @@
   ],
   "zor3l" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "Je commence à déssiner"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "Je m'incruste lors de l'un des nombreux karaoké pendant le SoFK"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 20,
+      "description": "Je change de medium pendant le déssin"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 30,
+      "description": "Je fait une mini peinture à la gouache de Dora l'éxploratrice"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 40,
+      "description": "Je survie 4 IRL sur Project Zomboid en Hardcore"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 50,
+      "description": "Je me transforme en Redneck"
+    },{
+      "montant": 60,
+      "description": "Je score un speedrun sur Ninja Senki DX"
+    },{
+      "montant": 70,
+      "description": "Je remt la robe qui m'allait si bien l'année dérnière"
+    },{
+      "montant": 80,
+      "description": "J'apprend à utiliser lAkai MK Mini et tente de faire un Son"
+    },{
+      "montant": 90,
+      "description": "J'apprend la peinture à l'huile"
+    },{
+      "montant": 100,
+      "description": "Je fait un Radiozozo sur les musiques des spots TV de JV"
+    },{
+      "montant": 200,
+      "description": "Je me fait tatouer à l'aveugle"
+    },{
+      "montant": 300,
+      "description": "Je vais en Normandie à Velo (VLOG)"
+    },{
+      "montant": 400,
+      "description": "J'arrête de fumer"
+    },{
+      "montant": 500,
+      "description": "Je rase ma moustache ou ma barbiche"
+    },{
+      "montant": 10000,
+      "description": "Je me rase le crâne"
     }
   ],
   "lacafet" : [
@@ -918,23 +948,50 @@
     ],
     "suriimii" : [
       {
-        "montant": 1204,
-        "description": "Donation Goal 1"
+        "montant": 30,
+        "description": "Pour mettre fin ç cette horrible musique"
       },{
-        "montant": 2451,
-        "description": "Donation Goal 2"
+        "montant": 50,
+        "description": "Hebi me maquille"
       },{
-        "montant": 3278,
-        "description": "Donation Goal 3"
+        "montant": 100,
+        "description": "Speedrun 102 Dalmatien"
       },{
-        "montant": 4257,
-        "description": "Donation Goal 4"
+        "montant": 150,
+        "description": "Quiveut gagner des millions chez Clem"
       },{
-        "montant": 5671,
-        "description": "Donation Goal 5"
+        "montant": 200,
+        "description": "L'honnëteté paie toujours ... ou pas (JDR)"
       },{
-        "montant": 6721,
-        "description": "Donation Goal 6"
+        "montant": 250,
+        "description": "Journée pêche en IRL"
+      },{
+        "montant": 300,
+        "description": "Soirée horreur solo"
+      },{
+        "montant": 400,
+        "description": "Vous choisissez mon prochain tatouage"
+      },{
+        "montant": 500,
+        "description": "Final Fantasy X à 100%"
+      },{
+        "montant": 680.65,
+        "description": "Félicitations vous êtes meilleurs que l'année dérnière !"
+      },{
+        "montant": 700,
+        "description": "Lecture épicée"
+      },{
+        "montant": 850,
+        "description": "Stream 24h"
+      },{
+        "montant": 1000,
+        "description": "Surprse !"
+      },{
+        "montant": 1250,
+        "description": "J'arrête la clope"
+      },{
+        "montant": 1500,
+        "description": "Je change de Pseudo"
       }
     ],
     "mrskulrex" : [
@@ -1101,23 +1158,98 @@
   ],
   "apen___" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "Fin de la musique qui rend fou"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 10,
+      "description": "JDR exquis avec Vaykhin"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 20,
+      "description": "Première sérénade"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 30,
+      "description": "JDR exquis"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 40,
+      "description": "Seconde sérénade"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 50,
+      "description": "Premier morceau à l'arrache"
+    },{
+      "montant": 60,
+      "description": "JDR exquis"
+    },{
+      "montant": 70,
+      "description": "Troisième sérénade"
+    },{
+      "montant": 80,
+      "description": "JDR exquis"
+    },{
+      "montant": 90,
+      "description": "Quatrième sérénade"
+    },{
+      "montant": 100,
+      "description": "Second morceau à l'arrache"
+    },{
+      "montant": 110,
+      "description": "JDR exquis"
+    },{
+      "montant": 120,
+      "description": "Cinquième sérénade"
+    },{
+      "montant": 130,
+      "description": "JDR exquis"
+    },{
+      "montant": 140,
+      "description": "Siième sérénade"
+    },{
+      "montant": 150,
+      "description": "Trosième morceau à l'arrache"
+    },{
+      "montant": 160,
+      "description": "JDR exquis"
+    },{
+      "montant": 170,
+      "description": "Septième sérénade"
+    },{
+      "montant": 180,
+      "description": "JDR exquis"
+    },{
+      "montant": 190,
+      "description": "Huitième sérénade"
+    },{
+      "montant": 200,
+      "description": "Quatrième morceau à l'arrache"
+    },{
+      "montant": 225,
+      "description": "JDR exquis"
+    },{
+      "montant": 250,
+      "description": "Ciqnuième morceau à l'arrache"
+    },{
+      "montant": 275,
+      "description": "JDR exquis"
+    },{
+      "montant": 300,
+      "description": "Sixième morceau à l'arrache"
+    },{
+      "montant": 325,
+      "description": "JDR exquis"
+    },{
+      "montant": 350,
+      "description": "Je me rase la barbichette icônique"
+    },{
+      "montant": 400,
+      "description": "Radio libre JDR"
+    },{
+      "montant": 450,
+      "description": "Septième morceau à l'arrache"
+    },{
+      "montant": 500,
+      "description": "J'enlève la moustache ( mode bébé )"
+    },{
+      "montant": 23542,
+      "description": "Je me rase les cheveux"
     }
   ],
   "parradox59" : [
