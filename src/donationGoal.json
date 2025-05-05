@@ -106,7 +106,7 @@
       "description": "Check Meuh Meuh"
     },{
       "montant": 40,
-      "description": "Tuto Maquillage"
+      "description": "Tuto dance du bidou"
     },{
       "montant": 45,
       "description": "Etoile en crochet"
@@ -197,6 +197,12 @@
     },{
       "montant": 1000,
       "description": "Rasage de sourcils !"
+    },{
+      "montant": 1500,
+      "description": "Peinture de bob ross"
+    },{
+      "montant": 2000,
+      "description": "J'apprends un instrument"
     },{
       "montant": 2500,
       "description": "Je fais une fausse Pub"
@@ -409,70 +415,100 @@
   "d3sty_n0v4" : [
     {
       "montant": 1,
-      "description": "J'allume la cam pour vous faire un petit coucou"
+      "description": "J’allume la cam pour vous faire un petit coucou"
     },{
       "montant": 5,
       "description": "Je commence à mixer et à préparer le set pour vous"
     },{
       "montant": 50,
-      "description": "Set 'Blind Test' : Je miwe des instrus et es viewers doivent deviner les morceaux"
+      "description": "Set Freestyle : Le donateurs qui nous fait passer la barre des 50€ choisi un morceau qui servira de référence en termes de BPM et de clé harmonique pour set qui va suivre."
     },{
       "montant": 100,
-      "description": "Set Thématique #1 : IAM Edition"
+      "description": "Set Thématique #1 : IAM Edition (Que du IAM, classiques et raretés)"
     },{
       "montant": 150,
       "description": "Set spécial Hip-Hop & Cinéma"
     },{
       "montant": 200,
-      "description": "Set Thématique #2 : NTM Edition"
+      "description": "Set Thématique #2 : NTM Edition (Bangers de NTM et solos de Joey & Kool Shen)"
     },{
       "montant": 250,
-      "description": "Set 'Samples Only'"
+      "description": "Set Samples Only : uniquement des samples originaux et leurs versions rap"
     },{
       "montant": 300,
-      "description": "Set Spécial 'Instru Only'"
+      "description": "Set spécial Instru Only : que des beats sans paroles"
     },{
       "montant": 350,
-      "description": "Live Analyse d'un classique hip-hop"
+      "description": "Live analyse d’un classique hip-hop (ex : Illmatic, The Chronic…) avec mix autour"
     },{
       "montant": 400,
-      "description": "Set Thématique #3 : Boot Camp Click Edition"
+      "description": "Set Thématique #3 : Boot Camp Clik Edition (Black Moon, Smif-N-Wessun, Heltah Skeltah…)"
     },{
       "montant": 450,
-      "description": "Set Spécial 'Année 80'"
+      "description": "Set spécial Années 80 : du early hip-hop avant 1990"
     },{
       "montant": 500,
-      "description": "Set Thématique #4 : Rap Français"
+      "description": "Set Thématique #4 : Rap Français Classiques (Oxmo, Lunatic, Fonky Family, Akhenaton…)"
     },{
       "montant": 550,
-      "description": "Set Thématique #5 : Neo-Soul Edition"
+      "description": "Set Thématique #5 : Neo-Soul Edition (Erykah Badu, D'Angelo, Jill Scott, The Roots…)"
     },{
       "montant": 600,
-      "description": "Set Thématique #6 : Mobb Deep Edition"
+      "description": "Set Thématique #6 : Mobb Deep Edition (Prodigy, Havoc, et l’univers Queensbridge)"
     },{
       "montant": 650,
-      "description": "Set Thématique #7 : Wu-Tang Clan Edition"
+      "description": "Set Thématique #7 : Wu-Tang Clan Edition (Wu-Tang et tous les membres en solo)"
     },{
       "montant": 700,
-      "description": "Set Thématique #8 : Produced by Dr. Dre"
+      "description": "Set Thématique #8 : Produced by Dr. Dre (De N.W.A à Eminem, en passant par Snoop, 50 Cent et Kendrick)"
     },{
       "montant": 750,
-      "description": "React en live sur les clips classiques de l'histoire du rap"
+      "description": "React en live sur les clips classiques de l'histoire du rap (US & FR)"
     },{
       "montant": 800,
-      "description": "Set Thématique #9 : DJ Premier Only"
+      "description": "Set Thématique #9 : DJ Premier Only (Que du DJ Premier, des classiques aux prods plus méconnues)"
     },{
       "montant": 850,
-      "description": "Set Thématique #10 : R.I.P Edition"
+      "description": "Set Thématique #10 : R.I.P. Edition (Que des morceaux d’artistes disparus – Biggie, 2Pac, Prodigy, DMX, etc.)"
     },{
       "montant": 900,
-      "description": "Un Mix de 1h construit à partir des suggestions des Followers"
+      "description": "Set Thématique #11 : A Tribe Called Quest (Que du Tribe et les projets solo de ses membres)"
     },{
       "montant": 950,
-      "description": "Je rap un morceau en live"
+      "description": "Mega mix de 2h avec tous les classiques du hip-hop 90/2000, dispo en téléchargement pour tous ceux qui ont contribué"
     },{
       "montant": 1000,
-      "description": "Mega mix de 2h avec tous les classiques du hip-hop 90/2000, dispo en téléchrgement pour tous ceux qui ont contribués"
+      "description": "Set Thématique #12 : Bootyshake (que du gros dancefloor en mode RnB)"
+    },{
+      "montant": 1050,
+      "description": "Set thématique #13 : M.O.P. (Que de la violence en provenance de Brownsville)"
+    },{
+      "montant": 1100,
+      "description": "Set Thématique #14 : Spécial West Coast (En mode G-Funk a pleine patate)"
+    },{
+      "montant": 1150,
+      "description": "Set Thématique #15 : Busta Rhymes"
+    },{
+      "montant": 1200,
+      "description": "Set Thématique #16 : Method Man & Redman (100% Blunt Brothers AKA Funk Doctor Spock & Iron Lung)"
+    },{
+      "montant": 1250,
+      "description": "Set Thématique #17 : Detour Vers le Futur (Set spécial 2015 - 2025 FR & US)"
+    },{
+      "montant": 1300,
+      "description": "Changement de style : Dj set en mode Minimal House"
+    },{
+      "montant": 1350,
+      "description": "Set Thématique #18 : D3sty N0v4 (le set de l'égotrip ou je ne mixe que mes propres productions)"
+    },{
+      "montant": 1400,
+      "description": "Set Thématique #19 : Fabe (le héros oublié du Rap Français)."
+    },{
+      "montant": 1450,
+      "description": "Viens on parle - venez parler en live via Discord de vos classiques Rap."
+    },{
+      "montant": 1500,
+      "description": "Je rap en live, en mode freestyle exclusif pour le SOFK."
     }
   ],
   "gwendyana" : [
@@ -1254,23 +1290,8 @@
   ],
   "parradox59" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
-    },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
-    },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
-    },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
-    },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
-    },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 200.35,
+      "description": "Record perso battu ! Merci a tous"
     }
   ],
   "taelth" : [
@@ -1820,6 +1841,45 @@
     }
   ],
   "tonypepere" : [
+    {
+      "montant": 10,
+      "description": "Lunettes !"
+    },{
+      "montant": 20,
+      "description": "Cosplay 'Gros-Kituss'"
+    },{
+      "montant": 30,
+      "description": "Je retire la casquette"
+    },{
+      "montant": 50,
+      "description": "Soirée Retro sur la PS1"
+    },{
+      "montant": 75,
+      "description": "On lance 'Isaac'"
+    },{
+      "montant": 100,
+      "description": "Séance de montage pour 'Mr Cartoon'"
+    },{
+      "montant": 150,
+      "description": "Je leak enfin la photo du petit Kituss"
+    },{
+      "montant": 200,
+      "description": "Cosplay et Makeup 'Simon des Glaçes'"
+    },{
+      "montant": 300,
+      "description": "Je me met au Sport"
+    },{
+      "montant": 400,
+      "description": "Objectif 75kg"
+    },{
+      "montant": 500,
+      "description": "J'arrete les bonbons"
+    },{
+      "montant": 600,
+      "description": "Mr Cartoon sur Youtube Soon"
+    }
+  ],
+  "akselsanssel" : [
     {
       "montant": 10,
       "description": "Lunettes !"
