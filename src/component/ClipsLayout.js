@@ -56,7 +56,6 @@ function ClipsLayout(props) {
     }, [props.team]);
     function handleDate(data) {
         const date = data.target.value;
-        setSelectedDate(date);
         if(data.target.value != "all"){
             if(filteredClipsByStreamer.length > 0){
                 if(clips.filter(item => item.created_at.includes(date)).filter((item => item.broadcaster_name.includes(selectedStreamer))).length > 0){
@@ -106,6 +105,13 @@ function ClipsLayout(props) {
             }
         }
     }
+    function handleStreamer(data) {
+        const pseudo = data.target.value;
+        if(filteredClips.length > 0){
+            setFilteredClipsByStreamer(filteredClips.filter(item => item.creator_name == pseudo ))
+        }else{
+            setFilteredClipsByStreamer(clips.filter(item => item.creator_name == pseudo ))        }
+    }
     return (
         <>
             {/*{showStreamerList === false &&*/}
@@ -142,7 +148,7 @@ function ClipsLayout(props) {
                     }
                 </>
             }
-        </>
+            </>
     )
 }
 

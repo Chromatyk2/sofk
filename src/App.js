@@ -19,28 +19,34 @@ import './App.css';
 import TestImg from "./component/testImg";
 import BidWar from "./component/BidWar";
 function App() {
-    const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-    const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-    const [token, setToken] = useState(null);
-    const [modalIsOpen, setIsOpen] = React.useState(false);
-    const [team, setTeam] = useState([]);
-    const [onStream, setOnStream] = useState([]);
-    const [offStream, setOffStream] = useState([]);
-    const [charityTeam, setCharityTeam] = useState(null);
-    const [charityStreamers, setCharityStreamers] = useState([]);
-    const [load, setLoad] = useState(true);
-    const [charityLoad, setCharityLoad] = useState(true);
-    const customStyles = {
-        content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
-            background: '#325269'
-        },
-    };
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+  const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+  const [token, setToken] = useState(null);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [team, setTeam] = useState([]);
+  const [onStream, setOnStream] = useState([]);
+  const [offStream, setOffStream] = useState([]);
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      background: '#325269'
+    },
+  };
+  function openModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+    function refreshStreamers() {
+    setOnStream([]);
+    setOffStream([]);
     useEffect(() => {
         Axios.get(
             'https://streamlabscharity.com/api/v1/teams/781834327792162028'
@@ -188,5 +194,4 @@ function App() {
         </>
     );
 }
-
-export default App;
+}
