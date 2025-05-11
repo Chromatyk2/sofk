@@ -202,17 +202,6 @@ function PersonalBar(props) {
                                     textAlign: "right",
                                     color: "white",
                                     position: "absolute",
-                                    left: "12px",
-                                    zIndex: 1,
-                                    top: "0px"
-                                }}>
-                                    {montant} €
-                                </p>
-                                <p style={{
-                                    fontSize: "28px",
-                                    textAlign: "right",
-                                    color: "white",
-                                    position: "absolute",
                                     right: "12px",
                                     zIndex: 1,
                                     top: "0px"
@@ -243,17 +232,6 @@ function PersonalBar(props) {
                                     textAlign: "left",
                                     margin: 0
                                 }}>
-                                <p style={{
-                                    fontSize: "28px",
-                                    textAlign: "right",
-                                    color: "white",
-                                    position: "absolute",
-                                    left: "12px",
-                                    zIndex: 1,
-                                    top: "22px"
-                                }}>
-                                    {montant} €
-                                </p>
                             </div>
                         </div>
                     </>

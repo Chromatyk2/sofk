@@ -18,15 +18,15 @@
     },
     {
       "montant": 40,
-      "description": "Doublage avec Chloe"
-    },
-    {
-      "montant": 50,
       "description": "Techno'confess avec Valenderia, on parle musique techno et de nos vies"
     },
     {
-      "montant": 60,
+      "montant": 50,
       "description": "Tierlist des Dessin Animés des années 90-2000 avec Kaito"
+    },
+    {
+      "montant": 60,
+      "description": "Bob l'éponge : Le film,  sur Gamecube"
     },
     {
       "montant": 70,
@@ -1296,23 +1296,68 @@
   ],
   "taelth" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "On lance la roue des jeux"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "Le live pass en couleur"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Une seul main pendant 5min"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "J'inverse mes exp faciales"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 30,
+      "description": "Je ne parle plus (10mins)"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 40,
+      "description": "QVGDM avec Clem_Brule"
+    },{
+      "montant": 50,
+      "description": "Jeux d'horreur avec les copains"
+    },{
+      "montant": 65,
+      "description": "Je fais une perf de Théatre"
+    },{
+      "montant": 95,
+      "description": "Jouer sans sauter ni attaquer"
+    },{
+      "montant": 110,
+      "description": "Vtuber pendant 1h"
+    },{
+      "montant": 125,
+      "description": "Commentateur sportif"
+    },{
+      "montant": 150,
+      "description": "Commande spéciale donateur"
+    },{
+      "montant": 200,
+      "description": "Jouer les yeux fermé (10min)"
+    },{
+      "montant": 300,
+      "description": "Jeux communautaires"
+    },{
+      "montant": 400,
+      "description": "Manger un aliment que je hais"
+    },{
+      "montant": 500,
+      "description": "Boire un soda d'un coup"
+    },{
+      "montant": 600,
+      "description": "Des tractions chaque live"
+    },{
+      "montant": 700,
+      "description": "Parler qu'en anglais (30 mins)"
+    },{
+      "montant": 800,
+      "description": "Un viewer devient Roi/Reine"
+    },{
+      "montant": 900,
+      "description": "Live Questions"
+    },{
+      "montant": 1000,
+      "description": "Only Fan"
     }
   ],
   "bios" : [
@@ -1641,44 +1686,125 @@
   ],
   "k3nt59" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "Je commence ma carrière sur Fortnite"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 2,
+      "description": "J'arrête ma carrière sur Fortnite"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Je lance le 1er Jeu"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 25,
+      "description": "Je répond honnêtement pendant 1h (30 min tout les +10€)"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 50,
+      "description": "Tierlist sujet libre pendant 1h30"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 75,
+      "description": "Déguisement"
+    },{
+      "montant": 100,
+      "description": "Soirée horreur"
+    },{
+      "montant": 150,
+      "description": "J'avance sur la charte graphique de la chaine Twitch"
+    },{
+      "montant": 200,
+      "description": "Live 12h"
+    },{
+      "montant": 250,
+      "description": "On fait un essaye de ne pas rire (5€ si rire)"
+    },{
+      "montant": 300,
+      "description": "Lempicka nous rejoins sur les stream gregblock"
+    },{
+      "montant": 350,
+      "description": "Je relance la série back to 2000's"
+    },{
+      "montant": 400,
+      "description": "Je refais la pub Alice, 20ans après"
+    },{
+      "montant": 450,
+      "description": "Je fais 2 Blindtest/Mois pendant 1an"
+    },{
+      "montant": 500,
+      "description": "Matinale pendant 1mois"
+    },{
+      "montant": 600,
+      "description": "Vlog Blind TEst"
+    },{
+      "montant": 700,
+      "description": "Je participe aux sélections pour The Voice"
+    },{
+      "montant": 800,
+      "description": "Live 12h devient live 24h"
+    },{
+      "montant": 900,
+      "description": "J'ouvre une chaine de daily observation"
+    },{
+      "montant": 1000,
+      "description": "Je garde la moustache pendant 3mois"
     }
   ],
   "bulbhyperion" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "On allume la caméra"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "Unboxing plaque nominative faite par orazia"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Premier déguisement"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "Crêpe au maroilles surprises par Shurtutu"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 30,
+      "description": "Course handisport avec Nunu"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 40,
+      "description": "Deuxiéme déguisement"
+    },{
+      "montant": 50,
+      "description": "Tirage au sort pour Deck Magic"
+    },{
+      "montant": 60,
+      "description": "Invocation du Sensei le Samedi"
+    },{
+      "montant": 69,
+      "description": "On fait une vraie PP"
+    },{
+      "montant": 70,
+      "description": "On acceuil Suriimii el professor del amor"
+    },{
+      "montant": 80,
+      "description": "Ligotage au matelas par asarhell"
+    },{
+      "montant": 90,
+      "description": "On fête les 2 ans d'abstinence avec les copains du SoFK"
+    },{
+      "montant": 100,
+      "description": "Teinture de Barbe"
+    },{
+      "montant": 120,
+      "description": "Troisième déguisement"
+    },{
+      "montant": 150,
+      "description": "Jeu d'horreur"
+    },{
+      "montant": 200,
+      "description": "A pu de barbe"
+    },{
+      "montant": 300,
+      "description": "J'ajoute 100€"
+    },{
+      "montant": 500,
+      "description": "Jeu d'horreur en VR"
+    },{
+      "montant": 5000,
+      "description": "On créé un compte sur un site de rencontre"
     }
   ],
   "kheitv" : [
