@@ -36,7 +36,7 @@ function ButtonToStreamers(props) {
     }
     useEffect(() => {
         Axios.get(
-            'https://streamlabscharity.com/api/v1/teams/643437249115068091'
+            'https://streamlabscharity.com/api/v1/teams/781834327792162028'
         ).then(function (response) {
             response.data.members.map((val, key) => {
                 setCharityTeam(oldArrayOn => [...oldArrayOn, {infos: val.user}]);
@@ -88,7 +88,7 @@ function ButtonToStreamers(props) {
                 offStream.length > 0 &&
                 <div className={"buttonStreamsContainer"}>
                     <button onClick={openModal} className={"buttonStreamers"}>Streameur.euses</button>
-                    <button className={"buttonStreamers"}>Boutique</button>
+                    {/*<button className={"buttonStreamers"}>Boutique</button>*/}
                     <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles}
                            contentLabel="Example Modal">
                         <div style={{display: "flex", justifyContent: "space-between", alignItems: "baseline"}}>

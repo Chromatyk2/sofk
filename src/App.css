@@ -1,11 +1,6 @@
-@font-face {
-    font-family: 'Charge Vector Black';
-    src: url('../public/Charge Vector Black.otf') format('truetype');
-}
-@font-face {
-    font-family: 'RetroTypo';
 
-}
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 :root {
     --card-height: 700px;
     --card-width: calc(var(--card-height) / 1.5);
@@ -31,16 +26,51 @@ iframe{
 .loginButton i{
     margin-right:25px;
 }
+.bidWarName{
+    color: rgb(252, 194, 73);
+    font-size: 35px;
+}
+.bidWarValues{
+    display: flex;
+    justify-content: space-between;
+    width: 685px;
+    color: white;
+    font-size: 25px;
+}
 .loginContainer p {
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 30px;
     line-height: 33px;
     text-align: center;
 }
+.scrollText{
+    font-size: 27px;
+    text-align: left;
+    color: white;
+    margin:0;
+    margin-bottom:-8px;
+    width:685px!important;
+}
+.scrollTextCard{
+    font-size: 27px;
+    text-align: left;
+    color: white;
+    margin:0;
+    margin-bottom:-8px;
+    margin-left:-25px;
+     width: 350px !important;
+}
+.scrollTextCardInlinePlayer{
+    font-size: 27px;
+    text-align: left;
+    color: white;
+    margin:0;
+    margin-bottom:-8px;
+}
 p.myNetworks {
     color: #3b6887;
-    font-family: "Charge Vector Black";
+    font-family: "Bungee";
     font-size: 30px;
     text-align: center;
 }
@@ -67,6 +97,10 @@ p.myNetworks {
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 13rem;
     background: linear-gradient(45deg,#c6ec9b,#88e4b9);
+}
+.intBar{
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
 }
 .top3Desktop .item .pic {
     position: absolute;
@@ -127,7 +161,7 @@ p.myNetworks {
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     border: solid gold 4px;
 }
 .top3Mobile .itemOne .pos {
@@ -189,7 +223,7 @@ p.myNetworks {
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     border: solid silver 4px;
 }
 .top3Mobile .itemTwo .pos {
@@ -250,7 +284,7 @@ p.myNetworks {
     transform-origin: left;
     transition: transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
     width: 40%;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     border : solid #F1AB70 4px;
 }
 .top3Mobile .itemThree .pos {
@@ -589,7 +623,7 @@ p.filterTitle {
     font-weight: 700;
     line-height: 28px;
     text-align: center;
-    font-family: 'Charge Vector Black';
+    font-family: 'Bungee';
     color: #255748;
     font-size: 30px;
 }
@@ -684,11 +718,11 @@ p.numberPokemonPage {
     text-align: center;
     font-size: 50px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 p.namePokemonPage {
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 50px;
     text-align: center;
     line-height: 10px;
@@ -709,7 +743,7 @@ p.namePokemonPage {
 }
 .capturesContainer {
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     text-align: center;
     width: 100%;
     display: flex;
@@ -728,7 +762,7 @@ p.titleMyCaptures {
 .myCapturesContainer {
     text-align: center;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 
 .myCaptureItem {
@@ -751,7 +785,7 @@ p.shinyPokemonList{
 }
 p.titleMyCaptures{
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 20px;
     text-align: center;
 }
@@ -790,7 +824,7 @@ p.titleMyCaptures{
 .pokemonNameTrade{
     text-align: center;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 15px;
     margin-top: 5px;
 }
@@ -814,7 +848,7 @@ button.deleteTrade {
     padding: 8px;
     width: 100%;
     color: white;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     letter-spacing: 2px;
 }
 .lastCardUsername {
@@ -841,7 +875,7 @@ button.deleteTrade {
     border: none;
     display: block;
     margin-top: 10px;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     width: 100%;
     letter-spacing: 2px;
     width: 236px;
@@ -866,7 +900,7 @@ img.imgPokemonTrade {
 }
 .guessedPokemonName{
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 30px;
     margin-top: 5px;
     text-align: center;
@@ -887,12 +921,12 @@ img.imgPokemonTrade {
     width:300px;
     font-size: 25px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 .autoCompleteSearch input{
     font-size: 25px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 ul{
     flex-wrap: wrap;
@@ -903,7 +937,7 @@ li{
     font-size: 25px;
     width: 300px;
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 li:hover{
     cursor: pointer;
@@ -922,7 +956,7 @@ li svg{
     border:none;
     display: block;
     margin: auto;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 
 }
 .validateGuessButton{
@@ -935,7 +969,7 @@ li svg{
     border:none;
     display: block;
     margin: auto;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
 }
 .validateGuessButton:hover{
     background: white;
@@ -1670,7 +1704,7 @@ a.linkOnAirOff {
 }
 .introTCGLink{
     color: #255748;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     font-size: 25px;
 }
 .validationSellContainer {
@@ -1992,6 +2026,60 @@ span.navbar-brand {
     width: 100%;
     height: 100%;
 }
+
+.twitch {
+    margin-top:-70px;
+}
+.personalBarContainerPlayer {
+    background: #38617f;
+    border: 2px solid #325269;
+    border-radius: 10px;
+    display: block;
+    display: flex
+;
+    flex-flow: column;
+    height: 350px;
+    justify-content: center;
+    padding: 20px;
+    width: 350px;
+    position: absolute;
+    top: 300px;
+}
+.personalBarContainerInline {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    height: 350px;
+    justify-content: center;
+    margin: 250px auto auto;
+    padding: 20px;
+    width: 75%;
+    align-items: anchor-center;
+}
+.donationBarMobile{
+    visibility: hidden;
+}
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+    .personalBarContainerPlayer {
+        visibility: hidden;
+    }
+    .donationBarMobile{
+        width: 75%;
+        position: relative;
+        z-index: 1;
+        border-radius: 50px;
+        height: 30px;
+        display:block;
+        margin:auto;
+        visibility: visible;
+
+    }
+    .twitch {
+        margin-top:50px;
+    }
+}
 @media screen and (min-width: 944px) and (max-width: 1659px) {
     .clipsGlobalContainer {
         display: flex;
@@ -2013,7 +2101,7 @@ span.navbar-brand {
         margin-bottom: 10px;
         font-size: 25px;
         color: #255748;
-        font-family: Charge Vector Black;
+        font-family: Bungee;
         text-align: center;
     }
     .leaderBoardSwitch{
@@ -2067,7 +2155,7 @@ span.navbar-brand {
         margin: auto;
         width: 300px;
         color: #255748;
-        font-family: Charge Vector Black;
+        font-family: Bungee;
         text-align: center;
     }
 }
@@ -2152,7 +2240,7 @@ span.navbar-brand {
         margin: auto;
         width: 300px;
         color: #255748;
-        font-family: Charge Vector Black;
+        font-family: Bungee;
         text-align: center;
     }
 }
@@ -2258,15 +2346,6 @@ span.navbar-brand {
     border:none;
     color:white;
 }
-
-#root{
-    background-image: url("../public/images/Background.jpg");
-    /*background-image: linear-gradient(0deg, #38617f 20%, #9AD4DF 238%, #38617f 60%);*/
-    min-height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
 nav.navbar.navbar-expand-lg.navbar-light {
     background-color: #38617F!important;
     border-bottom: #325269 solid 2px;
@@ -2275,7 +2354,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
     background-color: #38617f;
     width: 32.5%;
     border-radius: 10px;
-    height: 70px;
+    height: 130px;
     padding: 0px 20px 0 20px;
     display: flex;
     align-items: anchor-center;
@@ -2392,36 +2471,46 @@ img.linkUnderStreamImg {
     margin-top:80px;
 }
 .buttonStreamsContainer {
-    background: #5b8aa1;
     border-radius: 0 10px 0 10px;
-    bottom: 60px;
-    display: flex
-;
+    display: flex;
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
-    left: 0;
     margin: auto;
     padding: 5px;
-    position: fixed;
-    width: 175px;
+    width: 100%;
 }
-.buttonStreamers {
-    background-image: linear-gradient(180deg, #fcc249 24%, #b27d0d 155%);
+.buttonStreamsContainer .buttonStreamers {
+    background-image: linear-gradient(180deg, #fff 24%, #9ad4de 155%);
     border: none;
     border-radius: 10px;
-    bottom: 50px;
-    color: #fff;
-    font-size: 100%;
-    width: 100%;
+    color: #36617f;
+    font-size: 17px;
+    height: 35px;
+    width: 160px;
+}
+.buttonStreamsContainer .buttonStreamers:hover {
+    background-image: linear-gradient(180deg, #9ad4de 24%, #fff 155%);
+    color: #36617f;
 }
 li.previous, li.next {
     display: none;
 }
-.buttonStreamers:hover {
+.filterClipButton {
+    background-image: linear-gradient(180deg, #fcc249 24%, #b27d0d 155%);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    height: 35px;
+    width: 160px;
+}
+
+button.buttonStreamers.filterClipButton.selected  {
     background-image: linear-gradient(180deg, #b27d0d 24%, #fcc249 155%);
     color: #fff;
 }
+
 .firstSectionHome {
     display: flex;
     justify-content: center;
@@ -2536,6 +2625,7 @@ li.previous, li.next {
 a.clipsLink {
     text-decoration: none;
     border-radius: 10px;
+    width: 340px;
 }
 a.clipsLink:hover{
     background-color: white;
@@ -2550,6 +2640,7 @@ a.clipsLink:hover{
 p.titleClip {
     font-size: 20px;
     text-align: center;
+    margin-top: 15px;
 }
 img.imgClip {
     width: 340px;
@@ -2593,7 +2684,7 @@ ul.paginateLay {
 }
 h1.titleEdition {
     color: #fff;
-    font-family: Charge Vector Black;
+    font-family: Bungee;
     text-align: center;
     margin-bottom:60px;
 }
@@ -3083,4 +3174,65 @@ a.socialLink {
         height: auto;
         width: 25%;
     }
+}
+a.navLink.linkFromNav {
+    text-decoration: none;
+}
+.personalBarContainer{
+    display: block;
+    margin: 250px auto auto;
+    width: 350px;
+    height: 350px;
+    background: #38617f;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #325269;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+#bar {
+    width: 100%;
+    height: 40px;
+    background: #eee;
+    _border: 1px solid black;
+}
+/* standard unit to incremenet is 4 for 1% */
+.seg1 {
+    _display: inline-block;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background: red;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.seg2 {
+    _display: inline-block;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background-color: orangered;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+.seg3 {
+    _display: inline-block;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    background-color: orange;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+}
+.inputBid{
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 2px;
+    gap: 4px;
 }

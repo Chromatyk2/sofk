@@ -8,7 +8,7 @@ function AuthService(props) {
   const [cookies, setCookie, removeCookie] = useCookies();
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-  const REDIRECT_URI = "https://preview--streamonforkids.netlify.app/";
+  const REDIRECT_URI = "https://streamonforkids.fr/";
   // const REDIRECT_URI = "https://chromatyk.fr/";
   const SCOPES = ['openid'];
   console.log('log ON');
@@ -19,7 +19,7 @@ function AuthService(props) {
           client_id:CLIENT_ID,
           client_secret:CLIENT_SECRET,
           grant_type:"client_credentials",
-          redirect_uri:"https://preview--streamonforkids.netlify.app/"
+          redirect_uri:"https://streamonforkids.fr/"
         }
       )
       .then(
