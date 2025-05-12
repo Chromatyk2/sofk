@@ -26,9 +26,16 @@ function StreamOnLayout(props) {
             <>
                 <h1 style={{marginTop:"30px",color:"white", textAlign:"center"}}>Multi Stream</h1>
                 {multiStream.length > 0 ?
-                    <a className={"runMultiStreamButton"} target="_blank" href={"https://www.multitwitch.tv/" + multiStream.join("/")}>Lancer le Multi Stream</a>
+                    multiStream.length === 1 ?
+                        <a className={"runMultiStreamButton"} target="_blank"
+                           href={"https://streamonforkids.fr/stream?streamer="+ multiStream}>Voir le stream</a>
+                        :
+                        <a className={"runMultiStreamButton"} target="_blank"
+                           href={"https://www.multitwitch.tv/" + multiStream.join("/")}>Lancer le Multi Stream</a>
                     :
-                    <p style={{marginBottom:"12px",color: "white", textAlign: "center"}}>Clique sur les streams que tu veux voir !</p>
+                    <p style={{marginBottom: "12px", color: "white", textAlign: "center"}}>Clique sur les streams que tu
+                        veux voir !
+                    </p>
                 }
                 <div className={"streamerMozaique"}>
                     {
