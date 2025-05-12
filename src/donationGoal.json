@@ -1623,65 +1623,161 @@
   ],
   "mrvikingbear" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "J'allume la cam"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "Je mets du vernis au couleurs de l'event"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Sculpture de ballon à chaque streamer qui le demande"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "Giveaway goodies de la chaine"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 30,
+      "description": "Live debout 30 minutes"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 40,
+      "description": "On joue à quiet place"
+    },{
+      "montant": 50,
+      "description": "Karaoké dessin animé"
+    },{
+      "montant": 100,
+      "description": "1h de corde à sauter"
+    },{
+      "montant": 200,
+      "description": "Test de pureté"
+    },{
+      "montant": 300,
+      "description": "Karaoké Extrême"
+    },{
+      "montant": 400,
+      "description": "Hot chips challenge (La chips la plus salée)"
+    },{
+      "montant": 500,
+      "description": "Road to Kratos"
+    },{
+      "montant": 650,
+      "description": "Live cuisine regulier sur la chaine"
+    },{
+      "montant": 750,
+      "description": "On ce met au cosplay"
+    },{
+      "montant": 850,
+      "description": "Hot chips challenge ( la chips la plus piquante)"
+    },{
+      "montant": 950,
+      "description": "Giveaway 4 GTA 6 ou valeur équivalente"
+    },{
+      "montant": 1000,
+      "description": "Dégustation Surstromming"
+    },{
+      "montant": 1100,
+      "description": "Onlyfan de ma barbe"
+    },{
+      "montant": 1500,
+      "description": "Paris Roubaix à Vélo"
+    },{
+      "montant": 1000000,
+      "description": "Je rase ma barbe"
     }
   ],
   "vikanderz" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 10,
+      "description": "Dégustation en live"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 20,
+      "description": "Live débat avec la commu à l'event"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 40,
+      "description": "Je goûte un pot pour bébé"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 50,
+      "description": "Epilationdes aisselles à la cire"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 75,
+      "description": "Je dévoile ma playlist Spotify"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 100,
+      "description": "Je me déguise en ... (ça dépend de ce qu'il y a sur place)"
+    },{
+      "montant": 150,
+      "description": "React Tataki"
+    },{
+      "montant": 200,
+      "description": "Faire les voitures Fast & Furious en Lego"
+    },{
+      "montant": 350,
+      "description": "Contenu Vlog sur Youtube : Dégustation"
+    },{
+      "montant": 400,
+      "description": "Je fais des Tiktok traitant de l'actualité"
+    },{
+      "montant": 500,
+      "description": "Live ASMR ou lire un livre en chuchotant"
+    },{
+      "montant": 600,
+      "description": "Vlog défi : Faire une série de Vlog basic fit"
+    },{
+      "montant": 750,
+      "description": "Live cuisine avec Mme Vik"
+    },{
+      "montant": 1000,
+      "description": "React march du LOSC sur Twitch"
     }
   ],
   "bobrisme" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "J'allume la cam"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "J'allume le micro"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Je headshot mes voisins au nerf"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 25,
+      "description": "Ils se vengent"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 50,
+      "description": "Top 1 Fortnite à la manette"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 75,
+      "description": "Hebi_scarlet me manquille"
+    },{
+      "montant": 100,
+      "description": "Cosplay préparé depuis des mois"
+    },{
+      "montant": 150,
+      "description": "Je tryhard cs 2 pendant 1 mois"
+    },{
+      "montant": 200,
+      "description": "Je bats suriimii à DBZ Sparking Zero"
+    },{
+      "montant": 250,
+      "description": "Tatoo SoFK en Live"
+    },{
+      "montant": 300,
+      "description": "Chanson en live pendant le Sofk"
+    },{
+      "montant": 350,
+      "description": "Je fais un jeu d'horreur la nuit"
+    },{
+      "montant": 400,
+      "description": "Live 12h en Sailor Moon"
+    },{
+      "montant": 450,
+      "description": "Je fais une chanson su Spotify"
+    },{
+      "montant": 500,
+      "description": "J'ouvre un Onlyfan Pieds"
+    },{
+      "montant": 1000,
+      "description": "2éme Tatoo en live aussi"
     }
   ],
   "k3nt59" : [
