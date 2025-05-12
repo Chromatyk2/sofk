@@ -151,7 +151,7 @@ function App() {
     }
     return(
         <>
-            <div className={window.location.pathname != "/OoqZvHhdnIrOGL" ? "globalDiv" : "globalDivTransparent"}>
+            <div className={!window.location.pathname.startsWith("/OoqZvHhdnIrOGL") ? "globalDiv" : "globalDivTransparent"}>
                 <BrowserRouter>
                     <NavBar/>
                     <div className={"buttonStreamsContainer"}>
