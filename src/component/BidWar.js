@@ -108,7 +108,8 @@ function BidWar(props) {
             fontSize:" 25px"
         }
     }
-    useEffect(() => {
+    function runBid(e) {
+        setBidName(document.getElementById("bidName").value);
         const interval = setInterval(() =>
             {
                 const queryParameters = new URLSearchParams(window.location.search);
@@ -148,12 +149,13 @@ function BidWar(props) {
                             setLoad(Math.random())
                         }
                     })}
-            ,5000
+            ,1000
         );
         return () => {
             clearInterval(interval);
         };
-    }, []);
+    }
+
     useEffect(() => {
         setDonations([]);
         setCagnotteOne([])
