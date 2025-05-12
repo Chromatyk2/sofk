@@ -171,8 +171,6 @@ function BidWar(props) {
     }, [valueOne])
     function runBid(e) {
         setBidName(document.getElementById("bidName").value);
-
-        useEffect(() => {
             const interval = setInterval(() =>
                 {
                     const queryParameters = new URLSearchParams(window.location.search);
@@ -217,27 +215,23 @@ function BidWar(props) {
             return () => {
                 clearInterval(interval);
             };
-        }, []);
-
-        useEffect(() => {
-            setDonations([]);
-            setCagnotte([])
-            const queryParameters = new URLSearchParams(window.location.search)
-            var streamerName = queryParameters.get("streamer");
-            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-            });
-            if (donationGoal[streamerName.toLowerCase()] != undefined) {
-                setDonation(donationGoal[streamerName.toLowerCase()])
-            }
-        }, [load])
-        useEffect(() => {
-            setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
-        }, [cagnotte])
-        setBidValueOne(document.getElementById("bidValueOne").value);
-        setBidValueTwo(document.getElementById("bidValueTwo").value);
-        setBidValueThree(document.getElementById("bidValueThree").value);
     }
+
+    useEffect(() => {
+        setDonations([]);
+        setCagnotte([])
+        const queryParameters = new URLSearchParams(window.location.search)
+        var streamerName = queryParameters.get("streamer");
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+        });
+        if (donationGoal[streamerName.toLowerCase()] != undefined) {
+            setDonation(donationGoal[streamerName.toLowerCase()])
+        }
+    }, [load])
+    useEffect(() => {
+        setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
+    }, [cagnotte])
     return (
         <>
             <div className={"personalBarContainerInline"}>
