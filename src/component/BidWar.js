@@ -168,13 +168,13 @@ function BidWar(props) {
             const queryParameters = new URLSearchParams(window.location.search)
             var streamerName = queryParameters.get("streamer");
             console.log(donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).filter((uc) => uc.donation.comment.text.includes(bidValueOne)))
-            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).filter((uc) => uc.donation.comment.text.includes(bidValueOne)).map((val, key) => {
+            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).filter((uc) => uc.donation.comment.text.toLowerCase().includes(bidValueOne.toLowerCase())).map((val, key) => {
                 setCagnotteOne(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
-            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).filter((uc) => uc.donation.comment.text.includes(bidValueTwo)).map((val, key) => {
+            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).filter((uc) => uc.donation.comment.text.toLowerCase().includes(bidValueTwo.toLowerCase())).map((val, key) => {
                 setCagnotteTwo(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
-            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).filter((uc) => uc.donation.comment.text.includes(bidValueOne)).map((val, key) => {
+            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).filter((uc) => uc.donation.comment.text.toLowerCase().includes(bidValueThree.toLowerCase())).map((val, key) => {
                 setCagnotteThree(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
             });
             setReadyMontant(Math.random())
