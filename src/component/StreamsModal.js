@@ -10,9 +10,6 @@ import Axios from "axios";
 function StreamsModal(props) {
     const [donations, setDonations] = useState([]);
     useEffect(() => {
-        if(props.onStream.length == 0 && props.offStream.length == 0){
-            props.refresh();
-        }
         Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
             .then(function (response) {
                 response.data.map((val, key) => {
