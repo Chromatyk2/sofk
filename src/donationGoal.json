@@ -393,23 +393,53 @@
   ],
   "lokdonus" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "Je mets en route la musique du poisson Steve"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "Je coupe la musique du poisson Steve"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "On interviewe mon frère sur son arbitrage de foot (il est arbitre officiel ACFF en Belgique)"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 20,
+      "description": "On fait tourner la roulette pour choisir le 1er jeu à lancer"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 30,
+      "description": "On se met des vidéos WTF et on ne doit pas rire pendant 10min"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 40,
+      "description": "Je participe au qui veut gagner des millions de Clem"
+    },{
+      "montant": 45,
+      "description": "Prochain lancement de 7days to die Sakurakero m'obligera à faire tout ce qu'elle veut dans la partie pendant 1h"
+    },{
+      "montant": 50,
+      "description": "Je fais peur à Rikituss"
+    },{
+      "montant": 60,
+      "description": "On coupe le jeu eb question et on choisit celui qui aura le plus de votes sur le chat"
+    },{
+      "montant": 75,
+      "description": "Je propose à Sun_Shahine de m'initier et je tryhard sur DayZ"
+    },{
+      "montant": 125,
+      "description": "Je participe en choisissant 3 musiques qui me touchent personnellement sur la chaine de Kaito"
+    },{
+      "montant": 150,
+      "description": "Séance tryharding sur la division 2 avec mon frère"
+    },{
+      "montant": 175,
+      "description": "Je demande à Rikituss son régime Strict et je m'y tiens pendant 1 mois"
+    },{
+      "montant": 200,
+      "description": "Je commence le jeu Clair Obscure Expedition 33"
+    },{
+      "montant": 215,
+      "description": "Je tiens une nuit complète au SOFK sans dormir"
+    },{
+      "montant": 400,
+      "description": "Je peins ma boîte de kill team de Warhammer 40k avec tout le bruit de la salle en restant focus"
     }
   ],
   "d3sty_n0v4" : [
