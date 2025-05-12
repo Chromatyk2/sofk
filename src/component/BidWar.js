@@ -110,6 +110,9 @@ function BidWar(props) {
     }
     function runBid(e) {
         setBidName(document.getElementById("bidName").value);
+        setBidValueOne(document.getElementById("bidValueOne").value);
+        setBidValueTwo(document.getElementById("bidValueTwo").value);
+        setBidValueThree(document.getElementById("bidValueThree").value);
         const interval = setInterval(() =>
             {
                 const queryParameters = new URLSearchParams(window.location.search);
@@ -163,13 +166,13 @@ function BidWar(props) {
         setCagnotteThree([])
         const queryParameters = new URLSearchParams(window.location.search)
         var streamerName = queryParameters.get("streamer");
-        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueOne)).map((val, key) => {
             setCagnotteOne(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
         });
-        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueTwo)).map((val, key) => {
             setCagnotteTwo(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
         });
-        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueThree)).map((val, key) => {
             setCagnotteThree(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
         });
         setReadyMontant(Math.random())
