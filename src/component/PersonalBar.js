@@ -112,7 +112,6 @@ function PersonalBar(props) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
     }, [])
-    console.log(montant);
     return (
         <div style={{display: "flex",margin: "auto",width: "fit-content",gap: "250px"}}>
             <div className={"personalBarContainer"}>

@@ -160,23 +160,26 @@ function BidWar(props) {
     }
 
     useEffect(() => {
-        setDonations([]);
-        setCagnotteOne([])
-        setCagnotteTwo([])
-        setCagnotteThree([])
-        const queryParameters = new URLSearchParams(window.location.search)
-        var streamerName = queryParameters.get("streamer");
-        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueOne)).map((val, key) => {
-            setCagnotteOne(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-        });
-        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueTwo)).map((val, key) => {
-            setCagnotteTwo(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-        });
-        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueOne)).map((val, key) => {
-            setCagnotteThree(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-        });
-        setReadyMontant(Math.random())
+        if(donations.length > 0){
+            setDonations([]);
+            setCagnotteOne([])
+            setCagnotteTwo([])
+            setCagnotteThree([])
+            const queryParameters = new URLSearchParams(window.location.search)
+            var streamerName = queryParameters.get("streamer");
+            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueOne)).map((val, key) => {
+                setCagnotteOne(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+            });
+            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueTwo)).map((val, key) => {
+                setCagnotteTwo(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+            });
+            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).find((uc) => uc.donation.comment.text.includes(bidValueOne)).map((val, key) => {
+                setCagnotteThree(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+            });
+            setReadyMontant(Math.random())
+        }
     }, [load])
+
     useEffect(() => {
         setValueOne(cagnotteOne.reduce((a, b) => a + b, 0) / 100)
         setValueTwo(cagnotteTwo.reduce((a, b) => a + b, 0) / 100)
