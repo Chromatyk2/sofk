@@ -89,6 +89,22 @@ function PersonalBar(props) {
                 clearInterval(interval);
             };
     }, []);
+
+    useEffect(() => {
+        setDonations([]);
+        setCagnotte([])
+        const queryParameters = new URLSearchParams(window.location.search)
+        var streamerName = queryParameters.get("streamer");
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+        });
+        if (donationGoal[streamerName.toLowerCase()] != undefined) {
+            setDonation(donationGoal[streamerName.toLowerCase()])
+        }
+    }, [load])
+    useEffect(() => {
+        setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
+    }, [cagnotte])
     useEffect(() => {
         const queryParameters = new URLSearchParams(window.location.search);
         var streamerName = queryParameters.get("streamer");
@@ -96,21 +112,6 @@ function PersonalBar(props) {
             setDonation(donationGoal[streamerName.toLowerCase()])
         }
     }, [])
-    useEffect(() => {
-                    setDonations([]);
-                    setCagnotte([])
-                    const queryParameters = new URLSearchParams(window.location.search)
-                    var streamerName = queryParameters.get("streamer");
-                    donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-                        setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
-                    });
-                    if (donationGoal[streamerName.toLowerCase()] != undefined) {
-                        setDonation(donationGoal[streamerName.toLowerCase()])
-                    }
-    }, [load])
-    useEffect(() => {
-        setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
-    }, [cagnotte])
     return (
         <div style={{display: "flex",margin: "auto",width: "fit-content",gap: "250px"}}>
             <div className={"personalBarContainer"}>

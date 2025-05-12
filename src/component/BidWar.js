@@ -75,9 +75,9 @@ function BidWar(props) {
     const [donations, setDonations] = useState([]);
     const [load, setLoad] = useState(0);
     const [montant, setMontant] = useState(true);
-    const [valueOne, setValueOne] = useState(0);
-    const [valueTwo, setValueTwo] = useState(0);
-    const [valueThree, setValueThree] = useState(0);
+    const [valueOne, setValueOne] = useState([]);
+    const [valueTwo, setValueTwo] = useState([]);
+    const [valueThree, setValueThree] = useState([]);
     const [bidName, setBidName] = useState(null);
     const [bidValueOne, setBidValueOne] = useState(null);
     const [bidValueTwo, setBidValueTwo] = useState(null);
@@ -157,34 +157,89 @@ function BidWar(props) {
         const queryParameters = new URLSearchParams(window.location.search)
         var streamerName = queryParameters.get("streamer");
         donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
-            setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+            setValueOne(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
         });
-        if (donationGoal[streamerName.toLowerCase()] != undefined) {
-            setDonation(donationGoal[streamerName.toLowerCase()])
-        }
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            setValueTwo(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+        });
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+            setValueThree(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+        });
     }, [load])
     useEffect(() => {
         setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
-    }, [cagnotte])
-    function changeNumberOne(e) {
-        setValueOne(e.target.value);
-    }
-    function changeNumberTwo(e) {
-        setValueTwo(e.target.value);
-    }function changeNumberThree(e) {
-        setValueThree(e.target.value);
-    }
+    }, [valueOne])
     function runBid(e) {
         setBidName(document.getElementById("bidName").value);
+
+        useEffect(() => {
+            const interval = setInterval(() =>
+                {
+                    const queryParameters = new URLSearchParams(window.location.search);
+                    Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations')
+                        .then(function (response) {
+                            response.data.map((val, key) => {
+                                setDonations(oldDonations => [...oldDonations, val]);
+                            })
+                            if (response.data.length == 500) {
+                                Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=1')
+                                    .then(function (response) {
+                                        response.data.map((val, key) => {
+                                            setDonations(oldDonations => [...oldDonations, val]);
+                                        })
+                                        if (response.data.length == 500) {
+                                            Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=2')
+                                                .then(function (response) {
+                                                    response.data.map((val, key) => {
+                                                        setDonations(oldDonations => [...oldDonations, val]);
+                                                    })
+                                                    if (response.data.length == 500) {
+                                                        Axios.get('https://streamlabscharity.com/api/v1/teams/781834327792162028/donations?page=3')
+                                                            .then(function (response) {
+                                                                response.data.map((val, key) => {
+                                                                    setDonations(oldDonations => [...oldDonations, val]);
+                                                                })
+                                                            })
+                                                    }else{
+                                                        setLoad(Math.random())
+                                                    }
+                                                })
+                                        }else{
+                                            setLoad(Math.random())
+                                        }
+                                    })
+                            }else{
+                                setLoad(Math.random())
+                            }
+                        })}
+                ,1000
+            );
+            return () => {
+                clearInterval(interval);
+            };
+        }, []);
+
+        useEffect(() => {
+            setDonations([]);
+            setCagnotte([])
+            const queryParameters = new URLSearchParams(window.location.search)
+            var streamerName = queryParameters.get("streamer");
+            donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+                setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
+            });
+            if (donationGoal[streamerName.toLowerCase()] != undefined) {
+                setDonation(donationGoal[streamerName.toLowerCase()])
+            }
+        }, [load])
+        useEffect(() => {
+            setMontant(cagnotte.reduce((a, b) => a + b, 0) / 100)
+        }, [cagnotte])
         setBidValueOne(document.getElementById("bidValueOne").value);
         setBidValueTwo(document.getElementById("bidValueTwo").value);
         setBidValueThree(document.getElementById("bidValueThree").value);
     }
     return (
         <>
-            <input type={"number"} onChange={changeNumberOne}/>
-            <input type={"number"} onChange={changeNumberTwo}/>
-            <input type={"number"} onChange={changeNumberThree}/>
             <div className={"personalBarContainerInline"}>
                 {bidName ?
                     <div style={{width: "100%", justifyContent:"center", display:"flex"}}>
