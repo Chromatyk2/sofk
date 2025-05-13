@@ -768,23 +768,53 @@
   ],
   "akaihige_" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 1,
+      "description": "J'allume la caméra"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 5,
+      "description": "J'allume le micro"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 10,
+      "description": "Vous choisissez lepremier jeu"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 25,
+      "description": "On joue à QVGDM chez Clem"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 50,
+      "description": "Live 12h"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 75,
+      "description": "On lance une émission Twitch où on commente tous les matchs de Lens"
+    },{
+      "montant": 100,
+      "description": "On se teint les cheveux en Bleu/Violet"
+    },{
+      "montant": 150,
+      "description": "Live 24h"
+    },{
+      "montant": 175,
+      "description": "Live Karaoké"
+    },{
+      "montant": 250,
+      "description": "On prépare un parcours/événement autour du basket pour le prochain SOFK"
+    },{
+      "montant": 325,
+      "description": "On lance un live Tiktok à chaque fois que l'on va à BasicFit"
+    },{
+      "montant": 500,
+      "description": "Live 48h"
+    },{
+      "montant": 750,
+      "description": "On se rase la barbe entièrement"
+    },{
+      "montant": 1000,
+      "description": "On lance une émission sur le basket IRL"
+    },{
+      "montant": 1500,
+      "description": "Live 72h"
+    },{
+      "montant": 2424,
+      "description": "On commence les préparatifs pour la création de notre multigaming"
     }
   ],
   "god_thetroll" : [
@@ -1956,23 +1986,95 @@
   ],
   "binouh18" : [
     {
-      "montant": 1204,
-      "description": "Donation Goal 1"
+      "montant": 5,
+      "description": "J'allume la caméra"
     },{
-      "montant": 2451,
-      "description": "Donation Goal 2"
+      "montant": 25,
+      "description": "On refait les émotes"
     },{
-      "montant": 3278,
-      "description": "Donation Goal 3"
+      "montant": 42,
+      "description": "Je philosophe sur le sens de la vie"
     },{
-      "montant": 4257,
-      "description": "Donation Goal 4"
+      "montant": 75,
+      "description": "On reproduit un Bob Ross"
     },{
-      "montant": 5671,
-      "description": "Donation Goal 5"
+      "montant": 100,
+      "description": "On créé un scénario de JDR avec les idées des Streameurs"
     },{
-      "montant": 6721,
-      "description": "Donation Goal 6"
+      "montant": 125,
+      "description": "J'apprend un morceau à la flûte"
+    },{
+      "montant": 150,
+      "description": "Je monte un tuto troll"
+    },{
+      "montant": 175,
+      "description": "Chubby bunny challenge"
+    },{
+      "montant": 200,
+      "description": "Dessine une carte sur Wonderaft et on fait un poster"
+    },{
+      "montant": 225,
+      "description": "OIn redouble un extrait de Shrek avec un streameur"
+    },{
+      "montant": 250,
+      "description": "J'enfile le déguisement de moine DU TRUFU"
+    },{
+      "montant": 275,
+      "description": "On tent un boss rush Elden Ring ou DS1 randomizer ?"
+    },{
+      "montant": 300,
+      "description": "On repeinds un Bob Ross + enchère"
+    },{
+      "montant": 325,
+      "description": "On essaie League of Legends"
+    },{
+      "montant": 350,
+      "description": "On tente le speedrun Getting Over It"
+    },{
+      "montant": 375,
+      "description": "On fait un kahoot ABSURDE avec les streameurs et les viewers"
+    },{
+      "montant": 400,
+      "description": "Concours d'anecdote avec les streameurs"
+    },{
+      "montant": 433,
+      "description": "On organise un stream JDR avec le scénario préparé avant"
+    },{
+      "montant": 466,
+      "description": "On test les PIRES jeux gratuits sur Steam"
+    },{
+      "montant": 500,
+      "description": "Je m'épile une partie du corps à la cire"
+    },{
+      "montant": 533,
+      "description": "On faitundrawmy life"
+    },{
+      "montant": 566,
+      "description": "On défie tous les streameurs au bras de fer"
+    },{
+      "montant": 600,
+      "description": "Marathon 12h dans l'année"
+    },{
+      "montant": 633,
+      "description": "On stream en Anglais pendant 30min"
+    },{
+      "montant": 666,
+      "description": "On réact à des vidéos sur les satanistes / sciences occultes"
+    },{
+      "montant": 700,
+      "description": "On organise un stream cuisine"
+    },{
+      "montant": 800,
+      "description": "Je m'inscris à une course"
+    },{
+      "montant": 1000,
+      "description": "Je fini le 100% de Payday 2 avant le 31 décembre 2025"
+    },{
+      "montant": 2000,
+      "description": "J'ouvre enfin une chaine de VOD"
+    },{
+      "montant": 23542,
+      "description": "On ouvre Hildora minecraft"
     }
   ],
   "rikituss" : [
