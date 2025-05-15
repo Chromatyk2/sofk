@@ -996,7 +996,24 @@ span.myCountProposition {
     text-align: center;
 }
 
-
+.makeDonation{
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fcc249;
+    width: fit-content;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: white solid 4px;
+}
+.makeDonation:hover{
+    background-color: white;
+    font-size: 20px;
+    border: #fcc249 solid 4px;
+    cursor: pointer;
+}
 #backgroundGlobal {
     position: fixed;
     left: 0;

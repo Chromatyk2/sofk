@@ -71,13 +71,13 @@ function HomePage(props) {
                             <span>A quoi vont servir les dons de cette édition 2025 ?</span><br/>
                             Les dons récoltés seront utilisés pour financer des actions de sensibilisation et recruter un médiateur à mi-temps si la somme de <span>30 000 €</span> est atteinte.
 
-                            <br/><span>A quoi ont servi les dons des éditions précédentes ?</span>
+                            <br/><br/><span>A quoi ont servi les dons des éditions précédentes ?</span>
                             <br/>• <span>2021</span> : Imprimer des livrets de sensibilisation à destination des adolescents.
                             <br/>• <span>2022</span> : Organiser des ateliers de prévention sur les risques liés à la fugue dans les collèges et les lycées.
                             <br/>• <span>2023</span>: Créer et diffuser un spot de sensibilisation du 116 000 à la TV et à la radio et poursuivre l’organisation d’ateliers de sensibilisation aux risques liés à la fugue dans les collèges et les lycées.
                             <br/>• <span>2024</span>: Imprimer les nouveaux flyers et affiches du 116 000, développer de nouveaux outils sur le site internet, le traduire en anglais et financer des ateliers de prévention dans les collèges et les lycées.
                         </p>
-                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?l=fr-FR"}>Faire un don direct au 116 000</a>
+                        <a className={"makeDonation"} href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?l=fr-FR"}>Faire un don direct au 116 000</a>
                     </div>
                 </div>
             </div>
