@@ -1013,6 +1013,7 @@ span.myCountProposition {
     font-size: 20px;
     border: #fcc249 solid 4px;
     cursor: pointer;
+    color: #fcc249 ;
 }
 #backgroundGlobal {
     position: fixed;
