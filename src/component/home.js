@@ -77,7 +77,7 @@ function HomePage(props) {
                             <br/><br/>• <span>2023</span>: Créer et diffuser un spot de sensibilisation du 116 000 à la TV et à la radio et poursuivre l’organisation d’ateliers de sensibilisation aux risques liés à la fugue dans les collèges et les lycées.
                             <br/><br/>• <span>2024</span>: Imprimer les nouveaux flyers et affiches du 116 000, développer de nouveaux outils sur le site internet, le traduire en anglais et financer des ateliers de prévention dans les collèges et les lycées.
                         </p>
-                        <a className={"makeDonation"} href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?l=fr-FR"}>Faire un don direct au 116 000</a>
+                        <a className={"makeDonation"} href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?l=fr-FR"}>Faire un don direct au 116 000<br/><small>(Sans inscriptions)</small></a>
                     </div>
                 </div>
             </div>
