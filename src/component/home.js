@@ -68,29 +68,16 @@ function HomePage(props) {
                         marginBottom: "60px"
                     }}>
                         <p className={"paragraphHome"}>
-                            Le <span>Stream On for Kids</span> est un évènement caritatif en ligne se déroulant chaque
-                            année
-                            à l’occasion
-                            de la <span>Journée Internationale des Enfants Disparus</span> pour collecter des dons en
-                            faveur
-                            du <span>116 000 Enfants
-                        Disparus</span>. Ce numéro d’urgence gratuit, disponible <span>24h/24 et 7j7</span>, accompagne
-                            les familles
-                            confrontées à la disparition de leur enfant.
+                            <span>A quoi vont servir les dons de cette édition 2025 ?</span>
+                            Les dons récoltés seront utilisés pour financer des actions de sensibilisation et recruter un médiateur à mi-temps si la somme de <span>30 000 €</span> est atteinte.
+
+                            <span>A quoi ont servi les dons des éditions précédentes ?</span>
+                            • <span>2021</span> : Imprimer des livrets de sensibilisation à destination des adolescents.
+                            • <span>2022</span> : Organiser des ateliers de prévention sur les risques liés à la fugue dans les collèges et les lycées.
+                            • <span>2023</span>: Créer et diffuser un spot de sensibilisation du 116 000 à la TV et à la radio et poursuivre l’organisation d’ateliers de sensibilisation aux risques liés à la fugue dans les collèges et les lycées.
+                            • <span>2024</span>: Imprimer les nouveaux flyers et affiches du 116 000, développer de nouveaux outils sur le site internet, le traduire en anglais et financer des ateliers de prévention dans les collèges et les lycées.
                         </p>
-                        <p className={"paragraphHome"}>
-                            Créé à l’initiative de <span>Vaykhin</span> en 2021, le <span>Stream On for Kids</span> se
-                            déroule sur Twitch, une
-                            plateforme de vidéos en direct sur laquelle des streamers diffusent du contenu en
-                            interagissant
-                            avec leurs
-                            spectateurs. L’événement a permis de collecter près de <span>30 000 €</span> en faveur du
-                            numéro
-                            d’urgence
-                            lors de ses trois premières éditions et permet également d’accroitre la notoriété du
-                            numéro <span>116 000</span>
-                            auprès du public.
-                        </p>
+                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?l=fr-FR"}>Faire un don direct au 116 000</a>
                     </div>
                 </div>
             </div>
