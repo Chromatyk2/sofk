@@ -26,6 +26,7 @@ function NavBar(props) {
                         <Link onClick={() => setExpanded(false)} className="navLink linkFromNav" to="/">Accueil</Link>
                         <Link onClick={() => setExpanded(false)} className="navLink linkFromNav" to="/Streams">Multi Streams</Link>
                         <Link onClick={() => setExpanded(false)} className="navLink linkFromNav" to="/Clips">Clips</Link>
+                        {/*<Link className="navLink linkFromNav" target={"_blank"} to="/https://thepixelwar.fr/">Pixel War</Link>*/}
                         <Link target={"_blank"} to={"https://www.instagram.com/streamonforkids/"}><img src={InstaSVG} alt=""/></Link>
 
                     </Nav>
