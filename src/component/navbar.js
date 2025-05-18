@@ -8,7 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 import env from "react-dotenv";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import InstaSVG from '/public/images/instagram-brands.svg'
+import InstaSVG from '/src/instagram-brands.svg'
 
 function NavBar(props) {
     const [count, setCount] = useState(0);
