@@ -2040,8 +2040,35 @@
   ],
   "akselsanssel" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 5,
+      "description": "Je joue sans mes lunettes (je vois pas une vache à 1 mètre sans)"
+    },{
+      "montant": 10,
+      "description": "Je Change la langue de mon jeu pour une langue que je ne connais pas pendant 10 minutes"
+    },{
+      "montant": 15,
+      "description": "Joue avec une main dans le dos pendant cinq minutes"
+    },{
+      "montant": 25,
+      "description": "J'inverse les commandes de mon clavier/manette pendant 5 minutes"
+    },{
+      "montant": 35,
+      "description": "Je ne peux pas courir dans le jeu pendant 5 minutes (ou pas sauter selon le jeu)"
+    },{
+      "montant": 45,
+      "description": "Je dois commenter tout ce que je fais comme si j’étais dans un documentaire animalier"
+    },{
+      "montant": 60,
+      "description": "Maquillage chelou par Hebi"
+    },{
+      "montant": 80,
+      "description": "Je joue à \"qui veux gagner des millions\" chez Clem Brule"
+    },{
+      "montant": 90,
+      "description": "Je laisse les viewers choisir la prochaine activité ou le prochain jeu que je ferai en live"
+    },{
+      "montant": 100,
+      "description": "A mon prochain live je bouffe un scorpion (pas vivant faut pas déconner)"
     }
   ],
   "superwill1972" : [

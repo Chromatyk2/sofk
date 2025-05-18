@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link} from "react-router-dom";
 import env from "react-dotenv";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function NavBar(props) {
     const [count, setCount] = useState(0);
@@ -24,6 +25,8 @@ function NavBar(props) {
                         <Link onClick={() => setExpanded(false)} className="navLink linkFromNav" to="/">Accueil</Link>
                         <Link onClick={() => setExpanded(false)} className="navLink linkFromNav" to="/Streams">Multi Streams</Link>
                         <Link onClick={() => setExpanded(false)} className="navLink linkFromNav" to="/Clips">Clips</Link>
+                        <Link target={"_blank"} to={"https://www.instagram.com/streamonforkids/"}><FontAwesomeIcon icon="fa-brands fa-instagram" /></Link>
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>
