@@ -117,35 +117,51 @@ function ClipsLayout(props) {
             <h1 style={{marginTop:"30px", textAlign:"center", color:"white"}}>Les clips</h1>
             {clips.length > 0 ?
                 <>
-                    <div style={{display:"flex", width:"300px", gap:"10px", margin:"auto", marginBottom:"30px"}}>
-                        <button onClick={handleDate} value={"all"} className={selectedDate === "all" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Tous</button>
-                        <button onClick={handleDate} value={"2024-05-23"} className={selectedDate === "2024-05-23" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 1</button>
-                        <button onClick={handleDate} value={"2024-05-24"} className={selectedDate === "2024-05-24" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 2</button>
-                        <button onClick={handleDate} value={"2024-05-25"} className={selectedDate === "2024-05-25" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 3</button>
+                    <div style={{display: "flex", width: "300px", gap: "10px", margin: "auto", marginBottom: "30px"}}>
+                        <button onClick={handleDate} value={"all"}
+                                className={selectedDate === "all" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Tous
+                        </button>
+                        <button onClick={handleDate} value={"2024-05-23"}
+                                className={selectedDate === "2024-05-23" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                            1
+                        </button>
+                        <button onClick={handleDate} value={"2024-05-24"}
+                                className={selectedDate === "2024-05-24" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                            2
+                        </button>
+                        <button onClick={handleDate} value={"2024-05-25"}
+                                className={selectedDate === "2024-05-25" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                            3
+                        </button>
                     </div>
-                    <select style={{display:"block", margin:"auto", marginBottom:"15px", }} onChange={handleStreamer}>
-                        <option style={{textAlign:"center"}} value={"all"}>Tous</option>
+                    <select style={{display: "block", margin: "auto", marginBottom: "15px",}} onChange={handleStreamer}>
+                        <option style={{textAlign: "center"}} value={"all"}>Tous</option>
                         {clips.map(e => e['broadcaster_name'])
                             .map((e, i, final) => final.indexOf(e) === i && i)
                             .filter(e => clips[e]).map(e => clips[e])
                             .sort((a, b) => (a.broadcaster_name > b.broadcaster_name) ? 1 : -1)
                             .map((val, key) => {
-                                return (<option style={{textAlign:"center"}} value={val.broadcaster_name}>{val.broadcaster_name}</option>)
+                                return (<option style={{textAlign: "center"}}
+                                                value={val.broadcaster_name}>{val.broadcaster_name}</option>)
                             })}
                     </select>
                     {emptyClips === true ?
-                        <p>Il n'y a pas de clips correspondants</p>
+                        <>
+                            <p>Il n'y a pas encore de clips cette année</p>
+                            <p>Pensez à clipper sur les lies de vos streameur.euses préféré.es pour laisser une marque de
+                                l'événement !</p>
+                        </>
                         :
                         <ClipsPaginate
-                            itemsPerPage={32}
-                            items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : filteredClips.length > 0 ? filteredClips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : clips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1)}
-                        />
-                    }
-                </>
-                :
-                <>
-                    <p>Il n'y a pas encore de clips cette année</p>
-                    <p>Pensez à clipper sur les lies de vos streameur.euses préféré.es pour laisser une marque de l'événement !</p>
+                        itemsPerPage={32}
+                    items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : filteredClips.length > 0 ? filteredClips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : clips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1)}
+                />
+            }
+        </>
+        :
+    <>
+        <p>Il n'y a pas encore de clips cette année</p>
+        <p>Pensez à clipper sur les lies de vos streameur.euses préféré.es pour laisser une marque de l'événement !</p>
                 </>
             }
         </>
