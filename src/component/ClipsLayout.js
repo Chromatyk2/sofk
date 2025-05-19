@@ -28,7 +28,7 @@ function ClipsLayout(props) {
                 }
             ).then(function (response) {
                 Axios.get(
-                    'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + response.data.data[0].id,
+                    'https://api.twitch.tv/helix/clips?started_at=2024-05-28T00:00:00Z&ended_at=2024-05-31T23:59:59Z&first=100&broadcaster_id=' + response.data.data[0].id,
                     {
                         headers: {
                             'Authorization': `Bearer ${props.token}`,
