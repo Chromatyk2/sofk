@@ -7,6 +7,7 @@ import UniqueStreamerMozaique from "./UniqueStreamerMozaique";
 import Login from "../services/auth.services";
 import '../Component.css';
 import Clapperboard from '../clapperboard.svg'
+import Tuto from '../tuto.jpg'
 
 function ClipsLayout(props) {
     const [cookies, setCookie] = useCookies();
@@ -168,6 +169,7 @@ function ClipsLayout(props) {
                     <p style={{fontSize:"25px", color: "#ffd43b", textAlign: "center", fontFamily: "Bungee"}}>Pour clipper rien de plus
                         simple, il suffis de cliquer sur le logo <img style={{width: "50px",margin: "10px auto 10px auto"}} src={Clapperboard}/> sur le lecteur du stream !
                     </p>
+                    <img style={{display:"block", margin:"auto"}} src={Tuto}/>
                     <small style={{display:"block", color: "white", textAlign: "center", fontFamily: "Bungee"}}>(Nécessite un compte Twitch)</small>
                 </>
             }
