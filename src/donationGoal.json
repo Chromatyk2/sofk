@@ -1377,8 +1377,38 @@
   ],
   "bios" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "On allume la webcam"
+    },{
+      "montant": 10,
+      "description": "On joue à DbD en QWERTY"
+    },{
+      "montant": 15,
+      "description": "On enlève le QWERTY"
+    },{
+      "montant": 20,
+      "description": "Je joue pour la première fois à Valorant"
+    },{
+      "montant": 35,
+      "description": "On arrête Valorant"
+    },{
+      "montant": 40,
+      "description": "On réinstalle League of Legends"
+    },{
+      "montant": 60,
+      "description": "On reprend Gmod et on fait le BG ensemble sans ChatGPT, Arc One Piece RP"
+    },{
+      "montant": 100,
+      "description": "J'achète un costume de Chucky et chaque live DbD pendant 1 an sera fait en pure RP"
+    },{
+      "montant": 200,
+      "description": "J'ouvre un Only Fan de mon crâne aec une photo par jour de son évolution"
+    },{
+      "montant": 250,
+      "description": "On se rase la barbe et on laisse la moustache"
+    },{
+      "montant": 300,
+      "description": "Je ous dévoile le donation goal secret"
     }
   ],
   "leroios" : [
