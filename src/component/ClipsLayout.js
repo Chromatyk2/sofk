@@ -160,9 +160,14 @@ function ClipsLayout(props) {
             }
         </>
         :
-    <>
-        <p>Il n'y a pas encore de clips cette année</p>
-        <p>Pensez à clipper sur les lies de vos streameur.euses préféré.es pour laisser une marque de l'événement !</p>
+                <>
+                    <p style={{color: "white", textAlign: "center", fontFamily: "Bungee"}}>Il n'y a pas encore de clips
+                        cette année</p>
+                    <p style={{color: "white", textAlign: "center", fontFamily: "Bungee"}}>Pensez à clipper sur les lies
+                        de vos streameur.euses préféré.es pour laisser une marque de l'événement !</p>
+                    <p style={{color: "white", textAlign: "center", fontFamily: "Bungee"}}>Pour clipper rien de plus
+                        simple, il suffis de cliquer sur le logo <img src={Clapperboard}/> sur le lecteur du stream !
+                    </p>
                 </>
             }
         </>
