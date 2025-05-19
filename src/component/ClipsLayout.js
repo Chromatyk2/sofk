@@ -115,7 +115,7 @@ function ClipsLayout(props) {
             {/*        </div>*/}
             {/*    }*/}
             <h1 style={{marginTop:"30px", textAlign:"center", color:"white"}}>Les clips</h1>
-            {clips.length > 0 &&
+            {clips.length > 0 ?
                 <>
                     <div style={{display:"flex", width:"300px", gap:"10px", margin:"auto", marginBottom:"30px"}}>
                         <button onClick={handleDate} value={"all"} className={selectedDate === "all" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Tous</button>
@@ -142,8 +142,13 @@ function ClipsLayout(props) {
                         />
                     }
                 </>
+                :
+                <>
+                    <p>Il n'y a pas encore de clips cette année</p>
+                    <p>Pensez à clipper sur les lies de vos streameur.euses préféré.es pour laisser une marque de l'événement !</p>
+                </>
             }
-            </>
+        </>
     )
 }
 
