@@ -174,11 +174,15 @@ function App() {
                         <Route path="/" element={<HomePage />}/>
                         <Route path="/Streams"
                                element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream} change={refresh}/>}/>
-                        <Route path="/Clips" element={<ClipsLayout change={refresh} team={charityStreamers} token={token}/>}/>
-                        <Route path="/Stream" element={<Player change={refresh} team={charityStreamers} token={token}/>}/>
-                        <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
-                        <Route path="/OoqZvHhdnIrOGLB" element={<BidWar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
-                        <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
+                        {charityLoad === false &&
+                            <>
+                                <Route path="/Clips" element={<ClipsLayout change={refresh} team={charityStreamers} token={token}/>}/>
+                                <Route path="/Stream" element={<Player change={refresh} team={charityStreamers} token={token}/>}/>
+                                <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                                <Route path="/OoqZvHhdnIrOGLB" element={<BidWar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                                <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
+                            </>
+                        }
 
                     </Routes>
                     {/*<Partners cookies={cookies}/>*/}
