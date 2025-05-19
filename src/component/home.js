@@ -31,10 +31,10 @@ function HomePage(props) {
                             plateforme de vidéos en direct sur laquelle des streamers diffusent du contenu en
                             interagissant
                             avec leurs
-                            spectateurs. L’événement a permis de collecter près de <span>30 000 €</span> en faveur du
+                            spectateurs. L’événement a permis de collecter près de <span>52 000 €</span> en faveur du
                             numéro
                             d’urgence
-                            lors de ses trois premières éditions et permet également d’accroitre la notoriété du
+                            lors de ses quatre premières éditions et permet également d’accroitre la notoriété du
                             numéro <span>116 000</span>
                             auprès du public.
                         </p>
