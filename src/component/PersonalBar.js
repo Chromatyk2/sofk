@@ -83,7 +83,7 @@ function PersonalBar(props) {
                     setLoad(Math.random())
                 }
             })}
-            ,10000
+            ,6000
         );
             return () => {
                 clearInterval(interval);
