@@ -126,7 +126,6 @@ function Player(props) {
     useEffect(() => {
         setStreamer(streamerUrl)
     }, [streamerUrl]);
-    console.log(props.team.filter(item => item.user.display_name == streamer));
     return (
         <>
             {props.team.length > 0 &&
@@ -240,7 +239,7 @@ function Player(props) {
                         flexWrap: "wrap",
                         marginTop: "20px"
                     }}>
-                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member=" + props.team.filter(item => item.user.display_name == streamer).user.id + "&l=fr-FR"}
+                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member=" + props.team.filter(item => item.user.display_name == streamer)[0].user.id + "&l=fr-FR"}
                            target={"_blank"}
                            className={"linkUnderStream"}>
                             <div>
