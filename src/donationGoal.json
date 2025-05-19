@@ -1,39 +1,39 @@
 {
   "chromatyk" : [
     {
-      "montant": 5,
+      "montant": 10,
       "description": "Robin nous honore de sa présence tous le long de l'event"
     },
     {
-      "montant": 10,
+      "montant": 15,
       "description": "Je change de casquette"
     },
     {
-      "montant": 20,
-      "description": "On reproduis les streameur.euses de l'event sur Sims avec Taelth"
-    },
-    {
       "montant": 30,
-      "description": "Jeu d'horreur avec Clem ( promis )"
+      "description": "On reproduis les streameur.euses de l'event sur les Sims avec Taelth"
     },
     {
       "montant": 40,
-      "description": "Techno'confess avec Valenderia, on parle musique techno et de nos vies"
+      "description": "Jeu d'horreur avec Clem ( promis )"
     },
     {
       "montant": 50,
-      "description": "Tierlist des Dessin Animés des années 90-2000 avec Kaito"
+      "description": "Techno'confess avec Valenderia, on parle musique techno et de nos vies"
     },
     {
       "montant": 60,
-      "description": "Bob l'éponge : Le film,  sur Gamecube"
+      "description": "Tierlist des Dessin Animés des années 90-2000 avec Kaito"
     },
     {
       "montant": 70,
-      "description": "Blindtest avec les viewers et qui veux dans le SoFK"
+      "description": "Bob l'éponge : Le film,  sur Gamecube"
     },
     {
       "montant": 80,
+      "description": "Blindtest avec les viewers et qui veux dans le SoFK"
+    },
+    {
+      "montant": 90,
       "description": "Je passe le lvl 1 de Last Action Hero sur SNES"
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "montant": 300,
-      "description": "Je passe le lvl 1 de Last Action Hero sur SNES"
+      "description": "Je fais enfin les DLC Ecarlate et Violet avant la sortie de legend ZA"
     },
     {
       "montant": 409,
@@ -57,7 +57,7 @@
       "description": "Je vais enfin voir un Psy pour mes insomnies"
     },
     {
-      "montant": 1000000,
+      "montant": 100000,
       "description": "Je rase mes cheveux et mes poils de visage"
     }
   ],
