@@ -152,7 +152,7 @@ function BidWar(props) {
                             setLoad(Math.random())
                         }
                     })}
-            ,1000
+            ,10000
         );
         return () => {
             clearInterval(interval);
