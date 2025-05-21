@@ -750,10 +750,10 @@
   ],
   "guiguisan_" : [
     {
-      "montant": 5,
-      "description": "Reveal des cosplays du Stream On"
+      "montant": 2,
+      "description": "J'allume la cam"
     },{
-      "montant": 7,
+      "montant": 5,
       "description": "Je me fais maquiller par Hebi_scarlet"
     },{
       "montant": 10,
@@ -762,23 +762,41 @@
       "montant": 30,
       "description": "Je chante tous les opening de One Piece"
     },{
-      "montant": 40,
-      "description": "Je fais la dance mystère"
-    },{
       "montant": 50,
+      "description": "Je fais la danse mystère"
+    },{
+      "montant": 80,
       "description": "Je construit un Lego"
     },{
-      "montant": 60,
+      "montant": 100,
       "description": "Gras_TV me fait découvrir un jeu mystere"
     },{
-      "montant": 100,
-      "description": "Je joue à 5 jeux Rayman pendant 30minutes chacun"
-    },{
       "montant": 250,
-      "description": "Je joue à Outlast"
+      "description": "Je cris Stream On For Kids pendant 10 secondes"
     },{
       "montant": 500,
-      "description": "Je croque dans un citron (à l'ide)"
+      "description": "Je joue à un jeu Rayman mais à chaque mort je change"
+    },{
+      "montant": 700,
+      "description": "Je joue à Mario Kart mais la manette est à l'envers"
+    },{
+      "montant": 850,
+      "description": "Je joue à Outlast"
+    },{
+      "montant": 1000,
+      "description": "J'écris une Fan Fiction entre Vaykhin et moi"
+    },{
+      "montant": 1200,
+      "description": "Je croque dans un Citron"
+    },{
+      "montant": 1400,
+      "description": "Je me remet à la Muscu"
+    },{
+      "montant": 1800,
+      "description": "Rasage de cheveux et de barbe"
+    },{
+      "montant": 2000,
+      "description": "Vlog/Live IRL au Quèbec (2026-2027) ft Le_sheriffx"
     }
   ],
   "akaihige_" : [
@@ -1233,8 +1251,62 @@
   ],
   "sun_shahine" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "Démarrage du caméscope numérique en direct"
+    },{
+      "montant": 5,
+      "description": "Je montre la salle"
+    },{
+      "montant": 10,
+      "description": "Défis du dé OK/KO avec @Hebi_Scarlet"
+    },{
+      "montant": 15,
+      "description": "séance de  Tomb raider avec @lesdeliresdenunu"
+    },{
+      "montant": 20,
+      "description": "séance de doublage avec @clem_brule"
+    },{
+      "montant": 25,
+      "description": "Stream régulier : 1 live minimum par semaine"
+    },{
+      "montant": 30,
+      "description": "React sur une vidéo youtube"
+    },{
+      "montant": 50,
+      "description": "Je retire les films de protection de mon ordinateur"
+    },{
+      "montant": 75,
+      "description": "React sur une vidéo youtube"
+    },{
+      "montant": 100,
+      "description": "je me fait tartiner la tronche par @Hebi_scarlet"
+    },{
+      "montant": 125,
+      "description": "Je me lance dans les VOD Youtube"
+    },{
+      "montant": 166.07,
+      "description": "Je fais un selfie / câlin avec tous les participants"
+    },{
+      "montant": 175,
+      "description": "React sur une vidéo youtube"
+    },{
+      "montant": 200,
+      "description": "Je me lance dans les stories TikTok"
+    },{
+      "montant": 250,
+      "description": "Stream régulier : 4 Lives minimum par semaine"
+    },{
+      "montant": 300,
+      "description": "Stream en duplex sur tiktok"
+    },{
+      "montant": 400,
+      "description": "Je prépare une chanson pour le sofk 2026"
+    },{
+      "montant": 1000,
+      "description": "Je termine le tome 1 de mon livre avant le sofk 2026"
+    },{
+      "montant": 20000,
+      "description": "Je me rase la tête"
     }
   ],
   "apen___" : [
