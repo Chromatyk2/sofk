@@ -29,7 +29,7 @@ function Asso() {
                             Qui peut appeler le 116 000 ?
                         </h2>
                         <p className={"paragraphHome"}>
-                            Ce numéro est accessible à tout le monde et il est gratuit. Ce sont généralement les
+                            Ce numéro est accessible à tout le monde et il est <span style={{color: "rgb(252, 194, 73)"}}>gratuit</span>. Ce sont généralement les
                             parents, les familles, les proches des enfants disparus qui appellent, afin d’être guidés,
                             écoutés, suivis et accompagnés le mieux possible..
                         </p>
@@ -37,9 +37,9 @@ function Asso() {
                             Le numéro 116 000 est-il dédié seulement aux disparitions en France ?
                         </h2>
                         <p className={"paragraphHome"}>
-                            Le numéro 116 000 est utile pour toutes les disparitions de mineurs, que l’enfant soit en
-                            France ou non, qu’il ait disparu en France ou à l’étranger. Le 116 000 français collabore
-                            ensuite avec les autres associations européennes ayant en charge le 116 000 dans leur pays.
+                            Le numéro <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> est utile pour toutes les disparitions de mineurs, que l’enfant soit en
+                            France ou non, qu’il ait disparu en France ou à l’étranger. Le <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> français collabore
+                            ensuite avec les autres associations européennes ayant en charge le <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> dans leur pays.
                         </p>
                         <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
                             Peut-on appeler anonymement ?
