@@ -67,4 +67,4 @@ function Asso() {
     )
 }
 
-export default HomePage
+export default Asso
