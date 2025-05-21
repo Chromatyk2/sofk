@@ -14,9 +14,9 @@ function Asso() {
                         marginTop: "60px",
                         marginBottom: "60px"
                     }}>
-                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
+                        <h3 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
                             Qu'est de que le 116 000 ?
-                        </h2>
+                        </h3>
                         <p className={"paragraphHome"}>
                             Le <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> est un numéro d’urgence
                             gratuit, disponible <span style={{color: "rgb(252, 194, 73)"}}>24h/24 et 7j/7</span> à
@@ -25,25 +25,25 @@ function Asso() {
                             C’est un numéro européen présent dans <span
                             style={{color: "rgb(252, 194, 73)"}}>32 pays</span>s.
                         </p>
-                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
+                        <h3 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
                             Qui peut appeler le 116 000 ?
-                        </h2>
+                        </h3>
                         <p className={"paragraphHome"}>
                             Ce numéro est accessible à tout le monde et il est <span style={{color: "rgb(252, 194, 73)"}}>gratuit</span>. Ce sont généralement les
                             parents, les familles, les proches des enfants disparus qui appellent, afin d’être guidés,
                             écoutés, suivis et accompagnés le mieux possible..
                         </p>
-                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
+                        <h3 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
                             Le numéro 116 000 est-il dédié seulement aux disparitions en France ?
-                        </h2>
+                        </h3>
                         <p className={"paragraphHome"}>
                             Le numéro <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> est utile pour toutes les disparitions de mineurs, que l’enfant soit en
                             France ou non, qu’il ait disparu en France ou à l’étranger. Le <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> français collabore
                             ensuite avec les autres associations européennes ayant en charge le <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> dans leur pays.
                         </p>
-                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
+                        <h3 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
                             Peut-on appeler anonymement ?
-                        </h2>
+                        </h3>
                         <p className={"paragraphHome"}>
                             Il est possible de ne pas donner son identité, par contre, comme pour tout numéro d’urgence,
                             il est impossible d’appeler avec un numéro masqué ; donc le numéro de la personne qui
