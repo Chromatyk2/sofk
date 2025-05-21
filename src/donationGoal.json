@@ -1,39 +1,39 @@
 {
   "chromatyk" : [
     {
-      "montant": 5,
+      "montant": 10,
       "description": "Robin nous honore de sa présence tous le long de l'event"
     },
     {
-      "montant": 10,
+      "montant": 15,
       "description": "Je change de casquette"
     },
     {
-      "montant": 20,
-      "description": "On reproduis les streameur.euses de l'event sur Sims avec Taelth"
-    },
-    {
       "montant": 30,
-      "description": "Jeu d'horreur avec Clem ( promis )"
+      "description": "On reproduis les streameur.euses de l'event sur les Sims avec Taelth"
     },
     {
       "montant": 40,
-      "description": "Techno'confess avec Valenderia, on parle musique techno et de nos vies"
+      "description": "Jeu d'horreur avec Clem ( promis )"
     },
     {
       "montant": 50,
-      "description": "Tierlist des Dessin Animés des années 90-2000 avec Kaito"
+      "description": "Techno'confess avec Valenderia, on parle musique techno et de nos vies"
     },
     {
       "montant": 60,
-      "description": "Bob l'éponge : Le film,  sur Gamecube"
+      "description": "Tierlist des Dessin Animés des années 90-2000 avec Kaito"
     },
     {
       "montant": 70,
-      "description": "Blindtest avec les viewers et qui veux dans le SoFK"
+      "description": "Bob l'éponge : Le film,  sur Gamecube"
     },
     {
       "montant": 80,
+      "description": "Blindtest avec les viewers et qui veux dans le SoFK"
+    },
+    {
+      "montant": 90,
       "description": "Je passe le lvl 1 de Last Action Hero sur SNES"
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "montant": 300,
-      "description": "Je passe le lvl 1 de Last Action Hero sur SNES"
+      "description": "Je fais enfin les DLC Ecarlate et Violet avant la sortie de legend ZA"
     },
     {
       "montant": 409,
@@ -57,14 +57,44 @@
       "description": "Je vais enfin voir un Psy pour mes insomnies"
     },
     {
-      "montant": 1000000,
+      "montant": 100000,
       "description": "Je rase mes cheveux et mes poils de visage"
     }
   ],
   "vaykhin" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1393,
+      "description": "Record de dons pendant une cérémonie d'ouverture !"
+    },{
+      "montant": 1400,
+      "description": "Speedrun Pat Pyjamasque : Objectif Top 3 Mondial"
+    },{
+      "montant": 1500,
+      "description": "Je laisse mon stream à ma mère et à d'autres mères de Streamers"
+    },{
+      "montant": 1600,
+      "description": "Je test le tricot en live"
+    },{
+      "montant": 1800,
+      "description": "je fais un just dance  AVEC LES STREAMERS MOTIVES"
+    },{
+      "montant": 1900,
+      "description": "JE FAIS DES COMPLIMENTS ABSURDES A UN STREAMER DE VOTRE CHOIX"
+    },{
+      "montant": 2000,
+      "description": "Je peins un pat patrouille et le vends aux encheres"
+    },{
+      "montant": 2200,
+      "description": "je vous lis une fanfic cringe sur moi"
+    },{
+      "montant": 2500,
+      "description": "JE SORS UN ALBUM NUL AVEC DES EXTRAITS DE CLIPS"
+    },{
+      "montant": 3000,
+      "description": "je me lance au sport : objectif -15kg avant 2026"
+    },{
+      "montant": 4911,
+      "description": "RECORD perso battu : on décide ensemble quoi faire !"
     }
   ],
   "hebi_scarlet" : [
@@ -346,7 +376,7 @@
       "description": "J'impose ma loi sans vote de l'assemblée (surprise)"
     },{
       "montant": 60,
-      "description": "Ah c'est pas ici la plage ?"
+      "description": "C'est vous qui me donnez un défi  (plus d'idées)"
     },{
       "montant": 70,
       "description": "On écrit des mots dox à tous les participants du SoFK parcequ'on est doux"
@@ -400,7 +430,7 @@
       "description": "Prochain lancement de 7days to die Sakurakero m'obligera à faire tout ce qu'elle veut dans la partie pendant 1h"
     },{
       "montant": 50,
-      "description": "Je fais peur à Rikituss"
+      "description": "Je raconte une phrase complètement WTF à Surimi"
     },{
       "montant": 60,
       "description": "On coupe le jeu eb question et on choisit celui qui aura le plus de votes sur le chat"
@@ -415,7 +445,7 @@
       "description": "Séance tryharding sur la division 2 avec mon frère"
     },{
       "montant": 175,
-      "description": "Je demande à Rikituss son régime Strict et je m'y tiens pendant 1 mois"
+      "description": "Je suit un régime strict et je m'y tiens pendant 1 mois (sport compris)"
     },{
       "montant": 200,
       "description": "Je commence le jeu Clair Obscure Expedition 33"
@@ -720,10 +750,10 @@
   ],
   "guiguisan_" : [
     {
-      "montant": 5,
-      "description": "Reveal des cosplays du Stream On"
+      "montant": 2,
+      "description": "J'allume la cam"
     },{
-      "montant": 7,
+      "montant": 5,
       "description": "Je me fais maquiller par Hebi_scarlet"
     },{
       "montant": 10,
@@ -732,23 +762,41 @@
       "montant": 30,
       "description": "Je chante tous les opening de One Piece"
     },{
-      "montant": 40,
-      "description": "Je fais la dance mystère"
-    },{
       "montant": 50,
+      "description": "Je fais la danse mystère"
+    },{
+      "montant": 80,
       "description": "Je construit un Lego"
     },{
-      "montant": 60,
+      "montant": 100,
       "description": "Gras_TV me fait découvrir un jeu mystere"
     },{
-      "montant": 100,
-      "description": "Je joue à 5 jeux Rayman pendant 30minutes chacun"
-    },{
       "montant": 250,
-      "description": "Je joue à Outlast"
+      "description": "Je cris Stream On For Kids pendant 10 secondes"
     },{
       "montant": 500,
-      "description": "Je croque dans un citron (à l'ide)"
+      "description": "Je joue à un jeu Rayman mais à chaque mort je change"
+    },{
+      "montant": 700,
+      "description": "Je joue à Mario Kart mais la manette est à l'envers"
+    },{
+      "montant": 850,
+      "description": "Je joue à Outlast"
+    },{
+      "montant": 1000,
+      "description": "J'écris une Fan Fiction entre Vaykhin et moi"
+    },{
+      "montant": 1200,
+      "description": "Je croque dans un Citron"
+    },{
+      "montant": 1400,
+      "description": "Je me remet à la Muscu"
+    },{
+      "montant": 1800,
+      "description": "Rasage de cheveux et de barbe"
+    },{
+      "montant": 2000,
+      "description": "Vlog/Live IRL au Quèbec (2026-2027) ft Le_sheriffx"
     }
   ],
   "akaihige_" : [
@@ -1203,8 +1251,62 @@
   ],
   "sun_shahine" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "Démarrage du caméscope numérique en direct"
+    },{
+      "montant": 5,
+      "description": "Je montre la salle"
+    },{
+      "montant": 10,
+      "description": "Défis du dé OK/KO avec @Hebi_Scarlet"
+    },{
+      "montant": 15,
+      "description": "séance de  Tomb raider avec @lesdeliresdenunu"
+    },{
+      "montant": 20,
+      "description": "séance de doublage avec @clem_brule"
+    },{
+      "montant": 25,
+      "description": "Stream régulier : 1 live minimum par semaine"
+    },{
+      "montant": 30,
+      "description": "React sur une vidéo youtube"
+    },{
+      "montant": 50,
+      "description": "Je retire les films de protection de mon ordinateur"
+    },{
+      "montant": 75,
+      "description": "React sur une vidéo youtube"
+    },{
+      "montant": 100,
+      "description": "je me fait tartiner la tronche par @Hebi_scarlet"
+    },{
+      "montant": 125,
+      "description": "Je me lance dans les VOD Youtube"
+    },{
+      "montant": 166.07,
+      "description": "Je fais un selfie / câlin avec tous les participants"
+    },{
+      "montant": 175,
+      "description": "React sur une vidéo youtube"
+    },{
+      "montant": 200,
+      "description": "Je me lance dans les stories TikTok"
+    },{
+      "montant": 250,
+      "description": "Stream régulier : 4 Lives minimum par semaine"
+    },{
+      "montant": 300,
+      "description": "Stream en duplex sur tiktok"
+    },{
+      "montant": 400,
+      "description": "Je prépare une chanson pour le sofk 2026"
+    },{
+      "montant": 1000,
+      "description": "Je termine le tome 1 de mon livre avant le sofk 2026"
+    },{
+      "montant": 20000,
+      "description": "Je me rase la tête"
     }
   ],
   "apen___" : [
@@ -1377,8 +1479,38 @@
   ],
   "bios" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "On allume la webcam"
+    },{
+      "montant": 10,
+      "description": "On joue à DbD en QWERTY"
+    },{
+      "montant": 15,
+      "description": "On enlève le QWERTY"
+    },{
+      "montant": 20,
+      "description": "Je joue pour la première fois à Valorant"
+    },{
+      "montant": 35,
+      "description": "On arrête Valorant"
+    },{
+      "montant": 40,
+      "description": "On réinstalle League of Legends"
+    },{
+      "montant": 60,
+      "description": "On reprend Gmod et on fait le BG ensemble sans ChatGPT, Arc One Piece RP"
+    },{
+      "montant": 100,
+      "description": "J'achète un costume de Chucky et chaque live DbD pendant 1 an sera fait en pure RP"
+    },{
+      "montant": 200,
+      "description": "J'ouvre un Only Fan de mon crâne aec une photo par jour de son évolution"
+    },{
+      "montant": 250,
+      "description": "On se rase la barbe et on laisse la moustache"
+    },{
+      "montant": 300,
+      "description": "Je ous dévoile le donation goal secret"
     }
   ],
   "leroios" : [
@@ -1389,8 +1521,47 @@
   ],
   "shakalica" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "J'arrête de parler"
+    },{
+      "montant": 5,
+      "description": "Je recommence à parler"
+    },{
+      "montant": 10,
+      "description": "Je vous montre la salle"
+    },{
+      "montant": 25,
+      "description": "Hollow Knight Any%"
+    },{
+      "montant": 50,
+      "description": "La crêpe maroille/whatever de Shurtutu"
+    },{
+      "montant": 75,
+      "description": "Le retour du Père Fougasse"
+    },{
+      "montant": 100,
+      "description": "Composition de Côpitain' Flemme"
+    },{
+      "montant": 125,
+      "description": "Hollow Knight 112%"
+    },{
+      "montant": 150,
+      "description": "Jeu d'horreur avec mon petit-fils "
+    },{
+      "montant": 200,
+      "description": "On s'essaie à la peinture de figurine en live "
+    },{
+      "montant": 250,
+      "description": "Karaokringe "
+    },{
+      "montant": 300,
+      "description": "Live tonte de pelouse"
+    },{
+      "montant": 500,
+      "description": "El famoso stream 24h"
+    },{
+      "montant": 1500,
+      "description": "Concert de Sorcières en direct (un futur concert)"
     }
   ],
   "domar_kius" : [
@@ -1834,7 +2005,7 @@
       "description": "Premier déguisement"
     },{
       "montant": 20,
-      "description": "Crêpe au maroilles surprises par Shurtutu"
+      "description": "Crêpe au maroille surprises par Shurtutu"
     },{
       "montant": 30,
       "description": "Course handisport avec Nunu"
@@ -1846,40 +2017,40 @@
       "description": "Tirage au sort pour Deck Magic"
     },{
       "montant": 60,
-      "description": "Invocation du Sensei le Samedi"
+      "description": "Montage nouvelle chaise de bureau en live"
     },{
       "montant": 69,
-      "description": "On fait une vraie PP"
+      "description": "suriimii «el professor d’el amor» vient répondre aux questions"
     },{
       "montant": 70,
-      "description": "On acceuil Suriimii el professor del amor"
+      "description": "Vraie PP faite par le sensei Visualpics"
     },{
       "montant": 80,
-      "description": "Ligotage au matelas par asarhell"
+      "description": "Ligotage au matelas par asarhell + berceuse de Kaito"
     },{
       "montant": 90,
-      "description": "On fête les 2 ans d'abstinence avec les copains du SoFK"
+      "description": "troisième déguisement"
     },{
       "montant": 100,
-      "description": "Teinture de Barbe"
-    },{
-      "montant": 120,
-      "description": "Troisième déguisement"
+      "description": "teinture de barbe + cheveux"
     },{
       "montant": 150,
       "description": "Jeu d'horreur"
     },{
       "montant": 200,
-      "description": "A pu de barbe"
+      "description": "Rasage total de la barbe"
+    },{
+      "montant": 250,
+      "description": "Photo creative par lestudiogeek en convention"
     },{
       "montant": 300,
-      "description": "J'ajoute 100€"
+      "description": "J’ajoute 100 €"
     },{
       "montant": 500,
       "description": "Jeu d'horreur en VR"
     },{
-      "montant": 5000,
-      "description": "On créé un compte sur un site de rencontre"
+      "montant": 2500,
+      "description": "On lance le sort pour le changement de classe du Mage noir"
     }
   ],
   "kheitv" : [
@@ -2022,8 +2193,74 @@
   ],
   "captainorion_" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 5,
+      "description": "Je révèle les Donation Goals"
+    },{
+      "montant": 20,
+      "description": "Dragée Surprise tous les 100 euros on en prends 1"
+    },{
+      "montant": 50,
+      "description": "1v1 Culture générale"
+    },{
+      "montant": 100,
+      "description": "Tier list sincère des sons de Jul"
+    },{
+      "montant": 120,
+      "description": "Karaoké à l’aveugle"
+    },{
+      "montant": 200,
+      "description": "Jeux horreur harmonica"
+    },{
+      "montant": 300,
+      "description": "On fait des danses de salon (hot)"
+    },{
+      "montant": 400,
+      "description": "Ranked soloqueue sur Valorant avec le sourire (rage = don de 20€)"
+    },{
+      "montant": 500,
+      "description": "5 euros dans la cagnotte si blague tendancieuse"
+    },{
+      "montant": 600,
+      "description": "Malaise, on react nos premières vidéos"
+    },{
+      "montant": 800,
+      "description": "1 reprise de chanson sous un thème au hasard"
+    },{
+      "montant": 1000,
+      "description": "On reproduit l’émission Hot Ones!"
+    },{
+      "montant": 1500,
+      "description": "Big Rap Contenders!"
+    },{
+      "montant": 1800,
+      "description": "On se déguise!"
+    },{
+      "montant": 1900,
+      "description": "Test de pureté"
+    },{
+      "montant": 2000,
+      "description": "1 Valolhot sauce chaque mort = piment!"
+    },{
+      "montant": 2500,
+      "description": "Je reprends vraiment le sport (objectif : summer body !)"
+    },{
+      "montant": 3000,
+      "description": "Corn makeup l’équipe"
+    },{
+      "montant": 3500,
+      "description": "Je fais un Cosplay de mon personnage rp"
+    },{
+      "montant": 4000,
+      "description": "Chauve qui peut!"
+    },{
+      "montant": 4250,
+      "description": "On prod une musique spéciale pour le Stream On for Kids"
+    },{
+      "montant": 4500,
+      "description": "On fait une séance ULTRA HARD DE SPORT "
+    },{
+      "montant": 5000,
+      "description": "On organise un big voyage avec la team dans un pays random"
     }
   ],
   "nortonio" : [
@@ -2034,8 +2271,65 @@
   ],
   "tonypepere" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "J'allume ma cam"
+    },{
+      "montant": 2,
+      "description": "J'allume mon micro"
+    },{
+      "montant": 10,
+      "description": "Je vais dire bonjour à tous.tes les treameur.euses du SOFK 2025, chaque jour !"
+    },{
+      "montant": 25,
+      "description": "Je me fais dessiner des palmiers sur chaque joues "
+    },{
+      "montant": 50,
+      "description": "Je me ais coach sur Mavel Snap avec Valenderia durant le SOFK 2025"
+    },{
+      "montant": 100,
+      "description": "J'apprends la LSF (Langue des signes françise) avec Hebi_Scarlet durant le SOFK 2025"
+    },{
+      "montant": 150,
+      "description": "Je fais une session doublage au SOFK avec des camarades streamer.euses qui le souhaitent"
+    },{
+      "montant": 200,
+      "description": "Je test 'Meilleur Welsh des Hauts-de-France' en vidéo Youtube"
+    },{
+      "montant": 300,
+      "description": "Live IRL 'ché min coin' au centre historique minier de Lewarde"
+    },{
+      "montant": 500,
+      "description": "Tier List des Villes des Hauts-de-France"
+    },{
+      "montant": 590,
+      "description": "Live IRL 'Ché min coin' à Douai"
+    },{
+      "montant": 600,
+      "description": "Live IRL 'Chateau de l'Oise'"
+    },{
+      "montant": 620,
+      "description": "Live IRL à Berck s/Mer + Bagatelle durant l'été 2025 avec des participants du SOFK"
+    },{
+      "montant": 750,
+      "description": "Série Youtube 'Eul Meilleure Baraque à frites' avec vos propositions !"
+    },{
+      "montant": 800,
+      "description": "Live IRL 'Découverte de la ville d'Amiens' avec un participant du SOFK"
+    },{
+      "montant": 1000,
+      "description": "Je commence enfin 'Elden Ring' mais tous les streams en ch'ti"
+    },{
+      "montant": 1500,
+      "description": "Faire un sans pression en live, en public entre le SOFK 2025 et le SOFK 2026"
+    },{
+      "montant": 1906,
+      "description": "Live IRL 'visite guidée' du Stade Bollaert"
+    },{
+      "montant": 1988,
+      "description": "Live IRL 'Pepere Origins' : Pecquencourt ma vilel natale"
+    },{
+      "montant": 2000,
+      "description": "Je me laisse pousser les cheveux et Barbe pendant 1 An"
     }
   ],
   "akselsanssel" : [

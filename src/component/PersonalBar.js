@@ -83,7 +83,7 @@ function PersonalBar(props) {
                     setLoad(Math.random())
                 }
             })}
-            ,1000
+            ,6000
         );
             return () => {
                 clearInterval(interval);
@@ -95,7 +95,7 @@ function PersonalBar(props) {
         setCagnotte([])
         const queryParameters = new URLSearchParams(window.location.search)
         var streamerName = queryParameters.get("streamer");
-        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name == streamerName).map((val, key) => {
+        donations.filter(donation => donation.member != null).filter(donation => donation.member.user.display_name.toLowerCase() == streamerName.toLowerCase()).map((val, key) => {
             setCagnotte(oldCagnotte => [...oldCagnotte, val.donation.original_amount]);
         });
         if (donationGoal[streamerName.toLowerCase()] != undefined) {
@@ -124,7 +124,7 @@ function PersonalBar(props) {
                             {donation.filter(item => item.montant > montant)[0].montant + " €"}
                         </p>
                         <MarqueeText duration={10} direction={"right"} textSpacing={"8em"} className={"scrollTextCard"}>
-                            {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
+                            {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description.toUpperCase()}
                         </MarqueeText>
                         <div style={customStyles.extBarInlineCard} className="fullProgressBar">
                             <div
@@ -179,7 +179,7 @@ function PersonalBar(props) {
                         <div>
 
                             <MarqueeText duration={10} direction={"right"} textSpacing={"8em"} className={"scrollText"}>
-                                {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description}
+                                {donation.filter(item => item.montant > montant).length > 0 && donation.filter(item => item.montant > montant)[0].description.toUpperCase()}
                             </MarqueeText>
                             <div style={customStyles.extBarInline} className="fullProgressBar">
                                 <div

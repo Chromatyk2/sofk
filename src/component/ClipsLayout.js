@@ -6,6 +6,8 @@ import UniqueStreamerClip from "./uniqueStreamerClip";
 import UniqueStreamerMozaique from "./UniqueStreamerMozaique";
 import Login from "../services/auth.services";
 import '../Component.css';
+import Clapperboard from '../clapperboard.svg'
+import Tuto from '../tuto.jpg'
 
 function ClipsLayout(props) {
     const [cookies, setCookie] = useCookies();
@@ -28,7 +30,7 @@ function ClipsLayout(props) {
                 }
             ).then(function (response) {
                 Axios.get(
-                    'https://api.twitch.tv/helix/clips?started_at=2024-05-22T00:00:00Z&ended_at=2024-05-25T23:00:00Z&first=100&broadcaster_id=' + response.data.data[0].id,
+                    'https://api.twitch.tv/helix/clips?started_at=2025-05-28T00:00:00Z&ended_at=2025-05-31T23:59:59Z&first=100&broadcaster_id=' + response.data.data[0].id,
                     {
                         headers: {
                             'Authorization': `Bearer ${props.token}`,
@@ -115,35 +117,63 @@ function ClipsLayout(props) {
             {/*        </div>*/}
             {/*    }*/}
             <h1 style={{marginTop:"30px", textAlign:"center", color:"white"}}>Les clips</h1>
-            {clips.length > 0 &&
+            {clips.length > 0 ?
                 <>
-                    <div style={{display:"flex", width:"300px", gap:"10px", margin:"auto", marginBottom:"30px"}}>
-                        <button onClick={handleDate} value={"all"} className={selectedDate === "all" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Tous</button>
-                        <button onClick={handleDate} value={"2024-05-23"} className={selectedDate === "2024-05-23" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 1</button>
-                        <button onClick={handleDate} value={"2024-05-24"} className={selectedDate === "2024-05-24" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 2</button>
-                        <button onClick={handleDate} value={"2024-05-25"} className={selectedDate === "2024-05-25" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour 3</button>
+                    <div style={{display: "flex", width: "300px", gap: "10px", margin: "auto", marginBottom: "30px"}}>
+                        <button onClick={handleDate} value={"all"}
+                                className={selectedDate === "all" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Tous
+                        </button>
+                        <button onClick={handleDate} value={"2024-05-23"}
+                                className={selectedDate === "2024-05-23" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                            1
+                        </button>
+                        <button onClick={handleDate} value={"2024-05-24"}
+                                className={selectedDate === "2024-05-24" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                            2
+                        </button>
+                        <button onClick={handleDate} value={"2024-05-25"}
+                                className={selectedDate === "2024-05-25" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                            3
+                        </button>
                     </div>
-                    <select style={{display:"block", margin:"auto", marginBottom:"15px", }} onChange={handleStreamer}>
-                        <option style={{textAlign:"center"}} value={"all"}>Tous</option>
+                    <select style={{display: "block", margin: "auto", marginBottom: "15px",}} onChange={handleStreamer}>
+                        <option style={{textAlign: "center"}} value={"all"}>Tous</option>
                         {clips.map(e => e['broadcaster_name'])
                             .map((e, i, final) => final.indexOf(e) === i && i)
                             .filter(e => clips[e]).map(e => clips[e])
                             .sort((a, b) => (a.broadcaster_name > b.broadcaster_name) ? 1 : -1)
                             .map((val, key) => {
-                                return (<option style={{textAlign:"center"}} value={val.broadcaster_name}>{val.broadcaster_name}</option>)
+                                return (<option style={{textAlign: "center"}}
+                                                value={val.broadcaster_name}>{val.broadcaster_name}</option>)
                             })}
                     </select>
                     {emptyClips === true ?
-                        <p>Il n'y a pas de clips correspondants</p>
+                        <>
+                            <p style={{color: "white",textAlign: "center",fontFamily: "Bungee"}}>Il n'y a pas encore de clips cette année</p>
+                            <p style={{color: "white",textAlign: "center",fontFamily: "Bungee"}}>Pensez à clipper sur les lies de vos streameur.euses préféré.es pour laisser une marque de l'événement !</p>
+                            <p style={{color: "white",textAlign: "center",fontFamily: "Bungee"}}>Pour clipper rien de plus simple, il suffis de cliquer sur le logo <img src={Clapperboard}/> sur le lecteur du stream !</p>
+                        </>
                         :
                         <ClipsPaginate
-                            itemsPerPage={32}
-                            items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : filteredClips.length > 0 ? filteredClips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : clips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1)}
-                        />
-                    }
+                        itemsPerPage={32}
+                    items={filteredClipsByStreamer.length > 0 ? filteredClipsByStreamer.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : filteredClips.length > 0 ? filteredClips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1) : clips.sort((a, b) => (a.view_count < b.view_count) ? 1 : -1)}
+                />
+            }
+        </>
+        :
+                <>
+                    <p style={{color: "white", textAlign: "center", fontFamily: "Bungee"}}>Il n'y a pas encore de clips
+                        cette année</p>
+                    <p style={{color: "white", textAlign: "center", fontFamily: "Bungee"}}>Pensez à clipper sur les lives
+                        de vos streameur.euses préféré.es pour laisser une marque de l'événement !</p>
+                    <p style={{fontSize:"25px", color: "#ffd43b", textAlign: "center", fontFamily: "Bungee"}}>Pour clipper rien de plus
+                        simple, il suffis de cliquer sur le logo <img style={{width: "50px",margin: "10px auto 10px auto"}} src={Clapperboard}/> sur le lecteur du stream !
+                    </p>
+                    <img style={{display:"block", margin:"10px auto 10px auto", width:"150px"}} src={Tuto}/>
+                    <small style={{display:"block", color: "white", textAlign: "center", fontFamily: "Bungee"}}>(Nécessite un compte Twitch)</small>
                 </>
             }
-            </>
+        </>
     )
 }
 
