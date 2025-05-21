@@ -14,52 +14,43 @@ function Asso() {
                         marginTop: "60px",
                         marginBottom: "60px"
                     }}>
-                        <h1 className={"TitleAsso"}>
+                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
                             Qu'est de que le 116 000 ?
-                        </h1>
+                        </h2>
                         <p className={"paragraphHome"}>
-                            Le 116 000 est un numéro d’urgence gratuit, disponible 24h/24 et 7j/7 à appeler en cas de disparition de mineurs. Il a été créé pour écouter et soutenir les familles d’enfants disparus en leur apportant un soutien psychologique, juridique et social. C’est un numéro européen présent dans 32 pays.
+                            Le <span style={{color: "rgb(252, 194, 73)"}}>116 000</span> est un numéro d’urgence
+                            gratuit, disponible <span style={{color: "rgb(252, 194, 73)"}}>24h/24 et 7j/7</span> à
+                            appeler en cas de disparition de mineurs. Il a été créé pour écouter et soutenir les
+                            familles d’enfants disparus en leur apportant un soutien psychologique, juridique et social.
+                            C’est un numéro européen présent dans <span
+                            style={{color: "rgb(252, 194, 73)"}}>32 pays</span>s.
                         </p>
-                    </div>
-                    <div style={{marginTop: "30px", marginBottom: "150px"}}>
-                        <h1 className={"titleEdition"}>Editions précédentes</h1>
-                        <div className={"editionsInfosContainer"}>
-                            <div className={"editionsContainer"}>
-                                <p className={"nbEdition"}>Edition 2024</p>
-                                <p className={"totalEdition"}>23 542 €</p>
-                            </div>
-                            <div className={"editionsContainer"}>
-                                <p className={"nbEdition"}>Edition 2023</p>
-                                <p className={"totalEdition"}>17 414 €</p>
-                            </div>
-                            <div className={"editionsContainer"}>
-                                <p className={"nbEdition"}>Edition 2022</p>
-                                <p className={"totalEdition"}>8 238 €</p>
-                            </div>
-                            <div className={"editionsContainer"}>
-                                <p className={"nbEdition"}>Edition 2021</p>
-                                <p className={"totalEdition"}>2 800 €</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style={{
-                        maxWidth: "650px",
-                        display: "block",
-                        margin: "auto",
-                        marginTop: "60px",
-                        marginBottom: "60px"
-                    }}>
+                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
+                            Qui peut appeler le 116 000 ?
+                        </h2>
                         <p className={"paragraphHome"}>
-                            <span>A quoi vont servir les dons de cette édition 2025 ?</span><br/>
-                            Les dons récoltés seront utilisés pour financer des actions de sensibilisation et recruter un médiateur à mi-temps si la somme de <span>30 000 €</span> est atteinte.
-
-                            <br/><br/><span>A quoi ont servi les dons des éditions précédentes ?</span>
-                            <br/><br/>• <span>2021</span> : Imprimer des livrets de sensibilisation à destination des adolescents.
-                            <br/><br/>• <span>2022</span> : Organiser des ateliers de prévention sur les risques liés à la fugue dans les collèges et les lycées.
-                            <br/><br/>• <span>2023</span>: Créer et diffuser un spot de sensibilisation du 116 000 à la TV et à la radio et poursuivre l’organisation d’ateliers de sensibilisation aux risques liés à la fugue dans les collèges et les lycées.
-                            <br/><br/>• <span>2024</span>: Imprimer les nouveaux flyers et affiches du 116 000, développer de nouveaux outils sur le site internet, le traduire en anglais et financer des ateliers de prévention dans les collèges et les lycées.
+                            Ce numéro est accessible à tout le monde et il est gratuit. Ce sont généralement les
+                            parents, les familles, les proches des enfants disparus qui appellent, afin d’être guidés,
+                            écoutés, suivis et accompagnés le mieux possible..
                         </p>
-                        <a target={"_blank"} className={"makeDonation"} href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?l=fr-FR"}>Faire un don direct au 116 000<br/><small>(Sans inscriptions)</small></a>
+                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
+                            Le numéro 116 000 est-il dédié seulement aux disparitions en France ?
+                        </h2>
+                        <p className={"paragraphHome"}>
+                            Le numéro 116 000 est utile pour toutes les disparitions de mineurs, que l’enfant soit en
+                            France ou non, qu’il ait disparu en France ou à l’étranger. Le 116 000 français collabore
+                            ensuite avec les autres associations européennes ayant en charge le 116 000 dans leur pays.
+                        </p>
+                        <h2 style={{color: "rgb(252, 194, 73)"}} className={"TitleAsso"}>
+                            Peut-on appeler anonymement ?
+                        </h2>
+                        <p className={"paragraphHome"}>
+                            Il est possible de ne pas donner son identité, par contre, comme pour tout numéro d’urgence,
+                            il est impossible d’appeler avec un numéro masqué ; donc le numéro de la personne qui
+                            appelle s’affichera forcément.
+                        </p>
+                        <a target={"_blank"} className={"makeDonation"}
+                           href={"https://www.116000enfantsdisparus.fr/"}>+ d'infos</a>
                     </div>
                 </div>
             </div>
