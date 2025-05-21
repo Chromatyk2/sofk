@@ -1521,8 +1521,47 @@
   ],
   "shakalica" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "J'arrête de parler"
+    },{
+      "montant": 5,
+      "description": "Je recommence à parler"
+    },{
+      "montant": 10,
+      "description": "Je vous montre la salle"
+    },{
+      "montant": 25,
+      "description": "Hollow Knight Any%"
+    },{
+      "montant": 50,
+      "description": "La crêpe maroille/whatever de Shurtutu"
+    },{
+      "montant": 75,
+      "description": "Le retour du Père Fougasse"
+    },{
+      "montant": 100,
+      "description": "Composition de Côpitain' Flemme"
+    },{
+      "montant": 125,
+      "description": "Hollow Knight 112%"
+    },{
+      "montant": 150,
+      "description": "Jeu d'horreur avec mon petit-fils "
+    },{
+      "montant": 200,
+      "description": "On s'essaie à la peinture de figurine en live "
+    },{
+      "montant": 250,
+      "description": "Karaokringe "
+    },{
+      "montant": 300,
+      "description": "Live tonte de pelouse"
+    },{
+      "montant": 500,
+      "description": "El famoso stream 24h"
+    },{
+      "montant": 1500,
+      "description": "Concert de Sorcières en direct (un futur concert)"
     }
   ],
   "domar_kius" : [
