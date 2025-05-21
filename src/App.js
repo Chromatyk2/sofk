@@ -179,6 +179,7 @@ function App() {
                         <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                         <Route path="/OoqZvHhdnIrOGLB" element={<BidWar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                         <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
+                        <Route path="/Asso" element={<Asso />}/>
 
                     </Routes>
                     {/*<Partners cookies={cookies}/>*/}
