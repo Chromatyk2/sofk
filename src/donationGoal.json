@@ -1515,8 +1515,68 @@
   ],
   "leroios" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 0.92,
+      "description": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },{
+      "montant": 5.89,
+      "description": "Shuzo Matsuoka nous encourage à vivre encore un peu plus"
+    },{
+      "montant": 13.12,
+      "description": "Je vous fais découvrir Konata (Premier épisode de Lucky Star)"
+    },{
+      "montant": 24.11,
+      "description": "Je mange un piment (pas ceux de Louve, pitié)"
+    },{
+      "montant": 59.64,
+      "description": "Achat et lancement de Desktop Survivors 98"
+    },{
+      "montant": 83.37,
+      "description": "On écoute de la musique de weeb pendant 30 minutes"
+    },{
+      "montant": 104.25,
+      "description": "Je mange deux piments (pas ceux de Louve, pitié)"
+    },{
+      "montant": 127.76,
+      "description": "On branche une tablette graphique pour la toute première fois"
+    },{
+      "montant": 150.14,
+      "description": "Je vous fais découvrir Sakamoto (Premier épisode de Nichijou)"
+    },{
+      "montant": 162.03,
+      "description": "On reprend une run de Skyrim chat nécromancien armure lourde"
+    },{
+      "montant": 203.61,
+      "description": "Le JDR de Stream obtient un lore plus complet"
+    },{
+      "montant": 241.58,
+      "description": "On reprend la perte de poids, objectif IMC non surpoids (donc perte d’au moins 20 kilos)"
+    },{
+      "montant": 276.44,
+      "description": "Je mange trois piments (pas ceux de Louve, pitié)"
+    },{
+      "montant": 298.89,
+      "description": "Vidéo de lore sur Sacred et Sacred 2 (mes amours)"
+    },{
+      "montant": 323.32,
+      "description": "Reveal de mon rap battle entre deux personnages de JDR avec explication de chaque parole"
+    },{
+      "montant": 349.97,
+      "description": "Le JDR de Stream obtient une carte évolutive"
+    },{
+      "montant": 371.44,
+      "description": "On refait en entier Helltaker, le tout premier jeu fait sur la chaîne du Roi Os en 2021"
+    },{
+      "montant": 400.01,
+      "description": "Apprentissage du Chiptune pendant cet été"
+    },{
+      "montant": 420.69,
+      "description": "Je mange cinq piments (pas ceux de Louve, pitié)"
+    },{
+      "montant": 457.36,
+      "description": "Rédaction des règles complètes de Morts & Vivants"
+    },{
+      "montant": 500.05,
+      "description": "Bravo et merci. Apprentissage sérieux du Japonais"
     }
   ],
   "shakalica" : [
@@ -1722,8 +1782,50 @@
   ],
   "daxy_live" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "J'allume ma cam"
+    },{
+      "montant": 15,
+      "description": "Dance Just Dance de votre choix"
+    },{
+      "montant": 30,
+      "description": "Jeux d'horreur toute la journée / soirée"
+    },{
+      "montant": 45,
+      "description": "Je fait 1 Tiktok Géant"
+    },{
+      "montant": 60,
+      "description": "InZOI : Création streamer de l'event et/ou personnalitée de votre choix"
+    },{
+      "montant": 75,
+      "description": "Je coloris mes sourcils et rest comme ça jusqu'à la prochaine douche"
+    },{
+      "montant": 85,
+      "description": "Je passe la journée avec un costume de poisson très moche"
+    },{
+      "montant": 100,
+      "description": "Je fais rien d'autre tant que j'ai pas fini chained together"
+    },{
+      "montant": 115,
+      "description": "Je dors en live"
+    },{
+      "montant": 130,
+      "description": "130 Squats"
+    },{
+      "montant": 145,
+      "description": "Je joue avec une cagoule"
+    },{
+      "montant": 170,
+      "description": "J'écris le nom des donateurs sur ma tête / corps"
+    },{
+      "montant": 250,
+      "description": "Je garde le même t-shirt jusqu'à la fin de l'event"
+    },{
+      "montant": 300,
+      "description": "SMS à mon père 'Je suis enceinte'"
+    },{
+      "montant": 1000,
+      "description": "Photo de tous les streamers dédicacée au nom du donateur qui nous aura fait atteindre les 1000€"
     }
   ],
   "ballasta_tv" : [
@@ -2051,12 +2153,6 @@
     },{
       "montant": 2500,
       "description": "On lance le sort pour le changement de classe du Mage noir"
-    }
-  ],
-  "kheitv" : [
-    {
-      "montant": 23542,
-      "description": "Record battu !"
     }
   ],
   "binouh18" : [
