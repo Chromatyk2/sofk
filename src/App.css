@@ -3208,6 +3208,8 @@ a.navLink.linkFromNav {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    background-image: url("/public/images/background.png");
+    background-size: cover;
 }
 
 
