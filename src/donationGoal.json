@@ -1480,37 +1480,43 @@
   "bios" : [
     {
       "montant": 1,
-      "description": "On allume la webcam"
+      "description": "J’allume la cam"
     },{
-      "montant": 10,
-      "description": "On joue à DbD en QWERTY"
+      "montant": 5,
+      "description": "On crie tous \"MERCI SURIMI\" pour le follow"
     },{
       "montant": 15,
-      "description": "On enlève le QWERTY"
+      "description": "Retour tranquille sur DOFUS + explication de la pause stream"
     },{
       "montant": 20,
-      "description": "Je joue pour la première fois à Valorant"
+      "description": "Mortuary Assistant... DE NUIT"
     },{
-      "montant": 35,
-      "description": "On arrête Valorant"
+      "montant": 25,
+      "description": "Mise à jour des réseaux sociaux"
     },{
-      "montant": 40,
-      "description": "On réinstalle League of Legends"
+      "montant": 50,
+      "description": "Je prend une crêpe de  Shurtutu"
     },{
       "montant": 60,
-      "description": "On reprend Gmod et on fait le BG ensemble sans ChatGPT, Arc One Piece RP"
+      "description": "Je rejoue à DBD (même si j’le boude encore...)"
     },{
       "montant": 100,
-      "description": "J'achète un costume de Chucky et chaque live DbD pendant 1 an sera fait en pure RP"
+      "description": "Annonce du prochain live spécial JAPAN EXPO"
+    },{
+      "montant": 150,
+      "description": "Mise à jour du BIOS dans la semaine (fin du style Windows 98 sur le stream)"
     },{
       "montant": 200,
-      "description": "J'ouvre un Only Fan de mon crâne aec une photo par jour de son évolution"
+      "description": "J’arrête Uber Eats"
     },{
       "montant": 250,
-      "description": "On se rase la barbe et on laisse la moustache"
+      "description": "Je m’inscris à la salle"
     },{
-      "montant": 300,
-      "description": "Je ous dévoile le donation goal secret"
+      "montant": 600,
+      "description": "Je me rase la barbe"
+    },{
+      "montant": 800,
+      "description": "Je fais presque le même tatouage que mon père"
     }
   ],
   "leroios" : [
