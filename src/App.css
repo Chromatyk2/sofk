@@ -59,7 +59,8 @@ iframe{
     margin:0;
     margin-bottom:-8px;
     margin-left:-25px;
-     width: 350px !important;
+     width: 346px !important;
+    left: 4px;
 }
 .scrollTextCardInlinePlayer{
     font-size: 27px;
