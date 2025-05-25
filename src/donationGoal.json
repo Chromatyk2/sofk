@@ -2514,8 +2514,38 @@
   ],
   "nanascrunchyz" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 5,
+      "description": "J'allume ma cam"
+    },{
+      "montant": 10,
+      "description": "Je laisse les viewers choisir le premier jeu"
+    },{
+      "montant": 20,
+      "description": "Jouer en mode “ASMR” pendant une partie"
+    },{
+      "montant": 50,
+      "description": "Challenge gameplay (yeux fermés, mains inversées…)"
+    },{
+      "montant": 75,
+      "description": "Je raconte une histoire totalement inventée avec 3 mots du chat"
+    },{
+      "montant": 150,
+      "description": "Je fais une tier list en live (sur des plats choisis par les vieuwers)"
+    },{
+      "montant": 300,
+      "description": "Débloquer un stream rétro / jeux d’enfance auquel je jouais (Tah l'époque)"
+    },{
+      "montant": 500,
+      "description": "Organisation d’un quizz interactif avec lots pour les 3 viewers avec le plus de points"
+    },{
+      "montant": 750,
+      "description": "Je crée un skin momie avec du papier toilette"
+    },{
+      "montant": 1000,
+      "description": "Je fais le puzzle pokémon acheté à Londres pendant l'événement (1000 piéces )"
+    },{
+      "montant": 2000,
+      "description": "Je fais un live de 8h"
     }
   ]
 }
