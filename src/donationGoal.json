@@ -30,7 +30,7 @@
     },
     {
       "montant": 80,
-      "description": "Blindtest avec les viewers et qui veux dans le SoFK"
+      "description": "On ouvre la Nostal'Boite surprise !"
     },
     {
       "montant": 90,
@@ -2363,12 +2363,6 @@
     },{
       "montant": 5000,
       "description": "On organise un big voyage avec la team dans un pays random"
-    }
-  ],
-  "nortonio" : [
-    {
-      "montant": 23542,
-      "description": "Record battu !"
     }
   ],
   "tonypepere" : [
