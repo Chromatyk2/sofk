@@ -183,9 +183,8 @@ function App() {
                                 <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
                             </>
                         }
-
                     </Routes>
-                    {/*<Partners cookies={cookies}/>*/}
+                    <Partners cookies={cookies}/>
                     <Footer/>
                 </BrowserRouter>
             </div>
