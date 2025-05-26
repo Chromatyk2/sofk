@@ -35,8 +35,7 @@ function HomePage(props) {
                             numéro
                             d’urgence
                             lors de ses quatre premières éditions et permet également d’accroitre la notoriété du
-                            numéro <span>116 000</span>
-                            auprès du public.
+                            numéro <span>116 000</span> auprès du public.
                         </p>
                     </div>
                     <div style={{marginTop: "30px", marginBottom: "100px"}}>

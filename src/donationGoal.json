@@ -30,7 +30,7 @@
     },
     {
       "montant": 80,
-      "description": "Blindtest avec les viewers et qui veux dans le SoFK"
+      "description": "On ouvre la Nostal'Boite surprise !"
     },
     {
       "montant": 90,
@@ -1063,7 +1063,7 @@
     "suriimii" : [
       {
         "montant": 30,
-        "description": "Pour mettre fin ç cette horrible musique"
+        "description": "Pour mettre fin à cette horrible musique"
       },{
         "montant": 50,
         "description": "Hebi me maquille"
@@ -1480,43 +1480,109 @@
   "bios" : [
     {
       "montant": 1,
-      "description": "On allume la webcam"
+      "description": "J’allume la cam"
     },{
-      "montant": 10,
-      "description": "On joue à DbD en QWERTY"
+      "montant": 5,
+      "description": "On crie tous \"MERCI SURIMI\" pour le follow"
     },{
       "montant": 15,
-      "description": "On enlève le QWERTY"
+      "description": "Retour tranquille sur DOFUS + explication de la pause stream"
     },{
       "montant": 20,
-      "description": "Je joue pour la première fois à Valorant"
+      "description": "Mortuary Assistant... DE NUIT"
     },{
-      "montant": 35,
-      "description": "On arrête Valorant"
+      "montant": 25,
+      "description": "Mise à jour des réseaux sociaux"
     },{
-      "montant": 40,
-      "description": "On réinstalle League of Legends"
+      "montant": 50,
+      "description": "Je prend une crêpe de  Shurtutu"
     },{
       "montant": 60,
-      "description": "On reprend Gmod et on fait le BG ensemble sans ChatGPT, Arc One Piece RP"
+      "description": "Je rejoue à DBD (même si j’le boude encore...)"
     },{
       "montant": 100,
-      "description": "J'achète un costume de Chucky et chaque live DbD pendant 1 an sera fait en pure RP"
+      "description": "Annonce du prochain live spécial JAPAN EXPO"
+    },{
+      "montant": 150,
+      "description": "Mise à jour du BIOS dans la semaine (fin du style Windows 98 sur le stream)"
     },{
       "montant": 200,
-      "description": "J'ouvre un Only Fan de mon crâne aec une photo par jour de son évolution"
+      "description": "J’arrête Uber Eats"
     },{
       "montant": 250,
-      "description": "On se rase la barbe et on laisse la moustache"
+      "description": "Je m’inscris à la salle"
     },{
-      "montant": 300,
-      "description": "Je ous dévoile le donation goal secret"
+      "montant": 600,
+      "description": "Je me rase la barbe"
+    },{
+      "montant": 800,
+      "description": "Je fais presque le même tatouage que mon père"
     }
   ],
   "leroios" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 0.92,
+      "description": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },{
+      "montant": 5.89,
+      "description": "Shuzo Matsuoka nous encourage à vivre encore un peu plus"
+    },{
+      "montant": 13.12,
+      "description": "Je vous fais découvrir Konata (Premier épisode de Lucky Star)"
+    },{
+      "montant": 24.11,
+      "description": "Je mange un piment (pas ceux de Louve, pitié)"
+    },{
+      "montant": 59.64,
+      "description": "Achat et lancement de Desktop Survivors 98"
+    },{
+      "montant": 83.37,
+      "description": "On écoute de la musique de weeb pendant 30 minutes"
+    },{
+      "montant": 104.25,
+      "description": "Je mange deux piments (pas ceux de Louve, pitié)"
+    },{
+      "montant": 127.76,
+      "description": "On branche une tablette graphique pour la toute première fois"
+    },{
+      "montant": 150.14,
+      "description": "Je vous fais découvrir Sakamoto (Premier épisode de Nichijou)"
+    },{
+      "montant": 162.03,
+      "description": "On reprend une run de Skyrim chat nécromancien armure lourde"
+    },{
+      "montant": 203.61,
+      "description": "Le JDR de Stream obtient un lore plus complet"
+    },{
+      "montant": 241.58,
+      "description": "On reprend la perte de poids, objectif IMC non surpoids (donc perte d’au moins 20 kilos)"
+    },{
+      "montant": 276.44,
+      "description": "Je mange trois piments (pas ceux de Louve, pitié)"
+    },{
+      "montant": 298.89,
+      "description": "Vidéo de lore sur Sacred et Sacred 2 (mes amours)"
+    },{
+      "montant": 323.32,
+      "description": "Reveal de mon rap battle entre deux personnages de JDR avec explication de chaque parole"
+    },{
+      "montant": 349.97,
+      "description": "Le JDR de Stream obtient une carte évolutive"
+    },{
+      "montant": 371.44,
+      "description": "On refait en entier Helltaker, le tout premier jeu fait sur la chaîne du Roi Os en 2021"
+    },{
+      "montant": 400.01,
+      "description": "Apprentissage du Chiptune pendant cet été"
+    },{
+      "montant": 420.69,
+      "description": "Je mange cinq piments (pas ceux de Louve, pitié)"
+    },{
+      "montant": 457.36,
+      "description": "Rédaction des règles complètes de Morts & Vivants"
+    },{
+      "montant": 500.05,
+      "description": "Bravo et merci. Apprentissage sérieux du Japonais"
     }
   ],
   "shakalica" : [
@@ -1722,8 +1788,50 @@
   ],
   "daxy_live" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 1,
+      "description": "J'allume ma cam"
+    },{
+      "montant": 15,
+      "description": "Dance Just Dance de votre choix"
+    },{
+      "montant": 30,
+      "description": "Jeux d'horreur toute la journée / soirée"
+    },{
+      "montant": 45,
+      "description": "Je fait 1 Tiktok Géant"
+    },{
+      "montant": 60,
+      "description": "InZOI : Création streamer de l'event et/ou personnalitée de votre choix"
+    },{
+      "montant": 75,
+      "description": "Je coloris mes sourcils et rest comme ça jusqu'à la prochaine douche"
+    },{
+      "montant": 85,
+      "description": "Je passe la journée avec un costume de poisson très moche"
+    },{
+      "montant": 100,
+      "description": "Je fais rien d'autre tant que j'ai pas fini chained together"
+    },{
+      "montant": 115,
+      "description": "Je dors en live"
+    },{
+      "montant": 130,
+      "description": "130 Squats"
+    },{
+      "montant": 145,
+      "description": "Je joue avec une cagoule"
+    },{
+      "montant": 170,
+      "description": "J'écris le nom des donateurs sur ma tête / corps"
+    },{
+      "montant": 250,
+      "description": "Je garde le même t-shirt jusqu'à la fin de l'event"
+    },{
+      "montant": 300,
+      "description": "SMS à mon père 'Je suis enceinte'"
+    },{
+      "montant": 1000,
+      "description": "Photo de tous les streamers dédicacée au nom du donateur qui nous aura fait atteindre les 1000€"
     }
   ],
   "ballasta_tv" : [
@@ -2053,12 +2161,6 @@
       "description": "On lance le sort pour le changement de classe du Mage noir"
     }
   ],
-  "kheitv" : [
-    {
-      "montant": 23542,
-      "description": "Record battu !"
-    }
-  ],
   "binouh18" : [
     {
       "montant": 5,
@@ -2263,12 +2365,6 @@
       "description": "On organise un big voyage avec la team dans un pays random"
     }
   ],
-  "nortonio" : [
-    {
-      "montant": 23542,
-      "description": "Record battu !"
-    }
-  ],
   "tonypepere" : [
     {
       "montant": 1,
@@ -2412,8 +2508,38 @@
   ],
   "nanascrunchyz" : [
     {
-      "montant": 23542,
-      "description": "Record battu !"
+      "montant": 5,
+      "description": "J'allume ma cam"
+    },{
+      "montant": 10,
+      "description": "Je laisse les viewers choisir le premier jeu"
+    },{
+      "montant": 20,
+      "description": "Jouer en mode “ASMR” pendant une partie"
+    },{
+      "montant": 50,
+      "description": "Challenge gameplay (yeux fermés, mains inversées…)"
+    },{
+      "montant": 75,
+      "description": "Je raconte une histoire totalement inventée avec 3 mots du chat"
+    },{
+      "montant": 150,
+      "description": "Je fais une tier list en live (sur des plats choisis par les vieuwers)"
+    },{
+      "montant": 300,
+      "description": "Débloquer un stream rétro / jeux d’enfance auquel je jouais (Tah l'époque)"
+    },{
+      "montant": 500,
+      "description": "Organisation d’un quizz interactif avec lots pour les 3 viewers avec le plus de points"
+    },{
+      "montant": 750,
+      "description": "Je crée un skin momie avec du papier toilette"
+    },{
+      "montant": 1000,
+      "description": "Je fais le puzzle pokémon acheté à Londres pendant l'événement (1000 piéces )"
+    },{
+      "montant": 2000,
+      "description": "Je fais un live de 8h"
     }
   ]
 }

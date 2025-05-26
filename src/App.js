@@ -18,6 +18,7 @@ import PersonalBar from "./component/PersonalBar";
 import './App.css';
 import TestImg from "./component/testImg";
 import BidWar from "./component/BidWar";
+import Asso from "./component/Asso";
 function App() {
     const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
@@ -172,17 +173,13 @@ function App() {
                     </div>
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
-                        <Route path="/Streams"
-                               element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream} change={refresh}/>}/>
-                        {charityLoad === false &&
-                            <>
-                                <Route path="/Clips" element={<ClipsLayout change={refresh} team={charityStreamers} token={token}/>}/>
-                                <Route path="/Stream" element={<Player change={refresh} team={charityStreamers} token={token}/>}/>
-                                <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
-                                <Route path="/OoqZvHhdnIrOGLB" element={<BidWar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
-                                <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
-                            </>
-                        }
+                        <Route path="/Streams" element={<StreamOnLayout token={token} offStream={offStream} onStream={onStream} change={refresh}/>}/>
+                        <Route path="/Clips" element={<ClipsLayout change={refresh} team={charityStreamers} token={token}/>}/>
+                        <Route path="/Stream" element={<Player change={refresh} team={charityStreamers} token={token}/>}/>
+                        <Route path="/OoqZvHhdnIrOGL" element={<PersonalBar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                        <Route path="/OoqZvHhdnIrOGLB" element={<BidWar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
+                        <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
+                        <Route path="/Asso" element={<Asso />}/>
                     </Routes>
                     <Partners cookies={cookies}/>
                     <Footer/>
