@@ -4,7 +4,7 @@ import '../App.css'
 function Partners(props) {
     return (
         <>
-            <div style={{position: "relative",backgroundColor: "#f7bb3e"}} className={"partnerSection"}>
+            <div style={{position: "relative",backgroundColor: "#f7bb3e", marginTop:"25px"}} className={"partnerSection"}>
                 <h1 style={{color:"black",fontSize:"20px",padding:"10px"}} className={"titleEdition"}>Nos partenaires</h1>
                 <div className={"partnerContainer"}>
                     <a href={"https://www.ville-fachesthumesnil.fr/"} target={"_blank"}><img
