@@ -2705,7 +2705,7 @@ h1.titleEdition {
     color: #fff;
     font-family: Bungee;
     text-align: center;
-    margin-bottom:60px;
+    margin-bottom:10px;
 }
 .editionsInfosContainer {
     display: flex;
@@ -2910,6 +2910,7 @@ button.buttonToDisplayStreamMozaique {
     padding: 10px;
     position: fixed;
     bottom: 0;
+    z-index: 10;
 }
 .footerContainer p {
     color: #fff;
