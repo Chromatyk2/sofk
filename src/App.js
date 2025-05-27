@@ -181,7 +181,7 @@ function App() {
                         <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
                         <Route path="/Asso" element={<Asso />}/>
                     </Routes>
-                    <Partners cookies={cookies}/>
+                    <Partners />
                     <Footer/>
                 </BrowserRouter>
             </div>
