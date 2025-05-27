@@ -9,23 +9,17 @@ function Partners(props) {
                 <div className={"partnerContainer"}>
                     <a href={"https://www.ville-fachesthumesnil.fr/"} target={"_blank"}><img
                         src={"/images/faches.png"}/></a>
-                    <div style={{height: "100px", display: "flex", flexFlow: "column", justifyContent: "center"}}>
-                        <a href={"https://www.tokyosnackbox.com/"} target={"_blank"}><img
-                            src={"/images/tokyo.png"}/></a>
-                        <small style={{textAlign: "center"}}>-10 % sur vos commandes avec le code <span
-                            style={{fontWeight: "bold"}}>STREAMON10</span><br/> pendant la durée de l'événement</small>
-                    </div>
-                    <a href={"https://mangadokaze.com/index.php"} target={"_blank"}><img src={"/images/manga.png"}/></a>
                     <div style={{height: "120px", display: "flex", flexFlow: "column", justifyContent: "center"}}>
                         <a href={"https://mistertee.fr/"} target={"_blank"}><img src={"/images/mister.png"}/></a>
-                        <small style={{textAlign: "center"}}>-10 % sur vos commandes avec le code <span
-                            style={{fontWeight: "bold"}}>Stream10</span><br/> pendant la durée de
-                            l'événement</small>
+                        {/*<small style={{textAlign: "center"}}>-10 % sur vos commandes avec le code <span*/}
+                        {/*    style={{fontWeight: "bold"}}>Stream10</span><br/> pendant la durée de*/}
+                        {/*    l'événement</small>*/}
                     </div>
-                    <a href={"https://www.burgerking.fr/#!"} target={"_blank"}><img src={"/images/burger.png"}/></a>
-                    <a href={"https://www.dominos.fr/"} target={"_blank"}><img src={"/images/dominos.png"}/></a>
-                    <a href={"https://aucoeurdelamalice.com/"} target={"_blank"}><img src={"/images/coeur.jpg"}/></a>
-                    <a href={"https://dernierbar.com/pages/lille"} target={"_blank"}><img src={"/images/bar.webp"}/></a>
+                    <a href={"https://www.kiloutou.fr/"} target={"_blank"}><img src={"/images/kiloutou.png"}/></a>
+                    <a href={"https://www.instagram.com/lamoussetouch/"} target={"_blank"}><img src={"/images/mousse.png"}/></a>
+                    <a href={"https://barbraz.com/"} target={"_blank"}><img src={"/images/braz.png"}/></a>
+                    <a href={"https://www.bricodepot.fr/"} target={"_blank"}><img src={"/images/brico.jpg"}/></a>
+                    <a href={"https://agtraiteur.fr/"} target={"_blank"}><img src={"/images/ag.png"}/></a>
                 </div>
             </div>
         </>
