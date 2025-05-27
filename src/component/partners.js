@@ -16,10 +16,15 @@ function Partners(props) {
                         {/*    l'événement</small>*/}
                     </div>
                     <a href={"https://www.kiloutou.fr/"} target={"_blank"}><img src={"/images/kiloutou.png"}/></a>
-                    <a href={"https://www.instagram.com/lamoussetouch/"} target={"_blank"}><img src={"/images/mousse.png"}/></a>
+                    <a href={"https://www.instagram.com/lamoussetouch/"} target={"_blank"}><img
+                        src={"/images/mousse.png"}/></a>
                     <a href={"https://barbraz.com/"} target={"_blank"}><img src={"/images/braz.png"}/></a>
                     <a href={"https://www.bricodepot.fr/"} target={"_blank"}><img src={"/images/brico.jpg"}/></a>
                     <a href={"https://agtraiteur.fr/"} target={"_blank"}><img src={"/images/ag.png"}/></a>
+                    <a href={"https://www.dominos.fr/"} target={"_blank"}><img src={"/images/dominos.png"}/></a>
+                    <a href={"https://techme-event.fr/"} target={"_blank"}><img src={"/images/techme.png"}/></a>
+                    <a href={"https://www.instagram.com/chti.bao/?hl=fr"} target={"_blank"}><img src={"/images/bao.jpg"}/></a>
+                    <a href={"https://www.facebook.com/FriterieChezPierro/"} target={"_blank"}><img src={"/images/pierro.png"}/></a>
                 </div>
             </div>
         </>
