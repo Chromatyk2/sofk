@@ -24,7 +24,7 @@ function Partners(props) {
                     <a href={"https://www.dominos.fr/"} target={"_blank"}><img src={"/images/dominos.png"}/></a>
                     <a href={"https://techme-event.fr/"} target={"_blank"}><img src={"/images/techme.png"}/></a>
                     <a href={"https://www.instagram.com/chti.bao/?hl=fr"} target={"_blank"}><img src={"/images/bao.jpg"}/></a>
-                    <a href={"https://www.facebook.com/FriterieChezPierro/"} target={"_blank"}><img src={"/images/pierro.png"}/></a>
+                    <a href={"https://www.facebook.com/FriterieChezPierro/"} target={"_blank"}><img src={"/images/pierro.jpg"}/></a>
                 </div>
             </div>
         </>
