@@ -231,30 +231,30 @@ function Player(props) {
                             </iframe>
                         </div>
                     </div>
-                    {/*<div style={{*/}
-                    {/*    display: "flex",*/}
-                    {/*    alignItems: "center",*/}
-                    {/*    gap: "50px",*/}
-                    {/*    justifyContent: "center",*/}
-                    {/*    flexWrap: "wrap",*/}
-                    {/*    marginTop: "20px"*/}
-                    {/*}}>*/}
-                    {/*    <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member=" + props.team.filter(item => item.user.display_name == streamer)[0].user.id + "&l=fr-FR"}*/}
-                    {/*       target={"_blank"}*/}
-                    {/*       className={"linkUnderStream"}>*/}
-                    {/*        <div>*/}
-                    {/*            <img className={"linkUnderStreamImg"} src={logoEuro}/>*/}
-                    {/*        </div>*/}
-                    {/*        <div style={{width: "300px"}}>*/}
-                    {/*            <p className={"linkUnderStreamTxt"}><span*/}
-                    {/*                style={{*/}
-                    {/*                    fontSize: "20px",*/}
-                    {/*                    fontWeight: "bold"*/}
-                    {/*                }}>Clique pour faire un don ! </span><br/>Soutien le*/}
-                    {/*                116 000 avec un don, le moindre euro compte !</p>*/}
-                    {/*        </div>*/}
-                    {/*    </a>*/}
-                    {/*</div>*/}
+                    <div style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "50px",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                        marginTop: "20px"
+                    }}>
+                        <a href={"https://streamlabscharity.com/teams/@stream-on-for-kids-2025/stream-on-for-kids-2025?member=" + props.team.filter(item => item.user.display_name == streamer)[0].user.id + "&l=fr-FR"}
+                           target={"_blank"}
+                           className={"linkUnderStream"}>
+                            <div>
+                                <img className={"linkUnderStreamImg"} src={logoEuro}/>
+                            </div>
+                            <div style={{width: "300px"}}>
+                                <p className={"linkUnderStreamTxt"}><span
+                                    style={{
+                                        fontSize: "20px",
+                                        fontWeight: "bold"
+                                    }}>Clique pour faire un don ! </span><br/>Soutien le
+                                    116 000 avec un don, le moindre euro compte !</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             }
 
