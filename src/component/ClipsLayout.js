@@ -50,7 +50,7 @@ function ClipsLayout(props) {
                 })
             })
         })
-    }, [props.team]);
+    }, []);
     function handleDate(data) {
         const date = data.target.value;
         if(data.target.value != "all"){
