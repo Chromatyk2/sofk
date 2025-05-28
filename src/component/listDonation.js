@@ -5,7 +5,6 @@ import {BrowserRouter, Link} from "react-router-dom";
 import {ca} from "date-fns/locale";
 import donationGoal from '../donationGoal.json'
 import MarqueeText from "react-marquee-text"
-import "react-marquee-text/dist/styles.css"
 
 function ListDonation(props) {
     const [cagnotte, setCagnotte] = useState([]);
@@ -113,7 +112,7 @@ function ListDonation(props) {
         }
     }, [])
     return (
-        <div style={{display: "flex",margin: "auto",width: "fit-content",gap: "250px"}}>
+        <div style={{display: "flex",margin: "auto",width: "fit-content",gap: "10px",flexFlow:"column",marginTop:"50px"}}>
             {donation.length > 0 &&
 
                 donation.map((val, key) => {
