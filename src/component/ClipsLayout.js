@@ -19,18 +19,10 @@ function ClipsLayout(props) {
     const [clipStreamer, setClipStreamer] = useState([]);
     const [emptyClips, setEmptyClips] = useState(false);
     useEffect(() => {
-        props.team.map((val, key) => {
-            Axios.get(
-                'https://api.twitch.tv/helix/users?login=' + val.user.display_name,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${props.token}`,
-                        'Client-Id': process.env.REACT_APP_CLIENT_ID
-                    }
-                }
-            ).then(function (response) {
+        if(props.team.length > 0){
+            props.team.map((val, key) => {
                 Axios.get(
-                    'https://api.twitch.tv/helix/clips?started_at=2025-05-28T00:00:00Z&ended_at=2025-05-31T23:59:59Z&first=100&broadcaster_id=' + response.data.data[0].id,
+                    'https://api.twitch.tv/helix/users?login=' + val.user.display_name,
                     {
                         headers: {
                             'Authorization': `Bearer ${props.token}`,
@@ -38,19 +30,29 @@ function ClipsLayout(props) {
                         }
                     }
                 ).then(function (response) {
-                    setClipStreamer(
-                        Array.from(new Set(response.data.data.map(a => a.broadcaster_name)))
-                            .map(id => {
-                                return response.data.data.find(a => a.broadcaster_name === id)
-                            })
-                    )
-                    response.data.data.map((val, key) => {
-                        setClips(oldArrayOn => [...oldArrayOn, val]);
+                    Axios.get(
+                        'https://api.twitch.tv/helix/clips?started_at=2025-05-28T00:00:00Z&ended_at=2025-05-31T23:59:59Z&first=100&broadcaster_id=' + response.data.data[0].id,
+                        {
+                            headers: {
+                                'Authorization': `Bearer ${props.token}`,
+                                'Client-Id': process.env.REACT_APP_CLIENT_ID
+                            }
+                        }
+                    ).then(function (response) {
+                        setClipStreamer(
+                            Array.from(new Set(response.data.data.map(a => a.broadcaster_name)))
+                                .map(id => {
+                                    return response.data.data.find(a => a.broadcaster_name === id)
+                                })
+                        )
+                        response.data.data.map((val, key) => {
+                            setClips(oldArrayOn => [...oldArrayOn, val]);
+                        })
                     })
                 })
             })
-        })
-    }, []);
+        }
+    }, [props.team]);
     function handleDate(data) {
         const date = data.target.value;
         if(data.target.value != "all"){
