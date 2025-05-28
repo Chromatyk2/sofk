@@ -180,6 +180,7 @@ function App() {
                         <Route path="/OoqZvHhdnIrOGLB" element={<BidWar charityStreamers={charityStreamers} onStream={false} token={token} />}/>
                         <Route path="/OoqZvHhdnIrOGLs" element={<TestImg />}/>
                         <Route path="/Asso" element={<Asso />}/>
+                        <Route path="/OoqZvHhdnIrOGList" element={<ListDonation charityStreamers={charityStreamers} onStream={false} token={token}  />}/>
                     </Routes>
                     <Partners />
                     <Footer/>
