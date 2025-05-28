@@ -114,7 +114,7 @@ function ListDonation(props) {
     }, [])
     return (
         <div style={{display: "flex",margin: "auto",width: "fit-content",gap: "250px"}}>
-            {
+            {donation.length > 0 &&
 
                 donation.data.map((val, key) => {
                     return(
