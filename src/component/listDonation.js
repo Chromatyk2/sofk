@@ -116,7 +116,7 @@ function ListDonation(props) {
         <div style={{display: "flex",margin: "auto",width: "fit-content",gap: "250px"}}>
             {donation.length > 0 &&
 
-                donation.data.map((val, key) => {
+                donation.map((val, key) => {
                     return(
                         <>
                             <p> {val.description.toUpperCase()}</p>
