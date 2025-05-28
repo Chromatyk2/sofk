@@ -19,6 +19,7 @@ import './App.css';
 import TestImg from "./component/testImg";
 import BidWar from "./component/BidWar";
 import Asso from "./component/Asso";
+import ListDonation from "./component/listDonation";
 function App() {
     const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
     const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
