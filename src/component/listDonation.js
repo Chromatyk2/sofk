@@ -117,7 +117,7 @@ function ListDonation(props) {
 
                 donation.map((val, key) => {
                     return(
-                        <p style={val.montant < montant ? {textDecorationColor:"#38617F", textDecoration:"line-through", color: "rgb(252, 194, 73)"} : {color: "white"}}><span style={{color:"rgb(252, 194, 73)"}}>{val.montant+"€ "}</span>{val.description.toUpperCase()}</p>
+                        <p style={val.montant <= montant ? {textDecorationColor:"#38617F", textDecoration:"line-through", color: "rgb(252, 194, 73)"} : {color: "white"}}><span style={{color:"rgb(252, 194, 73)"}}>{val.montant+"€ "}</span>{val.description.toUpperCase()}</p>
                     )
                 })
             }
