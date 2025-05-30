@@ -17,6 +17,7 @@ function Player(props) {
     const [donations, setDonations] = useState([]);
     const [load, setLoad] = useState(0);
     const [montant, setMontant] = useState(true);
+    console.log(props.team)
     useEffect(() => {
         if(props.team.length == 0){
             props.change();
