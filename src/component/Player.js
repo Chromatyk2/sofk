@@ -17,7 +17,7 @@ function Player(props) {
     const [donations, setDonations] = useState([]);
     const [load, setLoad] = useState(0);
     const [montant, setMontant] = useState(true);
-    console.log(props.team)
+    console.log(props.team.filter(item => item.user.display_name == streamer))
     useEffect(() => {
         if(props.team.length == 0){
             props.change();
