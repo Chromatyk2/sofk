@@ -1406,6 +1406,24 @@
       "montant": 500,
       "description": "J'enlève la moustache ( mode bébé )"
     },{
+      "montant": 600,
+      "description": "JDR exquis"
+    },{
+      "montant": 625,
+      "description": "Auto portrait à la souris"
+    },{
+      "montant": 650,
+      "description": "L'auto portrait deviens la PP pendant 1 mois"
+    },{
+      "montant": 675,
+      "description": "JDR exquis"
+    },{
+      "montant": 700,
+      "description": "JDR avec 4 viewers tirés au hasard"
+    },{
+      "montant": 1000,
+      "description": "Ciao les sourcils"
+    },{
       "montant": 23542,
       "description": "Je me rase les cheveux"
     }
