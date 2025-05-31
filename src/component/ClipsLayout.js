@@ -125,16 +125,16 @@ function ClipsLayout(props) {
                         <button onClick={handleDate} value={"all"}
                                 className={selectedDate === "all" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Tous
                         </button>
-                        <button onClick={handleDate} value={"2024-05-23"}
-                                className={selectedDate === "2024-05-23" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                        <button onClick={handleDate} value={"2025-05-29"}
+                                className={selectedDate === "2025-05-29" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
                             1
                         </button>
-                        <button onClick={handleDate} value={"2024-05-24"}
-                                className={selectedDate === "2024-05-24" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                        <button onClick={handleDate} value={"2025-05-30"}
+                                className={selectedDate === "2025-05-30" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
                             2
                         </button>
-                        <button onClick={handleDate} value={"2024-05-25"}
-                                className={selectedDate === "2024-05-25" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
+                        <button onClick={handleDate} value={"2025-05-31"}
+                                className={selectedDate === "2025-05-31" ? "buttonStreamers filterClipButton selected" : "buttonStreamers filterClipButton"}>Jour
                             3
                         </button>
                     </div>
